@@ -114,3 +114,15 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(245,158,11,0.3) transparent;
 }
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-12deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-8deg); }
+  80% { transform: rotate(6deg); }
+}
+.animate-wiggle {
+  animation: wiggle 0.6s ease-in-out;
+  transform-origin: top center;
+}

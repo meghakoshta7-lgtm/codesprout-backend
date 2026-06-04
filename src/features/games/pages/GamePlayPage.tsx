@@ -7,7 +7,25 @@ import {
   Lightbulb, RotateCcw, PartyPopper, ArrowRight, Lock,
 } from 'lucide-react';
 import { useGameProgress, calcStars } from '../hooks/useGameProgress';
-import { LEVEL_TEMPLATES, getLevelQuestions, type QuizQuestion, type CodeChallenge } from '../data/gamesData';
+import { LEVEL_TEMPLATES, getLevelQuestions, BADGE_LIBRARY, type QuizQuestion, type CodeChallenge } from '../data/gamesData';
+import api from '@/services/api';
+
+function getUserId(): string | null {
+  try {
+    const raw = localStorage.getItem('user');
+    if (!raw) return null;
+    const u = JSON.parse(raw);
+    return u?.id ? String(u.id) : null;
+  } catch { return null; }
+}
+
+async function fireNotification(event: string, payload: Record<string, any> = {}) {
+  const uid = getUserId();
+  if (!uid) return;
+  try {
+    await api.post(`/notifications/trigger?userId=${uid}`, { event, payload });
+  } catch { /* silent */ }
+}
 
 interface AnswerRecord { questionId: string; correct: boolean; points: number; }
 
@@ -149,6 +167,23 @@ export default function GamePlayPage() {
     if (progress.streak.count >= 7 && !progress.badges.includes('streak7')) newBadges.push('streak7');
 
     saveLevel(topic, levelId, finalScore, total, stickerArr, newBadges);
+
+    fireNotification('level_complete', {
+      levelName: lvl.name,
+      stars,
+      topic,
+      nextLevelId: levelId < 7 ? levelId + 1 : undefined,
+    });
+
+    for (const bId of newBadges) {
+      const def = BADGE_LIBRARY.find(x => x.id === bId);
+      if (def) fireNotification('badge', { badgeName: def.name, emoji: def.emoji });
+    }
+
+    const newStreak = progress.streak.count;
+    if (newStreak > 0 && (newStreak === 3 || newStreak === 7 || newStreak === 14 || newStreak === 30)) {
+      fireNotification('streak', { days: newStreak });
+    }
   };
 
   const restart = () => {

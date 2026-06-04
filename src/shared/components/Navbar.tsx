@@ -6,6 +6,7 @@ import {
   Star, Shield, Search, Command, Bell, Bookmark, TrendingUp, Gamepad2
 } from 'lucide-react';
 import { cn } from '@/shared/utils/helpers';
+import { NotificationBell } from '@/features/games/components/NotificationBell';
 
 const navLinks = [
   { label: 'Topics', href: '/topics', icon: BookOpen },
@@ -125,6 +126,8 @@ export default function Navbar() {
                 </kbd>
               </button>
 
+              {user && <NotificationBell />}
+
               {user ? (
                 <div className="relative">
                   <button
@@ -194,6 +197,7 @@ export default function Navbar() {
               >
                 <Search className="w-4.5 h-4.5 text-white/60" />
               </button>
+              {user && <NotificationBell />}
               <button className="p-2 rounded-xl hover:bg-white/[0.06] transition-colors" onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? <X className="w-5 h-5 text-white/60" /> : <Menu className="w-5 h-5 text-white/60" />}
               </button>

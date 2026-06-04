@@ -147,6 +147,20 @@ export default function CodeEditor({ slug, template }: CodeEditorProps) {
       });
       const data: SubmitResponse = await res.json();
       setSubmitResult(data);
+      if (data?.status === 'Accepted' && slug) {
+        try {
+          const raw = localStorage.getItem('user');
+          const u = raw ? JSON.parse(raw) : null;
+          if (u?.id) {
+            const title = slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+            await fetch(`/api/notifications/trigger?userId=${u.id}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ event: 'question_solved', payload: { title } }),
+            });
+          }
+        } catch { /* ignore */ }
+      }
     } catch (e: any) {
       setError(e.message || 'Failed to submit');
     } finally {
