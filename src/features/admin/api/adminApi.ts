@@ -15,4 +15,8 @@ export const adminApi = {
   addTestCase: (slug: string, data: any) => api.post(`/admin/questions/${slug}/testcases`, data),
   updateTestCase: (id: string, data: any) => api.put(`/admin/testcases/${id}`, data),
   deleteTestCase: (id: string) => api.delete(`/admin/testcases/${id}`),
+  emailStatus: () => api.get<{ enabled: boolean }>('/email/status'),
+  testEmail: (type: string, to?: string) => api.post('/email/test', { type, to }),
+  checkExpiring: () => api.post('/email/check-expiring', {}),
+  streakNudge: (userId: string, days: number) => api.post(`/email/streak-nudge/${userId}`, { days }),
 };
