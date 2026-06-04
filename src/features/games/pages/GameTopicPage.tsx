@@ -27,19 +27,6 @@ function Stars({ count, size = 'sm' }: { count: number; size?: 'sm' | 'md' }) {
 }
 
 // SVG candy-cane path: stripes between level nodes
-function LollipopDecor({ emoji, style, size = 64 }: { emoji: string; style: React.CSSProperties; size?: number }) {
-  return (
-    <div className="absolute pointer-events-none select-none opacity-60" style={style}>
-      <div
-        className="rounded-full bg-gradient-to-br from-pink-300/30 to-rose-400/30 flex items-center justify-center border-2 border-pink-300/20 shadow-lg backdrop-blur-sm"
-        style={{ width: size, height: size, fontSize: size * 0.5 }}
-      >
-        {emoji}
-      </div>
-    </div>
-  );
-}
-
 export default function GameTopicPage() {
   const { topic: topicParam } = useParams<{ topic: string }>();
   const topic = topicParam ? decodeURIComponent(topicParam) : '';
@@ -61,13 +48,6 @@ export default function GameTopicPage() {
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-3xl" />
       </div>
       <div className="fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:60px_60px]" />
-
-      {/* Candy decorations */}
-      <LollipopDecor emoji="🍭" style={{ top: '12%', left: '4%' }} size={72} />
-      <LollipopDecor emoji="🍬" style={{ top: '35%', right: '5%' }} size={64} />
-      <LollipopDecor emoji="🍫" style={{ bottom: '15%', left: '6%' }} size={56} />
-      <LollipopDecor emoji="🍩" style={{ bottom: '30%', right: '3%' }} size={68} />
-      <LollipopDecor emoji="🍭" style={{ top: '60%', left: '3%' }} size={48} />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16">
         {/* Top bar: back link + stats */}
