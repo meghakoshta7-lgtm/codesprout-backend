@@ -1,9 +1,21 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Mail, Lock, Eye, EyeOff, Sparkles, CheckCircle, X, Chrome, Code2, Zap, Shield } from 'lucide-react';
+import { BookOpen, Mail, Lock, Eye, EyeOff, Sparkles, CheckCircle, X, Code2, Zap, Shield } from 'lucide-react';
 import { useLogin, useRegister } from '../hooks/useAuth';
+import { useGoogleAuth } from '../hooks/useGoogleAuth';
 import toast from 'react-hot-toast';
+
+function GoogleIcon() {
+  return (
+    <svg className="w-4 h-4" viewBox="0 0 48 48" aria-hidden="true">
+      <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" />
+      <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" />
+      <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" />
+      <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" />
+    </svg>
+  );
+}
 
 export default function LoginPage() {
   const location = useLocation();
@@ -19,6 +31,7 @@ export default function LoginPage() {
   });
   const { login, loading: loginLoading } = useLogin();
   const { register, loading: registerLoading } = useRegister();
+  const { login: googleLogin, loading: googleLoading } = useGoogleAuth();
 
   // Show success toast if redirected from signup
   useEffect(() => {
@@ -410,14 +423,24 @@ export default function LoginPage() {
                 <div className="flex-1 h-px bg-white/10" />
               </div>
 
-              {/* Social buttons */}
+              {/* Google Sign-In */}
               <button
                 type="button"
-                onClick={() => toast('Google login coming soon!', { icon: '🔜' })}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 hover:text-white transition-all"
+                onClick={() => googleLogin()}
+                disabled={googleLoading}
+                className="w-full flex items-center justify-center gap-2.5 py-2.5 rounded-xl bg-white hover:bg-white/95 text-gray-800 font-medium transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-sm"
               >
-                <Chrome className="w-4 h-4" />
-                <span className="text-sm font-medium">Continue with Google</span>
+                {googleLoading ? (
+                  <>
+                    <span className="w-4 h-4 border-2 border-gray-300 border-t-purple-600 rounded-full animate-spin" />
+                    <span className="text-sm">Signing in...</span>
+                  </>
+                ) : (
+                  <>
+                    <GoogleIcon />
+                    <span className="text-sm">Continue with Google</span>
+                  </>
+                )}
               </button>
             </div>
           </div>

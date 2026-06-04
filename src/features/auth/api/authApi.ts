@@ -5,4 +5,5 @@ export const authApi = {
   login: (payload: LoginPayload) => api.post<AuthResponse>('/auth/login', payload),
   register: (payload: RegisterPayload) => api.post<AuthResponse>('/auth/register', payload),
   me: () => api.get('/auth/me'),
+  google: (credential: string) => api.post<AuthResponse & { isNew?: boolean }>('/auth/google', { credential }),
 };
