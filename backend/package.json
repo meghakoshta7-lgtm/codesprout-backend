@@ -18,7 +18,8 @@
     "start:social": "node dist/services/social.js",
     "start:execution": "node dist/services/execution.js",
     "start:payment": "node dist/services/payment.js",
-    "start:gateway": "node dist/services/gateway.js"
+    "start:gateway": "node dist/services/gateway.js",
+    "health": "powershell -File health-check.ps1"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",

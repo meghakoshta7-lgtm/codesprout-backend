@@ -82,7 +82,7 @@ router.post('/init', (req: AuthRequest, res: Response) => {
   });
 });
 
-router.post('/verify', (req: AuthRequest, res: Response) => {
+router.post('/verify', async (req: AuthRequest, res: Response) => {
   const { utr, payment_id } = req.body;
   const userId = req.user!.id;
 
@@ -121,7 +121,7 @@ router.post('/verify', (req: AuthRequest, res: Response) => {
     sendPremiumNotification(userId);
     const user = getUserById(userId);
     if (user) {
-      sendSubscriptionEmail(user.email, user.name, 'Premium', new Date(newSub.end_date!), payment.amount);
+      await sendSubscriptionEmail(user.email, user.name, 'Premium', new Date(newSub.end_date!), payment.amount);
     }
   } catch (e) { console.error('[payments] premium notif/email failed:', e); }
 
@@ -161,7 +161,7 @@ router.get('/requests', (req: AuthRequest, res: Response) => {
   res.json(paymentRequests);
 });
 
-router.post('/admin-verify', (req: AuthRequest, res: Response) => {
+router.post('/admin-verify', async (req: AuthRequest, res: Response) => {
   if (req.user?.role !== 'admin') {
     return res.status(403).json({ error: 'Admin only' });
   }
@@ -187,7 +187,7 @@ router.post('/admin-verify', (req: AuthRequest, res: Response) => {
     try {
       sendPremiumNotification(payment.user_id);
       const user = getUserById(payment.user_id);
-      if (user) sendSubscriptionEmail(user.email, user.name, 'Premium', new Date(newSub.end_date!), payment.amount);
+      if (user) await sendSubscriptionEmail(user.email, user.name, 'Premium', new Date(newSub.end_date!), payment.amount);
     } catch (e) { console.error('[payments] premium notif/email failed:', e); }
 
     return res.json({ success: true, message: 'Payment verified by admin' });
