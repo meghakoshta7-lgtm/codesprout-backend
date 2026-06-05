@@ -1,0 +1,123 @@
+export const theme = {
+  colors: {
+    primary: {
+      50: '#EDE9FE',
+      100: '#DDD6FE',
+      200: '#C4B5FD',
+      300: '#A78BFA',
+      400: '#8B5CF6',
+      500: '#7C6CF6',
+      600: '#6D5CE7',
+      700: '#5B4CD4',
+      800: '#4C3FBF',
+      900: '#3D32A6',
+      950: '#2D247A',
+    },
+    success: {
+      50: '#ECFDF5',
+      100: '#D1FAE5',
+      500: '#10B981',
+      600: '#059669',
+    },
+    warning: {
+      50: '#FFFBEB',
+      100: '#FEF3C7',
+      500: '#F59E0B',
+      600: '#D97706',
+    },
+    danger: {
+      50: '#FEF2F2',
+      100: '#FEE2E2',
+      500: '#EF4444',
+      600: '#DC2626',
+    },
+    info: {
+      50: '#F0F9FF',
+      100: '#E0F2FE',
+      500: '#0EA5E9',
+      600: '#0284C7',
+    },
+    dark: {
+      50: '#94A3B8',
+      100: '#64748B',
+      200: '#475569',
+      300: '#334155',
+      400: '#1E293B',
+      500: '#111827',
+      600: '#0B1020',
+      700: '#060810',
+      800: '#030408',
+      900: '#000000',
+    },
+    background: '#0B1020',
+    surface: '#111827',
+  },
+  typography: {
+    fontFamily: {
+      sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+    },
+    fontSize: {
+      hero: '64px',
+      sectionTitle: '36px',
+      cardTitle: '20px',
+      body: '16px',
+      caption: '14px',
+    },
+    fontWeight: {
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+    },
+  },
+  spacing: {
+    unit: '8px',
+    xs: '4px',
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '32px',
+    '2xl': '48px',
+    '3xl': '64px',
+  },
+  borderRadius: {
+    sm: '8px',
+    md: '12px',
+    lg: '16px',
+    xl: '20px',
+    '2xl': '24px',
+    full: '9999px',
+  },
+  shadows: {
+    sm: '0 1px 2px 0 rgb(0 0 0 / 0.3)',
+    card: '0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3)',
+    'card-hover': '0 10px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3)',
+    nav: '0 1px 3px 0 rgb(0 0 0 / 0.3)',
+    glow: '0 0 30px rgb(124, 108, 246 / 0.3)',
+  },
+  pageThemes: {
+    marketing: {
+      background: 'bg-[#0B1020]',
+      typography: 'text-white',
+      spacing: 'py-20',
+    },
+    learning: {
+      background: 'bg-[#0B1020]',
+      typography: 'text-white',
+      spacing: 'py-8',
+    },
+    dashboard: {
+      background: 'bg-[#0B1020]',
+      typography: 'text-white',
+      spacing: 'py-6',
+    },
+    compiler: {
+      background: 'bg-[#0B1020]',
+      typography: 'text-white',
+      spacing: 'py-0',
+    },
+  },
+} as const;
+
+export type Theme = typeof theme;

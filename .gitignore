@@ -29,3 +29,5 @@ coverage/
 .parcel-cache/
 .eslintcache
 install-compilers.ps1
+.vite
+*.local
