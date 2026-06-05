@@ -12,6 +12,7 @@ import {
   useRazorpayStatus, useRazorpayCheckout,
 } from '../hooks/usePayment';
 import type { PaymentVerify } from '../types/payment';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 import toast from 'react-hot-toast';
 
 const STEPS = ['Payment', 'UTR', 'Verify'] as const;
@@ -46,7 +47,7 @@ export default function PaymentPage() {
 
   useEffect(() => {
     if (status?.status === 'verified') {
-      localStorage.setItem('subscription', 'premium');
+      subscriptionStorage.set('premium', status as any);
       setVerified(true);
       setStep(2);
     }

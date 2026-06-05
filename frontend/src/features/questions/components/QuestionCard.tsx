@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Lock } from 'lucide-react';
 import type { Question } from '../types/question';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 
 const diffBorder: Record<string, string> = {
   Easy: 'border-l-emerald-400',
@@ -16,7 +17,7 @@ const diffPill: Record<string, string> = {
 };
 
 export default function QuestionCard({ question, index }: { question: Question; index: number }) {
-  const isPremium = localStorage.getItem('subscription') === 'premium';
+  const isPremium = subscriptionStorage.isPremium();
   const isLocked = !isPremium && question.difficulty !== 'Easy';
   const borderColor = diffBorder[question.difficulty] || diffBorder.Easy;
   const pillColor = diffPill[question.difficulty] || diffPill.Easy;

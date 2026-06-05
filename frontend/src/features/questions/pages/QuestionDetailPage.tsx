@@ -5,6 +5,7 @@ import { useQuestion } from '../hooks/useQuestions';
 import DifficultyBadge from '../components/DifficultyBadge';
 import CodeEditor from '@/features/practice/components/CodeEditor';
 import { bookmarksApi } from '@/features/bookmarks/api/bookmarksApi';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 import toast from 'react-hot-toast';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { communityApi } from '@/features/community/api/communityApi';
@@ -45,7 +46,7 @@ export default function QuestionDetailPage() {
 
   const { question, loading, requiresPremium, lockedInfo } = useQuestion(slug || '');
   const [bookmarked, setBookmarked] = useState(false);
-  const isPremium = localStorage.getItem('subscription') === 'premium';
+  const isPremium = subscriptionStorage.isPremium();
   const [notes, setNotes] = useState('');
   const [showNotes, setShowNotes] = useState(false);
   const [savedNotes, setSavedNotes] = useState('');

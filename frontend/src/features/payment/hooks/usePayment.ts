@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { paymentApi } from '../api/paymentApi';
 import type { PaymentInit, PaymentStatus, PaymentVerify, RazorpayOrder, RazorpayVerifyResponse } from '../types/payment';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 import toast from 'react-hot-toast';
 
 export function usePaymentInit() {
@@ -32,9 +33,8 @@ export function usePaymentVerify() {
     try {
       const res = await paymentApi.verify(utr, paymentId);
       toast.success(res.data.message);
-      localStorage.setItem('subscription', 'premium');
       if (res.data.subscription) {
-        localStorage.setItem('subscription_data', JSON.stringify(res.data.subscription));
+        subscriptionStorage.set('premium', res.data.subscription as any);
       }
       return res.data;
     } catch (err: any) {
@@ -156,9 +156,8 @@ export function useRazorpayCheckout() {
                 payment_id: order.payment_id,
               });
               toast.success(verifyRes.data.message);
-              localStorage.setItem('subscription', 'premium');
               if (verifyRes.data.subscription) {
-                localStorage.setItem('subscription_data', JSON.stringify(verifyRes.data.subscription));
+                subscriptionStorage.set('premium', verifyRes.data.subscription as any);
               }
               resolve(verifyRes.data);
             } catch (err: any) {

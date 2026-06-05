@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 
 const api = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL || ''}/api`,
@@ -19,6 +20,7 @@ api.interceptors.response.use(
     if (err.response?.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
+      subscriptionStorage.clear();
       window.location.href = '/login';
     }
     return Promise.reject(err);

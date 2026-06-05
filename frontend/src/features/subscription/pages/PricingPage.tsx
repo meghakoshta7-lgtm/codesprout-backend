@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { Crown, Shield, Zap, Sparkles, Check, Calendar, ArrowRight, Star, Infinity, Lock, Code2, Brain, BarChart3, Lightbulb, Target, RefreshCw, ChevronRight } from 'lucide-react';
 import type { PricingPlan } from '../types/subscription';
 import { subscriptionApi } from '../api/subscriptionApi';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 
 function formatDate(dateStr: string): string {
   if (!dateStr) return '';
@@ -52,12 +53,10 @@ export default function PricingPage() {
   const [subData, setSubData] = useState<SubData | null>(null);
 
   useEffect(() => {
-    const isPremium = localStorage.getItem('subscription') === 'premium';
-    if (isPremium) {
-      try {
-        const raw = localStorage.getItem('subscription_data');
-        if (raw) { setSubData(JSON.parse(raw)); return; }
-      } catch { /* ignore */ }
+    const cached = subscriptionStorage.get();
+    if (cached && subscriptionStorage.isPremium()) {
+      setSubData(cached);
+      return;
     }
 
     const token = localStorage.getItem('token');
@@ -66,8 +65,7 @@ export default function PricingPage() {
       .then((res) => {
         if (res.data && res.data.plan === 'premium') {
           setSubData(res.data);
-          localStorage.setItem('subscription', 'premium');
-          localStorage.setItem('subscription_data', JSON.stringify(res.data));
+          subscriptionStorage.set('premium', res.data);
         }
       })
       .catch(() => {});

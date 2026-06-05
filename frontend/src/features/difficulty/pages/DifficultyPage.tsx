@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Crown, Check, Lock, Sparkles, Code2, BarChart3 } from 'lucide-react';
 import { useQuestions } from '@/features/questions/hooks/useQuestions';
 import QuestionCard from '@/features/questions/components/QuestionCard';
+import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 
 const difficultyMeta: Record<string, { color: string; title: string; desc: string; gradient: string }> = {
   easy: { color: 'success', title: 'Easy', desc: 'Basic problems to build foundation', gradient: 'from-success-500/10 via-[#0B1020] to-success-600/10' },
@@ -29,7 +30,7 @@ export default function DifficultyPage() {
   const level = location.pathname.replace('/', '');
   const meta = difficultyMeta[level] || difficultyMeta.easy;
   const { questions, loading } = useQuestions({ difficulty: level });
-  const isPremium = localStorage.getItem('subscription') === 'premium';
+  const isPremium = subscriptionStorage.isPremium();
 
   if (!isPremium && level !== 'easy') {
     return (
