@@ -142,8 +142,16 @@ export function useRazorpayCheckout() {
         const finalize = async (data: RazorpayVerifyResponse | null) => {
           if (resolved) return;
           resolved = true;
+          
           if (data?.subscription) {
+            // Save to subscription storage
             await subscriptionStorage.set('premium', data.subscription as any);
+            
+            // Dispatch custom event to notify other components (Dashboard, Pricing, etc)
+            window.dispatchEvent(new CustomEvent('subscription_updated', { 
+              detail: { plan: 'premium', subscription: data.subscription } 
+            }));
+            
             toast.success(data.message || 'Payment verified! Premium activated.');
           }
           resolve(data);
@@ -193,15 +201,25 @@ export function useRazorpayCheckout() {
                 razorpay_signature: response.razorpay_signature,
                 payment_id: order.payment_id,
               });
+              
+              // Success from API - directly finalize with verified data
               await finalize(verifyRes.data);
+              
+              // Also start polling in background as fallback (in case API response is delayed)
+              // This ensures subscription is definitely synced within 2-10 seconds
+              pollBackend();
             } catch (err: any) {
               toast.error(err.response?.data?.error || 'Payment verification failed');
-              finalize(null);
+              // If verification fails, still try polling backend
+              pollBackend();
             }
           },
           modal: {
             ondismiss: () => {
-              pollBackend();
+              // Modal dismissed - start polling to check if payment was completed
+              if (!resolved) {
+                pollBackend();
+              }
             },
           },
         };

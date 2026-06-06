@@ -67,16 +67,15 @@ export default function PricingPage() {
 function PricingContent() {
   const navigate = useNavigate();
   const [subData, setSubData] = useState<SubData | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  const fetchSub = useCallback(async () => {
-    const cached = await subscriptionStorage.get();
-    if (cached && subscriptionStorage.isPremiumSync()) {
-      setSubData(cached);
+  // Fetch subscription from backend (force fresh data)
+  const fetchSubFromApi = useCallback(async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setLoading(false);
       return;
     }
-
-    const token = localStorage.getItem('token');
-    if (!token) return;
     try {
       const res = await subscriptionApi.getStatus();
       if (res.data && res.data.plan === 'premium') {
@@ -85,20 +84,53 @@ function PricingContent() {
       } else {
         setSubData(null);
       }
-    } catch { setSubData(null); }
+    } catch (err) {
+      // If API fails, try to use cached data as fallback
+      const cached = await subscriptionStorage.get();
+      if (cached && cached.plan === 'premium') {
+        setSubData(cached);
+      } else {
+        setSubData(null);
+      }
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  useEffect(() => { fetchSub(); }, [fetchSub]);
-
+  // Fetch on component mount - ALWAYS force fresh data
   useEffect(() => {
-    const onStorage = (e: StorageEvent) => { if (e.key?.startsWith('subscription') || e.key === 'user') fetchSub(); };
-    window.addEventListener('codesprout_user_change', fetchSub);
+    setLoading(true);
+    fetchSubFromApi();
+  }, [fetchSubFromApi]);
+
+  // Listen for subscription updates from payment flow
+  useEffect(() => {
+    const handleSubscriptionUpdate = (event: CustomEvent) => {
+      if (event.detail?.subscription) {
+        setSubData(event.detail.subscription);
+      }
+    };
+
+    window.addEventListener('subscription_updated' as any, handleSubscriptionUpdate as any);
+    return () => {
+      window.removeEventListener('subscription_updated' as any, handleSubscriptionUpdate as any);
+    };
+  }, []);
+
+  // Also listen to storage changes (for multi-tab scenarios)
+  useEffect(() => {
+    const onStorage = (e: StorageEvent) => {
+      if (e.key?.startsWith('subscription') || e.key === 'user') {
+        fetchSubFromApi();
+      }
+    };
+    window.addEventListener('codesprout_user_change', fetchSubFromApi);
     window.addEventListener('storage', onStorage);
     return () => {
-      window.removeEventListener('codesprout_user_change', fetchSub);
+      window.removeEventListener('codesprout_user_change', fetchSubFromApi);
       window.removeEventListener('storage', onStorage);
     };
-  }, [fetchSub]);
+  }, [fetchSubFromApi]);
 
   const isPremium = !!subData && subData.plan === 'premium';
 
