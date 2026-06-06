@@ -4,6 +4,7 @@ import { useQuestions } from '../hooks/useQuestions';
 import QuestionCard from '../components/QuestionCard';
 import SearchBar from '@/shared/components/SearchBar';
 import { Filter, Code2, BookOpen, Zap, Trophy } from 'lucide-react';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 const difficulties = ['All', 'Easy', 'Medium', 'Hard'] as const;
 
@@ -25,6 +26,21 @@ function SkeletonList() {
 }
 
 export default function QuestionsPage() {
+  return (
+    <>
+      <SEO
+        title="Coding Interview Questions - Easy, Medium, Hard | CodeSprout"
+        description="Solve 1000+ curated coding interview questions filtered by difficulty and topic. Practice arrays, strings, trees, graphs, dynamic programming and more on CodeSprout."
+        path="/questions"
+        keywords={['coding questions', 'leetcode practice', 'easy medium hard', 'interview questions', 'array questions', 'string questions', 'tree problems', 'graph problems', 'DP problems']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Questions', url: '/questions' }])}
+      />
+      <QuestionsContent />
+    </>
+  );
+}
+
+function QuestionsContent() {
   const [difficulty, setDifficulty] = useState<string>('All');
   const { questions, loading } = useQuestions();
   const ref = useRef(null);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Medal, Award, Flame, Target, Crown, Sparkles, Loader2 } from 'lucide-react';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 interface LeaderboardEntry {
   rank: number;
@@ -47,6 +48,21 @@ function initials(name: string): string {
 }
 
 export default function LeaderboardPage() {
+  return (
+    <>
+      <SEO
+        title="Leaderboard - Top Coders on CodeSprout"
+        description="See where you rank among the top coders on CodeSprout. Compete on the global leaderboard, climb the ranks, and track your DSA preparation progress."
+        path="/leaderboard"
+        keywords={['coding leaderboard', 'top coders', 'DSA rankings', 'competitive coding']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Leaderboard', url: '/leaderboard' }])}
+      />
+      <LeaderboardContent />
+    </>
+  );
+}
+
+function LeaderboardContent() {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [totalUsers, setTotalUsers] = useState<number>(0);
   const [loading, setLoading] = useState(true);

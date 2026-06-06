@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { useGameProgress } from '../hooks/useGameProgress';
 import { BADGE_LIBRARY, STICKER_LIBRARY } from '../data/gamesData';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 interface Topic { id: string; name: string; }
 
@@ -90,6 +91,21 @@ function BadgeShelf({ earned }: { earned: string[] }) {
 }
 
 export default function GamesLandingPage() {
+  return (
+    <>
+      <SEO
+        title="Coding Games - Learn DSA Through Fun Challenges | CodeSprout"
+        description="Gamified coding practice with unlockable levels, badges, and stickers. Master DSA topics through bite-sized challenges that make interview prep fun and addictive."
+        path="/games"
+        keywords={['coding games', 'gamified DSA', 'coding challenges', 'learn coding fun']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Games', url: '/games' }])}
+      />
+      <GamesContent />
+    </>
+  );
+}
+
+function GamesContent() {
   const [topics, setTopics] = useState<Topic[]>([]);
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState<'topics' | 'stickers' | 'badges'>('topics');

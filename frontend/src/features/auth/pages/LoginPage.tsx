@@ -5,6 +5,7 @@ import { BookOpen, Mail, Lock, Eye, EyeOff, Sparkles, CheckCircle, X, Code2, Zap
 import { useLogin, useRegister } from '../hooks/useAuth';
 import { useGoogleAuth } from '../hooks/useGoogleAuth';
 import toast from 'react-hot-toast';
+import SEO from '@/shared/components/SEO';
 
 function GoogleIcon() {
   return (
@@ -18,6 +19,21 @@ function GoogleIcon() {
 }
 
 export default function LoginPage() {
+  return (
+    <>
+      <SEO
+        title="Login or Sign Up - Start Your Coding Journey | CodeSprout"
+        description="Sign in to CodeSprout to track progress, bookmark questions, and access premium content. Use email or Google sign-in to get started in seconds."
+        path="/login"
+        keywords={['login', 'sign up', 'CodeSprout account']}
+        noindex
+      />
+      <LoginContent />
+    </>
+  );
+}
+
+function LoginContent() {
   const location = useLocation();
   const navigate = useNavigate();
   const prefilled = (location.state as { prefilledEmail?: string; prefilledPassword?: string; fromSignup?: boolean } | null) || null;

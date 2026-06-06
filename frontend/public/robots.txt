@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /bookmarks
+Disallow: /payment
+Disallow: /communities
+Disallow: /login
+
+Sitemap: https://codesprout.com/sitemap.xml

@@ -4,6 +4,7 @@ import { ArrowLeft, Crown, Check, Lock, Sparkles, Code2, BarChart3 } from 'lucid
 import { useQuestions } from '@/features/questions/hooks/useQuestions';
 import QuestionCard from '@/features/questions/components/QuestionCard';
 import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 const difficultyMeta: Record<string, { color: string; title: string; desc: string; gradient: string }> = {
   easy: { color: 'success', title: 'Easy', desc: 'Basic problems to build foundation', gradient: 'from-success-500/10 via-[#0B1020] to-success-600/10' },
@@ -26,6 +27,34 @@ function SkeletonList() {
 }
 
 export default function DifficultyPage() {
+  const location = useLocation();
+  const level = location.pathname.replace('/', '');
+  const meta = difficultyMeta[level] || difficultyMeta.easy;
+  const titles: Record<string, string> = {
+    easy: 'Easy Coding Interview Questions',
+    medium: 'Medium Coding Interview Questions',
+    hard: 'Hard Coding Interview Questions',
+  };
+  const descriptions: Record<string, string> = {
+    easy: 'Start your DSA journey with easy coding interview questions. Perfect for beginners building a strong foundation in arrays, strings, and basic data structures.',
+    medium: 'Practice medium-level coding interview questions asked at top tech companies. Master common patterns like sliding window, two pointers, BFS, DFS and dynamic programming.',
+    hard: 'Challenge yourself with hard coding interview questions from FAANG and top product companies. Advanced data structures, complex algorithms and system-level thinking.',
+  };
+  return (
+    <>
+      <SEO
+        title={titles[level] || 'Coding Interview Questions'}
+        description={descriptions[level] || 'Practice coding interview questions by difficulty level on CodeSprout.'}
+        path={`/${level}`}
+        keywords={[`${level} coding questions`, `${level} DSA`, `${level} leetcode`, 'interview prep']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: meta.title, url: `/${level}` }])}
+      />
+      <DifficultyContent />
+    </>
+  );
+}
+
+function DifficultyContent() {
   const location = useLocation();
   const level = location.pathname.replace('/', '');
   const meta = difficultyMeta[level] || difficultyMeta.easy;

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search, Layers, Hash, Target, GitBranch, Network, Zap, Puzzle, RefreshCw, Maximize2, CircleDot, MoveVertical, Link2, Database, Trello, Braces, Code2, BookOpen, Sparkles, ArrowRight, Filter } from 'lucide-react';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 const patternIcons: Record<string, any> = {
   'HashMap Lookup': Hash, 'Hash Set': Hash, 'HashMap': Hash, 'Dual HashMap': Hash,
@@ -65,6 +66,21 @@ function categorizePattern(name: string): string {
 }
 
 export default function PatternsPage() {
+  return (
+    <>
+      <SEO
+        title="Coding Patterns - Sliding Window, Two Pointers, DP & More"
+        description="Master 16+ coding patterns including sliding window, two pointers, binary search, dynamic programming, BFS, DFS, backtracking, greedy and more. Each pattern includes cheat sheet, recognition signals, time complexity and code templates."
+        path="/patterns"
+        keywords={['sliding window', 'two pointers', 'binary search', 'dynamic programming', 'BFS', 'DFS', 'backtracking', 'greedy', 'monotonic stack', 'heap', 'trie', 'union find', 'graph patterns']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Patterns', url: '/patterns' }])}
+      />
+      <PatternsContent />
+    </>
+  );
+}
+
+function PatternsContent() {
   const [patterns, setPatterns] = useState<{ name: string; count: number; questions: any[] }[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');

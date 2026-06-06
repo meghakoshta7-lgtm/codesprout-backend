@@ -4,8 +4,36 @@ import { ArrowLeft, BookOpen, ChevronRight, Search, Filter, Hash } from 'lucide-
 import { useState, useMemo } from 'react';
 import { useTopic } from '../hooks/useTopics';
 import { getDifficultyColor } from '@/shared/utils/helpers';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 export default function TopicDetailPage() {
+  return (
+    <>
+      <TopicDetailSEO />
+      <TopicDetailContent />
+    </>
+  );
+}
+
+function TopicDetailSEO() {
+  const { slug } = useParams<{ slug: string }>();
+  const display = (slug || '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  return (
+    <SEO
+      title={`${display} Coding Questions - Practice & Master ${display} | CodeSprout`}
+      description={`Practice ${display} coding interview questions on CodeSprout. Curated problems with pattern-based cheat sheets, examples, constraints, and time complexity analysis.`}
+      path={`/topics/${slug}`}
+      keywords={[`${display.toLowerCase()} questions`, `${display.toLowerCase()} DSA`, `${display.toLowerCase()} leetcode`, 'coding interview practice']}
+      jsonLd={buildBreadcrumbJsonLd([
+        { name: 'Home', url: '/' },
+        { name: 'Topics', url: '/topics' },
+        { name: display, url: `/topics/${slug}` },
+      ])}
+    />
+  );
+}
+
+function TopicDetailContent() {
   const { slug } = useParams<{ slug: string }>();
   const { topic, loading } = useTopic(slug || '');
   const [searchQuery, setSearchQuery] = useState('');

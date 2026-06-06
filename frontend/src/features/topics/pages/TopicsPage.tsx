@@ -6,6 +6,7 @@ import TopicPopup from '../components/TopicPopup';
 import SearchBar from '@/shared/components/SearchBar';
 import { Sparkles, BookOpen, Code2, Zap, Target } from 'lucide-react';
 import type { Topic } from '../types/topic';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 function SkeletonGrid() {
   return (
@@ -22,6 +23,21 @@ function SkeletonGrid() {
 }
 
 export default function TopicsPage() {
+  return (
+    <>
+      <SEO
+        title="DSA Topics - Arrays, Strings, Trees, Graphs, DP & More"
+        description="Browse all DSA topics on CodeSprout. Master arrays, strings, linked lists, trees, graphs, dynamic programming, backtracking and more with curated problems and cheat sheets."
+        path="/topics"
+        keywords={['DSA topics', 'arrays', 'strings', 'linked list', 'trees', 'graphs', 'dynamic programming', 'backtracking', 'stack', 'queue', 'heap', 'greedy', 'binary search']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Topics', url: '/topics' }])}
+      />
+      <TopicsContent />
+    </>
+  );
+}
+
+function TopicsContent() {
   const { topics, loading } = useTopics();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });

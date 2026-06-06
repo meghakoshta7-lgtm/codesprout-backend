@@ -8,6 +8,7 @@ import { bookmarksApi } from '@/features/bookmarks/api/bookmarksApi';
 import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 import { useUser } from '@/shared/hooks/useUser';
 import toast from 'react-hot-toast';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { communityApi } from '@/features/community/api/communityApi';
 import type { Answer, Discussion } from '@/features/community/types/community';
@@ -15,9 +16,24 @@ import type { Answer, Discussion } from '@/features/community/types/community';
 type MobileTab = 'description' | 'editor';
 
 export default function QuestionDetailPage() {
+  return (
+    <>
+      <SEO
+        title="Solve Coding Interview Question | CodeSprout"
+        description="Read problem statement, examples, constraints, and approach. Practice in our in-browser code editor with test cases and complexity analysis."
+        path={`/questions/${typeof window !== 'undefined' ? window.location.pathname.split('/').pop() || '' : ''}`}
+        keywords={['coding problem', 'algorithm practice', 'solve DSA problem']}
+        noindex
+      />
+      <QuestionDetailContent />
+    </>
+  );
+}
+
+function QuestionDetailContent() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const token = localStorage.getItem('token');
+  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
   const user = useUser();
 
   useEffect(() => {

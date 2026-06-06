@@ -1,31 +1,33 @@
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '@/shared/components/Layout';
 import ProtectedRoute from '@/shared/components/ProtectedRoute';
 import TopicsPage from '@/features/topics/pages/TopicsPage';
-import TopicDetailPage from '@/features/topics/pages/TopicDetailPage';
 import QuestionsPage from '@/features/questions/pages/QuestionsPage';
-import QuestionDetailPage from '@/features/questions/pages/QuestionDetailPage';
+import PatternsPage from '@/features/patterns/pages/PatternsPage';
 import DifficultyPage from '@/features/difficulty/pages/DifficultyPage';
 import LoginPage from '@/features/auth/pages/LoginPage';
-import PatternsPage from '@/features/patterns/pages/PatternsPage';
-import PatternDetailPage from '@/features/patterns/pages/PatternDetailPage';
-import DashboardPage from '@/features/dashboard/pages/DashboardPage';
-import BookmarksPage from '@/features/bookmarks/pages/BookmarksPage';
 import PricingPage from '@/features/subscription/pages/PricingPage';
-import PaymentPage from '@/features/payment/pages/PaymentPage';
-import InterviewPrepPage from '@/features/interview/pages/InterviewPrepPage';
 import LeaderboardPage from '@/features/leaderboard/pages/LeaderboardPage';
-import CommunitiesPage from '@/features/community/pages/CommunitiesPage';
-import CommunityDetailPage from '@/features/community/pages/CommunityDetailPage';
-import AdminDashboard from '@/features/admin/pages/AdminDashboard';
-import ManageQuestions from '@/features/admin/pages/ManageQuestions';
-import AddQuestionPage from '@/features/admin/pages/AddQuestionPage';
-import ManageUsers from '@/features/admin/pages/ManageUsers';
+import InterviewPrepPage from '@/features/interview/pages/InterviewPrepPage';
+import GamesLandingPage from '@/features/games/pages/GamesLandingPage';
 import HeroSection from '@/shared/components/HeroSection';
 import FAQ from '@/shared/components/FAQ';
-import GamesLandingPage from '@/features/games/pages/GamesLandingPage';
-import GameTopicPage from '@/features/games/pages/GameTopicPage';
-import GamePlayPage from '@/features/games/pages/GamePlayPage';
+
+const TopicDetailPage = lazy(() => import('@/features/topics/pages/TopicDetailPage'));
+const QuestionDetailPage = lazy(() => import('@/features/questions/pages/QuestionDetailPage'));
+const PatternDetailPage = lazy(() => import('@/features/patterns/pages/PatternDetailPage'));
+const DashboardPage = lazy(() => import('@/features/dashboard/pages/DashboardPage'));
+const BookmarksPage = lazy(() => import('@/features/bookmarks/pages/BookmarksPage'));
+const PaymentPage = lazy(() => import('@/features/payment/pages/PaymentPage'));
+const CommunitiesPage = lazy(() => import('@/features/community/pages/CommunitiesPage'));
+const CommunityDetailPage = lazy(() => import('@/features/community/pages/CommunityDetailPage'));
+const GameTopicPage = lazy(() => import('@/features/games/pages/GameTopicPage'));
+const GamePlayPage = lazy(() => import('@/features/games/pages/GamePlayPage'));
+const AdminDashboard = lazy(() => import('@/features/admin/pages/AdminDashboard'));
+const ManageQuestions = lazy(() => import('@/features/admin/pages/ManageQuestions'));
+const AddQuestionPage = lazy(() => import('@/features/admin/pages/AddQuestionPage'));
+const ManageUsers = lazy(() => import('@/features/admin/pages/ManageUsers'));
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
@@ -36,6 +38,11 @@ import {
   ZapIcon, Sparkles, Code2, Eye, TrendingUp, Lightbulb, BookOpen, BarChart3,
   Play, CheckCircle, ChevronRight, ChevronLeft, FileText, Monitor, Shield, Gamepad2
 } from 'lucide-react';
+import SEO, {
+  buildOrganizationJsonLd,
+  buildSoftwareApplicationJsonLd,
+  buildFaqJsonLd,
+} from '@/shared/components/SEO';
 
 const topicIcons: Record<string, React.ReactNode> = {
   arrays: <Database className="w-5 h-5" />,
@@ -288,6 +295,21 @@ function HomePage() {
 
   return (
     <>
+      <SEO
+        title="CodeSprout - Master Coding Patterns & Crack DSA Interviews"
+        description="Master coding interview patterns with 1000+ curated DSA questions, pattern-based cheat sheets, step-by-step visualizer, and progress tracking. Crack FAANG interviews faster."
+        path="/"
+        keywords={['coding patterns', 'DSA practice', 'interview prep', 'FAANG', 'system design', 'coding cheat sheets', 'algorithm practice']}
+        jsonLd={[
+          buildOrganizationJsonLd(),
+          buildSoftwareApplicationJsonLd(),
+          buildFaqJsonLd([
+            { question: 'What is CodeSprout?', answer: 'CodeSprout is a pattern-based DSA learning platform with 1000+ coding interview questions, cheat sheets, and a code visualizer to help you crack FAANG interviews.' },
+            { question: 'Is CodeSprout free?', answer: 'Yes, CodeSprout offers free access to a large set of coding questions and cheat sheets. Premium plans unlock hard problems, advanced analytics, and unlimited practice.' },
+            { question: 'Which companies does CodeSprout prepare me for?', answer: 'CodeSprout helps you prepare for coding interviews at Google, Amazon, Microsoft, Meta, Apple, Netflix, Adobe, Uber, and other top tech companies.' },
+          ]),
+        ]}
+      />
       <HeroSection />
 
       <div className="relative" style={{ backgroundColor: '#0B1020' }}>
@@ -664,6 +686,18 @@ function HomePage() {
   );
 }
 
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center" role="status" aria-label="Loading page">
+    <div className="w-10 h-10 border-2 border-white/20 border-t-purple-400 rounded-full animate-spin" />
+  </div>
+);
+
+const lazyRoute = (Comp: React.LazyExoticComponent<any>) => (
+  <Suspense fallback={<PageLoader />}>
+    <Comp />
+  </Suspense>
+);
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -671,11 +705,11 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'topics', element: <TopicsPage /> },
-      { path: 'topics/:slug', element: <TopicDetailPage /> },
+      { path: 'topics/:slug', element: lazyRoute(TopicDetailPage) },
       { path: 'questions', element: <QuestionsPage /> },
-      { path: 'questions/:slug', element: <QuestionDetailPage /> },
+      { path: 'questions/:slug', element: lazyRoute(QuestionDetailPage) },
       { path: 'patterns', element: <PatternsPage /> },
-      { path: 'patterns/:name', element: <PatternDetailPage /> },
+      { path: 'patterns/:name', element: lazyRoute(PatternDetailPage) },
       { path: 'easy', element: <DifficultyPage /> },
       { path: 'medium', element: <DifficultyPage /> },
       { path: 'hard', element: <DifficultyPage /> },
@@ -683,24 +717,24 @@ export const router = createBrowserRouter([
       { path: 'pricing', element: <PricingPage /> },
       { path: 'interview-prep', element: <InterviewPrepPage /> },
       { path: 'leaderboard', element: <LeaderboardPage /> },
-      { path: 'communities', element: <ProtectedRoute><CommunitiesPage /></ProtectedRoute> },
-      { path: 'communities/:id', element: <ProtectedRoute><CommunityDetailPage /></ProtectedRoute> },
-      { path: 'payment', element: <ProtectedRoute><PaymentPage /></ProtectedRoute> },
-      { path: 'dashboard', element: <ProtectedRoute><DashboardPage /></ProtectedRoute> },
-      { path: 'bookmarks', element: <ProtectedRoute><BookmarksPage /></ProtectedRoute> },
+      { path: 'communities', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><CommunitiesPage /></Suspense></ProtectedRoute> },
+      { path: 'communities/:id', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><CommunityDetailPage /></Suspense></ProtectedRoute> },
+      { path: 'payment', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><PaymentPage /></Suspense></ProtectedRoute> },
+      { path: 'dashboard', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><DashboardPage /></Suspense></ProtectedRoute> },
+      { path: 'bookmarks', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><BookmarksPage /></Suspense></ProtectedRoute> },
       { path: 'games', element: <GamesLandingPage /> },
-      { path: 'games/:topic', element: <GameTopicPage /> },
-      { path: 'games/:topic/:level', element: <GamePlayPage /> },
+      { path: 'games/:topic', element: lazyRoute(GameTopicPage) },
+      { path: 'games/:topic/:level', element: lazyRoute(GamePlayPage) },
     ],
   },
   {
     path: '/admin',
     element: <ProtectedRoute adminOnly><Layout /></ProtectedRoute>,
     children: [
-      { index: true, element: <AdminDashboard /> },
-      { path: 'questions', element: <ManageQuestions /> },
-      { path: 'add-question', element: <AddQuestionPage /> },
-      { path: 'users', element: <ManageUsers /> },
+      { index: true, element: lazyRoute(AdminDashboard) },
+      { path: 'questions', element: lazyRoute(ManageQuestions) },
+      { path: 'add-question', element: lazyRoute(AddQuestionPage) },
+      { path: 'users', element: lazyRoute(ManageUsers) },
     ],
   },
 ]);

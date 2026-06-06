@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { Crown, Shield, Zap, Sparkles, Check, Calendar, ArrowRight, Star, Infinity, Lock, Code2, Brain, BarChart3, Lightbulb, Target, RefreshCw, ChevronRight } from 'lucide-react';
 import type { PricingPlan } from '../types/subscription';
 import { subscriptionApi } from '../api/subscriptionApi';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
 
 function formatDate(dateStr: string): string {
@@ -49,6 +50,21 @@ const testimonials = [
 ];
 
 export default function PricingPage() {
+  return (
+    <>
+      <SEO
+        title="Pricing Plans - Unlock Premium DSA Prep | CodeSprout"
+        description="Choose a CodeSprout premium plan and unlock unlimited access to 1000+ coding questions, all patterns, hard problems, and advanced analytics. Affordable monthly and yearly plans."
+        path="/pricing"
+        keywords={['CodeSprout pricing', 'premium subscription', 'coding interview premium', 'DSA subscription plans']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Pricing', url: '/pricing' }])}
+      />
+      <PricingContent />
+    </>
+  );
+}
+
+function PricingContent() {
   const navigate = useNavigate();
   const [subData, setSubData] = useState<SubData | null>(null);
 

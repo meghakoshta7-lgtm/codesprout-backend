@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Layers, ArrowRight, CheckCircle, AlertTriangle, Clock, Database, Code2, BookOpen, Target } from 'lucide-react';
 import { PATTERN_DETAILS, type PatternDetail } from '../data/patternsData';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 const categoryColors: Record<string, string> = {
   'HashMap': 'from-violet-500 to-purple-500',
@@ -54,6 +55,33 @@ const buildGenericPattern = (name: string, categoryFromName: string): PatternDet
 });
 
 export default function PatternDetailPage() {
+  return (
+    <>
+      <PatternDetailSEO />
+      <PatternDetailContent />
+    </>
+  );
+}
+
+function PatternDetailSEO() {
+  const { name } = useParams<{ name: string }>();
+  const decoded = name ? decodeURIComponent(name) : '';
+  return (
+    <SEO
+      title={`${decoded} Pattern - Cheat Sheet & Practice | CodeSprout`}
+      description={`Master the ${decoded} coding pattern. Learn recognition signals, time complexity, code template, and practice curated ${decoded} interview questions.`}
+      path={`/patterns/${name}`}
+      keywords={[`${decoded} pattern`, `${decoded} DSA`, `${decoded} leetcode`, 'coding pattern cheat sheet']}
+      jsonLd={buildBreadcrumbJsonLd([
+        { name: 'Home', url: '/' },
+        { name: 'Patterns', url: '/patterns' },
+        { name: decoded, url: `/patterns/${name}` },
+      ])}
+    />
+  );
+}
+
+function PatternDetailContent() {
   const { name } = useParams<{ name: string }>();
   const decodedName = name ? decodeURIComponent(name) : '';
   const slug = useMemo(() => slugify(decodedName), [decodedName]);

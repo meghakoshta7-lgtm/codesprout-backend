@@ -8,6 +8,7 @@ import {
   Calendar, Bookmark, Hash, GitBranch, Network, Layers, Puzzle, RefreshCw,
   ChevronDown, ChevronUp, CircleDot, Loader2,
 } from 'lucide-react';
+import SEO, { buildBreadcrumbJsonLd } from '@/shared/components/SEO';
 
 const PATTERN_META: Record<string, { icon: any; color: string; topics: string[] }> = {
   'HashMap Lookup': { icon: Hash, color: 'from-blue-500 to-cyan-500', topics: ['Hashing', 'Arrays'] },
@@ -81,6 +82,21 @@ function getSolvedFromStorage(): string[] {
 }
 
 export default function InterviewPrepPage() {
+  return (
+    <>
+      <SEO
+        title="Interview Preparation - Crack FAANG & Top Tech Interviews"
+        description="Prepare for coding interviews at Google, Amazon, Microsoft, Meta, Apple, Netflix with company-specific questions, timed practice, and pattern-based study plan."
+        path="/interview-prep"
+        keywords={['interview preparation', 'FAANG interview', 'Google interview', 'Amazon interview', 'Microsoft interview', 'Meta interview', 'coding interview prep', 'company wise questions']}
+        jsonLd={buildBreadcrumbJsonLd([{ name: 'Home', url: '/' }, { name: 'Interview Prep', url: '/interview-prep' }])}
+      />
+      <InterviewPrepContent />
+    </>
+  );
+}
+
+function InterviewPrepContent() {
   const [questions, setQuestions] = useState<any[]>([]);
   const [topics, setTopics] = useState<any[]>([]);
   const [bookmarks, setBookmarks] = useState<any[]>([]);
