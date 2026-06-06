@@ -165,9 +165,9 @@ services:
       - key: FRONTEND_URL
         value: https://codesproutcom.vercel.app
       - key: RAZORPAY_KEY_ID
-        value: rzp_test_SyLqIGdftXBERR
+        value: rzp_test_SyMWCKfsjOGQW5
       - key: RAZORPAY_KEY_SECRET
-        value: vPVdqTG3SR5K1scPxDgDiVd0
+        value: D0NxcDeBux0pbG5RIpWS2ThQ
       - key: RAZORPAY_WEBHOOK_SECRET
         sync: false
     port: 10005
