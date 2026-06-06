@@ -14,9 +14,15 @@ app.use(cors({
 
 const globalLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 120,
+  max: 500,
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req) => req.method === 'OPTIONS' || req.path === '/health',
+  keyGenerator: (req: any) => {
+    const token = req.headers['authorization'];
+    if (token) return token;
+    return req.ip;
+  },
   message: { error: 'Too many requests, please try again later.' },
 });
 app.use(globalLimiter);
