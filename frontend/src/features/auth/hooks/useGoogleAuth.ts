@@ -18,6 +18,7 @@ export function useGoogleAuth() {
       const res = await authApi.google(credential);
       localStorage.setItem('token', res.data.token);
       await userStorage.set(res.data.user);
+      window.dispatchEvent(new Event('codesprout_user_change'));
       if (res.data.isNew) {
         toast.success('Account created with Google! Welcome 🎉');
       } else {

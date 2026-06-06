@@ -14,6 +14,10 @@ let cachedUserId: string | null = null;
 let cachedIdPromise: Promise<string | null> | null = null;
 
 const getUserId = (): string | null => cachedUserId;
+const resetUserId = () => {
+  cachedUserId = null;
+  cachedIdPromise = null;
+};
 const refreshUserId = (): Promise<string | null> => {
   if (cachedIdPromise) return cachedIdPromise;
   cachedIdPromise = (async () => {
@@ -23,6 +27,8 @@ const refreshUserId = (): Promise<string | null> => {
   })();
   return cachedIdPromise;
 };
+
+window.addEventListener('codesprout_user_change', resetUserId);
 
 const keysFor = (userId: string) => ({
   plan: `${PLAN_KEY}_${userId}`,

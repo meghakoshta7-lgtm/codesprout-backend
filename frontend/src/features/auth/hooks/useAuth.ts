@@ -15,6 +15,7 @@ export function useLogin() {
       const res = await authApi.login(payload);
       localStorage.setItem('token', res.data.token);
       await userStorage.set(res.data.user);
+      window.dispatchEvent(new Event('codesprout_user_change'));
       toast.success('Welcome back!');
       navigate('/');
     } catch (err: any) {
