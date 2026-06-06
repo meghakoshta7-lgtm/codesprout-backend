@@ -36,7 +36,8 @@ import {
   ArrowRight, Database, Braces, Hash, Link2, Layers, MoveVertical, Trello,
   GitBranch, TreePine, Network, Target, Puzzle, RefreshCw, Maximize2, Search,
   ZapIcon, Sparkles, Code2, Eye, TrendingUp, Lightbulb, BookOpen, BarChart3,
-  Play, CheckCircle, ChevronRight, ChevronLeft, FileText, Monitor, Shield, Gamepad2
+  Play, CheckCircle, ChevronRight, ChevronLeft, FileText, Monitor, Shield, Gamepad2,
+  Trophy, Crown, Flame
 } from 'lucide-react';
 import SEO, {
   buildOrganizationJsonLd,
@@ -264,6 +265,8 @@ function SectionTestimonials() {
 function HomePage() {
   const [popularQuestions, setPopularQuestions] = useState<any[]>([]);
   const [stats, setStats] = useState({ questions: 0, patterns: 0, topics: 0, users: 0 });
+  const [topCoders, setTopCoders] = useState<any[]>([]);
+  const [totalCoders, setTotalCoders] = useState(0);
 
   useEffect(() => {
     fetch('/api/questions')
@@ -278,6 +281,13 @@ function HomePage() {
         topics: d.total_topics || 0,
         users: d.total_users || 0,
       }))
+      .catch(() => {});
+    fetch('/api/leaderboard')
+      .then((r) => r.json())
+      .then((d) => {
+        setTopCoders((d.leaderboard || []).slice(0, 5));
+        setTotalCoders(d.total_users || 0);
+      })
       .catch(() => {});
   }, []);
 
@@ -523,50 +533,78 @@ function HomePage() {
         </section>
       </FadeInSection>
 
-      {/* Dashboard */}
+      {/* Top Coders */}
       <FadeInSection>
         <section className="relative py-20">
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold mb-4 border border-purple-500/20">
-                <BarChart3 className="w-3.5 h-3.5" /> Dashboard
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold mb-4 border border-amber-500/20">
+                <Trophy className="w-3.5 h-3.5" /> Top Coders
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Interview Readiness</h2>
-              <p className="text-slate-400 mt-2">Track your preparation with detailed analytics</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Leaderboard</h2>
+              <p className="text-slate-400 mt-2">{totalCoders > 0 ? `${totalCoders} coders competing` : 'See how you rank against the community'}</p>
             </div>
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-[#111827] border border-white/10 rounded-2xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-lg font-bold text-white">Overall Progress</h3>
-                    <p className="text-sm text-slate-400">Your interview readiness score</p>
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-[#0d1424] border border-white/10 rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-12 px-5 py-3 text-[11px] font-semibold uppercase tracking-wider text-white/40 border-b border-white/5">
+                  <div className="col-span-2 sm:col-span-1">Rank</div>
+                  <div className="col-span-6 sm:col-span-5">Coder</div>
+                  <div className="col-span-2 text-center">Solved</div>
+                  <div className="col-span-2 text-center hidden sm:block">Streak</div>
+                  <div className="col-span-2 sm:col-span-2 text-right">Points</div>
+                </div>
+                {topCoders.length === 0 ? (
+                  <div className="px-5 py-10 text-center text-white/40 text-sm">
+                    {Array.from({ length: 3 }).map((_, i) => (
+                      <div key={i} className="h-12 bg-white/[0.02] rounded-lg mb-2 animate-pulse" />
+                    ))}
                   </div>
-                  <div className="text-right">
-                    <div className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-500">72%</div>
-                    <div className="text-xs text-slate-400">Ready</div>
-                  </div>
-                </div>
-                <div className="w-full h-3 bg-white/10 rounded-full overflow-hidden mb-8">
-                  <div className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full" style={{ width: '72%' }} />
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { name: 'Arrays & Hashing', pct: 90, color: 'bg-success-500' },
-                    { name: 'Trees & BST', pct: 65, color: 'bg-warning-500' },
-                    { name: 'Graphs', pct: 30, color: 'bg-danger-500' },
-                    { name: 'Dynamic Programming', pct: 45, color: 'bg-info-500' },
-                  ].map((item) => (
-                    <div key={item.name}>
-                      <div className="flex items-center justify-between text-sm mb-1">
-                        <span className="text-white font-medium">{item.name}</span>
-                        <span className="text-slate-400 font-mono text-xs">{item.pct}%</span>
+                ) : (
+                  topCoders.map((coder, i) => {
+                    const isTop3 = coder.rank <= 3;
+                    const rankIcon = coder.rank === 1 ? <Crown className="w-4 h-4 text-amber-400" />
+                      : coder.rank === 2 ? <Crown className="w-4 h-4 text-slate-300" />
+                      : coder.rank === 3 ? <Crown className="w-4 h-4 text-orange-400" />
+                      : <span className="text-sm text-white/40 font-mono">#{coder.rank}</span>;
+                    const avatarColor = isTop3
+                      ? coder.rank === 1 ? 'from-amber-400 to-yellow-500' : coder.rank === 2 ? 'from-slate-300 to-slate-400' : 'from-orange-400 to-amber-500'
+                      : 'from-purple-500/40 to-violet-600/40';
+                    return (
+                      <div key={coder.user_id} className={`grid grid-cols-12 px-5 py-3.5 items-center text-sm border-b border-white/[0.04] last:border-b-0 transition-colors hover:bg-white/[0.03] ${isTop3 ? 'bg-amber-500/[0.04]' : ''}`}>
+                        <div className="col-span-2 sm:col-span-1 flex items-center">{rankIcon}</div>
+                        <div className="col-span-6 sm:col-span-5 flex items-center gap-3 min-w-0">
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-bold text-white shrink-0 bg-gradient-to-br ${avatarColor} ${isTop3 ? 'ring-2 ring-amber-500/20' : ''}`}>
+                            {(coder.user_name || 'A').slice(0, 2).toUpperCase()}
+                          </div>
+                          <span className="text-white font-medium truncate">{coder.user_name || 'Anonymous'}</span>
+                        </div>
+                        <div className="col-span-2 text-center">
+                          <span className="text-white/80 font-mono text-xs">{coder.solved}</span>
+                        </div>
+                        <div className="col-span-2 text-center hidden sm:flex items-center justify-center gap-1">
+                          {coder.streak > 0 ? (
+                            <>
+                              <Flame className="w-3.5 h-3.5 text-orange-400" />
+                              <span className="text-orange-300 text-xs font-mono">{coder.streak}</span>
+                            </>
+                          ) : (
+                            <span className="text-white/20 text-xs">—</span>
+                          )}
+                        </div>
+                        <div className="col-span-2 sm:col-span-2 text-right">
+                          <span className={`font-mono font-semibold ${isTop3 ? 'text-amber-300' : 'text-emerald-300'}`}>
+                            {coder.points?.toLocaleString() || 0}
+                          </span>
+                        </div>
                       </div>
-                      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                        <div className={`h-full ${item.color} rounded-full transition-all`} style={{ width: `${item.pct}%` }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    );
+                  })
+                )}
+              </div>
+              <div className="text-center mt-6">
+                <Link to="/leaderboard" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-white/80 font-medium text-sm hover:bg-white/5 hover:border-white/20 transition-all">
+                  View Full Leaderboard <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>
