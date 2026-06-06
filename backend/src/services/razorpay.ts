@@ -9,12 +9,14 @@ let instance: Razorpay | null = null;
 
 export function getRazorpay(): Razorpay | null {
   if (instance) return instance;
-  if (!RAZORPAY_KEY_ID || !RAZORPAY_KEY_SECRET) {
+  const hasKey = Boolean(RAZORPAY_KEY_ID && RAZORPAY_KEY_SECRET);
+  console.log(`[razorpay] KEY_ID=${RAZORPAY_KEY_ID ? RAZORPAY_KEY_ID.slice(0, 12) + '...' : 'MISSING'} KEY_SECRET=${RAZORPAY_KEY_SECRET ? 'SET' : 'MISSING'}`);
+  if (!hasKey) {
     console.log('[razorpay] RAZORPAY_KEY_ID/RAZORPAY_KEY_SECRET not set — Razorpay disabled');
     return null;
   }
   instance = new Razorpay({ key_id: RAZORPAY_KEY_ID, key_secret: RAZORPAY_KEY_SECRET });
-  console.log(`[razorpay] initialized (key_id: ${RAZORPAY_KEY_ID.slice(0, 8)}...)`);
+  console.log(`[razorpay] initialized successfully`);
   return instance;
 }
 

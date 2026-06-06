@@ -213,9 +213,10 @@ router.post('/razorpay/create-order', async (req: AuthRequest, res: Response) =>
       notes: { plan: 'premium' },
     });
   } catch (e: any) {
-    const msg = e?.error?.description || e?.message || 'Failed to create Razorpay order';
-    console.error('[razorpay] create-order failed:', msg);
-    res.status(500).json({ error: msg });
+    const rzpErr = e?.error?.description || e?.error?.message;
+    const msg = rzpErr || e?.message || e?.toString() || 'Failed to create Razorpay order';
+    console.error('[razorpay] create-order failed:', JSON.stringify(e?.error || e?.message || e, null, 2));
+    res.status(500).json({ error: msg, detail: e?.error?.code || e?.statusCode || undefined });
   }
 });
 
