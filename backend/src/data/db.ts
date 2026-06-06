@@ -169,6 +169,7 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
         };
         console.log(`[DB] Loaded ${db.questions.length} questions, ${db.users.length} users from MongoDB`);
       }
+      migrateCodeToDb(questions, testCases);
       return;
     } catch (e) {
       console.error('[DB] MongoDB connection failed, falling back to JSON file:', e);
@@ -196,6 +197,63 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
 
 export function isUsingMongo(): boolean { return useMongo; }
 export async function closeDb(): Promise<void> { if (mongoClient) await mongoClient.close(); }
+
+function migrateCodeToDb(codeQuestions: Question[], codeTestCases: TestCaseData[]): void {
+  if (!db) return;
+  let qChanged = 0, tAdded = 0, tReplaced = 0;
+
+  const codeBySlug = new Map<string, Question>();
+  for (const q of codeQuestions) codeBySlug.set(q.slug, q);
+  for (const q of db.questions) {
+    const code = codeBySlug.get(q.slug);
+    if (!code) continue;
+    const updates: Partial<Question> = {};
+    if (!q.problem_statement && code.problem_statement) updates.problem_statement = code.problem_statement;
+    if ((!q.examples || q.examples.length === 0) && code.examples && code.examples.length > 0) updates.examples = code.examples;
+    if (!q.constraints && code.constraints) updates.constraints = code.constraints;
+    if (!q.input_format && code.input_format) updates.input_format = code.input_format;
+    if (!q.output_format && code.output_format) updates.output_format = code.output_format;
+    if (!q.explanation && code.explanation) updates.explanation = code.explanation;
+    if (Object.keys(updates).length > 0) {
+      Object.assign(q, updates);
+      qChanged++;
+    }
+  }
+
+  const codeBySlugTC = new Map<string, TestCaseData[]>();
+  for (const tc of codeTestCases) {
+    const arr = codeBySlugTC.get(tc.slug) || [];
+    arr.push(tc);
+    codeBySlugTC.set(tc.slug, arr);
+  }
+
+  for (const [slug, codeTCs] of codeBySlugTC) {
+    const codeIds = new Set(codeTCs.map(t => t.id));
+    const dbForSlug = db.testCases.filter(t => t.slug === slug);
+    const dbIds = new Set(dbForSlug.map(t => t.id));
+    let allSame = true;
+    for (const ct of codeTCs) {
+      const dt = dbForSlug.find(t => t.id === ct.id);
+      if (!dt) { allSame = false; break; }
+      if (dt.input !== ct.input || dt.expected_output !== ct.expected_output) { allSame = false; break; }
+    }
+    if (allSame && codeTCs.length === dbForSlug.length) continue;
+
+    db.testCases = db.testCases.filter(t => t.slug !== slug);
+    for (const ct of codeTCs) {
+      db.testCases.push({ ...ct });
+      if (dbIds.has(ct.id)) tReplaced++;
+      else tAdded++;
+    }
+  }
+
+  if (qChanged > 0 || tAdded > 0 || tReplaced > 0) {
+    console.log(`[DB] Migration: enriched ${qChanged} questions, added ${tAdded} new test cases, replaced ${tReplaced} existing test cases`);
+    saveDb();
+  } else {
+    console.log('[DB] Migration: no changes needed');
+  }
+}
 
 export function getDb(): DbData {
   if (!db) db = loadDb();

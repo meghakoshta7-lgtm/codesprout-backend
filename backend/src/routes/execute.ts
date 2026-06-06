@@ -10,16 +10,11 @@ import { v4 as uuidv4 } from 'uuid';
 const router = Router();
 
 function getDefaultTestCases(slug: string): TestCase[] {
-  return [
-    { id: '1', input: 'See problem description', expected_output: 'See problem description', is_hidden: false },
-  ];
+  return [];
 }
 
 router.get('/testcases/:slug', (req: Request, res: Response) => {
   const testCases = getTestCases(req.params.slug);
-  if (testCases.length === 0) {
-    return res.json(getDefaultTestCases(req.params.slug));
-  }
   res.json(testCases);
 });
 
@@ -44,7 +39,7 @@ router.post('/run', (req: Request, res: Response) => {
       id: tc.id,
       input: tc.input,
       expected: tc.expected_output,
-      output: tc.input.includes('See problem') ? 'Run from a specific question' : r.output,
+      output: r.output,
       error: r.error,
       runtime: r.runtime,
       status: r.status,

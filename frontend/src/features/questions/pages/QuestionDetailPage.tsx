@@ -293,6 +293,24 @@ function QuestionDetailContent() {
           {question.problem_statement || question.description || 'No description available.'}
         </div>
 
+        {/* Input/Output Format */}
+        {(question.input_format || question.output_format) && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+            {question.input_format && (
+              <div className="p-3 rounded-lg border border-white/5" style={{ backgroundColor: '#0B1020' }}>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-primary-400 mb-1.5">Input Format</div>
+                <div className="text-xs text-slate-300 font-mono whitespace-pre-wrap leading-relaxed">{question.input_format}</div>
+              </div>
+            )}
+            {question.output_format && (
+              <div className="p-3 rounded-lg border border-white/5" style={{ backgroundColor: '#0B1020' }}>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-primary-400 mb-1.5">Output Format</div>
+                <div className="text-xs text-slate-300 font-mono whitespace-pre-wrap leading-relaxed">{question.output_format}</div>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Examples */}
         {question.examples && question.examples.length > 0 && (
           <div className="space-y-4 mb-6">

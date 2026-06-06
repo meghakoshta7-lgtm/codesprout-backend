@@ -5810,14 +5810,12 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '3', input: `s="a"`, expected_output: `1`, is_hidden: true }
   ],
   'first-bad-version': [
-    { id: '1', input: `n=5, bad=4`, expected_output: `4`, is_hidden: false },
-    { id: '2', input: `n=1, bad=1`, expected_output: `1`, is_hidden: true },
-    { id: '3', input: `n=3, bad=1`, expected_output: `1`, is_hidden: true }
+    { id: '1', input: `n = 5, bad = 4`, expected_output: `4`, is_hidden: false },
+    { id: '2', input: `n = 1, bad = 1`, expected_output: `1`, is_hidden: true },
   ],
   'guess-number': [
-    { id: '1', input: `n=10, pick=6`, expected_output: `6`, is_hidden: false },
-    { id: '2', input: `n=1, pick=1`, expected_output: `1`, is_hidden: true },
-    { id: '3', input: `n=2, pick=1`, expected_output: `1`, is_hidden: true }
+    { id: '1', input: `n = 10, pick = 6`, expected_output: `6`, is_hidden: false },
+    { id: '2', input: `n = 1, pick = 1`, expected_output: `1`, is_hidden: true },
   ],
   'search-insert-position': [
     { id: '1', input: `nums=[1,3,5,6], target=5`, expected_output: `2`, is_hidden: false },
@@ -6005,9 +6003,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '3', input: `nums=[-1,1], lower=0, upper=0`, expected_output: `1`, is_hidden: true }
   ],
   'kth-smallest-multiplication-table': [
-    { id: '1', input: `m=3, n=3, k=5`, expected_output: `3`, is_hidden: false },
-    { id: '2', input: `m=2, n=3, k=6`, expected_output: `6`, is_hidden: true },
-    { id: '3', input: `m=1, n=1, k=1`, expected_output: `1`, is_hidden: true }
+    { id: '1', input: `m = 3, n = 3, k = 5`, expected_output: `3`, is_hidden: false },
+    { id: '2', input: `m = 2, n = 3, k = 6`, expected_output: `6`, is_hidden: true },
   ],
   'two-sum-ii': [
     { id: '1', input: `numbers=[2,7,11,15], target=9`, expected_output: `[1,2]`, is_hidden: false },
@@ -6647,51 +6644,10 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2375', input: `graph=[[1,1],[1,1]],initial=[0,1]`, expected_output: `0`, is_hidden: true }
   ],
   'dp': [
-    { id: '2376', input: `n=2`, expected_output: `2`, is_hidden: false },
-    { id: '2376', input: `n=3`, expected_output: `3`, is_hidden: true },
-    { id: '2376', input: `n=1`, expected_output: `1`, is_hidden: true },
-    { id: '2377', input: `cost=[10,15,20]`, expected_output: `15`, is_hidden: false },
-    { id: '2377', input: `cost=[1,100,1,1,1,100,1,1,100,1]`, expected_output: `6`, is_hidden: true },
-    { id: '2377', input: `cost=[1,2]`, expected_output: `1`, is_hidden: true },
-    { id: '2378', input: `nums=[1,2,3,1]`, expected_output: `4`, is_hidden: false },
-    { id: '2378', input: `nums=[2,7,9,3,1]`, expected_output: `12`, is_hidden: true },
-    { id: '2378', input: `nums=[1]`, expected_output: `1`, is_hidden: true },
-    { id: '2379', input: `nums=[-2,1,-3,4,-1,2,1,-5,4]`, expected_output: `6`, is_hidden: false },
-    { id: '2379', input: `nums=[1]`, expected_output: `1`, is_hidden: true },
-    { id: '2379', input: `nums=[5,4,-1,7,8]`, expected_output: `23`, is_hidden: true },
-    { id: '2380', input: `s=abc,t=ahbgdc`, expected_output: `true`, is_hidden: false },
-    { id: '2380', input: `s=axc,t=ahbgdc`, expected_output: `false`, is_hidden: true },
-    { id: '2380', input: `s=a,t=b`, expected_output: `false`, is_hidden: true },
-    { id: '2381', input: `nums=[10,9,2,5,3,7,101,18]`, expected_output: `4`, is_hidden: false },
-    { id: '2381', input: `nums=[0,1,0,3,2,3]`, expected_output: `4`, is_hidden: true },
-    { id: '2381', input: `nums=[7,7,7,7,7,7,7]`, expected_output: `1`, is_hidden: true },
-    { id: '2382', input: `coins=[1,2,5],amount=11`, expected_output: `3`, is_hidden: false },
-    { id: '2382', input: `coins=[2],amount=3`, expected_output: `-1`, is_hidden: true },
-    { id: '2382', input: `coins=[1],amount=0`, expected_output: `0`, is_hidden: true },
-    { id: '2383', input: `m=3,n=7`, expected_output: `28`, is_hidden: false },
-    { id: '2383', input: `m=3,n=2`, expected_output: `3`, is_hidden: true },
-    { id: '2383', input: `m=1,n=1`, expected_output: `1`, is_hidden: true },
-    { id: '2384', input: `grid=[[1,3,1],[1,5,1],[4,2,1]]`, expected_output: `7`, is_hidden: false },
-    { id: '2384', input: `grid=[[1,2,3],[4,5,6]]`, expected_output: `12`, is_hidden: true },
-    { id: '2384', input: `grid=[[1]]`, expected_output: `1`, is_hidden: true },
-    { id: '2385', input: `s=bbbab`, expected_output: `4`, is_hidden: false },
-    { id: '2385', input: `s=cbbd`, expected_output: `2`, is_hidden: true },
-    { id: '2385', input: `s=a`, expected_output: `1`, is_hidden: true },
-    { id: '2386', input: `s=leetcode,wordDict=[leet,code]`, expected_output: `true`, is_hidden: false },
-    { id: '2386', input: `s=catsandog,wordDict=[cats,dog,sand,and,cat]`, expected_output: `false`, is_hidden: true },
-    { id: '2386', input: `s=a,wordDict=[a]`, expected_output: `true`, is_hidden: true },
-    { id: '2387', input: `text1=abcde,text2=ace`, expected_output: `3`, is_hidden: false },
-    { id: '2387', input: `text1=abc,text2=def`, expected_output: `0`, is_hidden: true },
-    { id: '2387', input: `text1=a,text2=a`, expected_output: `1`, is_hidden: true },
-    { id: '2388', input: `word1=horse,word2=ros`, expected_output: `3`, is_hidden: false },
-    { id: '2388', input: `word1=intention,word2=execution`, expected_output: `5`, is_hidden: true },
-    { id: '2388', input: `word1=a,text2=b`, expected_output: `1`, is_hidden: true },
-    { id: '2389', input: `s=(()`, expected_output: `2`, is_hidden: false },
-    { id: '2389', input: `s=)()())`, expected_output: `4`, is_hidden: true },
-    { id: '2389', input: `s=()`, expected_output: `2`, is_hidden: true },
-    { id: '2390', input: `s=aa,p=a`, expected_output: `false`, is_hidden: false },
-    { id: '2390', input: `s=aa,p=a*`, expected_output: `true`, is_hidden: true },
-    { id: '2390', input: `s=ab,p=.*`, expected_output: `true`, is_hidden: true }
+    { id: '2376', input: `n = 2`, expected_output: `2`, is_hidden: false },
+    { id: '2376b', input: `n = 3`, expected_output: `3`, is_hidden: true },
+    { id: '2377', input: `cost = [10,15,20]`, expected_output: `15`, is_hidden: false },
+    { id: '2378', input: `nums = [1,2,3,1]`, expected_output: `4`, is_hidden: false },
   ],
   'segment-tree': [
     { id: '2391', input: `nums=[-2,0,3,-5,2,-1],query=[0,2]`, expected_output: `1`, is_hidden: false },
@@ -7223,9 +7179,7 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2525', input: `s = "()[]{}"`, expected_output: `true`, is_hidden: true }
   ],
   'max-flow-ford-fulkerson': [
-    { id: '2526', input: `n=6, flow network, source=0, sink=5`, expected_output: `23`, is_hidden: false },
-    { id: '2526', input: `n=2, edges=[[0,1,10]], source=0, sink=1`, expected_output: `10`, is_hidden: true },
-    { id: '2526', input: `n=3, edges=[[0,1,5],[1,2,3],[0,2,7]], source=0, sink=2`, expected_output: `7`, is_hidden: true }
+    { id: '2526', input: `n = 4, edges = [[0,1,1000000],[1,2,1000000],[2,3,1000000]], source = 0, sink = 3`, expected_output: `1000000`, is_hidden: false },
   ],
   'edmonds-karp-algorithm': [
     { id: '2527', input: `n=4, edges=[[0,1,10],[0,2,10],[1,2,2],[1,3,8],[2,3,10]], source=0, sink=3`, expected_output: `18`, is_hidden: false },
@@ -7233,9 +7187,7 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2527', input: `n=3, edges=[[0,1,3],[0,2,2],[1,2,5]], source=0, sink=2`, expected_output: `5`, is_hidden: true }
   ],
   'dinic-algorithm': [
-    { id: '2528', input: `n=6, complex network`, expected_output: `23`, is_hidden: false },
-    { id: '2528', input: `n=2, edges=[[0,1,100]], source=0, sink=1`, expected_output: `100`, is_hidden: true },
-    { id: '2528', input: `n=4, edges=[[0,1,1],[1,2,1],[2,3,1]], source=0, sink=3`, expected_output: `1`, is_hidden: true }
+    { id: '2528', input: `n = 4, edges = [[0,1,3],[0,2,2],[1,2,1],[1,3,3],[2,3,2]], source = 0, sink = 3`, expected_output: `5`, is_hidden: false },
   ],
   'min-cut': [
     { id: '2529', input: `n=5, edges=[[0,1,3],[0,2,2],[1,2,1],[1,3,3],[2,3,4],[3,4,2],[2,4,3]], source=0, sink=4`, expected_output: `5`, is_hidden: false },
@@ -7273,14 +7225,10 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2535', input: `nums = [1]`, expected_output: `0`, is_hidden: true }
   ],
   'max-flow-lower-bounds': [
-    { id: '2536', input: `n=4, edges with bounds`, expected_output: `Max feasible flow`, is_hidden: false },
-    { id: '2536', input: `n=2, edges=[[0,1,2,5]]`, expected_output: `5`, is_hidden: true },
-    { id: '2536', input: `n=3, simple network`, expected_output: `Flow value`, is_hidden: true }
+    { id: '2536', input: `n = 3, edges = [[0,1,2,3],[1,2,1,2],[0,2,1,3]]`, expected_output: `3`, is_hidden: false },
   ],
   'minimum-cost-flow': [
-    { id: '2537', input: `n=4, edges with capacity and cost, flow=2`, expected_output: `18`, is_hidden: false },
-    { id: '2537', input: `n=2, edges=[[0,1,10,1]], flow=5`, expected_output: `5`, is_hidden: true },
-    { id: '2537', input: `n=3, simple network, flow=1`, expected_output: `Cost value`, is_hidden: true }
+    { id: '2537', input: `n = 3, edges = [[0,1,10,2],[1,2,8,3],[0,2,5,1]], flow = 5`, expected_output: `30`, is_hidden: false },
   ],
   'stable-marriage-problem': [
     { id: '2538', input: `Preferences as given`, expected_output: `Stable matching`, is_hidden: false },
@@ -7293,9 +7241,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2539', input: `n=4, edges=[[1,3],[2,4]]`, expected_output: `2`, is_hidden: true }
   ],
   'airplane-seat-assignment': [
-    { id: '2540', input: `n = 5`, expected_output: `0.5`, is_hidden: false },
-    { id: '2540', input: `n = 1`, expected_output: `1.0`, is_hidden: true },
-    { id: '2540', input: `n = 2`, expected_output: `0.5`, is_hidden: true }
+    { id: '1', input: `n = 2`, expected_output: `0.5`, is_hidden: false },
+    { id: '2', input: `n = 1`, expected_output: `1.0`, is_hidden: true },
   ],
   'is-graph-bipartite-bg': [
     { id: '2541', input: `graph = [[1,3],[0,2],[1,3],[0,2]]`, expected_output: `true`, is_hidden: false },
@@ -7393,9 +7340,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2567', input: `s = "bb"`, expected_output: `2`, is_hidden: true }
   ],
   'count-and-say': [
-    { id: '2568', input: `n = 4`, expected_output: `"1211"`, is_hidden: false },
-    { id: '2568', input: `n = 1`, expected_output: `"1"`, is_hidden: true },
-    { id: '2568', input: `n = 2`, expected_output: `"11"`, is_hidden: true }
+    { id: '1', input: `n = 4`, expected_output: `"1211"`, is_hidden: false },
+    { id: '2', input: `n = 1`, expected_output: `"1"`, is_hidden: true },
   ],
   'text-justification': [
     { id: '2569', input: `words = ["This", "is", "an", "example", "of", "text", "justification."], maxWidth = 16`, expected_output: `Formatted lines`, is_hidden: false },
@@ -8753,8 +8699,9 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2', input: `nums = [3,2,4], target = 6`, expected_output: `[1,2]`, is_hidden: true }
   ],
   'contains-duplicate-hashing': [
-    { id: '1', input: `n = 10`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 11`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [1,2,3,1]`, expected_output: `true`, is_hidden: false },
+    { id: '2', input: `nums = [1,2,3,4]`, expected_output: `false`, is_hidden: true },
+    { id: '3', input: `nums = [1,1,1,3,3,4,3,2,4,2]`, expected_output: `true`, is_hidden: true },
   ],
   'subarray-sum-equals-k': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
@@ -8773,8 +8720,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `ops = ["LFUCache","put","get"], args = [[2],[1,1],[1]]`, expected_output: `[null,null,1]`, is_hidden: false }
   ],
   'all-o1-data-structure': [
-    { id: '1', input: `n = 9`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 23`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `["AllOne","inc","inc","getMaxKey","getMinKey","inc","getMaxKey","getMinKey"]\\n[[],[hello],[hello],[],[],[world],[],[]]`, expected_output: `[hello, world, world, hello]`, is_hidden: false },
+    { id: '2', input: `["AllOne","inc","inc","inc","inc","getMaxKey"]\\n[[],[a],[b],[b],[c],[]]`, expected_output: `[b]`, is_hidden: true },
   ],
   'remove-duplicates': [
     { id: '1', input: `nums = [1,1,2]`, expected_output: `2`, is_hidden: false },
@@ -8789,8 +8736,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2', input: `head = [1], n = 1`, expected_output: `[]`, is_hidden: true }
   ],
   'flatten-multilevel-dll': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 12`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]`, expected_output: `[1,2,3,7,8,11,12,9,10,4,5,6]`, is_hidden: false },
+    { id: '2', input: `head = [1,2,null,3]`, expected_output: `[1,3,2]`, is_hidden: true },
   ],
   'linked-list-cycle-ii': [
     { id: '1', input: `head = [3,2,0,-4], pos = 1`, expected_output: `1`, is_hidden: false },
@@ -8807,19 +8754,19 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `s = "3+2*2"`, expected_output: `7`, is_hidden: false }
   ],
   'parse-lisp-expression': [
-    { id: '1', input: `n = 3`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 25`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `expression = "(let x 2 (mult x (let x 3 y 4 (add x y))))"`, expected_output: `14`, is_hidden: false },
+    { id: '2', input: `expression = "(let x 3 x 2 x)"`, expected_output: `2`, is_hidden: true },
   ],
   'moving-average-from-data-stream': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 16`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `size=3, stream=[1,10,3,5]`, expected_output: `[1.0,5.5,4.66667,6.0]`, is_hidden: false },
+    { id: '2', input: `size=1, stream=[0,-1]`, expected_output: `[0.0,-1.0]`, is_hidden: true },
   ],
   'circular-queue': [
     { id: '1', input: `operations = ["push","push","pop","peek"]`, expected_output: `[null,null,null,1]`, is_hidden: false }
   ],
   'dota2-senate': [
-    { id: '1', input: `n = 5`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 14`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `senate = "RD"`, expected_output: `"Radiant"`, is_hidden: false },
+    { id: '2', input: `senate = "RDD"`, expected_output: `"Dire"`, is_hidden: true },
   ],
   'design-hit-counter': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `5`, is_hidden: false }
@@ -8828,16 +8775,16 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `operations = ["push","push","pop","peek"]`, expected_output: `[null,null,null,1]`, is_hidden: false }
   ],
   'shortest-distance-from-all-buildings': [
-    { id: '1', input: `n = 7`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 29`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `grid = [[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]`, expected_output: `7`, is_hidden: false },
+    { id: '2', input: `grid = [[1,0]]`, expected_output: `1`, is_hidden: true },
   ],
   'bus-routes': [
-    { id: '1', input: `n = 10`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 20`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `routes = [[1,2,7],[3,6,7]], S = 1, T = 6`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `routes = [[7,12],[4,5,15],[6],[15,19],[9,12,13]], S = 15, T = 12`, expected_output: `-1`, is_hidden: true },
   ],
   'race-car': [
-    { id: '1', input: `n = 10`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 29`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `target = 3`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `target = 6`, expected_output: `5`, is_hidden: true },
   ],
   'minimum-cost-to-reach-destination': [
     { id: '1', input: `arr = [1,3,5,7,9]`, expected_output: `1`, is_hidden: false }
@@ -8857,8 +8804,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `nums = [3,2,1,5,6,4], k = 2`, expected_output: `5`, is_hidden: false }
   ],
   'find-median-from-data-stream': [
-    { id: '1', input: `n = 9`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 11`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `stream = [1,2]`, expected_output: `1.5`, is_hidden: false },
+    { id: '2', input: `stream = [6,10,2,6]`, expected_output: `5.0`, is_hidden: true },
   ],
   'task-scheduler-heap': [
     { id: '1', input: `nums = [3,2,1,5,6,4], k = 2`, expected_output: `5`, is_hidden: false }
@@ -8886,12 +8833,12 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `root = [1,2,3,null,4,null,5]`, expected_output: `true`, is_hidden: false }
   ],
   'lowest-common-ancestor': [
-    { id: '1', input: `n = 3`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 26`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1`, expected_output: `3`, is_hidden: false },
+    { id: '2', input: `root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4`, expected_output: `5`, is_hidden: true },
   ],
   'right-side-view': [
-    { id: '1', input: `n = 1`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 11`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `root = [1,2,3,null,5,null,4]`, expected_output: `[1,3,4]`, is_hidden: false },
+    { id: '2', input: `root = [1,null,3]`, expected_output: `[1,3]`, is_hidden: true },
   ],
   'validate-binary-tree': [
     { id: '1', input: `root = [1,2,3,null,4,null,5]`, expected_output: `true`, is_hidden: false }
@@ -8907,8 +8854,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2', input: `nums = [1,3,5,7,9,11,13], target = 8`, expected_output: `-1`, is_hidden: true }
   ],
   'house-robber-iii': [
-    { id: '1', input: `n = 6`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 22`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `root = [3,2,3,null,3,null,1]`, expected_output: `7`, is_hidden: false },
+    { id: '2', input: `root = [3,4,5,1,3,null,1]`, expected_output: `9`, is_hidden: true },
   ],
   'minimum-distance-between-bst-nodes': [
     { id: '1', input: `root = [2,1,3]`, expected_output: `true`, is_hidden: false }
@@ -8940,15 +8887,15 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `root = [2,1,3]`, expected_output: `true`, is_hidden: false }
   ],
   'number-of-connected-components': [
-    { id: '1', input: `n = 3`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 25`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `n = 5, edges = [[0,1],[1,2],[3,4]]`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]`, expected_output: `1`, is_hidden: true },
   ],
   'alien-dictionary-graph': [
     { id: '1', input: `n = 4, edges = [[0,1],[1,2],[2,3]]`, expected_output: `true`, is_hidden: false }
   ],
   'critical-connections-in-network': [
-    { id: '1', input: `n = 2`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 10`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `n = 4, connections = [[0,1],[1,2],[2,0],[1,3]]`, expected_output: `[[1,3]]`, is_hidden: false },
+    { id: '2', input: `n = 2, connections = [[0,1]]`, expected_output: `[[0,1]]`, is_hidden: true },
   ],
   'minimum-cost-to-connect-points': [
     { id: '1', input: `arr = [1,3,5,7,9]`, expected_output: `1`, is_hidden: false }
@@ -8990,19 +8937,19 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
   ],
   'single-number': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 12`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [2,2,1]`, expected_output: `1`, is_hidden: false },
+    { id: '2', input: `nums = [4,1,2,1,2]`, expected_output: `4`, is_hidden: true },
   ],
   'number-of-1-bits': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 24`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `n = 11`, expected_output: `3`, is_hidden: false },
+    { id: '2', input: `n = 128`, expected_output: `1`, is_hidden: true },
   ],
   'reverse-bits': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `[5,4,3,2,1]`, is_hidden: false }
   ],
   'missing-number-xor': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 17`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [3,0,1]`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `nums = [9,6,4,2,3,5,7,0,1]`, expected_output: `8`, is_hidden: true },
   ],
   'counting-bits': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `5`, is_hidden: false }
@@ -9014,8 +8961,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `nums = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
   ],
   'utf-8-validation': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 22`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `data = [197,130,1]`, expected_output: `true`, is_hidden: false },
+    { id: '2', input: `data = [235,140,4]`, expected_output: `false`, is_hidden: true },
   ],
   'binary-substrings-1-to-n': [
     { id: '1', input: `root = [2,1,3]`, expected_output: `true`, is_hidden: false }
@@ -9045,36 +8992,37 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
   ],
   'powx-n': [
     { id: '1', input: `x = 2.00000, n = 10`, expected_output: `1024.00000`, is_hidden: false },
-    { id: '2', input: `x = 2.10000, n = 3`, expected_output: `9.26100`, is_hidden: true }
+    { id: '2', input: `x = 2.10000, n = 3`, expected_output: `9.26100`, is_hidden: true },
   ],
   'super-pow': [
     { id: '1', input: `a = 2, b = [3]`, expected_output: `8`, is_hidden: false }
   ],
   'ugly-number-ii': [
     { id: '1', input: `n = 10`, expected_output: `12`, is_hidden: false },
-    { id: '2', input: `n = 1`, expected_output: `1`, is_hidden: true }
+    { id: '2', input: `n = 1`, expected_output: `1`, is_hidden: true },
   ],
   'count-primes': [
     { id: '1', input: `n = 10`, expected_output: `4`, is_hidden: false },
-    { id: '2', input: `n = 0`, expected_output: `0`, is_hidden: true }
+    { id: '2', input: `n = 0`, expected_output: `0`, is_hidden: true },
   ],
   'integer-to-english-words': [
     { id: '1', input: `num = 123`, expected_output: `"One Hundred Twenty Three"`, is_hidden: false }
   ],
   'permutation-sequence': [
-    { id: '1', input: `n = 3, k = 3`, expected_output: `"213"`, is_hidden: false }
+    { id: '1', input: `n = 3, k = 3`, expected_output: `"213"`, is_hidden: false },
+    { id: '2', input: `n = 4, k = 9`, expected_output: `"2314"`, is_hidden: true },
   ],
   'largest-number': [
     { id: '1', input: `nums = [10,2]`, expected_output: `"210"`, is_hidden: false },
     { id: '2', input: `nums = [3,30,34,5,9]`, expected_output: `"9534330"`, is_hidden: true }
   ],
   'basic-calculator-ii': [
-    { id: '1', input: `n = 5`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 17`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `s = "3+2*2"`, expected_output: `7`, is_hidden: false },
+    { id: '2', input: `s = " 3/2 "`, expected_output: `1`, is_hidden: true },
   ],
   'best-time-buy-sell-stock': [
-    { id: '1', input: `n = 4`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 26`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `prices = [7,1,5,3,6,4]`, expected_output: `5`, is_hidden: false },
+    { id: '2', input: `prices = [7,6,4,3,1]`, expected_output: `0`, is_hidden: true },
   ],
   'max-units-truck': [
     { id: '1', input: `arr = [1,3,5,7,9]`, expected_output: `9`, is_hidden: false }
@@ -9098,7 +9046,7 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
   ],
   'n-queens-count': [
     { id: '1', input: `n = 4`, expected_output: `2`, is_hidden: false },
-    { id: '2', input: `n = 1`, expected_output: `1`, is_hidden: true }
+    { id: '2', input: `n = 1`, expected_output: `1`, is_hidden: true },
   ],
   'restore-ip-addresses': [
     { id: '1', input: `s = "25525511135"`, expected_output: `["255.255.11.135","255.255.111.35"]`, is_hidden: false }
@@ -9110,8 +9058,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `nums = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
   ],
   'majority-element-dc': [
-    { id: '1', input: `n = 6`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 17`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [3,2,3]`, expected_output: `3`, is_hidden: false },
+    { id: '2', input: `nums = [2,2,1,1,1,2,2]`, expected_output: `2`, is_hidden: true },
   ],
   'max-product-three': [
     { id: '1', input: `nums = [1,2,3]`, expected_output: `6`, is_hidden: false },
@@ -9144,8 +9092,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2', input: `arr = [10]`, expected_output: `10`, is_hidden: true }
   ],
   'lis-divide-conquer': [
-    { id: '1', input: `n = 7`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 23`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [10,9,2,5,3,7,101,18]`, expected_output: `4`, is_hidden: false },
+    { id: '2', input: `nums = [0,1,0,3,2,3]`, expected_output: `4`, is_hidden: true },
   ],
   'max-sum-rectangle-k': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
@@ -9154,8 +9102,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `s = "leetcode", wordDict = ["leet","code"]`, expected_output: `true`, is_hidden: false }
   ],
   'skyline-problem': [
-    { id: '1', input: `n = 5`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 14`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]`, expected_output: `[[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]`, is_hidden: false },
+    { id: '2', input: `buildings = [[0,2,3],[2,5,3]]`, expected_output: `[[0,3],[5,0]]`, is_hidden: true },
   ],
   'max-depth-binary-tree': [
     { id: '1', input: `root = [3,9,20,null,null,15,7]`, expected_output: `3`, is_hidden: false },
@@ -9257,8 +9205,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `s = "leetcode", wordDict = ["leet","code"]`, expected_output: `true`, is_hidden: false }
   ],
   'magic-dictionary': [
-    { id: '1', input: `n = 5`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 26`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `dict = [hello, leetcode], searchWord = hello`, expected_output: `false`, is_hidden: false },
+    { id: '2', input: `dict = [hello, hella], searchWord = hello`, expected_output: `true`, is_hidden: true },
   ],
   'search-suggestions': [
     { id: '1', input: `nums = [1,3,5,7,9,11,13], target = 7`, expected_output: `3`, is_hidden: false },
@@ -9285,49 +9233,51 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `ops = ["Trie","insert","search"], args = [[],["apple"],["apple"]]`, expected_output: `[null,null,true]`, is_hidden: false }
   ],
   'number-of-islands-dsu': [
-    { id: '1', input: `n = 4`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 20`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `grid = [[1,1,1,1,0],[1,1,0,1,0],[1,1,0,0,0],[0,0,0,0,0]]`, expected_output: `1`, is_hidden: false },
+    { id: '2', input: `grid = [[1,1,0,0,0],[1,1,0,0,0],[0,0,1,0,0],[0,0,0,1,1]]`, expected_output: `3`, is_hidden: true },
   ],
   'friend-circles': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 10`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `M = [[1,1,0],[1,1,0],[0,0,1]]`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `M = [[1,1,0],[1,1,1],[0,1,1]]`, expected_output: `1`, is_hidden: true },
   ],
   'smallest-string-swaps': [
     { id: '1', input: `arr = [3,1,4,1,5,9,2,6]`, expected_output: `1`, is_hidden: false }
   ],
   'number-of-good-paths': [
-    { id: '1', input: `m = 3, n = 3`, expected_output: `6`, is_hidden: false }
+    { id: '1', input: `vals = [1,3,2,1,3], edges = [[0,1],[0,2],[2,3],[2,4]]`, expected_output: `6`, is_hidden: false },
+    { id: '2', input: `vals = [1,1,2,2,3], edges = [[0,1],[1,2],[2,3],[2,4]]`, expected_output: `7`, is_hidden: true },
   ],
   'connected-components': [
     { id: '1', input: `n = 4, edges = [[0,1],[1,2],[2,3]]`, expected_output: `true`, is_hidden: false }
   ],
   'longest-consecutive-dsu': [
-    { id: '1', input: `n = 10`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 28`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [100,4,200,1,3,2]`, expected_output: `4`, is_hidden: false },
+    { id: '2', input: `nums = [0,3,7,2,5,8,4,6,0,1]`, expected_output: `9`, is_hidden: true },
   ],
   'redundant-connection-ii': [
-    { id: '1', input: `n = 4`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 19`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `edges = [[1,2],[1,3],[2,3]]`, expected_output: `[2,3]`, is_hidden: false },
+    { id: '2', input: `edges = [[1,2],[2,3],[3,4],[4,1],[1,5]]`, expected_output: `[4,1]`, is_hidden: true },
   ],
   'largest-component-common-factor': [
     { id: '1', input: `arr = [3,1,4,1,5,9,2,6]`, expected_output: `9`, is_hidden: false },
     { id: '2', input: `arr = [10]`, expected_output: `10`, is_hidden: true }
   ],
   'similar-string-groups': [
-    { id: '1', input: `n = 8`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 11`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `strs = [tars, rats, arts, star]`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `strs = [omv, ovm]`, expected_output: `1`, is_hidden: true },
   ],
   'minimize-malware-spread-ii': [
-    { id: '1', input: `n = 9`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 12`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `graph = [[1,1,0],[1,1,0],[0,0,1]], initial = [0,1]`, expected_output: `0`, is_hidden: false },
+    { id: '2', input: `graph = [[1,1,0,0],[1,1,1,0],[0,1,1,1],[0,0,1,1]], initial = [0,1,2]`, expected_output: `1`, is_hidden: true },
   ],
   'climbing-stairs': [
     { id: '1', input: `n = 2`, expected_output: `2`, is_hidden: false },
-    { id: '2', input: `n = 3`, expected_output: `3`, is_hidden: true }
+    { id: '2', input: `n = 3`, expected_output: `3`, is_hidden: true },
+    { id: '3', input: `n = 5`, expected_output: `8`, is_hidden: true },
   ],
   'min-cost-climbing-stairs': [
-    { id: '1', input: `n = 1`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 11`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `cost = [10,15,20]`, expected_output: `15`, is_hidden: false },
+    { id: '2', input: `cost = [1,100,1,1,1,100,1,1,100,1]`, expected_output: `6`, is_hidden: true },
   ],
   'house-robber': [
     { id: '1', input: `nums = [1,2,3,1]`, expected_output: `4`, is_hidden: false },
@@ -9349,7 +9299,7 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
   ],
   'unique-paths': [
     { id: '1', input: `m = 3, n = 7`, expected_output: `28`, is_hidden: false },
-    { id: '2', input: `m = 3, n = 2`, expected_output: `3`, is_hidden: true }
+    { id: '2', input: `m = 3, n = 2`, expected_output: `3`, is_hidden: true },
   ],
   'minimum-path-sum': [
     { id: '1', input: `grid = [[1,3,1],[1,5,1],[4,2,1]]`, expected_output: `7`, is_hidden: false },
@@ -9360,8 +9310,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2', input: `s = ")()())"`, expected_output: `4`, is_hidden: true }
   ],
   'regex-matching': [
-    { id: '1', input: `n = 9`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 18`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `s = "aa", p = "a"`, expected_output: `false`, is_hidden: false },
+    { id: '2', input: `s = "ab", p = ".*"`, expected_output: `true`, is_hidden: true },
   ],
   'range-sum-immutable-st': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
@@ -9382,12 +9332,12 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
   ],
   'my-calendar-i': [
-    { id: '1', input: `n = 10`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 17`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `bookings = [[10,20],[15,25],[20,30]]`, expected_output: `[true,false,true]`, is_hidden: false },
+    { id: '2', input: `bookings = [[47,50],[33,41],[39,45],[33,42],[25,32],[26,35],[19,25],[3,8],[8,13],[18,27]]`, expected_output: `[true,true,false,false,true,false,true,true,false,false]`, is_hidden: true },
   ],
   'my-calendar-ii': [
-    { id: '1', input: `n = 4`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 21`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `bookings = [[10,20],[15,25],[20,30]]`, expected_output: `[true,true,false]`, is_hidden: false },
+    { id: '2', input: `bookings = [[1,4],[2,5],[6,9],[3,8]]`, expected_output: `[true,true,false,false]`, is_hidden: true },
   ],
   'count-integers-intervals': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `5`, is_hidden: false }
@@ -9396,12 +9346,12 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `5`, is_hidden: false }
   ],
   'rectangle-area-ii': [
-    { id: '1', input: `n = 3`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 18`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]`, expected_output: `6`, is_hidden: false },
+    { id: '2', input: `rectangles = [[0,0,1000000000,1000000000]]`, expected_output: `49`, is_hidden: true },
   ],
   'bit-basics': [
-    { id: '1', input: `n = 2`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 22`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `n = 5`, expected_output: `[0,1,1,0,1]`, is_hidden: false },
+    { id: '2', input: `n = 2`, expected_output: `[0,1]`, is_hidden: true },
   ],
   'range-sum-query-bit': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
@@ -9426,8 +9376,8 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '2', input: `nums = [5,1,1,2,0,0]`, expected_output: `[0,0,1,1,2,5]`, is_hidden: true }
   ],
   'increasing-subsequences-bit': [
-    { id: '1', input: `n = 9`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 29`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [1,2,3,4]`, expected_output: `15`, is_hidden: false },
+    { id: '2', input: `nums = [4,6,7,7]`, expected_output: `8`, is_hidden: true },
   ],
   'reverse-pairs-bit': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `[5,4,3,2,1]`, is_hidden: false }
@@ -9436,12 +9386,12 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
   ],
   'number-longest-increasing-subseq': [
-    { id: '1', input: `n = 4`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 18`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `nums = [1,3,5,4,7]`, expected_output: `2`, is_hidden: false },
+    { id: '2', input: `nums = [2,2,2,2,2]`, expected_output: `5`, is_hidden: true },
   ],
   'falling-squares': [
-    { id: '1', input: `n = 1`, expected_output: `1`, is_hidden: false },
-    { id: '2', input: `n = 24`, expected_output: `2`, is_hidden: true }
+    { id: '1', input: `positions = [[1,2],[2,3],[6,1]]`, expected_output: `[2,5,5]`, is_hidden: false },
+    { id: '2', input: `positions = [[100,100],[200,100]]`, expected_output: `[100,100]`, is_hidden: true },
   ],
   'longest-subseq-limited-sum': [
     { id: '1', input: `arr = [1,2,3,4,5]`, expected_output: `15`, is_hidden: false }
