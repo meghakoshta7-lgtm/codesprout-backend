@@ -10,11 +10,11 @@ services:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        generateValue: true
+        value: dsa-codesprout-secret-2024-replace-in-prod
       - key: ENCRYPTION_KEY
         generateValue: true
       - key: CORS_ORIGINS
-        sync: false
+        value: "*"
       - key: AUTH_SERVICE_URL
         value: http://codesprout-auth:10001
       - key: CONTENT_SERVICE_URL
@@ -51,13 +51,25 @@ services:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        fromService: { type: web, name: codesprout-gateway, property: JWT_SECRET }
+        value: dsa-codesprout-secret-2024-replace-in-prod
       - key: CORS_ORIGINS
         sync: false
       - key: MONGODB_URL
         sync: false
       - key: UPI_ID
         sync: false
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        value: snehakoshta1@gmail.com
+      - key: SMTP_PASS
+        value: esyb jzaj umsm isaq
+      - key: EMAIL_FROM
+        value: "CodeSprout <snehakoshta1@gmail.com>"
+      - key: FRONTEND_URL
+        value: https://codesproutcom.vercel.app
     port: 10001
 
   - type: web
@@ -70,7 +82,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        fromService: { type: web, name: codesprout-gateway, property: JWT_SECRET }
+        value: dsa-codesprout-secret-2024-replace-in-prod
       - key: CORS_ORIGINS
         sync: false
       - key: MONGODB_URL
@@ -87,7 +99,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        fromService: { type: web, name: codesprout-gateway, property: JWT_SECRET }
+        value: dsa-codesprout-secret-2024-replace-in-prod
       - key: CORS_ORIGINS
         sync: false
       - key: MONGODB_URL
@@ -104,7 +116,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        fromService: { type: web, name: codesprout-gateway, property: JWT_SECRET }
+        value: dsa-codesprout-secret-2024-replace-in-prod
       - key: CORS_ORIGINS
         sync: false
       - key: MONGODB_URL
@@ -125,7 +137,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: JWT_SECRET
-        fromService: { type: web, name: codesprout-gateway, property: JWT_SECRET }
+        value: dsa-codesprout-secret-2024-replace-in-prod
       - key: CORS_ORIGINS
         sync: false
       - key: MONGODB_URL
@@ -145,13 +157,13 @@ services:
       - key: SMTP_PORT
         value: "587"
       - key: SMTP_USER
-        sync: false
+        value: snehakoshta1@gmail.com
       - key: SMTP_PASS
-        sync: false
+        value: esyb jzaj umsm isaq
       - key: EMAIL_FROM
-        sync: false
+        value: "CodeSprout <snehakoshta1@gmail.com>"
       - key: FRONTEND_URL
-        sync: false
+        value: https://codesproutcom.vercel.app
       - key: RAZORPAY_KEY_ID
         value: rzp_test_SyLqIGdftXBERR
       - key: RAZORPAY_KEY_SECRET
