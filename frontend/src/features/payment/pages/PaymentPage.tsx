@@ -262,6 +262,15 @@ export default function PaymentPage() {
                   <button onClick={handleInit} disabled={initLoading} className="btn-primary w-full inline-flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25">
                     {initLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Initializing...</> : <><Sparkles className="w-4 h-4" /> Pay ₹1 - Get Premium</>}
                   </button>
+                  <div className="flex items-center gap-3 my-4">
+                    <div className="flex-1 h-px bg-white/10" />
+                    <span className="text-xs text-slate-500 uppercase tracking-wider">or</span>
+                    <div className="flex-1 h-px bg-white/10" />
+                  </div>
+                  <button onClick={handleRazorpayPay} disabled={razorpayOpening} className="w-full py-3 rounded-xl border-2 border-primary-500/30 text-primary-400 font-semibold hover:bg-primary-500/10 transition-all inline-flex items-center justify-center gap-2">
+                    {razorpayOpening ? <><Loader2 className="w-4 h-4 animate-spin" /> Opening checkout...</> : <><CreditCard className="w-4 h-4" /> Pay with Razorpay</>}
+                  </button>
+                  <p className="text-[10px] text-slate-500 mt-2">Cards • UPI • NetBanking • Wallets</p>
                 </div>
               </motion.div>
             )}
