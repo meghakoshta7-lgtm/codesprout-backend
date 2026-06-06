@@ -46,10 +46,10 @@ const activatePremium = async (userId: string, userName: string, userEmail: stri
 
   addSubscription(newSub);
 
-  try {
-    sendPremiumNotification(userId);
-    await sendSubscriptionEmail(userEmail, userName, 'Premium', new Date(newSub.end_date!), amount);
-  } catch (e) { console.error('[payments] premium notif/email failed:', e); }
+  sendPremiumNotification(userId);
+  sendSubscriptionEmail(userEmail, userName, 'Premium', new Date(newSub.end_date!), amount).catch(e =>
+    console.error('[payments] email failed:', e)
+  );
 
   return newSub;
 };
@@ -74,6 +74,40 @@ const buildUpiLink = (txnNote: string) => {
 
 router.get('/razorpay/status', (_req: Request, res: Response) => {
   res.json({ enabled: isRazorpayEnabled(), build: 'status-public-v2' });
+});
+
+router.post('/razorpay/webhook', async (req: Request, res: Response) => {
+  try {
+    const signature = req.headers['x-razorpay-signature'] as string;
+    const rawBody = (req as any).rawBody || JSON.stringify(req.body);
+
+    if (!verifyRazorpayWebhook(rawBody, signature)) {
+      return res.status(400).json({ error: 'Invalid webhook signature' });
+    }
+
+    const event = req.body?.event;
+    if (event === 'payment.captured' || event === 'order.paid') {
+      const paymentEntity = req.body?.payload?.payment?.entity;
+      if (paymentEntity) {
+        const orderId = paymentEntity.order_id;
+        const payment = paymentRequests.find((p) => p.razorpay_order_id === orderId);
+        if (payment && payment.status !== 'verified') {
+          payment.razorpay_payment_id = paymentEntity.id;
+          payment.utr = paymentEntity.id;
+          payment.status = 'verified';
+          payment.verified_at = new Date().toISOString();
+          const user = getUserById(payment.user_id);
+          await activatePremium(payment.user_id, payment.user_name, user?.email || payment.user_email, payment.amount);
+        }
+      }
+    }
+
+    res.json({ received: true });
+  } catch (e: any) {
+    const msg = e?.error?.description || e?.message || 'Webhook processing failed';
+    console.error('[razorpay] webhook failed:', msg);
+    res.status(500).json({ error: msg });
+  }
 });
 
 router.use(authenticate);
@@ -278,40 +312,6 @@ router.post('/razorpay/verify', async (req: AuthRequest, res: Response) => {
   } catch (e: any) {
     const msg = e?.error?.description || e?.message || 'Failed to verify payment';
     console.error('[razorpay] verify failed:', msg);
-    res.status(500).json({ error: msg });
-  }
-});
-
-router.post('/razorpay/webhook', async (req: Request, res: Response) => {
-  try {
-    const signature = req.headers['x-razorpay-signature'] as string;
-    const rawBody = (req as any).rawBody || JSON.stringify(req.body);
-
-    if (!verifyRazorpayWebhook(rawBody, signature)) {
-      return res.status(400).json({ error: 'Invalid webhook signature' });
-    }
-
-    const event = req.body?.event;
-    if (event === 'payment.captured' || event === 'order.paid') {
-      const paymentEntity = req.body?.payload?.payment?.entity;
-      if (paymentEntity) {
-        const orderId = paymentEntity.order_id;
-        const payment = paymentRequests.find((p) => p.razorpay_order_id === orderId);
-        if (payment && payment.status !== 'verified') {
-          payment.razorpay_payment_id = paymentEntity.id;
-          payment.utr = paymentEntity.id;
-          payment.status = 'verified';
-          payment.verified_at = new Date().toISOString();
-          const user = getUserById(payment.user_id);
-          await activatePremium(payment.user_id, payment.user_name, user?.email || payment.user_email, payment.amount);
-        }
-      }
-    }
-
-    res.json({ received: true });
-  } catch (e: any) {
-    const msg = e?.error?.description || e?.message || 'Webhook processing failed';
-    console.error('[razorpay] webhook failed:', msg);
     res.status(500).json({ error: msg });
   }
 });

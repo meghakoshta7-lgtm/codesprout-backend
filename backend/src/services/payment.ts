@@ -6,6 +6,13 @@ import { initDb } from '../data/db';
 import { questions, topics, cheatSheets, users, patternDetails } from '../data/seed';
 import { TEST_CASES } from '../data/testCases';
 
+process.on('unhandledRejection', (reason) => {
+  console.error('[payment] UNHANDLED REJECTION —', reason);
+});
+process.on('uncaughtException', (err) => {
+  console.error('[payment] UNCAUGHT EXCEPTION —', err.message, err.stack);
+});
+
 const testCaseData = Object.entries(TEST_CASES).flatMap(([slug, cases]) =>
   cases.map(tc => ({ ...tc, slug }))
 );
@@ -14,7 +21,7 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3005;
 
 app.use(cors({
-  origin: (_origin, callback) => callback(null, _origin || true),
+  origin: true,
   credentials: true,
 }));
 app.use(express.json({
