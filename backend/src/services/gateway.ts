@@ -45,6 +45,15 @@ const getProxy = (target: string) => {
           console.error(`[gateway] proxy error to ${target}:`, err.message);
           if (!res.headersSent) res.status(502).json({ error: 'Service unavailable', service: target });
         },
+        proxyRes: (proxyRes: any, req: any, _res: any) => {
+          const origin = req.headers['origin'];
+          if (origin) {
+            proxyRes.headers['access-control-allow-origin'] = origin;
+            proxyRes.headers['access-control-allow-credentials'] = 'true';
+            proxyRes.headers['access-control-allow-methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
+            proxyRes.headers['access-control-allow-headers'] = 'Content-Type, Authorization, X-User-Id, x-user-id, x-requested-with';
+          }
+        },
       },
     });
     proxies.set(target, proxy);
@@ -79,6 +88,9 @@ const handle = (req: Request, res: Response, next: NextFunction) => {
   return getProxy(target)(req, res, next);
 };
 
+app.options('/api/*', (_req: Request, res: Response) => {
+  res.status(204).end();
+});
 app.use('/api', handle);
 
 app.use((_req, res) => res.status(404).json({ error: 'Route not found' }));
