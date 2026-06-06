@@ -154,6 +154,11 @@ export default function TopicCard({ topic, index, onClick }: TopicCardProps) {
           <h3 className="text-base font-semibold text-white mb-1 group-hover:text-white transition-colors line-clamp-2 min-h-[2.5rem]">
             {topic.name}
           </h3>
+          {topic.questionCount !== undefined && (
+            <p className="text-xs text-white/50">
+              {topic.questionCount} {topic.questionCount === 1 ? 'question' : 'questions'}
+            </p>
+          )}
           <div className="flex items-center text-xs font-medium text-white/0 group-hover:text-white/60 transition-all duration-300 translate-x-[-4px] group-hover:translate-x-0">
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
           </div>
