@@ -73,7 +73,7 @@ const buildUpiLink = (txnNote: string) => {
 };
 
 router.get('/razorpay/status', (_req: Request, res: Response) => {
-  res.json({ enabled: isRazorpayEnabled() });
+  res.json({ enabled: isRazorpayEnabled(), build: 'status-public-v2' });
 });
 
 router.use(authenticate);
