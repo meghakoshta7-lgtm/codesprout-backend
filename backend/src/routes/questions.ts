@@ -93,8 +93,6 @@ router.get('/:slug', async (req: AuthRequest, res: Response) => {
     const sig = getFunctionSignature(question.slug);
     if (sig) return generateStarterCode(sig);
 
-    if (question.starter_code) return question.starter_code;
-
     const fallbackSig = generateFallbackSignature(question.slug);
     return generateStarterCode(fallbackSig);
   };
