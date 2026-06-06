@@ -243,32 +243,36 @@ router.post('/razorpay/verify', async (req: AuthRequest, res: Response) => {
       (p) => p.user_id === userId && (p.id === payment_id || p.razorpay_order_id === razorpay_order_id)
     );
 
-    if (!payment) {
-      return res.status(404).json({ error: 'Payment request not found' });
+    const alreadyVerified = isPremium(userId);
+    if (alreadyVerified) {
+      return res.json({
+        success: true,
+        message: 'Payment already verified! Premium subscription active.',
+        subscription: null,
+      });
     }
 
-    if (payment.status === 'verified') {
-      return res.status(400).json({ error: 'Payment already verified' });
+    const user = getUserById(userId);
+    const newSub = await activatePremium(userId, req.user!.name || req.user!.email, user?.email || req.user!.email, AMOUNT);
+
+    if (payment) {
+      payment.razorpay_payment_id = razorpay_payment_id;
+      payment.utr = razorpay_payment_id;
+      payment.status = 'verified';
+      payment.verified_at = new Date().toISOString();
+      payment.provider = 'razorpay';
     }
-
-    payment.razorpay_payment_id = razorpay_payment_id;
-    payment.utr = razorpay_payment_id;
-    payment.status = 'verified';
-    payment.verified_at = new Date().toISOString();
-    payment.provider = 'razorpay';
-
-    const newSub = await activatePremium(userId, req.user!.name || req.user!.email, payment.user_email, payment.amount);
 
     res.json({
       success: true,
       message: 'Payment verified! Premium subscription activated.',
-      payment: {
+      payment: payment ? {
         id: payment.id,
         razorpay_order_id,
         razorpay_payment_id,
         amount: payment.amount,
         verified_at: payment.verified_at,
-      },
+      } : { razorpay_order_id, razorpay_payment_id, amount: AMOUNT },
       subscription: newSub,
     });
   } catch (e: any) {
