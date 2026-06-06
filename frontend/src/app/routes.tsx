@@ -131,16 +131,14 @@ const companyColors: Record<string, string> = {
   Meta: '#0668E1',
 };
 
-function ReviewCard({ review, isCenter }: { review: typeof reviewsData[0]; isCenter?: boolean }) {
+function ReviewCard({ review, isCenter, accent }: { review: typeof reviewsData[0]; isCenter?: boolean; accent?: string }) {
   return (
-    <div className={`relative rounded-2xl p-5 transition-all duration-500 select-none overflow-hidden ${
-      isCenter
-        ? 'bg-[#0a0d1a] border-2 border-purple-500/40 shadow-[0_0_40px_-5px_rgba(139,92,246,0.3)]'
-        : 'bg-white/[0.03] border border-white/[0.06]'
+    <div className={`relative rounded-2xl p-6 transition-all duration-500 select-none overflow-hidden h-full flex flex-col bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-white/20 hover:from-white/[0.06] hover:to-white/[0.02] ${
+      isCenter ? `shadow-[0_8px_40px_-8px_rgba(139,92,246,0.35)] ${accent || ''}` : ''
     }`}>
-      {isCenter && <div className="absolute -top-16 -right-16 w-40 h-40 bg-purple-500/8 rounded-full blur-3xl pointer-events-none" />}
-      <div className="relative">
-        <div className="flex items-start justify-between mb-3">
+      {isCenter && <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full blur-3xl pointer-events-none opacity-40" style={{ background: accent?.includes('purple') ? 'rgba(139,92,246,0.4)' : accent?.includes('amber') ? 'rgba(245,158,11,0.4)' : 'rgba(139,92,246,0.4)' }} />}
+      <div className="relative flex flex-col h-full">
+        <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-0.5">
             {Array.from({ length: 5 }).map((_, s) => (
               <svg key={s} className={`w-4 h-4 ${s < review.rating ? 'text-amber-400' : 'text-white/15'}`} fill="currentColor" viewBox="0 0 20 20">
@@ -148,18 +146,20 @@ function ReviewCard({ review, isCenter }: { review: typeof reviewsData[0]; isCen
               </svg>
             ))}
           </div>
-          <span className="text-5xl font-serif leading-none select-none -mt-2" style={{ color: isCenter ? 'rgba(139,92,246,0.4)' : 'rgba(139,92,246,0.15)' }}>&ldquo;</span>
+          <svg className="w-7 h-7 text-purple-400/40" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
+          </svg>
         </div>
-        <p className={`text-[13px] leading-relaxed mb-4 ${isCenter ? 'text-white/80' : 'text-white/60'}`}>&ldquo;{review.text}&rdquo;</p>
-        <div className="flex items-center gap-3">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 ${isCenter ? 'bg-gradient-to-br from-purple-500 to-violet-600 ring-2 ring-purple-500/30' : 'bg-white/10'}`}>
+        <p className="text-[14px] leading-relaxed mb-5 text-white/75 flex-1">&ldquo;{review.text}&rdquo;</p>
+        <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+          <div className="w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0 bg-gradient-to-br from-purple-500 to-violet-600 ring-2 ring-purple-500/20">
             {review.avatar}
           </div>
-          <div>
-            <div className={`text-sm font-semibold ${isCenter ? 'text-white' : 'text-white/80'}`}>{review.name}</div>
-            <div className="flex items-center gap-1.5 text-xs text-white/40">
+          <div className="min-w-0">
+            <div className="text-sm font-semibold text-white truncate">{review.name}</div>
+            <div className="flex items-center gap-1.5 text-xs text-white/50 mt-0.5">
               <span className="w-2 h-2 rounded-full shrink-0" style={{ background: companyColors[review.company] || '#888' }} />
-              {review.role} @ {review.company}
+              <span className="truncate">{review.role} @ {review.company}</span>
             </div>
           </div>
         </div>
@@ -169,92 +169,89 @@ function ReviewCard({ review, isCenter }: { review: typeof reviewsData[0]; isCen
 }
 
 function SectionTestimonials() {
-  const [idx, setIdx] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [cw, setCw] = useState(900);
-  const [isMobile, setIsMobile] = useState(false);
+  const [page, setPage] = useState(0);
+  const [perPage, setPerPage] = useState(3);
+  const [hovered, setHovered] = useState(false);
   const len = reviewsData.length;
-  const cardW = 340;
-  const gap = 20;
-  const step = cardW + gap;
 
   useEffect(() => {
-    const measure = () => {
-      if (containerRef.current) setCw(containerRef.current.offsetWidth);
-      setIsMobile(window.innerWidth < 768);
+    const update = () => {
+      const w = window.innerWidth;
+      if (w < 640) setPerPage(1);
+      else if (w < 1024) setPerPage(2);
+      else setPerPage(3);
     };
-    measure();
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
   }, []);
 
-  const prev = () => setIdx((p) => (p - 1 + len) % len);
-  const next = () => setIdx((p) => (p + 1) % len);
+  const totalPages = Math.ceil(len / perPage);
+  const safePage = page % totalPages;
+  const startIdx = safePage * perPage;
+  const visibleReviews = reviewsData.slice(startIdx, startIdx + perPage);
+  while (visibleReviews.length < perPage && visibleReviews.length < len) {
+    const missing = perPage - visibleReviews.length;
+    visibleReviews.push(...reviewsData.slice(0, missing));
+  }
+
+  const prev = () => setPage((p) => (p - 1 + totalPages) % totalPages);
+  const next = () => setPage((p) => (p + 1) % totalPages);
 
   useEffect(() => {
-    const t = setInterval(() => setIdx((p) => (p + 1) % len), 4000);
+    if (hovered) return;
+    const t = setInterval(() => setPage((p) => (p + 1) % totalPages), 5000);
     return () => clearInterval(t);
-  }, [len]);
-
-  const offsetX = -(idx * step) + (cw / 2) - (cardW / 2);
+  }, [totalPages, hovered]);
 
   return (
-    <div className="relative mx-auto max-w-5xl px-4">
-      <div ref={containerRef} className="relative h-[480px] overflow-hidden">
-        <motion.div
-          animate={{ x: offsetX }}
-          transition={{ type: 'spring', stiffness: 200, damping: 30 }}
-          className="flex gap-5 absolute left-0 top-1/2 -translate-y-1/2"
-        >
-          {reviewsData.map((review, i) => {
-            const dist = Math.abs(i - idx);
-            const isCenterCard = dist === 0;
-            return (
-              <motion.div
-                key={review.name}
-                animate={{
-                  scale: isMobile ? 1 : isCenterCard ? 1.05 : dist === 1 ? 0.88 : 0.75,
-                  opacity: isMobile ? (isCenterCard ? 1 : 0) : isCenterCard ? 1 : dist === 1 ? 0.55 : 0.15,
-                }}
-                transition={{ type: 'spring', stiffness: 250, damping: 28 }}
-                className="shrink-0"
-                style={{
-                  width: isMobile ? 'calc(100vw - 2rem)' : cardW,
-                  maxWidth: isMobile ? 340 : cardW,
-                  filter: isCenterCard ? 'none' : 'blur(0.5px)',
-                  pointerEvents: isCenterCard ? 'auto' : 'none',
-                }}
-              >
-                <ReviewCard review={review} isCenter={isCenterCard} />
-              </motion.div>
-            );
-          })}
-        </motion.div>
-        {!isMobile && (
-          <>
-            <div className="absolute top-0 left-0 bottom-0 w-16 bg-gradient-to-r from-[#0B1020] to-transparent pointer-events-none z-10" />
-            <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-[#0B1020] to-transparent pointer-events-none z-10" />
-          </>
-        )}
-        {isMobile && (
-          <>
-            <button onClick={prev} aria-label="Previous testimonial" className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/15 text-white/80 hover:text-white hover:bg-black/80 flex items-center justify-center transition-all z-20">
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button onClick={next} aria-label="Next testimonial" className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/15 text-white/80 hover:text-white hover:bg-black/80 flex items-center justify-center transition-all z-20">
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </>
-        )}
+    <div
+      className="relative mx-auto max-w-6xl px-4"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        {visibleReviews.map((review, i) => {
+          const isCenter = perPage === 3 ? i === 1 : perPage === 2 ? i === 0 : true;
+          const accents = ['border-purple-500/20', 'border-amber-500/20', 'border-blue-500/20'];
+          const accent = accents[i % accents.length];
+          return (
+            <motion.div
+              key={`${review.name}-${startIdx}-${i}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="h-full"
+            >
+              <ReviewCard review={review} isCenter={isCenter} accent={accent} />
+            </motion.div>
+          );
+        })}
       </div>
-      <div className="flex items-center justify-center gap-3 mt-4">
-        <button onClick={prev} className="hidden md:flex w-9 h-9 rounded-full bg-white/5 border border-white/10 text-white/40 hover:text-white hover:bg-white/10 items-center justify-center transition-all">
+
+      <div className="flex items-center justify-center gap-4 mt-8">
+        <button
+          onClick={prev}
+          aria-label="Previous testimonials"
+          className="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white/60 hover:text-white flex items-center justify-center transition-all hover:scale-105"
+        >
           <ChevronLeft className="w-4 h-4" />
         </button>
-        {reviewsData.map((_, i) => (
-          <button key={i} onClick={() => setIdx(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === idx ? 'bg-purple-400 w-6' : 'bg-white/20 hover:bg-white/40 w-1.5'}`} />
-        ))}
-        <button onClick={next} className="hidden md:flex w-9 h-9 rounded-full bg-white/5 border border-white/10 text-white/40 hover:text-white hover:bg-white/10 items-center justify-center transition-all">
+        <div className="flex items-center gap-2">
+          {Array.from({ length: totalPages }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage(i)}
+              aria-label={`Go to testimonial page ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === safePage ? 'bg-gradient-to-r from-purple-400 to-pink-400 w-8' : 'bg-white/20 hover:bg-white/40 w-1.5'}`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={next}
+          aria-label="Next testimonials"
+          className="w-10 h-10 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white/60 hover:text-white flex items-center justify-center transition-all hover:scale-105"
+        >
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
@@ -657,15 +654,16 @@ function HomePage() {
 
       {/* Reviews */}
       <FadeInSection>
-        <section className="relative py-12 overflow-hidden">
+        <section className="relative py-16 sm:py-20 overflow-hidden">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold mb-2 border border-purple-500/20">
+            <div className="text-center mb-10 sm:mb-12">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold mb-4 border border-purple-500/20">
                 Loved by 10,000+ Developers <span className="text-red-400">❤️</span>
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">What <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Students</span> Say</h2>
-              <p className="text-white/50 mt-1">Hear from students who cracked their dream interviews</p>
+              <p className="text-white/50 mt-2 max-w-2xl mx-auto">Real stories from developers who landed their dream jobs after practicing on CodeSprout</p>
             </div>
             <SectionTestimonials />
           </div>
