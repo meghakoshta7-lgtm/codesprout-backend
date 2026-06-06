@@ -32,6 +32,7 @@ export interface Question {
   key_insight?: string;
   related_problems?: { title: string; slug: string; difficulty: string }[];
   examples?: { input: string; output: string; explanation?: string }[];
+  test_cases?: { id: string; input: string; expected_output: string; is_hidden: boolean }[];
 }
 
 export interface CheatSheet {
