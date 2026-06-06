@@ -1,6 +1,6 @@
 import { Router, Response, Request } from 'express';
 import { authenticate, AuthRequest } from '../middleware/auth';
-import { isPremium, addSubscription } from '../data/store';
+import { isPremium, addSubscription, getSubscription } from '../data/store';
 import { getUserById } from '../data/db';
 import { sendPremiumNotification } from '../services/notifications';
 import { sendSubscriptionEmail } from '../services/email';
@@ -111,6 +111,15 @@ router.post('/razorpay/webhook', async (req: Request, res: Response) => {
 });
 
 router.use(authenticate);
+
+router.get('/subscription', (req: AuthRequest, res: Response) => {
+  const sub = getSubscription(req.user!.id);
+  if (sub) {
+    res.json(sub);
+  } else {
+    res.json({ plan: 'free', status: 'active' });
+  }
+});
 
 router.post('/init', (req: AuthRequest, res: Response) => {
   const userId = req.user!.id;
