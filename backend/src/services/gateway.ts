@@ -93,7 +93,7 @@ const handle = (req: Request, res: Response, next: NextFunction) => {
   const path = req.path;
   let target: string | null = null;
   if (path.startsWith('/auth') || path.startsWith('/notifications') || path.startsWith('/email')) target = SERVICES.auth;
-  else if (path.startsWith('/topics') || path.startsWith('/questions') || path.startsWith('/patterns') || path.startsWith('/stats')) target = SERVICES.content;
+  else if (path.startsWith('/topics') || path.startsWith('/questions') || path.startsWith('/patterns') || path.startsWith('/stats') || path.startsWith('/shop')) target = SERVICES.content;
   else if (path.startsWith('/bookmarks') || path.startsWith('/dashboard') || path.startsWith('/leaderboard')) target = SERVICES.social;
   else if (path.startsWith('/interview-prep')) target = SERVICES.social;
   else if (path.startsWith('/subscription')) target = SERVICES.payment;

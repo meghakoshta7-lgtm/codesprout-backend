@@ -1,12 +1,27 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, ShoppingCart, Star, Download, Lock, CheckCircle2, X, Filter, ArrowLeft, Loader2, BookOpen, Sparkles, TrendingUp, Users, Zap, Crown } from 'lucide-react';
+import { Search, ShoppingCart, Star, Download, CheckCircle2, X, Loader2, BookOpen, TrendingUp, Users, Crown } from 'lucide-react';
 import SEO from '@/shared/components/SEO';
-import { PRODUCTS, CATEGORIES, type ShopProduct, type ProductCategory } from '../data/products';
+import api from '@/services/api';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.05 } } };
 const itemAnim = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
+
+const CATEGORIES = [
+  { id: 'all' as const, label: 'All', icon: '📚' },
+  { id: 'pdf' as const, label: 'PDFs', icon: '📄' },
+  { id: 'notes' as const, label: 'Notes', icon: '📝' },
+  { id: 'interview-notes' as const, label: 'Interview Notes', icon: '🎤' },
+  { id: 'company-specific' as const, label: 'Company Specific', icon: '🏢' },
+];
+
+interface ShopProduct {
+  id: string; title: string; description: string; category: string;
+  price: { amount: number; label: string } | 'free';
+  icon: string; color: string; tags: string[];
+  popular?: boolean; pages?: number; author?: string;
+}
 
 function formatPrice(p: ShopProduct['price']) {
   if (p === 'free') return { text: 'Free', isFree: true, amount: 0 };
@@ -14,7 +29,9 @@ function formatPrice(p: ShopProduct['price']) {
 }
 
 export default function ShopPage() {
-  const [activeCategory, setActiveCategory] = useState<ProductCategory | 'all'>('all');
+  const [products, setProducts] = useState<ShopProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState('all');
   const [search, setSearch] = useState('');
   const [showFreeOnly, setShowFreeOnly] = useState(false);
   const [cart, setCart] = useState<ShopProduct[]>([]);
@@ -22,16 +39,24 @@ export default function ShopPage() {
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [checkoutDone, setCheckoutDone] = useState(false);
 
+  useEffect(() => {
+    setLoading(true);
+    api.get('/shop/products')
+      .then(res => setProducts(res.data?.products || []))
+      .catch(() => setProducts([]))
+      .finally(() => setLoading(false));
+  }, []);
+
   const filtered = useMemo(() => {
-    let list = PRODUCTS;
+    let list = products;
     if (activeCategory !== 'all') list = list.filter(p => p.category === activeCategory);
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter(p => p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.tags.some(t => t.includes(q)));
     }
-    if (showFreeOnly) list = list.filter(p => p.price === 'free' || p.price.amount === 0);
+    if (showFreeOnly) list = list.filter(p => p.price === 'free' || (typeof p.price === 'object' && p.price.amount === 0));
     return list;
-  }, [activeCategory, search, showFreeOnly]);
+  }, [products, activeCategory, search, showFreeOnly]);
 
   const cartTotal = cart.reduce((s, p) => {
     if (p.price === 'free') return s;
@@ -81,12 +106,12 @@ export default function ShopPage() {
             </button>
           </div>
 
-          {/* Stats bar */}
+          {!loading && (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             {[
-              { icon: BookOpen, label: 'Resources', value: PRODUCTS.length, color: 'text-primary-400' },
-              { icon: Crown, label: 'Free Items', value: PRODUCTS.filter(p => p.price === 'free' || p.price.amount === 0).length, color: 'text-emerald-400' },
-              { icon: TrendingUp, label: 'Premium', value: PRODUCTS.filter(p => p.price !== 'free' && p.price.amount > 0).length, color: 'text-amber-400' },
+              { icon: BookOpen, label: 'Resources', value: products.length, color: 'text-primary-400' },
+              { icon: Crown, label: 'Free Items', value: products.filter(p => p.price === 'free' || (typeof p.price === 'object' && p.price.amount === 0)).length, color: 'text-emerald-400' },
+              { icon: TrendingUp, label: 'Premium', value: products.filter(p => p.price !== 'free' && (typeof p.price === 'object' && p.price.amount > 0)).length, color: 'text-amber-400' },
               { icon: Users, label: 'Categories', value: CATEGORIES.length, color: 'text-pink-400' },
             ].map((s, i) => (
               <div key={i} className="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 flex items-center gap-3">
@@ -95,6 +120,7 @@ export default function ShopPage() {
               </div>
             ))}
           </div>
+          )}
 
           {/* Search + Filters */}
           <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 mb-6">
@@ -110,7 +136,6 @@ export default function ShopPage() {
             </div>
             {/* Category tabs */}
             <div className="flex gap-2 mt-3 overflow-x-auto pb-1 scrollbar-thin">
-              <button onClick={() => setActiveCategory('all')} className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition ${activeCategory === 'all' ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}>All</button>
               {CATEGORIES.map(c => (
                 <button key={c.id} onClick={() => setActiveCategory(c.id)} className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition ${activeCategory === c.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}>
                   <span>{c.icon}</span> {c.label}
@@ -120,12 +145,19 @@ export default function ShopPage() {
           </div>
 
           {/* Products grid */}
+          {loading ? (
+            <div className="flex items-center justify-center py-20"><Loader2 className="w-8 h-8 text-primary-500 animate-spin" /></div>
+          ) : filtered.length === 0 ? (
+            <div className="text-center py-16">
+              <Search className="w-12 h-12 text-slate-700 mx-auto mb-3" />
+              <p className="text-slate-400 text-sm">No resources found matching your criteria</p>
+            </div>
+          ) : (
           <motion.div variants={container} initial="hidden" animate="show" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filtered.map(p => {
               const price = formatPrice(p.price);
               return (
                 <motion.div key={p.id} variants={itemAnim} className="group bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition-all hover:shadow-lg hover:shadow-primary-500/5">
-                  {/* Color bar */}
                   <div className={`h-1.5 bg-gradient-to-r ${p.color}`} />
                   <div className="p-4">
                     <div className="flex items-start justify-between mb-2">
@@ -152,12 +184,6 @@ export default function ShopPage() {
               );
             })}
           </motion.div>
-
-          {filtered.length === 0 && (
-            <div className="text-center py-16">
-              <Search className="w-12 h-12 text-slate-700 mx-auto mb-3" />
-              <p className="text-slate-400 text-sm">No resources found matching your criteria</p>
-            </div>
           )}
         </div>
 
