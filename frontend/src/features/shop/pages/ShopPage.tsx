@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, ShoppingCart, Star, Download, CheckCircle2, X, Loader2, BookOpen, TrendingUp, Users, Crown } from 'lucide-react';
+import { Search, ShoppingCart, Star, Download, CheckCircle2, X, Loader2, BookOpen, TrendingUp, Users, Crown, ArrowRight, Sparkles } from 'lucide-react';
 import SEO from '@/shared/components/SEO';
 import api from '@/services/api';
 
@@ -82,108 +81,118 @@ export default function ShopPage() {
   return (
     <>
       <SEO title="Shop - CodeSprout" description="Premium interview preparation resources - PDFs, notes, company-specific guides" />
-      <div className="min-h-screen pt-20 sm:pt-24 pb-16 bg-slate-950">
+      <div className="min-h-screen pt-20 sm:pt-24 pb-16 bg-[#0a0a1a] relative overflow-hidden">
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 -left-40 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 -left-40 w-96 h-96 bg-purple-600/8 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-blue-600/8 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <div className="flex items-center gap-3 mb-1">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-pink-500 flex items-center justify-center">
-                  <ShoppingCart className="w-5 h-5 text-white" />
-                </div>
-                <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-primary-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">Shop</h1>
+          {/* Hero Section */}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12">
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/15 border border-purple-500/20 mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                <span className="text-xs font-semibold text-purple-400">Premium Resources</span>
               </div>
-              <p className="text-slate-400 text-sm">Premium resources to ace your interviews</p>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-4 tracking-tight">Shop</h1>
+              <p className="text-xl sm:text-2xl font-semibold text-white mb-3">Premium resources to ace your interviews</p>
+              <p className="text-slate-400 text-sm leading-relaxed max-w-md mb-6">Curated interview materials, company insights, notes and more to help you land your dream job.</p>
+              <a href="#resources" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold text-sm transition shadow-lg shadow-purple-500/25">
+                Explore Resources <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
-            <button onClick={() => setShowCart(true)} className="relative p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition">
-              <ShoppingCart className="w-5 h-5 text-slate-300" />
-              {cart.length > 0 && <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary-500 text-white text-xs font-bold flex items-center justify-center">{cart.length}</span>}
-            </button>
+            <div className="flex-shrink-0 w-80 h-80 lg:w-96 lg:h-96">
+              <img src="/shop-cart.png" alt="Shop Resources" className="w-full h-full object-contain drop-shadow-2xl" />
+            </div>
           </div>
 
+          {/* Stats */}
           {!loading && (
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            {[
-              { icon: BookOpen, label: 'Resources', value: products.length, color: 'text-primary-400' },
-              { icon: Crown, label: 'Free Items', value: products.filter(p => p.price === 'free' || (typeof p.price === 'object' && p.price.amount === 0)).length, color: 'text-emerald-400' },
-              { icon: TrendingUp, label: 'Premium', value: products.filter(p => p.price !== 'free' && (typeof p.price === 'object' && p.price.amount > 0)).length, color: 'text-amber-400' },
-              { icon: Users, label: 'Categories', value: CATEGORIES.length, color: 'text-pink-400' },
-            ].map((s, i) => (
-              <div key={i} className="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 flex items-center gap-3">
-                <s.icon className={`w-6 h-6 ${s.color}`} />
-                <div><div className="text-xl font-bold text-white">{s.value}</div><div className="text-xs text-slate-500">{s.label}</div></div>
-              </div>
-            ))}
-          </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+              {[
+                { icon: BookOpen, label: 'Resources', value: products.length, color: 'text-purple-400', bg: 'bg-purple-500/10' },
+                { icon: Crown, label: 'Free Items', value: products.filter(p => p.price === 'free' || (typeof p.price === 'object' && p.price.amount === 0)).length, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+                { icon: TrendingUp, label: 'Premium', value: products.filter(p => p.price !== 'free' && (typeof p.price === 'object' && p.price.amount > 0)).length, color: 'text-amber-400', bg: 'bg-amber-500/10' },
+                { icon: Users, label: 'Categories', value: CATEGORIES.length - 1, color: 'text-pink-400', bg: 'bg-pink-500/10' },
+              ].map((s, i) => (
+                <div key={i} className="bg-[#111127] border border-slate-800/50 rounded-2xl p-5 flex items-center gap-4">
+                  <div className={`w-12 h-12 rounded-xl ${s.bg} flex items-center justify-center`}>
+                    <s.icon className={`w-6 h-6 ${s.color}`} />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">{s.value}</div>
+                    <div className="text-xs text-slate-500">{s.label}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
 
           {/* Search + Filters */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 mb-6">
-            <div className="flex flex-col sm:flex-row gap-3">
+          <div id="resources" className="bg-[#111127] border border-slate-800/50 rounded-2xl p-5 mb-8">
+            <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search resources..." className="w-full pl-9 pr-4 py-2.5 bg-slate-800/80 border border-slate-700 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:border-primary-500" />
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search resources..." className="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-slate-700/50 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:border-purple-500 transition" />
               </div>
-              <label className="flex items-center gap-2 px-3 py-2.5 bg-slate-800/80 border border-slate-700 rounded-xl cursor-pointer hover:border-slate-600 transition">
-                <input type="checkbox" checked={showFreeOnly} onChange={e => setShowFreeOnly(e.target.checked)} className="w-4 h-4 rounded accent-primary-500" />
+              <label className="flex items-center gap-2.5 px-4 py-3 bg-slate-800/60 border border-slate-700/50 rounded-xl cursor-pointer hover:border-slate-600 transition">
+                <input type="checkbox" checked={showFreeOnly} onChange={e => setShowFreeOnly(e.target.checked)} className="w-4 h-4 rounded accent-purple-500" />
                 <span className="text-sm text-slate-300 whitespace-nowrap">Free only</span>
               </label>
             </div>
-            {/* Category tabs */}
-            <div className="flex gap-2 mt-3 overflow-x-auto pb-1 scrollbar-thin">
+            <div className="flex gap-2 overflow-x-auto pb-1">
               {CATEGORIES.map(c => (
-                <button key={c.id} onClick={() => setActiveCategory(c.id)} className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition ${activeCategory === c.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}>
+                <button key={c.id} onClick={() => setActiveCategory(c.id)} className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition ${activeCategory === c.id ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25' : 'bg-slate-800/60 text-slate-400 hover:bg-slate-700/60'}`}>
                   <span>{c.icon}</span> {c.label}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Products grid */}
+          {/* Products grid / Empty / Loading */}
           {loading ? (
-            <div className="flex items-center justify-center py-20"><Loader2 className="w-8 h-8 text-primary-500 animate-spin" /></div>
+            <div className="flex items-center justify-center py-20"><Loader2 className="w-8 h-8 text-purple-500 animate-spin" /></div>
           ) : filtered.length === 0 ? (
-            <div className="text-center py-16">
-              <Search className="w-12 h-12 text-slate-700 mx-auto mb-3" />
-              <p className="text-slate-400 text-sm">No resources found matching your criteria</p>
+            <div className="text-center py-20">
+              <div className="w-20 h-20 rounded-full bg-slate-800/60 border border-slate-700/50 flex items-center justify-center mx-auto mb-4">
+                <Search className="w-10 h-10 text-purple-400" />
+              </div>
+              <p className="text-slate-300 text-sm font-medium mb-1">No resources found matching your criteria</p>
+              <p className="text-slate-500 text-xs">Try adjusting your search or filters</p>
             </div>
           ) : (
-          <motion.div variants={container} initial="hidden" animate="show" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {filtered.map(p => {
-              const price = formatPrice(p.price);
-              return (
-                <motion.div key={p.id} variants={itemAnim} className="group bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition-all hover:shadow-lg hover:shadow-primary-500/5">
-                  <div className={`h-1.5 bg-gradient-to-r ${p.color}`} />
-                  <div className="p-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center text-lg`}>{p.icon}</div>
-                      <div className="flex items-center gap-1.5">
-                        {p.popular && <span className="px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 text-[10px] font-bold flex items-center gap-0.5"><Star className="w-2.5 h-2.5" /> Popular</span>}
-                        {price.isFree ? <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 text-[10px] font-bold">Free</span> : <span className="px-2 py-0.5 rounded-full bg-primary-500/15 text-primary-400 text-[10px] font-bold">{price.text}</span>}
+            <motion.div variants={container} initial="hidden" animate="show" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {filtered.map(p => {
+                const price = formatPrice(p.price);
+                return (
+                  <motion.div key={p.id} variants={itemAnim} className="group bg-[#111127] border border-slate-800/50 hover:border-purple-500/30 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5">
+                    <div className={`h-1.5 bg-gradient-to-r ${p.color}`} />
+                    <div className="p-4">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center text-lg`}>{p.icon}</div>
+                        <div className="flex items-center gap-1.5">
+                          {p.popular && <span className="px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 text-[10px] font-bold flex items-center gap-0.5"><Star className="w-2.5 h-2.5" /> Popular</span>}
+                          {price.isFree ? <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 text-[10px] font-bold">Free</span> : <span className="px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-400 text-[10px] font-bold">{price.text}</span>}
+                        </div>
                       </div>
+                      <h3 className="text-sm font-bold text-white mb-1.5 line-clamp-1">{p.title}</h3>
+                      <p className="text-xs text-slate-400 mb-3 line-clamp-2 leading-relaxed">{p.description}</p>
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {p.tags.slice(0, 3).map(t => <span key={t} className="px-2 py-0.5 rounded-md bg-slate-800/60 text-slate-400 text-[10px]">{t}</span>)}
+                      </div>
+                      <div className="flex items-center justify-between text-[10px] text-slate-500 mb-3">
+                        {p.pages && <span>{p.pages} pages</span>}
+                        {p.author && <span className="truncate ml-1">by {p.author}</span>}
+                      </div>
+                      <button onClick={() => toggleCart(p)} className={`w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${inCart(p.id) ? 'bg-slate-700 text-slate-300' : price.isFree ? 'bg-emerald-500 hover:bg-emerald-400 text-white' : 'bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20'}`}>
+                        {inCart(p.id) ? <><X className="w-3.5 h-3.5" /> Remove</> : price.isFree ? <><Download className="w-3.5 h-3.5" /> Free Download</> : <><ShoppingCart className="w-3.5 h-3.5" /> Add to Cart</>}
+                      </button>
                     </div>
-                    <h3 className="text-sm font-bold text-white mb-1 line-clamp-1">{p.title}</h3>
-                    <p className="text-xs text-slate-400 mb-3 line-clamp-2 leading-relaxed">{p.description}</p>
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {p.tags.slice(0, 3).map(t => <span key={t} className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-400 text-[10px]">{t}</span>)}
-                    </div>
-                    <div className="flex items-center justify-between text-[10px] text-slate-500 mb-3">
-                      {p.pages && <span>{p.pages} pages</span>}
-                      {p.author && <span className="truncate ml-1">by {p.author}</span>}
-                    </div>
-                    <button onClick={() => toggleCart(p)} className={`w-full py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${inCart(p.id) ? 'bg-slate-700 text-slate-300' : price.isFree ? 'bg-emerald-500 hover:bg-emerald-400 text-white' : 'bg-primary-500 hover:bg-primary-400 text-white'}`}>
-                      {inCart(p.id) ? <><X className="w-3.5 h-3.5" /> Remove</> : price.isFree ? <><Download className="w-3.5 h-3.5" /> Free Download</> : <><ShoppingCart className="w-3.5 h-3.5" /> Add to Cart</>}
-                    </button>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
           )}
         </div>
 
@@ -191,27 +200,27 @@ export default function ShopPage() {
         {showCart && (
           <div className="fixed inset-0 z-50 flex">
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowCart(false)} />
-            <div className="ml-auto w-full max-w-md bg-slate-950 border-l border-slate-800 h-full flex flex-col relative z-10">
-              <div className="flex items-center justify-between p-4 border-b border-slate-800">
-                <h2 className="text-lg font-bold text-white flex items-center gap-2"><ShoppingCart className="w-5 h-5 text-primary-400" /> Cart ({cart.length})</h2>
-                <button onClick={() => setShowCart(false)} className="p-1.5 rounded-lg hover:bg-slate-800 transition"><X className="w-5 h-5 text-slate-400" /></button>
+            <div className="ml-auto w-full max-w-md bg-[#0a0a1a] border-l border-slate-800/50 h-full flex flex-col relative z-10">
+              <div className="flex items-center justify-between p-5 border-b border-slate-800/50">
+                <h2 className="text-lg font-bold text-white flex items-center gap-2"><ShoppingCart className="w-5 h-5 text-purple-400" /> Cart ({cart.length})</h2>
+                <button onClick={() => setShowCart(false)} className="p-2 rounded-lg hover:bg-slate-800/60 transition"><X className="w-5 h-5 text-slate-400" /></button>
               </div>
 
-              <div className="flex-1 overflow-y-auto p-4 space-y-3">
+              <div className="flex-1 overflow-y-auto p-5 space-y-3">
                 {cart.length === 0 ? (
-                  <div className="text-center py-12"><ShoppingCart className="w-12 h-12 text-slate-700 mx-auto mb-3" /><p className="text-slate-500 text-sm">Your cart is empty</p></div>
+                  <div className="text-center py-16"><ShoppingCart className="w-14 h-14 text-slate-700 mx-auto mb-3" /><p className="text-slate-500 text-sm">Your cart is empty</p></div>
                 ) : (
                   cart.map(p => {
                     const price = formatPrice(p.price);
                     return (
-                      <div key={p.id} className="flex items-center gap-3 bg-slate-900/60 border border-slate-800 rounded-xl p-3">
+                      <div key={p.id} className="flex items-center gap-3 bg-[#111127] border border-slate-800/50 rounded-xl p-3">
                         <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${p.color} flex items-center justify-center text-base flex-shrink-0`}>{p.icon}</div>
                         <div className="flex-1 min-w-0">
                           <div className="text-sm font-semibold text-white truncate">{p.title}</div>
                           <div className="text-xs text-slate-500 capitalize">{p.category.replace('-', ' ')}</div>
                         </div>
                         <div className="text-right flex-shrink-0">
-                          <div className={`text-sm font-bold ${price.isFree ? 'text-emerald-400' : 'text-primary-400'}`}>{price.text}</div>
+                          <div className={`text-sm font-bold ${price.isFree ? 'text-emerald-400' : 'text-purple-400'}`}>{price.text}</div>
                           <button onClick={() => toggleCart(p)} className="text-xs text-red-400 hover:text-red-300">Remove</button>
                         </div>
                       </div>
@@ -221,7 +230,7 @@ export default function ShopPage() {
               </div>
 
               {cart.length > 0 && (
-                <div className="p-4 border-t border-slate-800 space-y-3">
+                <div className="p-5 border-t border-slate-800/50 space-y-3">
                   {hasPaidItems && (
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-slate-400">Total</span>
@@ -229,7 +238,7 @@ export default function ShopPage() {
                     </div>
                   )}
                   <button onClick={handleCheckout} disabled={checkoutLoading}
-                    className="w-full py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-primary-500 to-pink-500 hover:from-primary-400 hover:to-pink-400 text-white transition disabled:opacity-50 flex items-center justify-center gap-2">
+                    className="w-full py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white transition disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-purple-500/25">
                     {checkoutLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Processing...</> : checkoutDone ? <><CheckCircle2 className="w-4 h-4" /> Purchased!</> : hasPaidItems ? `Proceed to Checkout ₹${cartTotal.toLocaleString()}` : 'Download All Free'}
                   </button>
                   {checkoutDone && <p className="text-xs text-emerald-400 text-center">Resources will be available in your dashboard</p>}
