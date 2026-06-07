@@ -124,7 +124,7 @@ function PatternsContent() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <div className="fixed inset-0" style={{ backgroundColor: '#0B1020' }}>
+      <div className="fixed inset-0" style={{ background: 'linear-gradient(180deg, #0a0a1a 0%, #14091f 50%, #0a0a1a 100%)' }}>
         <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-emerald-500/8 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[700px] h-[700px] bg-teal-500/8 rounded-full blur-[120px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[100px]" />
@@ -136,67 +136,83 @@ function PatternsContent() {
 
       <section className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-8 sm:pb-12">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
-                <Layers className="w-4 h-4" /> DSA Patterns
-              </span>
-            </motion.div>
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            <div className="flex-1 w-full">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+                  <Layers className="w-4 h-4" /> DSA Patterns
+                </span>
+              </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
-            >
-              <span className="text-white">Master </span>
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">Patterns</span>
-            </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+              >
+                <span className="text-white">Master </span>
+                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">Patterns</span>
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-4 sm:mt-6 text-base sm:text-lg text-white/50 max-w-2xl mx-auto leading-relaxed px-4"
-            >
-              Learn algorithmic patterns to solve any coding problem. Each pattern includes multiple practice questions.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="mt-5 text-base sm:text-lg text-white/60 max-w-xl leading-relaxed"
+              >
+                Learn algorithmic patterns to solve any coding problem. Each pattern includes multiple practice questions.
+              </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-6 sm:mt-8 flex justify-center px-4"
-            >
-              <div className="relative w-full max-w-md">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  placeholder="Search patterns..."
-                  className="w-full pl-11 pr-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-sm text-white placeholder-white/30 outline-none focus:border-emerald-500/50 transition-colors"
-                />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
-            >
-              {[
-                { label: 'Patterns', value: patterns.length, color: 'text-emerald-400' },
-                { label: 'Questions', value: patterns.reduce((s, p) => s + p.count, 0), color: 'text-blue-400' },
-                { label: 'Categories', value: availableCategories.length - 1, color: 'text-violet-400' },
-              ].map((s) => (
-                <div key={s.label} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/5">
-                  <span className={`text-sm font-bold ${s.color}`}>{s.value}+</span>
-                  <span className="text-xs text-white/40">{s.label}</span>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="mt-7"
+              >
+                <div className="relative w-full max-w-md">
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}
+                    placeholder="Search patterns..."
+                    className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/10 rounded-xl text-sm text-white placeholder-white/30 outline-none focus:border-emerald-500/50 transition-colors"
+                  />
                 </div>
-              ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="mt-6 flex flex-wrap items-center gap-3"
+              >
+                {[
+                  { label: 'Patterns', value: patterns.length, color: 'text-emerald-400' },
+                  { label: 'Questions', value: patterns.reduce((s, p) => s + p.count, 0), color: 'text-blue-400' },
+                  { label: 'Categories', value: availableCategories.length - 1, color: 'text-violet-400' },
+                ].map((s) => (
+                  <div key={s.label} className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/5">
+                    <span className={`text-sm font-bold ${s.color}`}>{s.value}+</span>
+                    <span className="text-xs text-white/40">{s.label}</span>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="flex-shrink-0 w-full max-w-md lg:max-w-lg"
+            >
+              <img src="/patterns-hero.png" alt="DSA Patterns" className="w-full h-auto drop-shadow-2xl" />
             </motion.div>
+          </div>
+        </div>
+        <div className="flex justify-center pb-6">
+          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/30">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6" /></svg>
           </div>
         </div>
       </section>
