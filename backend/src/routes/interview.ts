@@ -9,6 +9,7 @@ import {
   getInterviewKitsByUser, getInterviewKit, addInterviewKit,
 } from '../data/db';
 import { getRoleById } from '../data/roles';
+import { getSubjectQuestions, getAllSubjectNames } from '../data/interviewQuestionsBank';
 import type {
   InterviewPreference, GeneratedInterviewQuestion, MockInterviewSession, MockAnswer,
   InterviewKit, InterviewExperienceLevel, QuestionDifficulty, MockRoundType,
@@ -112,23 +113,64 @@ const FALLBACK_QUESTIONS: Record<string, { basic: { question: string; answer: st
 };
 
 function getFallbackQuestions(subject: string, difficulty: QuestionDifficulty, count: number): { question: string; answer: string; tags: string[] }[] {
+  // Try subject-specific static bank first
+  const subjectQs = getSubjectQuestions(subject, difficulty);
+  if (subjectQs.length > 0) return subjectQs.slice(0, count);
+  // Then try FALLBACK_QUESTIONS per-subject entries
   const lower = subject.toLowerCase();
-  // Try to find a subject-specific bank
   for (const [key, bank] of Object.entries(FALLBACK_QUESTIONS)) {
     if (key === 'default') continue;
     if (lower.includes(key) || key.includes(lower)) {
       const pool = bank[difficulty] || [];
-      return pool.slice(0, count);
+      if (pool.length > 0) return pool.slice(0, count);
     }
   }
-  // Otherwise use default + try to make them subject-specific
+  // Last resort: default bank with subject-name substitution
   const defaultBank = FALLBACK_QUESTIONS.default[difficulty] || [];
-  const result = defaultBank.slice(0, count).map(q => ({
+  return defaultBank.slice(0, count).map(q => ({
     question: q.question.replace(/\b(system|service|project|role)\b/gi, subject),
     answer: q.answer,
     tags: q.tags,
   }));
-  return result;
+}
+
+const SUBJECT_ALIASES: Record<string, string[]> = {
+  'dbms': ['database', 'dbms', 'db', 'rdbms'],
+  'os': ['operating system', 'os', 'kernel'],
+  'dsa': ['data structure', 'algorithm', 'dsa'],
+  'oop': ['object oriented', 'oop', 'class', 'inheritance'],
+  'html & css': ['html', 'css', 'hypertext', 'cascading'],
+  'cicd': ['ci/cd', 'ci', 'cd', 'pipeline', 'continuous'],
+};
+
+function isSubjectSpecific(question: string, subject: string): boolean {
+  const lowerQ = question.toLowerCase();
+  const lowerSubj = subject.toLowerCase();
+  const genericPatterns = [
+    'tell me about yourself', 'why do you want', 'what are your strengths',
+    'what are your weaknesses', 'where do you see yourself',
+    'why are you leaving', 'describe a challenging',
+    'how do you handle disagreement', 'tell me about a time',
+    'describe a time', 'how would your colleagues describe',
+    'why should we hire', 'what motivates you',
+  ];
+  for (const gp of genericPatterns) {
+    if (lowerQ.includes(gp)) return false;
+  }
+  // Build keyword list from subject name + aliases
+  const keywords: string[] = [];
+  for (const [aliasKey, aliasList] of Object.entries(SUBJECT_ALIASES)) {
+    if (lowerSubj.includes(aliasKey) || aliasKey.includes(lowerSubj)) {
+      keywords.push(...aliasList);
+    }
+  }
+  keywords.push(...lowerSubj.split(/\s+/).filter((kw: string) => kw.length > 2));
+  if (keywords.length === 0) return true;
+  return keywords.some((kw: string) => lowerQ.includes(kw));
+}
+
+function filterSubjectSpecific(questions: any[], subject: string): any[] {
+  return questions.filter(q => q && q.question && isSubjectSpecific(q.question, subject));
 }
 
 function extractJsonArray(text: string): any[] {
@@ -239,6 +281,7 @@ router.post('/interview-prep/generate-questions', authenticate, async (req: Auth
 
     for (const diff of toGenerate) {
       const need = targets[diff] - existingByDiff[diff];
+      const subjectKeywords = subject.split(/\s+/).join(', ');
       const prompt = `You are an expert technical interviewer preparing questions for a ${pref.experience}-level ${roleName} candidate.
 
 Generate exactly ${need} ${diff.toUpperCase()}-level interview questions on the subject "${subject}".
@@ -246,13 +289,15 @@ Generate exactly ${need} ${diff.toUpperCase()}-level interview questions on the 
 For each question, return a JSON object with this exact shape:
 { "question": "<the question text>", "answer": "<a clear, 3-6 sentence answer>", "tags": ["<tag1>", "<tag2>"] }
 
-Rules:
-- Questions should be realistic and commonly asked in real interviews
-- The answer should be concise but complete (3-6 sentences, no bullet lists)
-- Tags should be 1-3 short keywords related to the question
+CRITICAL RULES:
+- EVERY question MUST be specifically and exclusively about "${subject}"
+- Forbidden: generic HR/behavioral questions like "Tell me about yourself", "Why do you want this job", "What are your strengths", "Where do you see yourself", "Describe a challenging project", "Tell me about a time"
+- Your question MUST contain keywords like: ${subjectKeywords}
+- The answer must demonstrate technical depth specific to ${subject}, not generic advice
+- Vary question types: conceptual explanations, compare/contrast, scenario-based problem solving, implementation details
 - Return ONLY a JSON array, no markdown, no commentary, no preamble
 
-Example: [{"question":"What is X?","answer":"X is ...","tags":["x"]}]`;
+Example for subject "JavaScript": [{"question":"What is the difference between let and var in JavaScript?","answer":"let is block-scoped...","tags":["variables","scoping"]}]`;
 
       let aiSucceeded = false;
       try {
@@ -262,7 +307,9 @@ Example: [{"question":"What is X?","answer":"X is ...","tags":["x"]}]`;
         ]);
         const arr = extractJsonArray(text);
         if (Array.isArray(arr)) {
-          for (const item of arr.slice(0, need)) {
+          // Quality check: reject generic questions that lack subject-specific terms
+          const filtered = filterSubjectSpecific(arr, subject);
+          for (const item of filtered.slice(0, need)) {
             if (!item?.question || !item?.answer) continue;
             newQuestions.push({
               id: `giq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
@@ -278,6 +325,8 @@ Example: [{"question":"What is X?","answer":"X is ...","tags":["x"]}]`;
             });
           }
           aiSucceeded = newQuestions.filter(q => q.difficulty === diff).length > 0;
+          const rejectedCount = arr.length - filtered.length;
+          if (rejectedCount > 0) console.log(`[interview-prep] rejected ${rejectedCount} generic questions for ${subject}/${diff}`);
         }
       } catch (err: any) {
         console.error(`[interview-prep] gen failed for ${subject}/${diff}:`, err.message);
@@ -348,9 +397,14 @@ router.post('/interview-prep/mock/start', authenticate, async (req: AuthRequest,
     if (pool.length < N) {
       const newOnes: GeneratedInterviewQuestion[] = [];
       try {
+        const subjectKeywords = subject.split(/\s+/).join(', ');
         const prompt = `Generate ${Math.max(N, 8)} interview questions on "${subject}" for a ${pref.experience}-level ${getRoleById(pref.role)?.name || pref.role} candidate. Round type: ${round_type}.
 Return a JSON array of { "question": "<text>", "answer": "<3-6 sentence answer>", "tags": ["..."] }.
 ${round_type === 'behavioral' || round_type === 'hr' ? 'Focus on behavioral/situational questions, not technical.' : 'Focus on technical depth.'}
+CRITICAL RULES:
+- EVERY question MUST be specifically about "${subject}" and contain keywords like: ${subjectKeywords}
+- DO NOT generate generic questions like "Tell me about yourself", "Why do you want this job", "What are your strengths"
+- Use specific terminology belonging to ${subject}
 Output only the JSON array, no markdown.`;
         const text = await callOpenRouter([
           { role: 'system', content: 'You output strict JSON arrays only.' },
@@ -358,7 +412,8 @@ Output only the JSON array, no markdown.`;
         ]);
         const arr = extractJsonArray(text);
         if (Array.isArray(arr)) {
-          for (const item of arr) {
+          const filtered = filterSubjectSpecific(arr, subject);
+          for (const item of filtered) {
             if (!item?.question || !item?.answer) continue;
             newOnes.push({
               id: `giq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
@@ -373,6 +428,8 @@ Output only the JSON array, no markdown.`;
               created_at: new Date().toISOString(),
             });
           }
+          const rejected = arr.length - filtered.length;
+          if (rejected > 0) console.log(`[interview-prep] mock/start rejected ${rejected} generic questions`);
         }
       } catch (err: any) {
         console.error('[interview-prep] mock/start auto-gen failed:', err.message);
