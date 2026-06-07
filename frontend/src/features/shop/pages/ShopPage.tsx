@@ -81,7 +81,7 @@ export default function ShopPage() {
   return (
     <>
       <SEO title="Shop - CodeSprout" description="Premium interview preparation resources - PDFs, notes, company-specific guides" />
-      <div className="min-h-screen pt-6 sm:pt-8 pb-16 bg-[#0a0a1a] relative overflow-hidden">
+      <div className="min-h-screen pt-2 sm:pt-3 pb-16 bg-[#0a0a1a] relative overflow-hidden">
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 -left-40 w-96 h-96 bg-purple-600/8 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-blue-600/8 rounded-full blur-3xl" />
