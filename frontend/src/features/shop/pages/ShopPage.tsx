@@ -168,24 +168,26 @@ export default function ShopPage() {
                 return (
                   <motion.div key={p.id} variants={itemAnim} className="group bg-[#111127] border border-slate-800/50 hover:border-purple-500/30 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5">
                     <div className={`h-1.5 bg-gradient-to-r ${p.color}`} />
-                    <div className="p-4">
-                      <div className="flex items-start justify-between mb-3">
-                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center text-lg`}>{p.icon}</div>
-                        <div className="flex items-center gap-1.5">
-                          {p.popular && <span className="px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 text-[10px] font-bold flex items-center gap-0.5"><Star className="w-2.5 h-2.5" /> Popular</span>}
-                          {price.isFree ? <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 text-[10px] font-bold">Free</span> : <span className="px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-400 text-[10px] font-bold">{price.text}</span>}
+                    <div className="p-5">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${p.color} flex items-center justify-center text-2xl shadow-lg`}>{p.icon}</div>
+                        <div className="flex flex-col items-end gap-1.5">
+                          {p.popular && <span className="px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-400 text-[10px] font-bold flex items-center gap-1"><Star className="w-3 h-3" /> Popular</span>}
+                          {price.isFree
+                            ? <span className="px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-[10px] font-bold">Free</span>
+                            : <span className="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-400 text-[10px] font-bold">{price.text}</span>}
                         </div>
                       </div>
-                      <h3 className="text-sm font-bold text-white mb-1.5 line-clamp-1">{p.title}</h3>
-                      <p className="text-xs text-slate-400 mb-3 line-clamp-2 leading-relaxed">{p.description}</p>
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {p.tags.slice(0, 3).map(t => <span key={t} className="px-2 py-0.5 rounded-md bg-slate-800/60 text-slate-400 text-[10px]">{t}</span>)}
+                      <h3 className="text-base font-bold text-white mb-2 line-clamp-1">{p.title}</h3>
+                      <p className="text-xs text-slate-400 mb-4 line-clamp-2 leading-relaxed min-h-[2.5rem]">{p.description}</p>
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {p.tags.slice(0, 3).map(t => <span key={t} className="px-2 py-0.5 rounded-md bg-slate-800/60 text-slate-300 text-[10px] font-medium border border-slate-700/50">{t}</span>)}
                       </div>
-                      <div className="flex items-center justify-between text-[10px] text-slate-500 mb-3">
-                        {p.pages && <span>{p.pages} pages</span>}
-                        {p.author && <span className="truncate ml-1">by {p.author}</span>}
+                      <div className="flex items-center justify-between text-[11px] text-slate-500 mb-4 pb-4 border-b border-slate-800/50">
+                        {p.pages && <span className="flex items-center gap-1"><BookOpen className="w-3 h-3" /> {p.pages} pages</span>}
+                        {p.author && <span className="truncate ml-2 text-right">by {p.author}</span>}
                       </div>
-                      <button onClick={() => toggleCart(p)} className={`w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${inCart(p.id) ? 'bg-slate-700 text-slate-300' : price.isFree ? 'bg-emerald-500 hover:bg-emerald-400 text-white' : 'bg-purple-600 hover:bg-purple-500 text-white shadow-lg shadow-purple-500/20'}`}>
+                      <button onClick={() => toggleCart(p)} className={`w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 ${inCart(p.id) ? 'bg-slate-700 text-slate-300 hover:bg-slate-600' : price.isFree ? 'bg-emerald-500 hover:bg-emerald-400 text-white shadow-lg shadow-emerald-500/20' : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white shadow-lg shadow-purple-500/25'}`}>
                         {inCart(p.id) ? <><X className="w-3.5 h-3.5" /> Remove</> : price.isFree ? <><Download className="w-3.5 h-3.5" /> Free Download</> : <><ShoppingCart className="w-3.5 h-3.5" /> Add to Cart</>}
                       </button>
                     </div>
