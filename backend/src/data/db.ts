@@ -224,6 +224,7 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
         console.log(`[DB] Loaded ${db.questions.length} questions, ${db.users.length} users from MongoDB`);
       }
       migrateCodeToDb(questions, testCases);
+      addMissingSeedQuestions(questions);
       return;
     } catch (e) {
       console.error('[DB] MongoDB connection failed, falling back to JSON file:', e);
@@ -241,6 +242,7 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
       if (existing.questions && existing.questions.length > 0) {
         db = existing;
         migrateCodeToDb(questions, testCases);
+        addMissingSeedQuestions(questions);
         console.log(`[DB] Loaded existing data: ${db.questions.length} questions, ${db.topics.length} topics`);
         return;
       }
@@ -362,6 +364,39 @@ function migrateCodeToDb(codeQuestions: Question[], codeTestCases: TestCaseData[
   } else {
     console.log('[DB] Migration: no changes needed');
   }
+}
+
+export function addMissingSeedQuestions(codeQuestions: Question[]): { added: number } {
+  if (!db) return { added: 0 };
+  const dbSlugs = new Set(db.questions.map(q => q.slug));
+  const dbIds = new Set(db.questions.map(q => q.id));
+  const toAdd: Question[] = [];
+  for (const q of codeQuestions) {
+    if (!q.slug || !q.id) continue;
+    if (dbSlugs.has(q.slug) || dbIds.has(q.id)) continue;
+    toAdd.push(q);
+  }
+  if (toAdd.length > 0) {
+    db.questions.push(...toAdd);
+    for (const q of toAdd) {
+      if (q.test_cases && q.test_cases.length > 0) {
+        for (const tc of q.test_cases) {
+          db.testCases.push({
+            id: String(tc.id),
+            slug: q.slug,
+            input: tc.input,
+            expected_output: tc.expected_output,
+            is_hidden: !!tc.is_hidden,
+          });
+        }
+      }
+    }
+    saveDb();
+    console.log(`[DB] Migration: added ${toAdd.length} new questions from seed (with embedded test cases)`);
+  } else {
+    console.log('[DB] Migration: no new questions to add from seed');
+  }
+  return { added: toAdd.length };
 }
 
 export function getDb(): DbData {
