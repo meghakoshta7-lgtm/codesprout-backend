@@ -1,10 +1,11 @@
 import { Router, Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
-import { getAllUsers, getUserByEmail, addUser } from '../data/db';
+import { getAllUsers, getUserByEmail, getUserById, addUser } from '../data/db';
 import { generateToken, authenticate, AuthRequest } from '../middleware/auth';
 import { sendWelcomeNotification } from '../services/notifications';
 import { sendWelcomeEmail } from '../services/email';
 import { maskEmail } from '../services/crypto';
+import { isPremiumFresh, getSubscription } from '../data/store';
 
 const router = Router();
 
@@ -62,8 +63,26 @@ router.post('/register', async (req: Request, res: Response) => {
   res.json({ token, user: publicUser(newUser) });
 });
 
-router.get('/me', authenticate, (req: AuthRequest, res: Response) => {
-  res.json(req.user);
+router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
+  const userId = req.user!.id;
+  const user = getUserById(userId);
+  if (!user) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+  const subscription = getSubscription(userId);
+  const isPremium = await isPremiumFresh(userId);
+  const now = new Date();
+  const subscriptionActive = subscription?.status === 'active'
+    && (!subscription.end_date || new Date(subscription.end_date) > now);
+  res.json({
+    ...publicUser(user),
+    plan: isPremium ? 'premium' : 'free',
+    is_premium: isPremium,
+    subscription_status: subscription?.status || (isPremium ? 'active' : 'inactive'),
+    subscription_start: subscription?.start_date || null,
+    subscription_end: subscription?.end_date || null,
+    subscription_active: subscriptionActive,
+  });
 });
 
 // POST /api/auth/google — verify Google access token via userinfo, find-or-create user, issue JWT
