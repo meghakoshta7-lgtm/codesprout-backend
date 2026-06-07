@@ -61,6 +61,7 @@ interface DbData {
   generatedInterviewQuestions: GeneratedInterviewQuestion[];
   mockInterviewSessions: MockInterviewSession[];
   interviewKits: InterviewKit[];
+  aiInterviewSessions: any[];
 }
 
 const DB_PATH = join(__dirname, '..', '..', 'data', 'db.json');
@@ -183,6 +184,7 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
           generatedInterviewQuestions: [],
           mockInterviewSessions: [],
           interviewKits: [],
+          aiInterviewSessions: [],
         };
         db = fresh;
         await persistToMongo();
@@ -219,6 +221,7 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
           generatedInterviewQuestions: await col('generatedInterviewQuestions').find({}).toArray() as any,
           mockInterviewSessions: await col('mockInterviewSessions').find({}).toArray() as any,
           interviewKits: await col('interviewKits').find({}).toArray() as any,
+          aiInterviewSessions: [],
         };
         const adminUser = db.users.find((u: any) => u.email === 'admin@dsacheatsheets.com');
         if (adminUser) {
@@ -276,10 +279,10 @@ export async function initDb(questions: Question[], topics: Topic[], cheatSheets
     interviewPreferences: [],
     generatedInterviewQuestions: [],
     mockInterviewSessions: [],
-    interviewKits: [],
-  };
-  writeFileSync(DB_PATH, JSON.stringify(fresh, null, 2));
-  db = fresh;
+          interviewKits: [],
+          aiInterviewSessions: [],
+        };
+        db = fresh;
   console.log(`[DB] Initialized with ${questions.length} questions, ${testCases.length} test cases, ${patternDetails.length} pattern details`);
 }
 
@@ -781,6 +784,38 @@ export function addInterviewKit(kit: InterviewKit): void {
   if (!db.interviewKits) (db as any).interviewKits = [];
   db.interviewKits.push(kit);
   saveDb();
+}
+
+// ====== AI INTERVIEW SESSIONS ======
+interface AiDbEntry {
+  id: string;
+  user_id: string;
+  state: any;
+  created_at: string;
+}
+
+function getAiSessions(): AiDbEntry[] { return (getDb().aiInterviewSessions || []) as AiDbEntry[]; }
+
+export function saveAiSession(state: any): void {
+  const db = getDb();
+  if (!db.aiInterviewSessions) (db as any).aiInterviewSessions = [];
+  const idx = db.aiInterviewSessions.findIndex((s: any) => s.id === state.id);
+  const entry: AiDbEntry = { id: state.id, user_id: state.user_id, state, created_at: state.started_at };
+  if (idx >= 0) db.aiInterviewSessions[idx] = entry;
+  else db.aiInterviewSessions.push(entry);
+  saveDb();
+}
+
+export function getAiSession(id: string, userId: string): any | undefined {
+  return getAiSessions().find(s => s.id === id && s.user_id === userId)?.state;
+}
+
+export function getAiSessionsByUser(userId: string, limit = 20): any[] {
+  return getAiSessions()
+    .filter(s => s.user_id === userId)
+    .sort((a, b) => b.created_at.localeCompare(a.created_at))
+    .slice(0, limit)
+    .map(s => s.state);
 }
 
 export function deleteNotification(id: string, userId: string): boolean {

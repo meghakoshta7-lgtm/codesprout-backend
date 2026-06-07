@@ -10,6 +10,11 @@ import {
 } from '../data/db';
 import { getRoleById } from '../data/roles';
 import { getSubjectQuestions, getAllSubjectNames } from '../data/interviewQuestionsBank';
+import {
+  createAiSession, processAiInterviewTurn, generateAiInterviewReport,
+  type AiSessionState,
+} from '../services/interviewEngine';
+import { saveAiSession, getAiSession, getAiSessionsByUser } from '../data/db';
 import type {
   InterviewPreference, GeneratedInterviewQuestion, MockInterviewSession, MockAnswer,
   InterviewKit, InterviewExperienceLevel, QuestionDifficulty, MockRoundType,
@@ -779,6 +784,83 @@ router.get('/interview-prep/kit/:id', authenticate, (req: AuthRequest, res: Resp
   const pref = getInterviewPreferenceByUser(req.user!.id);
   const roleName = pref?.custom_role && pref.role === 'custom' ? pref.custom_role : (getRoleById(pref?.role || '')?.name || kit.role);
   res.json({ ...kit, role_name: roleName });
+});
+
+// =============== AI INTERVIEW ENGINE (Multi-Round) ===============
+
+router.post('/interview-prep/ai-interview/start', authenticate, async (req: AuthRequest, res: Response) => {
+  try {
+    const pref = getInterviewPreferenceByUser(req.user!.id);
+    if (!pref) return res.status(400).json({ error: 'Set up interview preferences first' });
+    const roleDef = getRoleById(pref.role);
+    const roleName = pref.custom_role && pref.role === 'custom' ? pref.custom_role : (roleDef?.name || pref.role);
+    const state = createAiSession(req.user!.id, pref.role, pref.experience, pref.subjects, pref.custom_role);
+    saveAiSession(state);
+    // Get greeting from AI
+    const { reply, updatedState } = await processAiInterviewTurn(state, 'Start the interview');
+    saveAiSession(updatedState);
+    res.json({ sessionId: updatedState.id, reply, round: updatedState.rounds[updatedState.current_round_idx].type, state: updatedState });
+  } catch (err: any) {
+    console.error('[ai-interview] start error:', err);
+    res.status(500).json({ error: err.message || 'Failed to start interview' });
+  }
+});
+
+router.post('/interview-prep/ai-interview/:id/chat', authenticate, async (req: AuthRequest, res: Response) => {
+  try {
+    const { message } = req.body as { message: string };
+    if (!message || !message.trim()) return res.status(400).json({ error: 'message is required' });
+    const state = getAiSession(req.params.id, req.user!.id);
+    if (!state) return res.status(404).json({ error: 'Session not found' });
+    if (state.status !== 'in_progress') return res.status(400).json({ error: 'Interview already completed' });
+    const { reply, updatedState } = await processAiInterviewTurn(state, message);
+    saveAiSession(updatedState);
+    const round = updatedState.rounds[updatedState.current_round_idx];
+    const completedRounds = updatedState.rounds.filter(r => r.status === 'completed').map(r => ({ type: r.type, score: r.score }));
+    res.json({
+      reply,
+      round: round.type,
+      difficulty: round.difficulty,
+      roundNumber: updatedState.current_round_idx + 1,
+      totalRounds: updatedState.rounds.length,
+      interviewComplete: updatedState.status === 'completed',
+      completedRounds,
+    });
+  } catch (err: any) {
+    console.error('[ai-interview] chat error:', err);
+    res.status(500).json({ error: err.message || 'Chat failed' });
+  }
+});
+
+router.get('/interview-prep/ai-interview/:id', authenticate, (req: AuthRequest, res: Response) => {
+  const state = getAiSession(req.params.id, req.user!.id);
+  if (!state) return res.status(404).json({ error: 'Session not found' });
+  res.json({ state });
+});
+
+router.post('/interview-prep/ai-interview/:id/end', authenticate, (req: AuthRequest, res: Response) => {
+  const state = getAiSession(req.params.id, req.user!.id);
+  if (!state) return res.status(404).json({ error: 'Session not found' });
+  state.status = 'abandoned';
+  state.ended_at = new Date().toISOString();
+  saveAiSession(state);
+  res.json({ success: true });
+});
+
+router.get('/interview-prep/ai-interview/:id/report', authenticate, (req: AuthRequest, res: Response) => {
+  const state = getAiSession(req.params.id, req.user!.id);
+  if (!state) return res.status(404).json({ error: 'Session not found' });
+  if (state.status === 'in_progress') return res.status(400).json({ error: 'Interview still in progress' });
+  const report = JSON.parse(generateAiInterviewReport(state));
+  res.json({ report, conversation: state.conversation, rounds: state.rounds.map((r: any) => ({ type: r.type, difficulty: r.difficulty, score: r.score, questions_asked: r.questions_asked })) });
+});
+
+router.get('/interview-prep/ai-interviews', authenticate, (req: AuthRequest, res: Response) => {
+  const list = getAiSessionsByUser(req.user!.id);
+  res.json(list.map((s: AiSessionState) => ({
+    id: s.id, role: s.role, status: s.status, started_at: s.started_at,
+    overall_score: s.overall_score, rounds: s.rounds.map(r => ({ type: r.type, score: r.score })),
+  })));
 });
 
 export default router;

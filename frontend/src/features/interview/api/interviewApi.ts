@@ -35,4 +35,21 @@ export const interviewApi = {
     api.post<InterviewKit>('/interview-prep/kit/generate', { subjects, max_per_subject }),
   getKits: () => api.get<InterviewKit[]>('/interview-prep/kits'),
   getKit: (id: string) => api.get<InterviewKit>(`/interview-prep/kit/${id}`),
+
+  // AI Interview Engine (Multi-Round)
+  startAiInterview: () =>
+    api.post<{ sessionId: string; reply: string; round: string; state: any }>('/interview-prep/ai-interview/start', {}),
+  sendAiMessage: (sessionId: string, message: string) =>
+    api.post<{
+      reply: string; round: string; difficulty: string;
+      roundNumber: number; totalRounds: number;
+      interviewComplete: boolean; completedRounds: { type: string; score?: number }[];
+    }>(`/interview-prep/ai-interview/${sessionId}/chat`, { message }),
+  getAiSession: (sessionId: string) =>
+    api.get<{ state: any }>(`/interview-prep/ai-interview/${sessionId}`),
+  endAiInterview: (sessionId: string) =>
+    api.post(`/interview-prep/ai-interview/${sessionId}/end`, {}),
+  getAiInterviewReport: (sessionId: string) =>
+    api.get<{ report: any; conversation: any[]; rounds: any[] }>(`/interview-prep/ai-interview/${sessionId}/report`),
+  getAiInterviews: () => api.get<any[]>('/interview-prep/ai-interviews'),
 };

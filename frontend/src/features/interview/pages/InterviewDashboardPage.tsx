@@ -164,14 +164,22 @@ function InterviewDashboardContent() {
         </div>
 
         {/* CTAs */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
-          <button
-            onClick={() => startMock(pref.subjects[0] || 'DSA')}
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 sm:gap-4 mb-6">
+          <Link
+            to="/interview-prep/ai"
             className="p-5 rounded-2xl bg-gradient-to-br from-primary-500 to-pink-500 hover:opacity-90 text-white text-left shadow-lg shadow-primary-500/25 transition"
           >
             <Mic className="w-7 h-7 mb-2" />
-            <div className="text-lg font-bold">Start Mock Interview</div>
-            <div className="text-sm text-white/80">AI-graded answers + audio</div>
+            <div className="text-lg font-bold">Full AI Interview</div>
+            <div className="text-sm text-white/80">All rounds + detailed feedback</div>
+          </Link>
+          <button
+            onClick={() => startMock(pref.subjects[0] || 'DSA')}
+            className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 text-left transition"
+          >
+            <Mic className="w-7 h-7 mb-2 text-primary-400" />
+            <div className="text-lg font-bold text-white">Quick Mock</div>
+            <div className="text-sm text-slate-400">Single subject + audio</div>
           </button>
           <button
             onClick={generateKit}
