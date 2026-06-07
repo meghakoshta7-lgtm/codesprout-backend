@@ -39,6 +39,33 @@ export const LEVEL_TEMPLATES: LevelDef[] = [
   { id: 7, name: 'Problems',   desc: 'Challenge time',       difficulty: 'hard'   },
 ];
 
+export const ORIGINAL_LEVEL_COUNT = 7;
+
+const LEVEL_NAME_CYCLE: Record<Difficulty, string[]> = {
+  easy:   ['Basics', 'Access', 'Traversal'],
+  medium: ['Search', 'Insert', 'Delete'],
+  hard:   ['Problems', 'Challenge', 'Master'],
+};
+
+export function getLevelDef(levelId: number): LevelDef {
+  const safeId = Math.max(1, Math.floor(levelId) || 1);
+  const idx = (safeId - 1) % 9;
+  const cycle = Math.floor((safeId - 1) / 9) + 1;
+  const difficulty: Difficulty = idx < 3 ? 'easy' : idx < 6 ? 'medium' : 'hard';
+  const baseName = LEVEL_NAME_CYCLE[difficulty][idx % 3];
+  const name = cycle > 1 ? `${baseName} ${cycle}` : baseName;
+  const descMap: Record<Difficulty, string[]> = {
+    easy:   ['Topic intro', 'Index & access', 'Loop through items'],
+    medium: ['Find elements', 'Add elements', 'Remove elements'],
+    hard:   ['Challenge time', 'Push your limits', 'Final boss'],
+  };
+  return { id: safeId, name, desc: descMap[difficulty][idx % 3], difficulty };
+}
+
+export function getLevelDifficulty(levelId: number): Difficulty {
+  return getLevelDef(levelId).difficulty;
+}
+
 // Per-topic pool of questions keyed by difficulty. The 7-level UI pulls
 // from these pools, with Easy levels getting the easy pool, etc.
 export interface LevelPool {
@@ -1065,7 +1092,7 @@ function getFallback(topic: string): LevelPool {
       'Single pass accumulator.'),
     codeQ(`${topic}-e-6`, `Find the largest number in an array.`, 'Track the maximum seen so far.', `function maxOf(arr) {\n  return 0;\n}`,
       [{ input: '[3, 1, 4, 1, 5, 9, 2]', expected: '9', visible: true }, { input: '[-5, -2, -8]', expected: '-2' }, { input: '[10]', expected: '10' }],
-      `function maxOf(arr) { let m = arr[0]; for (let i = 1; i < arr.length; i++) if (arr[i] > m) m = arr[i]; return m; }`,
+      `function maxOf(arr) { let m = arr[0]; for (let i = 1; i < arr.length; i++) if (arr[i] > m) m = arr[i]; }`,
       'Track max while iterating.'),
     easyQ(`${topic}-e-7`, `In ${topic}, indexing typically starts at:`, ['-1', '0', '1', '2'], 1, 'Zero-based indexing is the norm.'),
     easyQ(`${topic}-e-8`, `Which is NOT a basic operation in ${topic}?`, ['Insert', 'Delete', 'Compile', 'Search'], 2, 'Compile is a build step, not a data op.'),
@@ -1120,8 +1147,113 @@ function getFallback(topic: string): LevelPool {
   return { easy, medium, hard };
 }
 
+interface McqTemplate {
+  q: (t: string) => string;
+  options: (t: string) => string[];
+  answer: number;
+  explanation: string | ((t: string) => string);
+}
+
+const MCQ_LIBRARY: McqTemplate[] = [
+  { q: (t) => `Which is the most common use case of ${t}?`, options: (t) => [`Solving ${t} problems efficiently`, 'Designing web pages', 'Writing SQL', 'Editing images'], answer: 0, explanation: 'A foundational technique in computer science.' },
+  { q: (t) => `Which time complexity is typical for a basic ${t} operation?`, options: () => ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], answer: 2, explanation: 'Single-pass operations over n items run in O(n).' },
+  { q: (t) => `To iterate through items in ${t}, you usually use a:`, options: () => ['for / while loop', 'SQL query', 'regex match', 'cron job'], answer: 0, explanation: 'Loops are the standard way to traverse a collection.' },
+  { q: (t) => `${t} problems are common in:`, options: () => ['coding interviews', 'cooking recipes', 'fashion design', 'astronomy'], answer: 0, explanation: 'A staple of technical interviews.' },
+  { q: (t) => `Which data structure pairs well with ${t}?`, options: () => ['HashMap', 'HashMap or Array', 'Only Stack', 'None'], answer: 1, explanation: 'HashMaps and Arrays are universal companions.' },
+  { q: (t) => `When would you reach for ${t}?`, options: (t) => [`When a problem asks for ${t}-style reasoning`, 'For every problem', 'Only for I/O', 'Never'], answer: 0, explanation: 'Shines for specific problem patterns.' },
+  { q: (t) => `The main idea behind ${t} is:`, options: () => ['efficiency', 'randomness', 'obfuscation', 'graphics'], answer: 0, explanation: 'Efficiency is the core motivation.' },
+  { q: (t) => `What does ${t} help you achieve?`, options: () => ['faster, cleaner code', 'smaller fonts', 'colorful UIs', 'network access'], answer: 0, explanation: 'It improves performance and clarity.' },
+  { q: (t) => `Big-O analysis is important for ${t} because:`, options: () => ['it predicts performance', 'JavaScript requires it', 'compilers need it', 'it is decoration'], answer: 0, explanation: 'Big-O tells you how an algorithm scales.' },
+  { q: (t) => `${t} often appears alongside which other concept?`, options: () => ['Recursion', 'CSS', 'SQL injection', 'Color theory'], answer: 0, explanation: 'Recursion and iteration are common partners.' },
+  { q: (t) => `Which is a typical input format for ${t}?`, options: () => ['Array or string', 'Bitmap', 'Audio file', 'Video file'], answer: 0, explanation: 'Arrays and strings are the most common inputs.' },
+  { q: (t) => `${t} is best practiced by:`, options: () => ['solving many small problems', 'memorizing answers', 'avoiding practice', 'watching only'], answer: 0, explanation: 'Deliberate practice builds intuition.' },
+  { q: (t) => `${t} is related to which broader area?`, options: () => ['Algorithms & Data Structures', 'Graphic design', 'Cooking', 'Marketing'], answer: 0, explanation: 'Sits inside algorithms & data structures.' },
+  { q: (t) => `Which language is ${t} commonly implemented in?`, options: () => ['Any general-purpose language', 'Only C', 'Only Haskell', 'Only SQL'], answer: 0, explanation: 'Algorithms are language-agnostic.' },
+  { q: (t) => `A typical ${t} problem tests your understanding of:`, options: () => ['problem decomposition', 'typography', 'color mixing', 'audio mixing'], answer: 0, explanation: 'Decomposition is the key skill.' },
+  { q: (t) => `${t} usually requires careful handling of:`, options: () => ['edge cases', 'fonts', 'colors', 'animations'], answer: 0, explanation: 'Edge cases like empty input, single element, etc.' },
+  { q: (t) => `To debug ${t} code, you should:`, options: () => ['trace small examples by hand', 'randomly change lines', 'reboot the computer', 'shout at the screen'], answer: 0, explanation: 'Hand-tracing is the most reliable debugging technique.' },
+  { q: (t) => `${t} is often paired with which complexity class?`, options: () => ['O(log n)', 'O(1) always', 'O(∞)', 'O(visual)'], answer: 0, explanation: 'Many efficient techniques run in O(log n).' },
+  { q: (t) => `What is the space complexity of an in-place ${t} algorithm?`, options: () => ['O(1)', 'O(n)', 'O(n²)', 'O(2^n)'], answer: 0, explanation: 'In-place means constant extra space.' },
+  { q: (t) => `${t} is essential for which kind of interview?`, options: () => ['Software engineering', 'Journalism', 'Bartending', 'Acting'], answer: 0, explanation: 'DSA interviews are standard at software companies.' },
+  { q: (t) => `Picking the right ${t} technique is mostly about:`, options: () => ['recognizing patterns', 'guessing', 'flipping a coin', 'throwing darts'], answer: 0, explanation: 'Pattern recognition comes from practice.' },
+  { q: (t) => `If a problem mentions "optimal", ${t} is often:`, options: () => ['part of the solution', 'irrelevant', 'the wrong tool', 'a coincidence'], answer: 0, explanation: 'Optimal substructure is core to efficient algorithms.' },
+  { q: (t) => `Which is NOT a ${t} problem type?`, options: () => ['Knitting pattern', 'Search', 'Sort', 'Count'], answer: 0, explanation: 'Knitting patterns are unrelated to CS algorithms.' },
+  { q: (t) => `${t} problems often appear on which platform?`, options: () => ['LeetCode / HackerRank', 'Instagram', 'TikTok', 'Pinterest'], answer: 0, explanation: 'Practice platforms host these problems.' },
+  { q: (t) => `${t} builds on which foundational skill?`, options: () => ['Logical reasoning', 'Public speaking', 'Cooking', 'Singing'], answer: 0, explanation: 'Logical thinking is the prerequisite.' },
+  { q: (t) => `Which operation is typically O(1) in ${t}?`, options: () => ['Depends on the structure', 'Always sort', 'Always search', 'Always print'], answer: 0, explanation: 'It depends on the data structure used.' },
+  { q: (t) => `The hardest part of ${t} is often:`, options: () => ['seeing the right invariant', 'typing fast', 'choosing colors', 'naming variables'], answer: 0, explanation: 'Invariants and proofs of correctness are tricky.' },
+  { q: (t) => `Which is the first step in solving a ${t} problem?`, options: () => ['Understand the input and output', 'Start coding', 'Ask the interviewer to do it', 'Take a nap'], answer: 0, explanation: 'I/O understanding is step zero.' },
+  { q: (t) => `What does "amortized" mean in ${t} context?`, options: () => ['Average cost over many operations', 'Always cheap', 'Always expensive', 'Unrelated to cost'], answer: 0, explanation: 'Amortized cost averages out rare expensive operations.' },
+  { q: (t) => `Which is a common ${t} technique?`, options: () => ['Two pointers', 'Ironing', 'Sewing', 'Baking'], answer: 0, explanation: 'Two pointers is a standard technique.' },
+  { q: (t) => `Sliding window is often used in ${t} for:`, options: () => ['contiguous subarray problems', 'non-contiguous sets', 'file I/O', 'animations'], answer: 0, explanation: 'Sliding window shines on contiguous sequences.' },
+  { q: (t) => `Hashing in ${t} provides:`, options: () => ['average O(1) lookup', 'guaranteed O(1) lookup', 'O(n log n) sort', 'free memory'], answer: 0, explanation: 'Hashing gives average O(1), not worst-case.' },
+  { q: (t) => `Binary search in ${t} requires:`, options: () => ['a sorted (or monotonic) input', 'random data', 'a tree', 'a graph'], answer: 0, explanation: 'Binary search needs monotonic input.' },
+  { q: (t) => `Which is a "must-know" ${t} tool?`, options: () => ['Debug print / console.log', 'Hair dryer', 'Toaster', 'Vacuum'], answer: 0, explanation: 'Print debugging is invaluable.' },
+  { q: (t) => `${t} problems are most often solved in:`, options: () => ['O(n), O(log n), or O(n log n)', 'exponential time', 'constant time only', 'O(0)'], answer: 0, explanation: 'Polynomial time is typical for practical problems.' },
+  { q: (t) => `The "optimal substructure" of ${t} means:`, options: () => ['optimal solution built from optimal sub-solutions', 'random structure', 'worst structure', 'no structure'], answer: 0, explanation: 'This is the textbook definition.' },
+  { q: (t) => `Which is a "greedy" ${t} strategy?`, options: () => ['Always take the best-looking local choice', 'Always sort first', 'Always recurse', 'Always hash'], answer: 0, explanation: 'Greedy = locally optimal choice at each step.' },
+  { q: (t) => `When you see overlapping subproblems in ${t}, consider:`, options: () => ['Dynamic programming', 'Sorting', 'I/O', 'CSS'], answer: 0, explanation: 'DP is the canonical solution.' },
+  { q: (t) => `When you see optimal substructure only, consider:`, options: () => ['Greedy', 'Hashing', 'Networking', 'Graphics'], answer: 0, explanation: 'Greedy works with optimal substructure alone.' },
+  { q: (t) => `${t} mastery comes from:`, options: () => ['consistent daily practice', 'one all-nighter', 'reading the docs once', 'guessing'], answer: 0, explanation: 'Consistency beats cramming.' },
+  { q: (t) => `In ${t}, an "edge case" usually means:`, options: () => ['Empty, single, or boundary input', 'A bug in the IDE', 'A type error', 'A typo'], answer: 0, explanation: 'Edge cases are unusual but valid inputs.' },
+  { q: (t) => `${t} code should be:`, options: () => ['clear, tested, and commented where tricky', 'as cryptic as possible', 'unindented', 'single-letter variables only'], answer: 0, explanation: 'Readability counts in interviews and beyond.' },
+  { q: (t) => `Which is a common ${t} interview trick?`, options: () => ['Asking about edge cases', 'Asking about colors', 'Asking about food', 'Asking about hobbies'], answer: 0, explanation: 'Edge cases are interview favorites.' },
+  { q: (t) => `${t} is often used to:`, options: () => ['reduce time or space', 'make code look cool', 'win bets', 'print money'], answer: 0, explanation: 'Algorithmic efficiency is the goal.' },
+  { q: (t) => `A "stable" ${t} technique preserves:`, options: () => ['relative order of equal elements', 'random order', 'hash values', 'colors'], answer: 0, explanation: 'Stable algorithms keep equal elements in original order.' },
+  { q: (t) => `${t} problems can be tackled by:`, options: () => ['breaking into smaller sub-problems', 'ignoring the problem', 'rewriting from scratch daily', 'googling only'], answer: 0, explanation: 'Divide and conquer is a fundamental approach.' },
+  { q: (t) => `${t} interviews reward:`, options: () => ['clear communication + correct code', 'silence', 'fast typing only', 'memorization only'], answer: 0, explanation: 'Communication is as important as code.' },
+  { q: (t) => `${t} is closely tied to:`, options: () => ['computer science fundamentals', 'graphic design', 'culinary arts', 'music theory'], answer: 0, explanation: 'It is a core CS topic.' },
+  { q: (t) => `If your ${t} solution is too slow, try:`, options: () => ['a different data structure or algorithm', 'a faster keyboard', 'a different language', 'prayer'], answer: 0, explanation: 'Algorithm choice is the typical lever.' },
+  { q: (t) => `${t} is rarely needed for:`, options: () => ['printing "Hello, world!"', 'searching in an array', 'sorting data', 'counting items'], answer: 0, explanation: 'Hello world needs no algorithm.' },
+];
+
+function topicSlug(t: string): string {
+  return t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function generateTopicMcqs(topic: string, count: number): QuizQuestion[] {
+  const slug = topicSlug(topic);
+  const seed = hashSeed(slug);
+  const rotated = rotate(MCQ_LIBRARY, seed);
+  const out: QuizQuestion[] = [];
+  for (let i = 0; i < count; i++) {
+    const tpl = rotated[i % rotated.length];
+    const variant = Math.floor(i / rotated.length);
+    const opts = tpl.options(topic);
+    let displayOpts = opts;
+    let answerIdx = tpl.answer;
+    if (variant > 0 && opts.length > 1) {
+      const shift = variant % opts.length;
+      displayOpts = opts.slice(shift).concat(opts.slice(0, shift));
+      answerIdx = (tpl.answer - shift + opts.length) % opts.length;
+    }
+    const explanation = typeof tpl.explanation === 'function' ? tpl.explanation(topic) : tpl.explanation;
+    out.push({
+      type: 'quiz',
+      id: `${slug}-mcq-${i + 1}`,
+      q: tpl.q(topic),
+      options: displayOpts,
+      answer: answerIdx,
+      explanation,
+    });
+  }
+  return out;
+}
+
+const POOL_CACHE = new Map<string, LevelPool>();
+
 export function getPool(topic: string): LevelPool {
-  return POOLS[topic] || getFallback(topic);
+  const cached = POOL_CACHE.get(topic);
+  if (cached) return cached;
+  const base = POOLS[topic] || getFallback(topic);
+  const extra = generateTopicMcqs(topic, 80);
+  const pool: LevelPool = {
+    easy: [...base.easy, ...extra],
+    medium: base.medium,
+    hard: base.hard,
+  };
+  POOL_CACHE.set(topic, pool);
+  return pool;
 }
 
 function hashSeed(s: string): number {
@@ -1136,16 +1268,38 @@ function rotate<T>(arr: T[], seed: number): T[] {
   return arr.slice(shift).concat(arr.slice(0, shift));
 }
 
-export function getLevelQuestions(topic: string, levelId: number): GameQuestion[] {
+function deterministicShuffle<T>(arr: T[], seed: number): T[] {
+  const a = arr.slice();
+  if (a.length <= 1) return a;
+  let s = (seed || 1) >>> 0;
+  if (s === 0) s = 1;
+  for (let i = a.length - 1; i > 0; i--) {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    const j = s % (i + 1);
+    const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+
+export function getLevelQuestions(topic: string, levelId: number, usedIds: string[] = []): GameQuestion[] {
   const pool = getPool(topic);
-  const lvl = LEVEL_TEMPLATES.find((l) => l.id === levelId);
-  if (!lvl) return [];
-  const src = pool[lvl.difficulty];
-  if (!src || src.length === 0) return [];
-  const seed = hashSeed(`${topic}:${levelId}`);
-  const rotated = rotate(src, seed);
-  const start = ((levelId - 1) % 3) * 3;
-  return rotated.slice(start, start + 3);
+  const lvl = getLevelDef(levelId);
+  const all: GameQuestion[] = [...pool.easy, ...pool.medium, ...pool.hard];
+  if (all.length === 0) return [];
+
+  const used = new Set(usedIds);
+  const matchingDiff = pool[lvl.difficulty] || [];
+  const matchingUnused = matchingDiff.filter((q) => !used.has(q.id));
+  const allUnused = all.filter((q) => !used.has(q.id));
+
+  let source: GameQuestion[];
+  if (matchingUnused.length >= 3) source = matchingUnused;
+  else if (allUnused.length >= 3) source = allUnused;
+  else source = all;
+
+  const seed = hashSeed(`${topic}:${levelId}:${usedIds.length}`);
+  const shuffled = deterministicShuffle(source, seed);
+  return shuffled.slice(0, 3);
 }
 
 export const STICKER_LIBRARY = [

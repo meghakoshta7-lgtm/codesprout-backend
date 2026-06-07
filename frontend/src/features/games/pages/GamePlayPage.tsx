@@ -7,7 +7,7 @@ import {
   Lightbulb, RotateCcw, PartyPopper, ArrowRight, Lock,
 } from 'lucide-react';
 import { useGameProgress, calcStars } from '../hooks/useGameProgress';
-import { LEVEL_TEMPLATES, getLevelQuestions, BADGE_LIBRARY, type QuizQuestion, type CodeChallenge } from '../data/gamesData';
+import { getLevelDef, getLevelQuestions, BADGE_LIBRARY, ORIGINAL_LEVEL_COUNT, type QuizQuestion, type CodeChallenge } from '../data/gamesData';
 import { userStorage } from '@/shared/utils/userStorage';
 import api from '@/services/api';
 
@@ -36,12 +36,14 @@ function pickSticker(score: number, total: number, stars: number): string | null
 export default function GamePlayPage() {
   const { topic: topicParam, level: levelParam } = useParams<{ topic: string; level: string }>();
   const topic = topicParam ? decodeURIComponent(topicParam) : '';
-  const levelId = parseInt(levelParam || '1', 10);
-  const lvl = LEVEL_TEMPLATES.find((l) => l.id === levelId);
+  const levelId = Math.max(1, parseInt(levelParam || '1', 10) || 1);
+  const lvl = getLevelDef(levelId);
 
   const { progress, saveLevel, isLevelUnlocked, getLevel } = useGameProgress();
-  const unlocked = isLevelUnlocked(topic, levelId);
-  const questions = useMemo(() => getLevelQuestions(topic, levelId), [topic, levelId]);
+  const unlocked = isLevelUnlocked(topic, levelId) || levelId > ORIGINAL_LEVEL_COUNT;
+  const usedIds = progress.usedQuestionIds[topic] || [];
+  const questions = useMemo(() => getLevelQuestions(topic, levelId, usedIds), [topic, levelId, usedIds]);
+  const levelQuestionIds = useMemo(() => questions.map((q) => q.id), [questions]);
 
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
@@ -139,19 +141,21 @@ export default function GamePlayPage() {
     const sticker = pickSticker(finalScore, total, stars);
     const stickerArr = sticker ? [sticker] : [];
 
-    // Badges: count completed topics
+    // Badges: count completed topics (all 7 starter levels done)
     const prevTopicsDone = Object.values(progress.topics).filter((t) => {
-      const done = Object.values(t.levels || {}).filter((r) => r.stars >= 1).length;
-      return done === 7;
+      const done = Object.values(t.levels || {}).filter((r) => r.stars >= 1 && r.total > 0).length;
+      const origDone = Array.from({ length: ORIGINAL_LEVEL_COUNT }, (_, i) => t.levels?.[i + 1]?.stars || 0).filter((s) => s >= 1).length;
+      return origDone === ORIGINAL_LEVEL_COUNT;
     }).length;
-    const isLastLevel = levelId === 7;
+    const isLastOriginalLevel = levelId === ORIGINAL_LEVEL_COUNT;
     const currentLevelDone = stars >= 1;
-    const allLevelsNow = LEVEL_TEMPLATES.every((l) => {
-      if (l.id < levelId) return (getLevel(topic, l.id)?.stars || 0) >= 1;
-      if (l.id === levelId) return currentLevelDone;
+    const allOriginalDoneNow = Array.from({ length: ORIGINAL_LEVEL_COUNT }, (_, i) => {
+      const id = i + 1;
+      if (id < levelId) return (getLevel(topic, id)?.stars || 0) >= 1;
+      if (id === levelId) return currentLevelDone;
       return false;
-    });
-    const newCompletedTopics = allLevelsNow && isLastLevel ? prevTopicsDone + 1 : prevTopicsDone;
+    }).every(Boolean);
+    const newCompletedTopics = allOriginalDoneNow && isLastOriginalLevel ? prevTopicsDone + 1 : prevTopicsDone;
     const newPerfect = finalScore === total ? (progress.perfectLevels || 0) + 1 : progress.perfectLevels;
 
     const newBadges: string[] = [];
@@ -159,17 +163,18 @@ export default function GamePlayPage() {
     if (newCompletedTopics >= 5 && !progress.badges.includes('sprout')) newBadges.push('sprout');
     if (newCompletedTopics >= 10 && !progress.badges.includes('master')) newBadges.push('master');
     if (newCompletedTopics >= 25 && !progress.badges.includes('pro')) newBadges.push('pro');
+    if (newCompletedTopics >= 59 && !progress.badges.includes('legend')) newBadges.push('legend');
     if (newPerfect >= 1 && !progress.badges.includes('perfect')) newBadges.push('perfect');
     if (progress.streak.count >= 3 && !progress.badges.includes('streak3')) newBadges.push('streak3');
     if (progress.streak.count >= 7 && !progress.badges.includes('streak7')) newBadges.push('streak7');
 
-    saveLevel(topic, levelId, finalScore, total, stickerArr, newBadges);
+    saveLevel(topic, levelId, finalScore, total, stickerArr, newBadges, levelQuestionIds);
 
     fireNotification('level_complete', {
       levelName: lvl.name,
       stars,
       topic,
-      nextLevelId: levelId < 7 ? levelId + 1 : undefined,
+      nextLevelId: levelId + 1,
     });
 
     for (const bId of newBadges) {
@@ -469,21 +474,12 @@ export default function GamePlayPage() {
                 >
                   <RotateCcw className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> Retry
                 </button>
-                {levelId < 7 ? (
-                  <Link
-                    to={`/games/${encodeURIComponent(topic)}/${levelId + 1}`}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition text-xs sm:text-base"
-                  >
-                    Next Level <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  </Link>
-                ) : (
-                  <Link
-                    to="/games"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition text-xs sm:text-base"
-                  >
-                    More Topics <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  </Link>
-                )}
+                <Link
+                  to={`/games/${encodeURIComponent(topic)}/${levelId + 1}`}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:opacity-90 transition text-xs sm:text-base"
+                >
+                  Next Level <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                </Link>
               </div>
             </motion.div>
           )}

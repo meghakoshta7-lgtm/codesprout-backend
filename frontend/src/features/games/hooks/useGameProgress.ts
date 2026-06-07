@@ -13,6 +13,7 @@ export interface LevelResult {
 
 export interface TopicProgress {
   levels: Record<number, LevelResult>;
+  maxLevel: number;
 }
 
 export interface GameProgress {
@@ -22,6 +23,7 @@ export interface GameProgress {
   streak: { count: number; lastDate: string };
   totalXp: number;
   perfectLevels: number;
+  usedQuestionIds: Record<string, string[]>;
 }
 
 const empty: GameProgress = {
@@ -31,6 +33,7 @@ const empty: GameProgress = {
   streak: { count: 0, lastDate: '' },
   totalXp: 0,
   perfectLevels: 0,
+  usedQuestionIds: {},
 };
 
 function read(): GameProgress {
@@ -38,7 +41,20 @@ function read(): GameProgress {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return { ...empty };
     const parsed = JSON.parse(raw);
-    return { ...empty, ...parsed, streak: { ...empty.streak, ...(parsed.streak || {}) } };
+    const topics = parsed.topics || {};
+    for (const k of Object.keys(topics)) {
+      if (typeof topics[k].maxLevel !== 'number') {
+        const lvlKeys = Object.keys(topics[k].levels || {}).map(Number).filter((n) => Number.isFinite(n));
+        topics[k].maxLevel = lvlKeys.length ? Math.max(...lvlKeys) : 0;
+      }
+    }
+    return {
+      ...empty,
+      ...parsed,
+      usedQuestionIds: parsed.usedQuestionIds || {},
+      streak: { ...empty.streak, ...(parsed.streak || {}) },
+      topics,
+    };
   } catch { return { ...empty }; }
 }
 
@@ -80,6 +96,7 @@ export function useGameProgress() {
     total: number,
     stickersEarned: string[],
     badgesEarned: string[],
+    usedIds: string[] = [],
   ) => {
     setProgress((prev) => {
       const next: GameProgress = {
@@ -87,8 +104,9 @@ export function useGameProgress() {
         topics: { ...prev.topics },
         stickers: [...prev.stickers],
         badges: [...prev.badges],
+        usedQuestionIds: { ...prev.usedQuestionIds },
       };
-      const topicPrev = next.topics[topic] || { levels: {} };
+      const topicPrev = next.topics[topic] || { levels: {}, maxLevel: 0 };
       const levelPrev = topicPrev.levels[levelId];
       const stars = calcStars(score, total);
       const perfect = score === total;
@@ -102,7 +120,12 @@ export function useGameProgress() {
       };
       next.topics[topic] = {
         levels: { ...topicPrev.levels, [levelId]: newResult },
+        maxLevel: Math.max(topicPrev.maxLevel || 0, levelId),
       };
+
+      const prevUsed = next.usedQuestionIds[topic] || [];
+      const newUsed = usedIds.filter((id) => !prevUsed.includes(id));
+      if (newUsed.length) next.usedQuestionIds[topic] = [...prevUsed, ...newUsed];
 
       for (const s of stickersEarned) if (!next.stickers.includes(s)) next.stickers.push(s);
       for (const b of badgesEarned) if (!next.badges.includes(b)) next.badges.push(b);

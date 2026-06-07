@@ -1,11 +1,12 @@
+import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft, Gamepad2, Lock, Crown, Zap, Brain, Star,
-  Trophy, Code2, Rocket,
+  Trophy, Code2, Rocket, Flame, ChevronRight, Sparkles,
 } from 'lucide-react';
 import { useGameProgress } from '../hooks/useGameProgress';
-import { LEVEL_TEMPLATES, type Difficulty } from '../data/gamesData';
+import { getLevelDef, type Difficulty, getPool } from '../data/gamesData';
 
 const difficultyMeta: Record<Difficulty, { color: string; ring: string; gradient: string; icon: any; label: string; }> = {
   easy:   { color: 'text-emerald-300', ring: 'ring-emerald-400/50',   gradient: 'from-emerald-400 to-teal-500',    icon: Brain, label: 'Easy'   },
@@ -26,20 +27,39 @@ function Stars({ count, size = 'sm' }: { count: number; size?: 'sm' | 'md' }) {
   );
 }
 
-// SVG candy-cane path: stripes between level nodes
+const ORIGINAL_LEVEL_COUNT = 7;
+
 export default function GameTopicPage() {
   const { topic: topicParam } = useParams<{ topic: string }>();
   const topic = topicParam ? decodeURIComponent(topicParam) : '';
   const { getLevel, isLevelUnlocked, progress } = useGameProgress();
 
-  const levelResults = LEVEL_TEMPLATES.map((l) => getLevel(topic, l.id));
-  const completedCount = levelResults.filter((r) => r && r.stars >= 1).length;
-  const allDone = completedCount === 7;
-  const totalStars = levelResults.reduce((s, r) => s + (r?.stars || 0), 0);
-  const maxStars = 21;
-  const progressPct = (totalStars / maxStars) * 100;
+  const topicProgress = progress.topics[topic];
+  const maxLevel = topicProgress?.maxLevel || 0;
+  const completedLevelIds = useMemo(() => {
+    if (!topicProgress?.levels) return [] as number[];
+    return Object.keys(topicProgress.levels)
+      .map((k) => Number(k))
+      .filter((n) => Number.isFinite(n) && (topicProgress.levels[n]?.stars || 0) >= 1)
+      .sort((a, b) => a - b);
+  }, [topicProgress]);
 
-  const completed = levelResults.map((r) => !!(r && r.stars >= 1));
+  const pool = useMemo(() => getPool(topic), [topic]);
+  const poolSize = pool.easy.length + pool.medium.length + pool.hard.length;
+  const approxMaxUniqueLevels = Math.floor(poolSize / 3);
+  const totalLevels = Math.max(ORIGINAL_LEVEL_COUNT, maxLevel + 1, approxMaxUniqueLevels);
+  const displayLevels = ORIGINAL_LEVEL_COUNT;
+
+  const levelResults = Array.from({ length: displayLevels }, (_, i) => getLevel(topic, i + 1));
+  const completedCount = levelResults.filter((r) => r && r.stars >= 1).length;
+  const allOriginalDone = completedCount === ORIGINAL_LEVEL_COUNT;
+  const totalStars = Object.values(topicProgress?.levels || {}).reduce((s, r) => s + (r.stars || 0), 0);
+  const totalPossibleStars = totalLevels * 3;
+  const progressPct = Math.min(100, (totalStars / Math.max(1, totalPossibleStars)) * 100);
+
+  const completedSet = new Set(completedLevelIds);
+  const extraCompleted = completedLevelIds.filter((id) => id > ORIGINAL_LEVEL_COUNT);
+  const nextUnlockedLevel = Math.max(maxLevel + 1, 1);
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -63,7 +83,7 @@ export default function GameTopicPage() {
               <Trophy className="w-3 h-3" /> {progress.totalXp}
             </span>
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">
-              <CheckIcon /> {completedCount}/7
+              <CheckIcon /> {completedSet.size}
             </span>
           </div>
         </div>
@@ -76,9 +96,11 @@ export default function GameTopicPage() {
             </div>
             <div className="min-w-0 flex-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight truncate">{topic}</h1>
-              <p className="text-white/50 text-xs sm:text-sm mt-0.5">Clear levels, earn XP & badges</p>
+              <p className="text-white/50 text-xs sm:text-sm mt-0.5">
+                {completedSet.size} levels cleared · {totalStars} ⭐ earned
+              </p>
             </div>
-            {allDone && (
+            {allOriginalDone && (
               <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold">
                 <Crown className="w-3.5 h-3.5" /> Mastered
               </div>
@@ -86,35 +108,32 @@ export default function GameTopicPage() {
           </div>
         </motion.div>
 
-        {/* Levels candy path */}
+        {/* Original 7 levels: candy-cane path */}
         <div className="bg-[#0d0f1f] border border-white/10 rounded-2xl sm:rounded-3xl p-3 sm:p-5 mb-5 relative overflow-hidden">
           <div className="flex items-center justify-between mb-3 sm:mb-4 px-1 relative z-10">
-            <h2 className="text-sm sm:text-base font-semibold text-white">Levels</h2>
+            <h2 className="text-sm sm:text-base font-semibold text-white">Starter Path</h2>
             <div className="flex items-center gap-1.5 text-xs text-white/50">
               <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-              <span className="text-amber-300 font-semibold">{totalStars}</span>
-              <span>/ {maxStars}</span>
+              <span className="text-amber-300 font-semibold">{levelResults.reduce((s, r) => s + (r?.stars || 0), 0)}</span>
+              <span>/ 21</span>
             </div>
           </div>
 
           {(() => {
-            // Use a wider viewBox so circles spread out across the full container
             const H = 340;
-            // Wave centers (top to bottom of container)
             const centers = [70, 200, 110, 230, 80, 210, 130];
-            const nodeSize = 72; // bigger circles so they look proper, not cramped
-            const innerW = 900;  // wider viewBox so path spreads horizontally
+            const nodeSize = 72;
+            const innerW = 900;
             const innerH = H;
-            const xPositions = LEVEL_TEMPLATES.map((_, i) => (i + 0.5) * (innerW / LEVEL_TEMPLATES.length));
+            const xPositions = Array.from({ length: displayLevels }, (_, i) => (i + 0.5) * (innerW / displayLevels));
 
-            const segs = LEVEL_TEMPLATES.slice(0, -1).map((_, i) => ({
+            const segs = Array.from({ length: displayLevels - 1 }, (_, i) => ({
               x1: xPositions[i], y1: centers[i],
               x2: xPositions[i + 1], y2: centers[i + 1],
             }));
 
             return (
               <div className="relative w-full" style={{ height: H }}>
-                {/* Background candy path SVG — same coord system as the circles below */}
                 <svg
                   viewBox={`0 0 ${innerW} ${innerH}`}
                   preserveAspectRatio="none"
@@ -137,22 +156,14 @@ export default function GameTopicPage() {
                     const cp1Y = s.y1 + (s.y2 - s.y1) * 0.3;
                     const cp2Y = s.y2 - (s.y2 - s.y1) * 0.3;
                     const d = `M ${s.x1} ${s.y1} C ${midX} ${cp1Y}, ${midX} ${cp2Y}, ${s.x2} ${s.y2}`;
-                    const isActive = completed[i] && completed[i + 1];
+                    const isActive = !!(levelResults[i]?.stars && levelResults[i + 1]?.stars);
                     return (
                       <g key={i}>
                         <path d={d} stroke="url(#candyDim)" strokeWidth="8" fill="none" strokeLinecap="round" />
                         {isActive && (
                           <>
                             <path d={d} stroke="url(#candy)" strokeWidth="8" fill="none" strokeLinecap="round" />
-                            <path
-                              d={d}
-                              stroke="white"
-                              strokeWidth="3"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeDasharray="8 10"
-                              opacity="0.7"
-                            />
+                            <path d={d} stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" strokeDasharray="8 10" opacity="0.7" />
                           </>
                         )}
                       </g>
@@ -160,16 +171,17 @@ export default function GameTopicPage() {
                   })}
                 </svg>
 
-                {/* Level nodes — absolutely positioned, centered on the path */}
-                {LEVEL_TEMPLATES.map((lvl, i) => {
+                {Array.from({ length: displayLevels }, (_, i) => {
+                  const id = i + 1;
+                  const lvl = getLevelDef(id);
                   const meta = difficultyMeta[lvl.difficulty];
                   const result = levelResults[i];
-                  const unlocked = isLevelUnlocked(topic, lvl.id);
+                  const unlocked = isLevelUnlocked(topic, id);
                   const isCompleted = result && result.stars >= 1;
                   const leftPct = (xPositions[i] / innerW) * 100;
                   return (
                     <div
-                      key={lvl.id}
+                      key={id}
                       className="absolute"
                       style={{
                         left: `calc(${leftPct}% - ${nodeSize / 2}px)`,
@@ -178,14 +190,14 @@ export default function GameTopicPage() {
                       }}
                     >
                       {unlocked ? (
-                        <Link to={`/games/${encodeURIComponent(topic)}/${lvl.id}`} className="block group">
+                        <Link to={`/games/${encodeURIComponent(topic)}/${id}`} className="block group">
                           <Stars count={result?.stars || 0} />
                           <div className={`relative w-14 h-14 sm:w-[72px] sm:h-[72px] rounded-full flex items-center justify-center text-white text-lg sm:text-xl font-bold shadow-xl transition-all ${
                             isCompleted
                               ? `bg-gradient-to-br ${meta.gradient} ring-2 ${meta.ring} group-hover:scale-110 group-hover:shadow-2xl`
                               : `bg-gradient-to-br ${meta.gradient} ring-2 ${meta.ring} group-hover:scale-110 group-hover:brightness-110`
                           }`}>
-                            <span className="drop-shadow-md">{lvl.id}</span>
+                            <span className="drop-shadow-md">{id}</span>
                             {isCompleted && (
                               <div className="absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-500 border-2 border-[#0d0f1f] flex items-center justify-center">
                                 <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -206,7 +218,7 @@ export default function GameTopicPage() {
                             <Stars count={0} />
                           </div>
                           <div className="relative w-14 h-14 sm:w-[72px] sm:h-[72px] rounded-full bg-white/[0.04] border-2 border-white/10 flex items-center justify-center text-white/30 text-lg sm:text-xl font-bold">
-                            {lvl.id}
+                            {id}
                             <div className="absolute inset-0 rounded-full flex items-center justify-center bg-black/40">
                               <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-white/40" />
                             </div>
@@ -226,13 +238,66 @@ export default function GameTopicPage() {
           })()}
         </div>
 
+        {/* Infinite Advanced Levels */}
+        <div className="bg-[#0d0f1f] border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-5 mb-5">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h2 className="text-sm sm:text-base font-semibold text-white flex items-center gap-2">
+                <Flame className="w-4 h-4 text-orange-400" />
+                Advanced Levels
+              </h2>
+              <p className="text-[10px] sm:text-xs text-white/40 mt-0.5">
+                Infinite levels with unique MCQ questions — pool of {poolSize} questions
+              </p>
+            </div>
+            <Link
+              to={`/games/${encodeURIComponent(topic)}/${nextUnlockedLevel}`}
+              className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs sm:text-sm font-semibold hover:opacity-90 transition"
+            >
+              Play Level {nextUnlockedLevel} <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          {extraCompleted.length === 0 ? (
+            <div className="text-center py-6 text-white/40 text-xs sm:text-sm">
+              <Sparkles className="w-5 h-5 mx-auto mb-2 opacity-40" />
+              Clear all 7 starter levels to unlock the advanced path.
+            </div>
+          ) : (
+            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2 sm:gap-3">
+              {extraCompleted.slice(-40).map((id) => {
+                const lvl = getLevelDef(id);
+                const meta = difficultyMeta[lvl.difficulty];
+                const result = getLevel(topic, id);
+                return (
+                  <Link
+                    key={id}
+                    to={`/games/${encodeURIComponent(topic)}/${id}`}
+                    className="group relative aspect-square rounded-xl bg-white/[0.03] border border-white/10 hover:border-white/30 transition flex flex-col items-center justify-center p-1.5"
+                  >
+                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${meta.gradient} opacity-10 group-hover:opacity-20 transition`} />
+                    <div className="relative text-center">
+                      <div className="text-[10px] sm:text-xs font-bold text-white">{id}</div>
+                      <div className="flex justify-center mt-0.5">
+                        <Stars count={result?.stars || 0} />
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
         {/* Progress + Next Reward */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
           <div className="sm:col-span-2 bg-[#0d0f1f] border border-white/10 rounded-2xl p-4">
             <div className="flex items-center justify-between mb-2">
               <div>
                 <div className="text-xs sm:text-sm font-semibold text-white">Your Progress</div>
-                <div className="text-[10px] sm:text-xs text-white/40 mt-0.5">{completedCount} of 7 levels completed</div>
+                <div className="text-[10px] sm:text-xs text-white/40 mt-0.5">
+                  {completedSet.size} of {totalLevels} levels · {totalStars}/{totalPossibleStars} ⭐
+                </div>
               </div>
               <div className="text-sm sm:text-base font-bold text-emerald-400">{Math.round(progressPct)}%</div>
             </div>
@@ -252,9 +317,9 @@ export default function GameTopicPage() {
             <div className="min-w-0 flex-1">
               <div className="text-[10px] text-white/40">Next Reward</div>
               <div className="text-xs sm:text-sm font-bold text-white truncate">
-                +{LEVEL_TEMPLATES[completedCount]?.id ? 30 + LEVEL_TEMPLATES[completedCount].id * 10 : 0} XP
+                +{30 + nextUnlockedLevel * 10} XP
               </div>
-              <div className="text-[10px] sm:text-xs text-white/40 truncate">Complete Level {Math.min(completedCount + 1, 7)}</div>
+              <div className="text-[10px] sm:text-xs text-white/40 truncate">Complete Level {nextUnlockedLevel}</div>
             </div>
           </div>
         </div>
@@ -264,9 +329,9 @@ export default function GameTopicPage() {
           <h2 className="text-sm sm:text-base font-semibold text-white mb-3">How it works</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { icon: Gamepad2, color: 'from-violet-500 to-purple-500', title: 'Pick a Level', desc: 'Choose a level to start your coding adventure' },
-              { icon: Code2, color: 'from-cyan-500 to-blue-500', title: 'Solve Challenges', desc: 'Solve bite-sized coding problems' },
-              { icon: Trophy, color: 'from-amber-500 to-orange-500', title: 'Earn Rewards', desc: 'Earn XP, stickers and unlock new levels' },
+              { icon: Gamepad2, color: 'from-violet-500 to-purple-500', title: 'Pick a Level', desc: 'Starter path or advanced — every level unique' },
+              { icon: Code2, color: 'from-cyan-500 to-blue-500', title: 'Solve MCQs', desc: 'Bite-sized multiple-choice questions' },
+              { icon: Trophy, color: 'from-amber-500 to-orange-500', title: 'Earn Rewards', desc: 'XP, stars, stickers, and unlock the next level' },
             ].map((s) => (
               <div key={s.title} className="bg-white/[0.02] border border-white/5 rounded-xl p-3">
                 <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br ${s.color} flex items-center justify-center mb-2`}>

@@ -18,11 +18,11 @@ const topicGradients = [
   'from-teal-500 to-emerald-500', 'from-yellow-500 to-amber-500', 'from-red-500 to-rose-500',
 ];
 
-function TopicCard({ topic, index, completed, totalLevels, onClick }: {
-  topic: Topic; index: number; completed: number; totalLevels: number; onClick: () => void;
+function TopicCard({ topic, index, completed, totalLevels, originalDone, onClick }: {
+  topic: Topic; index: number; completed: number; totalLevels: number; originalDone: number; onClick: () => void;
 }) {
   const color = topicGradients[index % topicGradients.length];
-  const isComplete = completed === totalLevels;
+  const isMastered = originalDone >= 7;
   return (
     <motion.button
       initial={{ opacity: 0, y: 16 }}
@@ -40,14 +40,15 @@ function TopicCard({ topic, index, completed, totalLevels, onClick }: {
           <h3 className="text-sm sm:text-base font-semibold text-white truncate group-hover:text-purple-300 transition">{topic.name}</h3>
           <div className="flex items-center gap-2 mt-1">
             <div className="flex gap-0.5 flex-wrap">
-              {Array.from({ length: totalLevels }).map((_, i) => (
+              {Array.from({ length: Math.min(totalLevels, 30) }).map((_, i) => (
                 <div key={i} className={`w-1.5 h-1.5 rounded-full ${i < completed ? `bg-gradient-to-br ${color}` : 'bg-white/10'}`} />
               ))}
+              {totalLevels > 30 && <span className="text-[9px] text-white/30 ml-0.5">+{totalLevels - 30}</span>}
             </div>
-            <span className="text-[10px] sm:text-xs text-white/40">{completed}/{totalLevels}</span>
+            <span className="text-[10px] sm:text-xs text-white/40">{completed} lvl</span>
           </div>
         </div>
-        {isComplete ? (
+        {isMastered ? (
           <Crown className="w-4 h-4 text-amber-400 shrink-0" />
         ) : (
           <ChevronRight className="w-4 h-4 text-white/20 group-hover:text-white/60 group-hover:translate-x-0.5 transition-all shrink-0" />
@@ -129,17 +130,16 @@ function GamesContent() {
 
   const stats = useMemo(() => {
     let completedTopics = 0;
-    let totalLevels = 0;
     let completedLevels = 0;
     for (const t of topics) {
       const p = progress.topics[t.name];
       if (!p?.levels) continue;
-      const done = Object.values(p.levels).filter((r) => r.stars >= 1).length;
-      if (done === 7) completedTopics++;
-      totalLevels += 7;
-      completedLevels += done;
+      const origDone = Array.from({ length: 7 }, (_, i) => p.levels[i + 1]?.stars || 0).filter((s) => s >= 1).length;
+      if (origDone === 7) completedTopics++;
+      const allDone = Object.values(p.levels).filter((r) => r.stars >= 1).length;
+      completedLevels += allDone;
     }
-    return { completedTopics, totalLevels, completedLevels };
+    return { completedTopics, completedLevels };
   }, [topics, progress]);
 
   return (
@@ -161,9 +161,9 @@ function GamesContent() {
             <span className="text-white">Games </span>
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">Test</span>
           </h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-white/50 max-w-2xl mx-auto">
-            Pick a topic, clear 7 levels, earn stickers & badges. Each level mixes quick quizzes with bite-sized coding challenges.
-          </p>
+            <p className="mt-3 sm:mt-4 text-base sm:text-lg text-white/50 max-w-2xl mx-auto">
+              Pick a topic, play infinite unique MCQ levels, earn stickers & badges. Every level tests you with a fresh question.
+            </p>
         </motion.div>
 
         {/* Stats */}
@@ -172,7 +172,7 @@ function GamesContent() {
             { icon: Flame, label: 'Streak', value: `${progress.streak.count}d`, color: 'from-orange-500 to-red-500' },
             { icon: Zap, label: 'XP', value: progress.totalXp, color: 'from-yellow-500 to-amber-500' },
             { icon: Trophy, label: 'Topics', value: `${stats.completedTopics}/${topics.length}`, color: 'from-purple-500 to-violet-500' },
-            { icon: Target, label: 'Levels', value: `${stats.completedLevels}/${stats.totalLevels}`, color: 'from-emerald-500 to-teal-500' },
+            { icon: Target, label: 'Levels', value: `${stats.completedLevels}`, color: 'from-emerald-500 to-teal-500' },
           ].map((s, i) => (
             <motion.div
               key={s.label}
@@ -239,13 +239,15 @@ function GamesContent() {
                 {filtered.map((t, i) => {
                   const p = progress.topics[t.name];
                   const done = p?.levels ? Object.values(p.levels).filter((r) => r.stars >= 1).length : 0;
+                  const origDone = p?.levels ? Array.from({ length: 7 }, (_, k) => p.levels[k + 1]?.stars || 0).filter((s) => s >= 1).length : 0;
                   return (
                     <TopicCard
                       key={t.id}
                       topic={t}
                       index={i}
                       completed={done}
-                      totalLevels={7}
+                      totalLevels={Math.max(7, p?.maxLevel || 0)}
+                      originalDone={origDone}
                       onClick={() => { window.location.href = `/games/${encodeURIComponent(t.name)}`; }}
                     />
                   );
