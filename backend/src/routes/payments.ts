@@ -461,6 +461,61 @@ router.post('/debug/clear-all-subs', async (req: AuthRequest, res: Response) => 
   }
 });
 
+router.post('/debug/recreate-sub', async (req: AuthRequest, res: Response) => {
+  if (req.user?.role !== 'admin') {
+    return res.status(403).json({ error: 'Admin only' });
+  }
+  const { user_id, days } = req.body;
+  if (!user_id) return res.status(400).json({ error: 'user_id required' });
+  const dbModule = require('../data/db');
+  const store = require('../data/store');
+  const { randomUUID } = require('crypto');
+  const sub = {
+    id: randomUUID(),
+    user_id: String(user_id),
+    plan: 'premium',
+    status: 'active',
+    start_date: new Date().toISOString(),
+    end_date: new Date(Date.now() + (days || 30) * 24 * 60 * 60 * 1000).toISOString(),
+  };
+  store.addSubscription(sub);
+  res.json({ success: true, subscription: sub });
+});
+
+router.post('/debug/cleanup-fake-subs', async (req: AuthRequest, res: Response) => {
+  if (req.user?.role !== 'admin') {
+    return res.status(403).json({ error: 'Admin only' });
+  }
+  const dbModule = require('../data/db');
+  const db = dbModule.getDb();
+  const payments = dbModule.getPaymentRequests();
+  const verifiedUserIds = new Set(payments.filter((p: any) => p.status === 'verified').map((p: any) => String(p.user_id)));
+  const fakeSubs = db.subscriptions.filter((s: any) => !verifiedUserIds.has(String(s.user_id)));
+  const legitSubs = db.subscriptions.filter((s: any) => verifiedUserIds.has(String(s.user_id)));
+  db.subscriptions = legitSubs;
+  const mongoUrl = process.env.MONGODB_URL || process.env.MONGO_URL;
+  if (mongoUrl) {
+    const { MongoClient } = require('mongodb');
+    const client = new MongoClient(mongoUrl, { serverSelectionTimeoutMS: 5000 });
+    await client.connect();
+    const col = client.db().collection('subscriptions');
+    await col.deleteMany({});
+    if (legitSubs.length > 0) {
+      await col.insertMany(legitSubs);
+    }
+    await client.close();
+  }
+  res.json({
+    success: true,
+    removed_count: fakeSubs.length,
+    removed_user_ids: fakeSubs.map((s: any) => s.user_id),
+    kept_count: legitSubs.length,
+    kept_user_ids: legitSubs.map((s: any) => s.user_id),
+    verified_payment_user_ids: Array.from(verifiedUserIds),
+    message: `Removed ${fakeSubs.length} fake subs, kept ${legitSubs.length} legit subs.`,
+  });
+});
+
 router.post('/admin-verify', async (req: AuthRequest, res: Response) => {
   if (req.user?.role !== 'admin') {
     return res.status(403).json({ error: 'Admin only' });
