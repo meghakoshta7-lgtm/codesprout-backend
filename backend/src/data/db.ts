@@ -316,8 +316,48 @@ function migrateCodeToDb(codeQuestions: Question[], codeTestCases: TestCaseData[
     }
   }
 
-  if (qChanged > 0 || tAdded > 0 || tReplaced > 0) {
-    console.log(`[DB] Migration: enriched ${qChanged} questions, added ${tAdded} new test cases, replaced ${tReplaced} existing test cases`);
+  for (const q of codeQuestions) {
+    if (!q.test_cases || q.test_cases.length === 0) continue;
+    const code = codeBySlug.get(q.slug);
+    if (!code) continue;
+    const dbForSlug = db.testCases.filter(t => t.slug === q.slug);
+    if (dbForSlug.length > 0) continue;
+    for (const tc of q.test_cases) {
+      const tcData: TestCaseData = {
+        id: String(tc.id),
+        slug: q.slug,
+        input: tc.input,
+        expected_output: tc.expected_output,
+        is_hidden: !!tc.is_hidden,
+      };
+      db.testCases.push(tcData);
+      tAdded++;
+    }
+  }
+
+  let qDeleted = 0;
+  let tcDeleted = 0;
+  const toDeleteSlugs: string[] = [];
+  for (const q of db.questions) {
+    if (!q.slug || !q.topic_name) continue;
+    const topicSlug = q.topic_name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const brokenPattern = new RegExp(`-${topicSlug}-${topicSlug}-\\d+$`);
+    if (brokenPattern.test(q.slug)) {
+      toDeleteSlugs.push(q.slug);
+    }
+  }
+  if (toDeleteSlugs.length > 0) {
+    const beforeQ = db.questions.length;
+    db.questions = db.questions.filter(q => !toDeleteSlugs.includes(q.slug));
+    qDeleted = beforeQ - db.questions.length;
+    const beforeTC = db.testCases.length;
+    db.testCases = db.testCases.filter(tc => !toDeleteSlugs.includes(tc.slug));
+    tcDeleted = beforeTC - db.testCases.length;
+    console.log(`[DB] Migration: removed ${qDeleted} broken filler questions, ${tcDeleted} related test cases`);
+  }
+
+  if (qChanged > 0 || tAdded > 0 || tReplaced > 0 || qDeleted > 0) {
+    console.log(`[DB] Migration: enriched ${qChanged} questions, added ${tAdded} new test cases, replaced ${tReplaced} existing test cases, removed ${qDeleted} broken questions`);
     saveDb();
   } else {
     console.log('[DB] Migration: no changes needed');
