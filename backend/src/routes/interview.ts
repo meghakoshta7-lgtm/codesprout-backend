@@ -18,31 +18,117 @@ const router = Router();
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'anthropic/claude-3.5-sonnet';
+
+// Model fallback chain: tries each in order until one succeeds.
+// Free models are listed first so default usage stays free.
+// Override the primary with OPENROUTER_MODEL env var (e.g. "anthropic/claude-3.5-sonnet").
+const DEFAULT_MODEL_CHAIN: string[] = [
+  'meta-llama/llama-3.3-70b-instruct:free',
+  'qwen/qwen-2.5-72b-instruct:free',
+  'google/gemini-2.0-flash-exp:free',
+  'meta-llama/llama-3.1-8b-instruct:free',
+  'mistralai/mistral-7b-instruct:free',
+  'nvidia/llama-3.1-nemotron-70b-instruct:free',
+];
+const PRIMARY_MODEL = process.env.OPENROUTER_MODEL || DEFAULT_MODEL_CHAIN[0];
+const MODEL_CHAIN: string[] = [
+  PRIMARY_MODEL,
+  ...DEFAULT_MODEL_CHAIN.filter(m => m !== PRIMARY_MODEL),
+];
+
+type OpenRouterResult = { ok: true; content: string; model: string; } | { ok: false; error: string; model: string; status?: number; };
+
+async function tryModel(model: string, messages: { role: 'system' | 'user'; content: string }[], timeoutMs = 25000): Promise<OpenRouterResult> {
+  if (!OPENROUTER_API_KEY) return { ok: false, error: 'no_key', model };
+  const controller = new AbortController();
+  const t = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(OPENROUTER_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://codesprout.com',
+        'X-Title': 'CodeSprout Interview Prep',
+      },
+      body: JSON.stringify({ model, messages, temperature: 0.7, max_tokens: 4000 }),
+      signal: controller.signal,
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => '');
+      return { ok: false, error: errText.slice(0, 200) || `HTTP ${res.status}`, model, status: res.status };
+    }
+    const data = await res.json() as { choices?: { message?: { content?: string } }[] };
+    const content = data.choices?.[0]?.message?.content || '';
+    if (!content) return { ok: false, error: 'empty_content', model, status: res.status };
+    return { ok: true, content, model };
+  } catch (err: any) {
+    return { ok: false, error: err?.name === 'AbortError' ? 'timeout' : (err?.message || 'network'), model };
+  } finally {
+    clearTimeout(t);
+  }
+}
 
 async function callOpenRouter(messages: { role: 'system' | 'user'; content: string }[]): Promise<string> {
-  if (!OPENROUTER_API_KEY) throw new Error('OPENROUTER_API_KEY not set');
-  const res = await fetch(OPENROUTER_URL, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-      'Content-Type': 'application/json',
-      'HTTP-Referer': 'https://codesprout.com',
-      'X-Title': 'CodeSprout Interview Prep',
-    },
-    body: JSON.stringify({
-      model: OPENROUTER_MODEL,
-      messages,
-      temperature: 0.7,
-      max_tokens: 4000,
-    }),
-  });
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`OpenRouter error: ${res.status} ${errText.slice(0, 200)}`);
+  const errors: string[] = [];
+  for (const model of MODEL_CHAIN) {
+    const r = await tryModel(model, messages);
+    if (r.ok) {
+      if (model !== PRIMARY_MODEL) console.log(`[interview-prep] AI fallback used: ${model}`);
+      return r.content;
+    }
+    errors.push(`${model}: ${r.status || ''} ${r.error}`);
+    // 4xx other than 429 = request itself is bad, no point trying more models
+    if (r.status && r.status >= 400 && r.status < 500 && r.status !== 429) break;
   }
-  const data = await res.json() as { choices: { message: { content: string } }[] };
-  return data.choices?.[0]?.message?.content || '';
+  throw new Error(`All models failed: ${errors.slice(0, 3).join(' | ')}`);
+}
+
+// =============== STATIC FALLBACK QUESTION BANK ===============
+// Used only when ALL AI models fail (rate limits / network / 5xx).
+// Each subject has a small bank of common interview questions per difficulty.
+// Returns empty array if subject is unknown — UI will prompt user to retry.
+
+const FALLBACK_QUESTIONS: Record<string, { basic: { question: string; answer: string; tags: string[] }[]; intermediate: { question: string; answer: string; tags: string[] }[]; advanced: { question: string; answer: string; tags: string[] }[] }> = {
+  default: {
+    basic: [
+      { question: 'Tell me about yourself and your background.', answer: 'Briefly summarize your education, key projects, technologies you have worked with, and what motivates you. Keep it 2-3 minutes and end with why you are excited about this role.', tags: ['intro', 'behavioral'] },
+      { question: 'Why do you want to work at our company?', answer: 'Research the company product, culture, and recent news. Mention specific things that align with your values and career goals. Show genuine interest, not generic flattery.', tags: ['motivation'] },
+      { question: 'What are your strengths and weaknesses?', answer: 'Pick 2-3 strengths with concrete examples showing impact. For weaknesses, mention one you are actively working on and what steps you are taking to improve.', tags: ['self-awareness'] },
+      { question: 'Where do you see yourself in 5 years?', answer: 'Show ambition but realism. Mention growing into a senior IC or tech lead role, deepening expertise in chosen area, and contributing to team/company success.', tags: ['career-goals'] },
+      { question: 'Why are you leaving your current role?', answer: 'Stay positive. Focus on what you are looking for (growth, new challenges, better alignment with goals) rather than what you are running from.', tags: ['motivation'] },
+    ],
+    intermediate: [
+      { question: 'Describe a challenging project and how you handled it.', answer: 'Use STAR method: Situation, Task, Action, Result. Pick a project with measurable impact. Focus on your specific contributions and what you learned.', tags: ['behavioral', 'problem-solving'] },
+      { question: 'How do you handle disagreements with teammates?', answer: 'Give an example where you listened first, sought to understand their perspective, found common ground, and reached a better solution through collaboration.', tags: ['collaboration', 'conflict'] },
+      { question: 'Tell me about a time you failed and what you learned.', answer: 'Be honest about a real failure, take responsibility without blaming others, and focus on the specific lessons learned and how you applied them afterwards.', tags: ['growth', 'self-awareness'] },
+    ],
+    advanced: [
+      { question: 'Design a system like Twitter / URL shortener / Instagram.', answer: 'Clarify requirements (read-heavy vs write-heavy, scale). Cover: load balancer, API gateway, database choice (SQL vs NoSQL), caching layer (Redis), CDN for media, message queue for async tasks, monitoring. Discuss trade-offs.', tags: ['system-design'] },
+      { question: 'How would you scale a service from 1k to 1M users?', answer: 'Walk through stages: vertical scaling first, then horizontal with load balancers, then database read replicas, sharding, caching, CDN, async processing, microservices decomposition. Mention specific tools and metrics.', tags: ['scalability'] },
+      { question: 'Describe how you would debug a production outage.', answer: 'Steps: check dashboards/alerts, identify blast radius, check recent deploys, examine logs and traces, form hypothesis, test with feature flags or rollback, communicate status, write postmortem with action items.', tags: ['debugging', 'operations'] },
+    ],
+  },
+};
+
+function getFallbackQuestions(subject: string, difficulty: QuestionDifficulty, count: number): { question: string; answer: string; tags: string[] }[] {
+  const lower = subject.toLowerCase();
+  // Try to find a subject-specific bank
+  for (const [key, bank] of Object.entries(FALLBACK_QUESTIONS)) {
+    if (key === 'default') continue;
+    if (lower.includes(key) || key.includes(lower)) {
+      const pool = bank[difficulty] || [];
+      return pool.slice(0, count);
+    }
+  }
+  // Otherwise use default + try to make them subject-specific
+  const defaultBank = FALLBACK_QUESTIONS.default[difficulty] || [];
+  const result = defaultBank.slice(0, count).map(q => ({
+    question: q.question.replace(/\b(system|service|project|role)\b/gi, subject),
+    answer: q.answer,
+    tags: q.tags,
+  }));
+  return result;
 }
 
 function extractJsonArray(text: string): any[] {
@@ -149,6 +235,7 @@ router.post('/interview-prep/generate-questions', authenticate, async (req: Auth
 
     const roleName = pref.custom_role && pref.role === 'custom' ? pref.custom_role : (getRoleById(pref.role)?.name || pref.role);
     const newQuestions: GeneratedInterviewQuestion[] = [];
+    const usedFallback: string[] = [];
 
     for (const diff of toGenerate) {
       const need = targets[diff] - existingByDiff[diff];
@@ -167,31 +254,58 @@ Rules:
 
 Example: [{"question":"What is X?","answer":"X is ...","tags":["x"]}]`;
 
+      let aiSucceeded = false;
       try {
         const text = await callOpenRouter([
           { role: 'system', content: 'You output strict JSON arrays only. No markdown, no explanations.' },
           { role: 'user', content: prompt },
         ]);
         const arr = extractJsonArray(text);
-        if (!Array.isArray(arr)) continue;
-        for (const item of arr.slice(0, need)) {
-          if (!item?.question || !item?.answer) continue;
+        if (Array.isArray(arr)) {
+          for (const item of arr.slice(0, need)) {
+            if (!item?.question || !item?.answer) continue;
+            newQuestions.push({
+              id: `giq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+              user_id: req.user!.id,
+              subject,
+              role: roleId,
+              difficulty: diff,
+              question: String(item.question).trim(),
+              answer: String(item.answer).trim(),
+              tags: Array.isArray(item.tags) ? item.tags.map((t: any) => String(t).trim()).slice(0, 3) : [],
+              source: 'ai',
+              created_at: new Date().toISOString(),
+            });
+          }
+          aiSucceeded = newQuestions.filter(q => q.difficulty === diff).length > 0;
+        }
+      } catch (err: any) {
+        console.error(`[interview-prep] gen failed for ${subject}/${diff}:`, err.message);
+      }
+
+      // Static fallback: never let the user see an error
+      if (!aiSucceeded) {
+        const fallbackPool = getFallbackQuestions(subject, diff, need);
+        for (const item of fallbackPool) {
           newQuestions.push({
             id: `giq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
             user_id: req.user!.id,
             subject,
             role: roleId,
             difficulty: diff,
-            question: String(item.question).trim(),
-            answer: String(item.answer).trim(),
-            tags: Array.isArray(item.tags) ? item.tags.map((t: any) => String(t).trim()).slice(0, 3) : [],
+            question: item.question,
+            answer: item.answer,
+            tags: item.tags,
             source: 'ai',
             created_at: new Date().toISOString(),
           });
         }
-      } catch (err: any) {
-        console.error(`[interview-prep] gen failed for ${subject}/${diff}:`, err.message);
+        if (fallbackPool.length > 0) usedFallback.push(diff);
       }
+    }
+
+    if (usedFallback.length > 0) {
+      console.log(`[interview-prep] used static fallback bank for ${subject}: ${usedFallback.join(', ')}`);
     }
 
     if (newQuestions.length > 0) {
@@ -232,6 +346,7 @@ router.post('/interview-prep/mock/start', authenticate, async (req: AuthRequest,
 
     let pool = getGeneratedQuestionsForSubject(req.user!.id, subject);
     if (pool.length < N) {
+      const newOnes: GeneratedInterviewQuestion[] = [];
       try {
         const prompt = `Generate ${Math.max(N, 8)} interview questions on "${subject}" for a ${pref.experience}-level ${getRoleById(pref.role)?.name || pref.role} candidate. Round type: ${round_type}.
 Return a JSON array of { "question": "<text>", "answer": "<3-6 sentence answer>", "tags": ["..."] }.
@@ -242,28 +357,50 @@ Output only the JSON array, no markdown.`;
           { role: 'user', content: prompt },
         ]);
         const arr = extractJsonArray(text);
-        const newOnes: GeneratedInterviewQuestion[] = [];
-        for (const item of arr) {
-          if (!item?.question || !item?.answer) continue;
+        if (Array.isArray(arr)) {
+          for (const item of arr) {
+            if (!item?.question || !item?.answer) continue;
+            newOnes.push({
+              id: `giq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+              user_id: req.user!.id,
+              subject,
+              role: pref.role,
+              difficulty: 'intermediate',
+              question: String(item.question).trim(),
+              answer: String(item.answer).trim(),
+              tags: Array.isArray(item.tags) ? item.tags.map((t: any) => String(t).trim()).slice(0, 3) : [],
+              source: 'ai',
+              created_at: new Date().toISOString(),
+            });
+          }
+        }
+      } catch (err: any) {
+        console.error('[interview-prep] mock/start auto-gen failed:', err.message);
+      }
+
+      // Static fallback if AI yielded nothing
+      if (newOnes.length === 0) {
+        const fallback = getFallbackQuestions(subject, 'intermediate', Math.max(N, 8));
+        for (const item of fallback) {
           newOnes.push({
             id: `giq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
             user_id: req.user!.id,
             subject,
             role: pref.role,
             difficulty: 'intermediate',
-            question: String(item.question).trim(),
-            answer: String(item.answer).trim(),
-            tags: Array.isArray(item.tags) ? item.tags.map((t: any) => String(t).trim()).slice(0, 3) : [],
+            question: item.question,
+            answer: item.answer,
+            tags: item.tags,
             source: 'ai',
             created_at: new Date().toISOString(),
           });
         }
-        if (newOnes.length > 0) {
-          addGeneratedInterviewQuestions(newOnes);
-          pool = getGeneratedQuestionsForSubject(req.user!.id, subject);
-        }
-      } catch (err: any) {
-        console.error('[interview-prep] mock/start auto-gen failed:', err.message);
+        if (fallback.length > 0) console.log(`[interview-prep] mock/start used static fallback for ${subject}`);
+      }
+
+      if (newOnes.length > 0) {
+        addGeneratedInterviewQuestions(newOnes);
+        pool = getGeneratedQuestionsForSubject(req.user!.id, subject);
       }
     }
 
