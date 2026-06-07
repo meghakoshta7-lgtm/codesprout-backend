@@ -153,6 +153,9 @@ function isSubjectSpecific(question: string, subject: string): boolean {
     'how do you handle disagreement', 'tell me about a time',
     'describe a time', 'how would your colleagues describe',
     'why should we hire', 'what motivates you',
+    'good morning', 'good afternoon', 'good evening',
+    'how are you', 'how are you doing', 'nice to meet you',
+    'great to have you', 'let me start', 'first of all',
   ];
   for (const gp of genericPatterns) {
     if (lowerQ.includes(gp)) return false;
@@ -169,8 +172,20 @@ function isSubjectSpecific(question: string, subject: string): boolean {
   return keywords.some((kw: string) => lowerQ.includes(kw));
 }
 
+function sanitizeQuestion(text: string): string {
+  return text
+    .replace(/^(Good\s*(morning|afternoon|evening)[\s,!.-]*)/i, '')
+    .replace(/^(Hello|Hi|Hey|Greetings)[\s,!.-]*/i, '')
+    .replace(/^(Welcome[\s\w,]+!?\s*)/i, '')
+    .replace(/^(Let'?s?\s*start\s*(with|by|the)[\s\w]*!?\s*)/i, '')
+    .replace(/^(First\s*(of\s*all)?,?\s*)/i, '')
+    .trim();
+}
+
 function filterSubjectSpecific(questions: any[], subject: string): any[] {
-  return questions.filter(q => q && q.question && isSubjectSpecific(q.question, subject));
+  return questions
+    .filter(q => q && q.question && isSubjectSpecific(q.question, subject))
+    .map(q => ({ ...q, question: sanitizeQuestion(q.question) }));
 }
 
 function extractJsonArray(text: string): any[] {
@@ -317,7 +332,7 @@ Example for subject "JavaScript": [{"question":"What is the difference between l
               subject,
               role: roleId,
               difficulty: diff,
-              question: String(item.question).trim(),
+              question: sanitizeQuestion(String(item.question).trim()),
               answer: String(item.answer).trim(),
               tags: Array.isArray(item.tags) ? item.tags.map((t: any) => String(t).trim()).slice(0, 3) : [],
               source: 'ai',
@@ -342,7 +357,7 @@ Example for subject "JavaScript": [{"question":"What is the difference between l
             subject,
             role: roleId,
             difficulty: diff,
-            question: item.question,
+            question: sanitizeQuestion(item.question),
             answer: item.answer,
             tags: item.tags,
             source: 'ai',
@@ -421,7 +436,7 @@ Output only the JSON array, no markdown.`;
               subject,
               role: pref.role,
               difficulty: 'intermediate',
-              question: String(item.question).trim(),
+              question: sanitizeQuestion(String(item.question).trim()),
               answer: String(item.answer).trim(),
               tags: Array.isArray(item.tags) ? item.tags.map((t: any) => String(t).trim()).slice(0, 3) : [],
               source: 'ai',
@@ -445,7 +460,7 @@ Output only the JSON array, no markdown.`;
             subject,
             role: pref.role,
             difficulty: 'intermediate',
-            question: item.question,
+            question: sanitizeQuestion(item.question),
             answer: item.answer,
             tags: item.tags,
             source: 'ai',

@@ -224,7 +224,7 @@ function MockCallContent() {
     setAnswer('');
     setLastFeedback(null);
     setInterimTranscript('');
-    const text = `Question. ${q.question}. Take your time.`;
+    const text = q.question.replace(/^(Good\s*(morning|afternoon|evening)[\s,!]*|Hello[\s,!]*|Hi[\s,!]*|Welcome[\s,!]*)/i, '');
     speak(text, () => {
       setPhase('user_turn');
     });
