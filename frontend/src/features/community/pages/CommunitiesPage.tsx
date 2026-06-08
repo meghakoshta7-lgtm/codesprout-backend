@@ -136,37 +136,39 @@ export default function CommunitiesPage() {
   return (
     <div className="min-h-screen pb-12 sm:pb-16 overflow-hidden" style={{ backgroundColor: '#0B1020' }}>
       {/* Hero Section */}
-      <div className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0B1020 0%, #1a1140 50%, #0B1020 100%)' }}>
-        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(168,85,247,0.15) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-        <div className="absolute top-10 left-10 w-72 h-72 rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(124,108,246,0.3) 0%, transparent 70%)' }} />
-        <div className="absolute bottom-0 right-10 w-72 h-72 rounded-full blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%)' }} />
+      <div className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0d0a1a 0%, #130e2a 40%, #0B1020 100%)' }}>
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(168,85,247,0.2) 1px, transparent 0)', backgroundSize: '28px 28px' }} />
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(124,108,246,0.2) 0%, transparent 70%)' }} />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)' }} />
+        </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-10 sm:pb-14">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-6 sm:pb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             {/* Left Content */}
             <div>
-              <Link to="/" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-sm mb-5 transition-colors group">
+              <Link to="/" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-sm mb-4 transition-colors group">
                 <ChevronRight className="w-3.5 h-3.5 rotate-180 group-hover:-translate-x-0.5 transition-transform" /> Back to Home
               </Link>
-              <div className="flex items-center gap-4 mb-4">
-                <span className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center shadow-lg shadow-purple-500/25">
-                  <Users className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center shadow-lg shadow-purple-500/25">
+                  <Users className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </span>
-                <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight" style={{ textShadow: '0 0 40px rgba(139,92,246,0.3)' }}>Communities</h1>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight" style={{ textShadow: '0 0 40px rgba(139,92,246,0.3)' }}>Communities</h1>
               </div>
-              <p className="text-white/50 text-base sm:text-lg mb-8 max-w-md">Create or join study groups to learn together</p>
+              <p className="text-white/50 text-sm sm:text-base mb-6 max-w-sm">Create or join study groups to learn together</p>
               <div className="flex flex-wrap gap-3">
-                <button onClick={() => setShowCreate(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold hover:from-purple-500 hover:to-violet-500 transition-all text-sm shadow-lg shadow-purple-500/30">
+                <button onClick={() => setShowCreate(true)} className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold hover:from-purple-500 hover:to-violet-500 transition-all text-sm shadow-lg shadow-purple-500/30">
                   <Plus className="w-4 h-4" /> Create Community
                 </button>
-                <button onClick={() => setShowJoin(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white/80 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all text-sm font-medium">
+                <button onClick={() => setShowJoin(true)} className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl border border-white/20 text-white/80 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all text-sm font-medium">
                   <UserPlus className="w-4 h-4" /> Join Community
                 </button>
               </div>
             </div>
             {/* Right Illustration */}
             <div className="hidden lg:flex justify-end">
-              <img src="/communities-hero.png" alt="Communities" className="w-full max-w-md lg:max-w-lg object-contain drop-shadow-2xl" />
+              <img src="/communities-hero.png" alt="Communities" className="w-full max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl" />
             </div>
           </div>
         </div>
