@@ -167,8 +167,8 @@ export default function CommunitiesPage() {
               </div>
             </div>
             {/* Right Illustration */}
-            <div className="hidden lg:flex justify-end">
-              <img src="/communities-hero.png" alt="Communities" className="w-full max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl" />
+            <div className="flex justify-center lg:justify-end">
+              <img src="/communities-hero.png" alt="Communities" className="w-56 sm:w-72 lg:w-full lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl" />
             </div>
           </div>
         </div>

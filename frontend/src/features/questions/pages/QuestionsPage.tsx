@@ -166,8 +166,8 @@ function QuestionsContent() {
             </div>
 
             {/* Right Illustration */}
-            <div className="hidden lg:flex justify-end">
-              <img src="/questions-hero.png" alt="Questions" className="w-full max-w-lg xl:max-w-xl object-contain drop-shadow-2xl" />
+            <div className="flex justify-center lg:justify-end">
+              <img src="/questions-hero.png" alt="Questions" className="w-56 sm:w-72 lg:w-full lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl" />
             </div>
           </div>
         </div>
