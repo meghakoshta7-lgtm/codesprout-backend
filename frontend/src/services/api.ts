@@ -10,7 +10,7 @@ const api = axios.create({
 });
 
 axiosRetry(api, {
-  retries: 4,
+  retries: 2,
   retryCondition: (error) => error.response?.status === 429,
   retryDelay: axiosRetry.exponentialDelay,
   onRetry: (retryCount, error) => {

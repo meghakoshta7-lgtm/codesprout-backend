@@ -9,8 +9,8 @@ import multer from 'multer';
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
-// Trust proxy for correct IP when behind NGINX/reverse proxy
-app.set('trust proxy', 1);
+// Trust proxy for correct IP when behind Render's proxy
+app.set('trust proxy', 3);
 
 app.use(cors({
   origin: (_origin, callback) => callback(null, _origin || true),
@@ -20,7 +20,7 @@ app.use(cors({
 // Auth-specific rate limiter (stricter — login/register/Google OAuth)
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 50,
+  max: 500,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) => req.method === 'OPTIONS',
@@ -31,7 +31,7 @@ app.use('/auth', authLimiter);
 
 const globalLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 1000,
+  max: 10000,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) =>
@@ -52,7 +52,7 @@ app.use(globalLimiter);
 
 const notificationsLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 600,
+  max: 5000,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) => req.method === 'OPTIONS',
