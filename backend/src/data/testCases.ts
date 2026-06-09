@@ -9581,4 +9581,19372 @@ export const TEST_CASES: Record<string, Omit<TestCaseData, 'slug'>[]> = {
     { id: '1', input: `arr = [1,2,3,4,5], queries = [[0,2],[2,4]]`, expected_output: `[6,12]`, is_hidden: false },
     { id: '2', input: `arr = [10,20,30,40], queries = [[0,1],[2,3]]`, expected_output: `[30,70]`, is_hidden: true },
   ],
+  'find-element-in-advanced-dynamic-programming-advanced-dp-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-advanced-dynamic-programming-advanced-dp-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-advanced-dynamic-programming-advanced-dp-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-advanced-dynamic-programming-advanced-dp-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-advanced-dynamic-programming-advanced-dp-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-advanced-dynamic-programming-advanced-dp-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-advanced-dynamic-programming-advanced-dp-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-advanced-dynamic-programming-advanced-dp-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-advanced-dynamic-programming-advanced-dp-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-advanced-dynamic-programming-advanced-dp-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-advanced-dynamic-programming-advanced-dp-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-advanced-dynamic-programming-advanced-dp-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-advanced-dynamic-programming-descending-advanced-dp-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-advanced-dynamic-programming-right-by-k-advanced-dp-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-advanced-dynamic-programming-left-by-k-advanced-dp-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-advanced-dynamic-programming-advanced-dp-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-advanced-dynamic-programming-advanced-dp-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-advanced-dynamic-programming-advanced-dp-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-advanced-dynamic-programming-advanced-dp-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-advanced-dp-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-advanced-dynamic-programming-advanced-dp-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-advanced-dynamic-programming-advanced-dp-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-advanced-dynamic-programming-advanced-dp-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-advanced-dynamic-programming-advanced-dp-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-advanced-dynamic-programming-advanced-dp-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-advanced-dynamic-programming-advanced-dp-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-advanced-dynamic-programming-advanced-dp-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-advanced-dynamic-programming-advanced-dp-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-advanced-dynamic-programming-advanced-dp-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-advanced-dynamic-programming-advanced-dp-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-advanced-dp-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-advanced-dp-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-advanced-dp-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-advanced-dp-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-advanced-dp-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-advanced-dp-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-advanced-dp-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-advanced-dp-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-advanced-dp-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-advanced-dp-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-advanced-dp-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-advanced-dp-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-advanced-dp-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-advanced-dp-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-advanced-dp-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-advanced-dp-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-advanced-dp-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-advanced-dp-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-advanced-dp-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-advanced-dp-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-advanced-dynamic-programming-advanced-dp-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-advanced-dynamic-programming-advanced-dp-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-advanced-dp-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-advanced-dynamic-programming-advanced-dp-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-advanced-dynamic-programming-advanced-dp-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-advanced-dynamic-programming-advanced-dp-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-advanced-dp-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-advanced-dp-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-advanced-dp-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-advanced-dp-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-advanced-dp-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-advanced-dp-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-advanced-dp-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-advanced-dp-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-advanced-dp-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-advanced-dp-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-advanced-dp-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-advanced-dp-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-advanced-dp-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-advanced-dp-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-advanced-dynamic-programming-advanced-dp-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-advanced-dynamic-programming-advanced-dp-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-advanced-dynamic-programming-advanced-dp-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-advanced-dynamic-programming-advanced-dp-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-advanced-dynamic-programming-advanced-dp-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-advanced-dynamic-programming-advanced-dp-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-advanced-dp-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-advanced-dp-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-advanced-dynamic-programming-advanced-dp-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-advanced-dp-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-advanced-dynamic-programming-advanced-dp-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-advanced-dp-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-advanced-dp-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-advanced-dp-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-advanced-dp-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-advanced-dp-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-advanced-dp-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-advanced-dp-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-advanced-dp-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-advanced-dp-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-advanced-dp-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-advanced-dp-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-advanced-dp-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-advanced-dp-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-advanced-dp-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-advanced-dp-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-advanced-dp-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-advanced-dp-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-advanced-dp-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-advanced-dp-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-advanced-graph-algorithms-advanced-graphs-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-advanced-graph-algorithms-advanced-graphs-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-advanced-graph-algorithms-advanced-graphs-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-advanced-graph-algorithms-advanced-graphs-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-advanced-graph-algorithms-advanced-graphs-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-advanced-graph-algorithms-advanced-graphs-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-advanced-graph-algorithms-advanced-graphs-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-advanced-graph-algorithms-advanced-graphs-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-advanced-graph-algorithms-advanced-graphs-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-advanced-graph-algorithms-advanced-graphs-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-advanced-graph-algorithms-advanced-graphs-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-advanced-graph-algorithms-advanced-graphs-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-advanced-graph-algorithms-descending-advanced-graphs-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-advanced-graph-algorithms-right-by-k-advanced-graphs-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-advanced-graph-algorithms-left-by-k-advanced-graphs-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-advanced-graph-algorithms-advanced-graphs-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-advanced-graph-algorithms-advanced-graphs-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-advanced-graph-algorithms-advanced-graphs-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-advanced-graph-algorithms-advanced-graphs-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-advanced-graphs-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-advanced-graph-algorithms-advanced-graphs-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-advanced-graph-algorithms-advanced-graphs-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-advanced-graph-algorithms-advanced-graphs-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-advanced-graph-algorithms-advanced-graphs-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-advanced-graph-algorithms-advanced-graphs-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-advanced-graph-algorithms-advanced-graphs-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-advanced-graph-algorithms-advanced-graphs-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-advanced-graph-algorithms-advanced-graphs-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-advanced-graph-algorithms-advanced-graphs-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-advanced-graph-algorithms-advanced-graphs-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-advanced-graphs-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-advanced-graphs-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-advanced-graphs-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-advanced-graphs-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-advanced-graphs-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-advanced-graphs-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-advanced-graphs-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-advanced-graphs-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-advanced-graphs-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-advanced-graphs-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-advanced-graphs-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-advanced-graphs-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-advanced-graphs-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-advanced-graphs-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-advanced-graphs-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-advanced-graphs-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-advanced-graphs-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-advanced-graphs-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-advanced-graphs-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-advanced-graphs-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-advanced-graph-algorithms-advanced-graphs-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-advanced-graph-algorithms-advanced-graphs-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-advanced-graphs-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-advanced-graph-algorithms-advanced-graphs-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-advanced-graph-algorithms-advanced-graphs-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-advanced-graph-algorithms-advanced-graphs-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-advanced-graphs-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-advanced-graphs-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-advanced-graphs-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-advanced-graphs-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-advanced-graphs-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-advanced-graphs-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-advanced-graphs-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-advanced-graphs-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-advanced-graphs-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-advanced-graphs-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-advanced-graphs-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-advanced-graphs-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-advanced-graphs-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-advanced-graphs-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-advanced-graph-algorithms-advanced-graphs-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-advanced-graph-algorithms-advanced-graphs-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-advanced-graph-algorithms-advanced-graphs-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-advanced-graph-algorithms-advanced-graphs-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-advanced-graph-algorithms-advanced-graphs-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-advanced-graph-algorithms-advanced-graphs-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-advanced-graphs-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-advanced-graphs-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-advanced-graph-algorithms-advanced-graphs-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-advanced-graphs-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-advanced-graph-algorithms-advanced-graphs-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-advanced-graphs-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-advanced-graphs-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-advanced-graphs-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-advanced-graphs-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-advanced-graphs-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-advanced-graphs-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-advanced-graphs-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-advanced-graphs-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-advanced-graphs-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-advanced-graphs-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-advanced-graphs-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-advanced-graphs-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-advanced-graphs-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-advanced-graphs-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-advanced-graphs-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-advanced-graphs-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-advanced-graphs-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-advanced-graphs-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-advanced-graphs-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'sum-of-array-arrays-1': [
+    { id: '1', input: '[1,2,3]', expected_output: '6', is_hidden: false },
+    { id: '2', input: '[-1,1,0]', expected_output: '0', is_hidden: true },
+    { id: '3', input: '[100]', expected_output: '100', is_hidden: true },
+  ],
+  'product-of-array-arrays-2': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+    { id: '2', input: '[1,1,1]', expected_output: '1', is_hidden: true },
+    { id: '3', input: '[0,5,6]', expected_output: '0', is_hidden: true },
+  ],
+  'average-of-array-arrays-3': [
+    { id: '1', input: '[1,2,3,4]', expected_output: '2.5', is_hidden: false },
+    { id: '2', input: '[5,5]', expected_output: '5.00', is_hidden: true },
+  ],
+  'maximum-element-arrays-4': [
+    { id: '1', input: '[3,1,4,1,5]', expected_output: '5', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'minimum-element-arrays-5': [
+    { id: '1', input: '[3,1,4,1,5]', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[5,5,5]', expected_output: '5', is_hidden: true },
+  ],
+  'second-maximum-arrays-6': [
+    { id: '1', input: '[10,20,30]', expected_output: '20', is_hidden: false },
+    { id: '2', input: '[5,5,5,5]', expected_output: '-1', is_hidden: true },
+  ],
+  'second-minimum-arrays-7': [
+    { id: '1', input: '[10,20,30]', expected_output: '20', is_hidden: false },
+    { id: '2', input: '[1,1,1]', expected_output: '-1', is_hidden: true },
+  ],
+  'count-frequency-arrays-8': [
+    { id: '1', input: '[1,1,2]', expected_output: '[[1,2],[2,1]]', is_hidden: false },
+    { id: '2', input: '[5]', expected_output: '[[5,1]]', is_hidden: true },
+  ],
+  'running-sum-arrays-9': [
+    { id: '1', input: '[1,2,3,4]', expected_output: '[1,3,6,10]', is_hidden: false },
+    { id: '2', input: '[3,1,2,10,1]', expected_output: '[3,4,6,16,17]', is_hidden: true },
+  ],
+  'cumulative-product-arrays-10': [
+    { id: '1', input: '[1,2,3,4]', expected_output: '[1,2,6,24]', is_hidden: false },
+    { id: '2', input: '[2,2,2]', expected_output: '[2,4,8]', is_hidden: true },
+  ],
+  'reverse-array-arrays-11': [
+    { id: '1', input: '[1,2,3]', expected_output: '[3,2,1]', is_hidden: false },
+    { id: '2', input: '[1]', expected_output: '[1]', is_hidden: true },
+  ],
+  'rotate-array-right-arrays-12': [
+    { id: '1', input: '[1,2,3,4,5], k=2', expected_output: '[4,5,1,2,3]', is_hidden: false },
+  ],
+  'rotate-array-left-arrays-13': [
+    { id: '1', input: '[1,2,3,4,5], k=2', expected_output: '[3,4,5,1,2]', is_hidden: false },
+  ],
+  'move-zeros-to-end-arrays-14': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+    { id: '2', input: '[0,0,1]', expected_output: '[1,0,0]', is_hidden: true },
+  ],
+  'rearrange-even-odd-arrays-15': [
+    { id: '1', input: '[1,2,3,4]', expected_output: '[2,4,1,3]', is_hidden: false },
+  ],
+  'reverse-k-groups-arrays-16': [
+    { id: '1', input: '[1,2,3,4,5,6,7,8], k=3', expected_output: '[3,2,1,6,5,4,8,7]', is_hidden: false },
+  ],
+  'rotate-90-clockwise-matrix-arrays-17': [
+    { id: '1', input: '[[1,2],[3,4]]', expected_output: '[[3,1],[4,2]]', is_hidden: false },
+  ],
+  'linear-search-arrays-18': [
+    { id: '1', input: '[4,2,7,1,9], 7', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3], 4', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-arrays-19': [
+    { id: '1', input: '[1,3,5,7,9], 5', expected_output: '2', is_hidden: false },
+  ],
+  'first-occurrence-arrays-20': [
+    { id: '1', input: '[1,2,2,2,3], 2', expected_output: '1', is_hidden: false },
+  ],
+  'last-occurrence-arrays-21': [
+    { id: '1', input: '[1,2,2,2,3], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-arrays-22': [
+    { id: '1', input: '[1,2,2,2,3], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-missing-number-arrays-23': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[0]', expected_output: '1', is_hidden: true },
+  ],
+  'find-duplicate-arrays-24': [
+    { id: '1', input: '[3,1,3,4,2]', expected_output: '3', is_hidden: false },
+  ],
+  'all-duplicates-arrays-25': [
+    { id: '1', input: '[4,3,2,7,8,2,3,1]', expected_output: '[2,3]', is_hidden: false },
+  ],
+  'contains-duplicate-arrays-26': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'single-number-arrays-27': [
+    { id: '1', input: '[2,2,1]', expected_output: '1', is_hidden: false },
+  ],
+  'two-sum-arrays-28': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'two-sum-sorted-arrays-29': [
+    { id: '1', input: '[2,3,4], 6', expected_output: '[1,3]', is_hidden: false },
+  ],
+  'three-sum-arrays-30': [
+    { id: '1', input: '[0,1,1]', expected_output: '[]', is_hidden: false },
+  ],
+  'three-sum-closest-arrays-31': [
+    { id: '1', input: '[0,0,0], 1', expected_output: '0', is_hidden: false },
+  ],
+  'four-sum-arrays-32': [
+    { id: '1', input: '[2,2,2,2,2], 8', expected_output: '[[2,2,2,2]]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-arrays-33': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-arrays-34': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-2', is_hidden: false },
+  ],
+  'max-product-subarray-arrays-35': [
+    { id: '1', input: '[-2,0,-1]', expected_output: '0', is_hidden: false },
+  ],
+  'min-size-subarray-sum-arrays-36': [
+    { id: '1', input: '4, [1,4,4]', expected_output: '1', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-arrays-37': [
+    { id: '1', input: '[1,2,3], 3', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-arrays-38': [
+    { id: '1', input: '[-1,1,2,3], 3', expected_output: '3', is_hidden: false },
+  ],
+  'subarray-with-given-sum-positives-arrays-39': [
+    { id: '1', input: '[1,10,3], 10', expected_output: '[1,1]', is_hidden: false },
+  ],
+  'largest-subarray-length-with-sum-k-arrays-40': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'maximum-average-subarray-i-arrays-41': [
+    { id: '1', input: '[5], 1', expected_output: '5', is_hidden: false },
+  ],
+  'contiguous-array-equal-0-and-1-arrays-42': [
+    { id: '1', input: '[0,1,0,1]', expected_output: '4', is_hidden: false },
+  ],
+  'continuous-subarray-sum-arrays-43': [
+    { id: '1', input: '[23,2,6,4,7], 6', expected_output: 'true', is_hidden: false },
+  ],
+  'maximum-subarray-sum-circular-arrays-44': [
+    { id: '1', input: '[3,-1,2,-1]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-subarray-of-1s-after-deleting-one-arrays-45': [
+    { id: '1', input: '[0,0,1,1], 0', expected_output: '2', is_hidden: false },
+  ],
+  'maximum-number-of-vowels-in-substring-arrays-46': [
+    { id: '1', input: '\\"aeiou\\", 2', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-iii-arrays-47': [
+    { id: '1', input: '[0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3', expected_output: '10', is_hidden: false },
+  ],
+  'fruit-into-baskets-arrays-48': [
+    { id: '1', input: '[0,1,2,2]', expected_output: '3', is_hidden: false },
+  ],
+  'kth-largest-element-arrays-49': [
+    { id: '1', input: '[3,2,3,1,2,4,5,5,6], 4', expected_output: '4', is_hidden: false },
+  ],
+  'kth-smallest-element-arrays-50': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-elements-arrays-51': [
+    { id: '1', input: '[1], 1', expected_output: '[1]', is_hidden: false },
+  ],
+  'top-k-frequent-words-arrays-52': [
+    { id: '1', input: '[\\"a\\",\\"b\\"], 2', expected_output: '[\\"a\\",\\"b\\"]', is_hidden: false },
+  ],
+  'k-closest-points-to-origin-arrays-53': [
+    { id: '1', input: '[[3,3],[5,-1],[-2,4]], 2', expected_output: '[[3,3],[-2,4]]', is_hidden: false },
+  ],
+  'sort-array-by-parity-arrays-54': [
+    { id: '1', input: '[0,1]', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'sort-array-by-parity-ii-arrays-55': [
+    { id: '1', input: '[2,3]', expected_output: '[2,3]', is_hidden: false },
+  ],
+  'sort-colors-0-1-2-arrays-56': [
+    { id: '1', input: '[0]', expected_output: '[0]', is_hidden: false },
+  ],
+  'wiggle-sort-arrays-57': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,3,2]', is_hidden: false },
+  ],
+  'sort-array-squared-arrays-58': [
+    { id: '1', input: '[-7,-3,2,3,11]', expected_output: '[4,9,9,49,121]', is_hidden: false },
+  ],
+  'merge-intervals-arrays-59': [
+    { id: '1', input: '[[1,4],[4,5]]', expected_output: '[[1,5]]', is_hidden: false },
+  ],
+  'insert-interval-arrays-60': [
+    { id: '1', input: '[[1,2],[3,5],[6,7],[8,10],[12,16]], [4,8]', expected_output: '[[1,2],[3,10],[12,16]]', is_hidden: false },
+  ],
+  'non-overlapping-intervals-arrays-61': [
+    { id: '1', input: '[[1,2],[2,3]]', expected_output: '0', is_hidden: false },
+  ],
+  'meeting-rooms-arrays-62': [
+    { id: '1', input: '[[7,10],[2,4]]', expected_output: 'true', is_hidden: false },
+  ],
+  'meeting-rooms-ii-arrays-63': [
+    { id: '1', input: '[[7,10],[2,4]]', expected_output: '1', is_hidden: false },
+  ],
+  'min-arrows-to-burst-balloons-arrays-64': [
+    { id: '1', input: '[[1,2],[3,4],[5,6]]', expected_output: '3', is_hidden: false },
+  ],
+  'summary-ranges-arrays-65': [
+    { id: '1', input: '[0,2,3,4,6,8,9]', expected_output: '[\\"0\\",\\"2->4\\",\\"6\\",\\"8->9\\"]', is_hidden: false },
+  ],
+  'partition-labels-arrays-66': [
+    { id: '1', input: '\\"eccbbbbdec\\"', expected_output: '[10]', is_hidden: false },
+  ],
+  'best-time-buy-sell-stock-arrays-67': [
+    { id: '1', input: '[7,6,4,3,1]', expected_output: '0', is_hidden: false },
+  ],
+  'best-time-buy-sell-stock-ii-arrays-68': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '4', is_hidden: false },
+  ],
+  'best-time-buy-sell-stock-with-cooldown-arrays-69': [
+    { id: '1', input: '[1]', expected_output: '0', is_hidden: false },
+  ],
+  'best-time-buy-sell-stock-with-fee-arrays-70': [
+    { id: '1', input: '[1,3,7,5,10,3], 3', expected_output: '6', is_hidden: false },
+  ],
+  'jump-game-arrays-71': [
+    { id: '1', input: '[3,2,1,0,4]', expected_output: 'false', is_hidden: false },
+  ],
+  'jump-game-ii-arrays-72': [
+    { id: '1', input: '[2,3,0,1,4]', expected_output: '2', is_hidden: false },
+  ],
+  'gas-station-arrays-73': [
+    { id: '1', input: '[2,3,4], [3,4,3]', expected_output: '-1', is_hidden: false },
+  ],
+  'candy-distribution-arrays-74': [
+    { id: '1', input: '[1,2,2]', expected_output: '4', is_hidden: false },
+  ],
+  'trapping-rain-water-arrays-75': [
+    { id: '1', input: '[4,2,0,3,2,5]', expected_output: '9', is_hidden: false },
+  ],
+  'spiral-matrix-arrays-76': [
+    { id: '1', input: '[[1],[2],[3]]', expected_output: '[1,2,3]', is_hidden: false },
+  ],
+  'set-matrix-zeroes-arrays-77': [
+    { id: '1', input: '[[0,1,2,0]]', expected_output: '[[0,0,0,0]]', is_hidden: false },
+  ],
+  'diagonal-traverse-arrays-78': [
+    { id: '1', input: '[[1,2],[3,4]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'search-a-2d-matrix-arrays-79': [
+    { id: '1', input: '[[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13', expected_output: 'false', is_hidden: false },
+  ],
+  'search-a-2d-matrix-ii-arrays-80': [
+    { id: '1', input: '[[-5]], -5', expected_output: 'true', is_hidden: false },
+  ],
+  'game-of-life-arrays-81': [
+    { id: '1', input: '[[1,1],[1,0]]', expected_output: '[[1,1],[1,1]]', is_hidden: false },
+  ],
+  'number-of-islands-arrays-82': [
+    { id: '1', input: '[[\\"1\\",\\"0\\"],[\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-arrays-83': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'majority-element-ii-arrays-84': [
+    { id: '1', input: '[1,2,3,4]', expected_output: '[]', is_hidden: false },
+  ],
+  'find-pivot-index-arrays-85': [
+    { id: '1', input: '[1,2,3]', expected_output: '-1', is_hidden: false },
+  ],
+  'product-of-array-except-self-arrays-86': [
+    { id: '1', input: '[-1,1,0,-3,3]', expected_output: '[0,0,9,0,0]', is_hidden: false },
+  ],
+  'next-permutation-arrays-87': [
+    { id: '1', input: '[3,2,1]', expected_output: '[1,2,3]', is_hidden: false },
+  ],
+  'maximum-difference-arrays-88': [
+    { id: '1', input: '[7,1,5,3,6,4]', expected_output: '5', is_hidden: false },
+  ],
+  'maximum-subarray-min-product-arrays-89': [
+    { id: '1', input: '[2,3,3,1,2]', expected_output: '18', is_hidden: false },
+  ],
+  'sort-array-by-squaring-and-sorting-arrays-90': [
+    { id: '1', input: '[-7,-3,2,3,11]', expected_output: '[4,9,9,49,121]', is_hidden: false },
+  ],
+  'maximum-xor-of-two-numbers-arrays-91': [
+    { id: '1', input: '[0]', expected_output: '0', is_hidden: false },
+  ],
+  'triplet-sum-close-to-target-arrays-92': [
+    { id: '1', input: '[1,1,1,0], -100', expected_output: '2', is_hidden: false },
+  ],
+  'squares-of-sorted-array-alt-arrays-93': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'find-all-duplicates-in-array-arrays-94': [
+    { id: '1', input: '[1,1,2]', expected_output: '[1]', is_hidden: false },
+  ],
+  'maximum-average-subtree-arrays-95': [
+    { id: '1', input: '[1], 1', expected_output: '1.0', is_hidden: false },
+  ],
+  'maximum-profit-with-k-transactions-arrays-96': [
+    { id: '1', input: '2, [3,2,6,5,0,3]', expected_output: '7', is_hidden: false },
+  ],
+  'find-element-in-backtracking-backtracking-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-backtracking-backtracking-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-backtracking-backtracking-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-backtracking-backtracking-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-backtracking-backtracking-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-backtracking-backtracking-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-backtracking-backtracking-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-backtracking-backtracking-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-backtracking-backtracking-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-backtracking-backtracking-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-backtracking-backtracking-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-backtracking-backtracking-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-backtracking-descending-backtracking-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-backtracking-right-by-k-backtracking-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-backtracking-left-by-k-backtracking-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-backtracking-backtracking-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-backtracking-backtracking-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-backtracking-backtracking-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-backtracking-backtracking-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-backtracking-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-backtracking-backtracking-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-backtracking-backtracking-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-backtracking-backtracking-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-backtracking-backtracking-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-backtracking-backtracking-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-backtracking-backtracking-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-backtracking-backtracking-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-backtracking-backtracking-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-backtracking-backtracking-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-backtracking-backtracking-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-backtracking-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-backtracking-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-backtracking-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-backtracking-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-backtracking-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-backtracking-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-backtracking-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-backtracking-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-backtracking-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-backtracking-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-backtracking-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-backtracking-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-backtracking-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-backtracking-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-backtracking-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-backtracking-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-backtracking-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-backtracking-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-backtracking-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-backtracking-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-backtracking-backtracking-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-backtracking-backtracking-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-backtracking-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-backtracking-backtracking-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-backtracking-backtracking-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-backtracking-backtracking-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-backtracking-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-backtracking-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-backtracking-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-backtracking-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-backtracking-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-backtracking-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-backtracking-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-backtracking-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-backtracking-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-backtracking-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-backtracking-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-backtracking-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-backtracking-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-backtracking-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-backtracking-backtracking-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-backtracking-backtracking-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-backtracking-backtracking-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-backtracking-backtracking-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-backtracking-backtracking-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-backtracking-backtracking-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-backtracking-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-backtracking-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-backtracking-backtracking-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-backtracking-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-backtracking-backtracking-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-backtracking-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-backtracking-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-backtracking-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-backtracking-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-backtracking-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-backtracking-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-backtracking-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-backtracking-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-backtracking-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-backtracking-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-backtracking-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-backtracking-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-backtracking-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-backtracking-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-backtracking-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-backtracking-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-backtracking-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-backtracking-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-backtracking-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-binary-search-tree-bst-binary-search-tree-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-binary-search-tree-bst-binary-search-tree-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-binary-search-tree-bst-binary-search-tree-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-binary-search-tree-bst-binary-search-tree-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-binary-search-tree-bst-binary-search-tree-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-binary-search-tree-bst-binary-search-tree-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-binary-search-tree-bst-binary-search-tree-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-binary-search-tree-bst-binary-search-tree-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-binary-search-tree-bst-binary-search-tree-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-binary-search-tree-bst-binary-search-tree-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-binary-search-tree-bst-binary-search-tree-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-binary-search-tree-bst-binary-search-tree-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-binary-search-tree-bst-descending-binary-search-tree-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-binary-search-tree-bst-right-by-k-binary-search-tree-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-binary-search-tree-bst-left-by-k-binary-search-tree-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-binary-search-tree-bst-binary-search-tree-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-binary-search-tree-bst-binary-search-tree-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-binary-search-tree-bst-binary-search-tree-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-binary-search-tree-bst-binary-search-tree-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-binary-search-tree-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-binary-search-tree-bst-binary-search-tree-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-binary-search-tree-bst-binary-search-tree-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-binary-search-tree-bst-binary-search-tree-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-binary-search-tree-bst-binary-search-tree-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-binary-search-tree-bst-binary-search-tree-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-binary-search-tree-bst-binary-search-tree-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-binary-search-tree-bst-binary-search-tree-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-binary-search-tree-bst-binary-search-tree-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-binary-search-tree-bst-binary-search-tree-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-binary-search-tree-bst-binary-search-tree-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-binary-search-tree-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-binary-search-tree-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-binary-search-tree-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-binary-search-tree-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-binary-search-tree-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-binary-search-tree-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-binary-search-tree-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-binary-search-tree-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-binary-search-tree-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-binary-search-tree-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-binary-search-tree-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-binary-search-tree-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-binary-search-tree-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-binary-search-tree-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-binary-search-tree-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-binary-search-tree-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-binary-search-tree-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-binary-search-tree-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-binary-search-tree-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-binary-search-tree-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-binary-search-tree-bst-binary-search-tree-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-binary-search-tree-bst-binary-search-tree-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-binary-search-tree-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-binary-search-tree-bst-binary-search-tree-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-binary-search-tree-bst-binary-search-tree-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-binary-search-tree-bst-binary-search-tree-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-binary-search-tree-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-binary-search-tree-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-binary-search-tree-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-binary-search-tree-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-binary-search-tree-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-binary-search-tree-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-binary-search-tree-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-binary-search-tree-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-binary-search-tree-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-binary-search-tree-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-binary-search-tree-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-binary-search-tree-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-binary-search-tree-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-binary-search-tree-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-binary-search-tree-bst-binary-search-tree-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-binary-search-tree-bst-binary-search-tree-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-binary-search-tree-bst-binary-search-tree-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-binary-search-tree-bst-binary-search-tree-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-binary-search-tree-bst-binary-search-tree-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-binary-search-tree-bst-binary-search-tree-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-binary-search-tree-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-binary-search-tree-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-binary-search-tree-bst-binary-search-tree-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-binary-search-tree-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-binary-search-tree-bst-binary-search-tree-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-binary-search-tree-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-binary-search-tree-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-binary-search-tree-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-binary-search-tree-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-binary-search-tree-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-binary-search-tree-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-binary-search-tree-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-binary-search-tree-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-binary-search-tree-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-binary-search-tree-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-binary-search-tree-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-binary-search-tree-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-binary-search-tree-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-binary-search-tree-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-binary-search-tree-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-binary-search-tree-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-binary-search-tree-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-binary-search-tree-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-binary-search-tree-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-binary-search-binary-search-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-binary-search-binary-search-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-binary-search-binary-search-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-binary-search-binary-search-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-binary-search-binary-search-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-binary-search-binary-search-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-binary-search-binary-search-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-binary-search-binary-search-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-binary-search-binary-search-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-binary-search-binary-search-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-binary-search-binary-search-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-binary-search-binary-search-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-binary-search-descending-binary-search-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-binary-search-right-by-k-binary-search-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-binary-search-left-by-k-binary-search-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-binary-search-binary-search-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-binary-search-binary-search-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-binary-search-binary-search-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-binary-search-binary-search-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-binary-search-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-binary-search-binary-search-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-binary-search-binary-search-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-binary-search-binary-search-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-binary-search-binary-search-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-binary-search-binary-search-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-binary-search-binary-search-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-binary-search-binary-search-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-binary-search-binary-search-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-binary-search-binary-search-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-binary-search-binary-search-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-binary-search-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-binary-search-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-binary-search-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-binary-search-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-binary-search-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-binary-search-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-binary-search-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-binary-search-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-binary-search-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-binary-search-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-binary-search-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-binary-search-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-binary-search-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-binary-search-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-binary-search-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-binary-search-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-binary-search-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-binary-search-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-binary-search-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-binary-search-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-binary-search-binary-search-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-binary-search-binary-search-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-binary-search-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-binary-search-binary-search-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-binary-search-binary-search-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-binary-search-binary-search-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-binary-search-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-binary-search-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-binary-search-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-binary-search-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-binary-search-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-binary-search-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-binary-search-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-binary-search-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-binary-search-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-binary-search-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-binary-search-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-binary-search-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-binary-search-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-binary-search-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-binary-search-binary-search-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-binary-search-binary-search-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-binary-search-binary-search-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-binary-search-binary-search-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-binary-search-binary-search-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-binary-search-binary-search-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-binary-search-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-binary-search-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-binary-search-binary-search-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-binary-search-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-binary-search-binary-search-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-binary-search-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-binary-search-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-binary-search-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-binary-search-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-binary-search-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-binary-search-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-binary-search-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-binary-search-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-binary-search-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-binary-search-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-binary-search-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-binary-search-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-binary-search-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-binary-search-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-binary-search-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-binary-search-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-binary-search-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-binary-search-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-binary-search-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-binary-tree-binary-tree-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-binary-tree-binary-tree-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-binary-tree-binary-tree-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-binary-tree-binary-tree-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-binary-tree-binary-tree-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-binary-tree-binary-tree-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-binary-tree-binary-tree-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-binary-tree-binary-tree-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-binary-tree-binary-tree-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-binary-tree-binary-tree-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-binary-tree-binary-tree-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-binary-tree-binary-tree-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-binary-tree-descending-binary-tree-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-binary-tree-right-by-k-binary-tree-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-binary-tree-left-by-k-binary-tree-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-binary-tree-binary-tree-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-binary-tree-binary-tree-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-binary-tree-binary-tree-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-binary-tree-binary-tree-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-binary-tree-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-binary-tree-binary-tree-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-binary-tree-binary-tree-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-binary-tree-binary-tree-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-binary-tree-binary-tree-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-binary-tree-binary-tree-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-binary-tree-binary-tree-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-binary-tree-binary-tree-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-binary-tree-binary-tree-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-binary-tree-binary-tree-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-binary-tree-binary-tree-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-binary-tree-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-binary-tree-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-binary-tree-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-binary-tree-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-binary-tree-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-binary-tree-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-binary-tree-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-binary-tree-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-binary-tree-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-binary-tree-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-binary-tree-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-binary-tree-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-binary-tree-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-binary-tree-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-binary-tree-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-binary-tree-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-binary-tree-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-binary-tree-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-binary-tree-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-binary-tree-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-binary-tree-binary-tree-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-binary-tree-binary-tree-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-binary-tree-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-binary-tree-binary-tree-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-binary-tree-binary-tree-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-binary-tree-binary-tree-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-binary-tree-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-binary-tree-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-binary-tree-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-binary-tree-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-binary-tree-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-binary-tree-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-binary-tree-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-binary-tree-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-binary-tree-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-binary-tree-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-binary-tree-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-binary-tree-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-binary-tree-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-binary-tree-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-binary-tree-binary-tree-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-binary-tree-binary-tree-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-binary-tree-binary-tree-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-binary-tree-binary-tree-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-binary-tree-binary-tree-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-binary-tree-binary-tree-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-binary-tree-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-binary-tree-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-binary-tree-binary-tree-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-binary-tree-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-binary-tree-binary-tree-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-binary-tree-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-binary-tree-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-binary-tree-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-binary-tree-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-binary-tree-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-binary-tree-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-binary-tree-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-binary-tree-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-binary-tree-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-binary-tree-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-binary-tree-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-binary-tree-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-binary-tree-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-binary-tree-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-binary-tree-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-binary-tree-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-binary-tree-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-binary-tree-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-binary-tree-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-bipartite-graphs-bipartite-graphs-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-bipartite-graphs-bipartite-graphs-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-bipartite-graphs-bipartite-graphs-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-bipartite-graphs-bipartite-graphs-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-bipartite-graphs-bipartite-graphs-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-bipartite-graphs-bipartite-graphs-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-bipartite-graphs-bipartite-graphs-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-bipartite-graphs-bipartite-graphs-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-bipartite-graphs-bipartite-graphs-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-bipartite-graphs-bipartite-graphs-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-bipartite-graphs-bipartite-graphs-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-bipartite-graphs-bipartite-graphs-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-bipartite-graphs-descending-bipartite-graphs-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-bipartite-graphs-right-by-k-bipartite-graphs-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-bipartite-graphs-left-by-k-bipartite-graphs-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-bipartite-graphs-bipartite-graphs-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-bipartite-graphs-bipartite-graphs-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-bipartite-graphs-bipartite-graphs-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-bipartite-graphs-bipartite-graphs-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-bipartite-graphs-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-bipartite-graphs-bipartite-graphs-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-bipartite-graphs-bipartite-graphs-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-bipartite-graphs-bipartite-graphs-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-bipartite-graphs-bipartite-graphs-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-bipartite-graphs-bipartite-graphs-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-bipartite-graphs-bipartite-graphs-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-bipartite-graphs-bipartite-graphs-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-bipartite-graphs-bipartite-graphs-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-bipartite-graphs-bipartite-graphs-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-bipartite-graphs-bipartite-graphs-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-bipartite-graphs-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-bipartite-graphs-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-bipartite-graphs-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-bipartite-graphs-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-bipartite-graphs-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-bipartite-graphs-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-bipartite-graphs-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-bipartite-graphs-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-bipartite-graphs-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-bipartite-graphs-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-bipartite-graphs-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-bipartite-graphs-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-bipartite-graphs-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-bipartite-graphs-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-bipartite-graphs-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-bipartite-graphs-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-bipartite-graphs-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-bipartite-graphs-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-bipartite-graphs-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-bipartite-graphs-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-bipartite-graphs-bipartite-graphs-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-bipartite-graphs-bipartite-graphs-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-bipartite-graphs-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-bipartite-graphs-bipartite-graphs-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-bipartite-graphs-bipartite-graphs-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-bipartite-graphs-bipartite-graphs-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-bipartite-graphs-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-bipartite-graphs-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-bipartite-graphs-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-bipartite-graphs-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-bipartite-graphs-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-bipartite-graphs-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-bipartite-graphs-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-bipartite-graphs-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-bipartite-graphs-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-bipartite-graphs-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-bipartite-graphs-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-bipartite-graphs-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-bipartite-graphs-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-bipartite-graphs-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-bipartite-graphs-bipartite-graphs-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-bipartite-graphs-bipartite-graphs-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-bipartite-graphs-bipartite-graphs-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-bipartite-graphs-bipartite-graphs-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-bipartite-graphs-bipartite-graphs-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-bipartite-graphs-bipartite-graphs-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-bipartite-graphs-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-bipartite-graphs-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-bipartite-graphs-bipartite-graphs-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-bipartite-graphs-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-bipartite-graphs-bipartite-graphs-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-bipartite-graphs-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-bipartite-graphs-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-bipartite-graphs-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-bipartite-graphs-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-bipartite-graphs-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-bipartite-graphs-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-bipartite-graphs-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-bipartite-graphs-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-bipartite-graphs-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-bipartite-graphs-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-bipartite-graphs-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-bipartite-graphs-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-bipartite-graphs-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-bipartite-graphs-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-bipartite-graphs-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-bipartite-graphs-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-bipartite-graphs-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-bipartite-graphs-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-bipartite-graphs-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-bit-manipulation-bit-manipulation-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-bit-manipulation-bit-manipulation-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-bit-manipulation-bit-manipulation-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-bit-manipulation-bit-manipulation-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-bit-manipulation-bit-manipulation-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-bit-manipulation-bit-manipulation-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-bit-manipulation-bit-manipulation-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-bit-manipulation-bit-manipulation-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-bit-manipulation-bit-manipulation-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-bit-manipulation-bit-manipulation-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-bit-manipulation-bit-manipulation-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-bit-manipulation-bit-manipulation-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-bit-manipulation-descending-bit-manipulation-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-bit-manipulation-right-by-k-bit-manipulation-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-bit-manipulation-left-by-k-bit-manipulation-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-bit-manipulation-bit-manipulation-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-bit-manipulation-bit-manipulation-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-bit-manipulation-bit-manipulation-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-bit-manipulation-bit-manipulation-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-bit-manipulation-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-bit-manipulation-bit-manipulation-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-bit-manipulation-bit-manipulation-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-bit-manipulation-bit-manipulation-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-bit-manipulation-bit-manipulation-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-bit-manipulation-bit-manipulation-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-bit-manipulation-bit-manipulation-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-bit-manipulation-bit-manipulation-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-bit-manipulation-bit-manipulation-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-bit-manipulation-bit-manipulation-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-bit-manipulation-bit-manipulation-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-bit-manipulation-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-bit-manipulation-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-bit-manipulation-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-bit-manipulation-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-bit-manipulation-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-bit-manipulation-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-bit-manipulation-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-bit-manipulation-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-bit-manipulation-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-bit-manipulation-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-bit-manipulation-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-bit-manipulation-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-bit-manipulation-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-bit-manipulation-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-bit-manipulation-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-bit-manipulation-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-bit-manipulation-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-bit-manipulation-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-bit-manipulation-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-bit-manipulation-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-bit-manipulation-bit-manipulation-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-bit-manipulation-bit-manipulation-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-bit-manipulation-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-bit-manipulation-bit-manipulation-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-bit-manipulation-bit-manipulation-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-bit-manipulation-bit-manipulation-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-bit-manipulation-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-bit-manipulation-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-bit-manipulation-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-bit-manipulation-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-bit-manipulation-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-bit-manipulation-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-bit-manipulation-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-bit-manipulation-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-bit-manipulation-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-bit-manipulation-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-bit-manipulation-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-bit-manipulation-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-bit-manipulation-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-bit-manipulation-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-bit-manipulation-bit-manipulation-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-bit-manipulation-bit-manipulation-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-bit-manipulation-bit-manipulation-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-bit-manipulation-bit-manipulation-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-bit-manipulation-bit-manipulation-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-bit-manipulation-bit-manipulation-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-bit-manipulation-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-bit-manipulation-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-bit-manipulation-bit-manipulation-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-bit-manipulation-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-bit-manipulation-bit-manipulation-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-bit-manipulation-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-bit-manipulation-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-bit-manipulation-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-bit-manipulation-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-bit-manipulation-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-bit-manipulation-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-bit-manipulation-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-bit-manipulation-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-bit-manipulation-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-bit-manipulation-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-bit-manipulation-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-bit-manipulation-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-bit-manipulation-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-bit-manipulation-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-bit-manipulation-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-bit-manipulation-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-bit-manipulation-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-bit-manipulation-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-bit-manipulation-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-bitmasking-bitmasking-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-bitmasking-bitmasking-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-bitmasking-bitmasking-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-bitmasking-bitmasking-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-bitmasking-bitmasking-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-bitmasking-bitmasking-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-bitmasking-bitmasking-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-bitmasking-bitmasking-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-bitmasking-bitmasking-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-bitmasking-bitmasking-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-bitmasking-bitmasking-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-bitmasking-bitmasking-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-bitmasking-descending-bitmasking-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-bitmasking-right-by-k-bitmasking-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-bitmasking-left-by-k-bitmasking-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-bitmasking-bitmasking-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-bitmasking-bitmasking-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-bitmasking-bitmasking-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-bitmasking-bitmasking-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-bitmasking-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-bitmasking-bitmasking-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-bitmasking-bitmasking-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-bitmasking-bitmasking-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-bitmasking-bitmasking-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-bitmasking-bitmasking-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-bitmasking-bitmasking-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-bitmasking-bitmasking-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-bitmasking-bitmasking-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-bitmasking-bitmasking-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-bitmasking-bitmasking-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-bitmasking-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-bitmasking-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-bitmasking-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-bitmasking-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-bitmasking-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-bitmasking-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-bitmasking-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-bitmasking-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-bitmasking-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-bitmasking-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-bitmasking-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-bitmasking-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-bitmasking-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-bitmasking-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-bitmasking-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-bitmasking-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-bitmasking-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-bitmasking-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-bitmasking-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-bitmasking-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-bitmasking-bitmasking-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-bitmasking-bitmasking-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-bitmasking-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-bitmasking-bitmasking-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-bitmasking-bitmasking-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-bitmasking-bitmasking-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-bitmasking-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-bitmasking-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-bitmasking-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-bitmasking-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-bitmasking-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-bitmasking-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-bitmasking-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-bitmasking-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-bitmasking-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-bitmasking-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-bitmasking-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-bitmasking-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-bitmasking-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-bitmasking-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-bitmasking-bitmasking-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-bitmasking-bitmasking-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-bitmasking-bitmasking-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-bitmasking-bitmasking-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-bitmasking-bitmasking-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-bitmasking-bitmasking-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-bitmasking-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-bitmasking-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-bitmasking-bitmasking-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-bitmasking-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-bitmasking-bitmasking-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-bitmasking-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-bitmasking-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-bitmasking-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-bitmasking-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-bitmasking-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-bitmasking-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-bitmasking-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-bitmasking-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-bitmasking-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-bitmasking-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-bitmasking-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-bitmasking-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-bitmasking-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-bitmasking-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-bitmasking-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-bitmasking-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-bitmasking-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-bitmasking-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-bitmasking-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-bst-bst-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-bst-bst-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-bst-bst-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-bst-bst-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-bst-bst-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-bst-bst-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-bst-bst-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-bst-bst-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-bst-bst-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-bst-bst-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-bst-bst-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-bst-bst-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-bst-descending-bst-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-bst-right-by-k-bst-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-bst-left-by-k-bst-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-bst-bst-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-bst-bst-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-bst-bst-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-bst-bst-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-bst-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-bst-bst-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-bst-bst-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-bst-bst-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-bst-bst-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-bst-bst-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-bst-bst-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-bst-bst-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-bst-bst-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-bst-bst-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-bst-bst-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-bst-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-bst-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-bst-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-bst-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-bst-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-bst-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-bst-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-bst-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-bst-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-bst-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-bst-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-bst-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-bst-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-bst-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-bst-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-bst-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-bst-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-bst-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-bst-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-bst-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-bst-bst-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-bst-bst-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-bst-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-bst-bst-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-bst-bst-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-bst-bst-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-bst-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-bst-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-bst-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-bst-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-bst-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-bst-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-bst-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-bst-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-bst-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-bst-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-bst-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-bst-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-bst-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-bst-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-bst-bst-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-bst-bst-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-bst-bst-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-bst-bst-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-bst-bst-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-bst-bst-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-bst-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-bst-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-bst-bst-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-bst-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-bst-bst-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-bst-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-bst-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-bst-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-bst-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-bst-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-bst-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-bst-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-bst-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-bst-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-bst-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-bst-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-bst-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-bst-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-bst-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-bst-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-bst-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-bst-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-bst-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-bst-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-centroid-decomposition-centroid-decomposition-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-centroid-decomposition-centroid-decomposition-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-centroid-decomposition-centroid-decomposition-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-centroid-decomposition-centroid-decomposition-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-centroid-decomposition-centroid-decomposition-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-centroid-decomposition-centroid-decomposition-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-centroid-decomposition-centroid-decomposition-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-centroid-decomposition-centroid-decomposition-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-centroid-decomposition-centroid-decomposition-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-centroid-decomposition-centroid-decomposition-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-centroid-decomposition-centroid-decomposition-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-centroid-decomposition-centroid-decomposition-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-centroid-decomposition-descending-centroid-decomposition-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-centroid-decomposition-right-by-k-centroid-decomposition-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-centroid-decomposition-left-by-k-centroid-decomposition-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-centroid-decomposition-centroid-decomposition-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-centroid-decomposition-centroid-decomposition-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-centroid-decomposition-centroid-decomposition-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-centroid-decomposition-centroid-decomposition-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-centroid-decomposition-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-centroid-decomposition-centroid-decomposition-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-centroid-decomposition-centroid-decomposition-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-centroid-decomposition-centroid-decomposition-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-centroid-decomposition-centroid-decomposition-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-centroid-decomposition-centroid-decomposition-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-centroid-decomposition-centroid-decomposition-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-centroid-decomposition-centroid-decomposition-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-centroid-decomposition-centroid-decomposition-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-centroid-decomposition-centroid-decomposition-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-centroid-decomposition-centroid-decomposition-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-centroid-decomposition-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-centroid-decomposition-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-centroid-decomposition-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-centroid-decomposition-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-centroid-decomposition-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-centroid-decomposition-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-centroid-decomposition-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-centroid-decomposition-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-centroid-decomposition-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-centroid-decomposition-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-centroid-decomposition-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-centroid-decomposition-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-centroid-decomposition-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-centroid-decomposition-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-centroid-decomposition-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-centroid-decomposition-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-centroid-decomposition-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-centroid-decomposition-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-centroid-decomposition-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-centroid-decomposition-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-centroid-decomposition-centroid-decomposition-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-centroid-decomposition-centroid-decomposition-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-centroid-decomposition-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-centroid-decomposition-centroid-decomposition-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-centroid-decomposition-centroid-decomposition-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-centroid-decomposition-centroid-decomposition-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-centroid-decomposition-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-centroid-decomposition-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-centroid-decomposition-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-centroid-decomposition-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-centroid-decomposition-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-centroid-decomposition-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-centroid-decomposition-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-centroid-decomposition-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-centroid-decomposition-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-centroid-decomposition-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-centroid-decomposition-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-centroid-decomposition-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-centroid-decomposition-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-centroid-decomposition-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-centroid-decomposition-centroid-decomposition-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-centroid-decomposition-centroid-decomposition-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-centroid-decomposition-centroid-decomposition-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-centroid-decomposition-centroid-decomposition-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-centroid-decomposition-centroid-decomposition-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-centroid-decomposition-centroid-decomposition-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-centroid-decomposition-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-centroid-decomposition-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-centroid-decomposition-centroid-decomposition-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-centroid-decomposition-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-centroid-decomposition-centroid-decomposition-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-centroid-decomposition-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-centroid-decomposition-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-centroid-decomposition-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-centroid-decomposition-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-centroid-decomposition-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-centroid-decomposition-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-centroid-decomposition-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-centroid-decomposition-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-centroid-decomposition-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-centroid-decomposition-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-centroid-decomposition-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-centroid-decomposition-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-centroid-decomposition-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-centroid-decomposition-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-centroid-decomposition-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-centroid-decomposition-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-centroid-decomposition-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-centroid-decomposition-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-centroid-decomposition-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-computational-geometry-computational-geometry-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-computational-geometry-computational-geometry-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-computational-geometry-computational-geometry-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-computational-geometry-computational-geometry-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-computational-geometry-computational-geometry-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-computational-geometry-computational-geometry-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-computational-geometry-computational-geometry-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-computational-geometry-computational-geometry-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-computational-geometry-computational-geometry-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-computational-geometry-computational-geometry-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-computational-geometry-computational-geometry-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-computational-geometry-computational-geometry-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-computational-geometry-descending-computational-geometry-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-computational-geometry-right-by-k-computational-geometry-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-computational-geometry-left-by-k-computational-geometry-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-computational-geometry-computational-geometry-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-computational-geometry-computational-geometry-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-computational-geometry-computational-geometry-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-computational-geometry-computational-geometry-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-computational-geometry-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-computational-geometry-computational-geometry-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-computational-geometry-computational-geometry-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-computational-geometry-computational-geometry-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-computational-geometry-computational-geometry-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-computational-geometry-computational-geometry-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-computational-geometry-computational-geometry-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-computational-geometry-computational-geometry-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-computational-geometry-computational-geometry-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-computational-geometry-computational-geometry-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-computational-geometry-computational-geometry-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-computational-geometry-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-computational-geometry-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-computational-geometry-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-computational-geometry-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-computational-geometry-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-computational-geometry-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-computational-geometry-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-computational-geometry-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-computational-geometry-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-computational-geometry-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-computational-geometry-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-computational-geometry-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-computational-geometry-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-computational-geometry-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-computational-geometry-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-computational-geometry-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-computational-geometry-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-computational-geometry-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-computational-geometry-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-computational-geometry-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-computational-geometry-computational-geometry-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-computational-geometry-computational-geometry-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-computational-geometry-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-computational-geometry-computational-geometry-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-computational-geometry-computational-geometry-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-computational-geometry-computational-geometry-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-computational-geometry-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-computational-geometry-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-computational-geometry-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-computational-geometry-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-computational-geometry-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-computational-geometry-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-computational-geometry-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-computational-geometry-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-computational-geometry-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-computational-geometry-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-computational-geometry-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-computational-geometry-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-computational-geometry-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-computational-geometry-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-computational-geometry-computational-geometry-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-computational-geometry-computational-geometry-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-computational-geometry-computational-geometry-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-computational-geometry-computational-geometry-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-computational-geometry-computational-geometry-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-computational-geometry-computational-geometry-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-computational-geometry-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-computational-geometry-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-computational-geometry-computational-geometry-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-computational-geometry-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-computational-geometry-computational-geometry-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-computational-geometry-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-computational-geometry-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-computational-geometry-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-computational-geometry-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-computational-geometry-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-computational-geometry-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-computational-geometry-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-computational-geometry-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-computational-geometry-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-computational-geometry-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-computational-geometry-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-computational-geometry-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-computational-geometry-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-computational-geometry-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-computational-geometry-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-computational-geometry-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-computational-geometry-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-computational-geometry-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-computational-geometry-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-competitive-programming-techniques-cp-techniques-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-competitive-programming-techniques-cp-techniques-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-competitive-programming-techniques-cp-techniques-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-competitive-programming-techniques-cp-techniques-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-competitive-programming-techniques-cp-techniques-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-competitive-programming-techniques-cp-techniques-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-competitive-programming-techniques-cp-techniques-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-competitive-programming-techniques-cp-techniques-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-competitive-programming-techniques-cp-techniques-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-competitive-programming-techniques-cp-techniques-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-competitive-programming-techniques-cp-techniques-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-competitive-programming-techniques-cp-techniques-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-competitive-programming-techniques-descending-cp-techniques-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-competitive-programming-techniques-right-by-k-cp-techniques-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-competitive-programming-techniques-left-by-k-cp-techniques-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-competitive-programming-techniques-cp-techniques-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-competitive-programming-techniques-cp-techniques-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-competitive-programming-techniques-cp-techniques-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-competitive-programming-techniques-cp-techniques-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-cp-techniques-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-competitive-programming-techniques-cp-techniques-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-competitive-programming-techniques-cp-techniques-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-competitive-programming-techniques-cp-techniques-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-competitive-programming-techniques-cp-techniques-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-competitive-programming-techniques-cp-techniques-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-competitive-programming-techniques-cp-techniques-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-competitive-programming-techniques-cp-techniques-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-competitive-programming-techniques-cp-techniques-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-competitive-programming-techniques-cp-techniques-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-competitive-programming-techniques-cp-techniques-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-cp-techniques-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-cp-techniques-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-cp-techniques-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-cp-techniques-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-cp-techniques-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-cp-techniques-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-cp-techniques-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-cp-techniques-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-cp-techniques-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-cp-techniques-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-cp-techniques-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-cp-techniques-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-cp-techniques-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-cp-techniques-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-cp-techniques-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-cp-techniques-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-cp-techniques-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-cp-techniques-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-cp-techniques-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-cp-techniques-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-competitive-programming-techniques-cp-techniques-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-competitive-programming-techniques-cp-techniques-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-cp-techniques-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-competitive-programming-techniques-cp-techniques-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-competitive-programming-techniques-cp-techniques-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-competitive-programming-techniques-cp-techniques-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-cp-techniques-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-cp-techniques-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-cp-techniques-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-cp-techniques-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-cp-techniques-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-cp-techniques-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-cp-techniques-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-cp-techniques-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-cp-techniques-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-cp-techniques-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-cp-techniques-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-cp-techniques-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-cp-techniques-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-cp-techniques-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-competitive-programming-techniques-cp-techniques-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-competitive-programming-techniques-cp-techniques-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-competitive-programming-techniques-cp-techniques-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-competitive-programming-techniques-cp-techniques-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-competitive-programming-techniques-cp-techniques-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-competitive-programming-techniques-cp-techniques-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-cp-techniques-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-cp-techniques-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-competitive-programming-techniques-cp-techniques-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-cp-techniques-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-competitive-programming-techniques-cp-techniques-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-cp-techniques-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-cp-techniques-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-cp-techniques-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-cp-techniques-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-cp-techniques-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-cp-techniques-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-cp-techniques-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-cp-techniques-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-cp-techniques-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-cp-techniques-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-cp-techniques-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-cp-techniques-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-cp-techniques-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-cp-techniques-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-cp-techniques-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-cp-techniques-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-cp-techniques-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-cp-techniques-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-cp-techniques-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-deque-deque-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-deque-deque-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-deque-deque-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-deque-deque-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-deque-deque-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-deque-deque-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-deque-deque-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-deque-deque-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-deque-deque-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-deque-deque-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-deque-deque-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-deque-deque-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-deque-descending-deque-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-deque-right-by-k-deque-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-deque-left-by-k-deque-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-deque-deque-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-deque-deque-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-deque-deque-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-deque-deque-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-deque-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-deque-deque-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-deque-deque-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-deque-deque-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-deque-deque-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-deque-deque-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-deque-deque-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-deque-deque-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-deque-deque-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-deque-deque-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-deque-deque-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-deque-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-deque-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-deque-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-deque-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-deque-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-deque-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-deque-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-deque-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-deque-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-deque-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-deque-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-deque-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-deque-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-deque-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-deque-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-deque-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-deque-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-deque-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-deque-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-deque-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-deque-deque-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-deque-deque-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-deque-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-deque-deque-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-deque-deque-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-deque-deque-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-deque-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-deque-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-deque-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-deque-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-deque-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-deque-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-deque-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-deque-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-deque-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-deque-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-deque-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-deque-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-deque-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-deque-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-deque-deque-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-deque-deque-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-deque-deque-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-deque-deque-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-deque-deque-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-deque-deque-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-deque-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-deque-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-deque-deque-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-deque-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-deque-deque-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-deque-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-deque-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-deque-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-deque-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-deque-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-deque-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-deque-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-deque-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-deque-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-deque-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-deque-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-deque-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-deque-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-deque-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-deque-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-deque-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-deque-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-deque-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-deque-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-divide-and-conquer-divide-and-conquer-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-divide-and-conquer-divide-and-conquer-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-divide-and-conquer-divide-and-conquer-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-divide-and-conquer-divide-and-conquer-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-divide-and-conquer-divide-and-conquer-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-divide-and-conquer-divide-and-conquer-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-divide-and-conquer-divide-and-conquer-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-divide-and-conquer-divide-and-conquer-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-divide-and-conquer-divide-and-conquer-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-divide-and-conquer-divide-and-conquer-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-divide-and-conquer-divide-and-conquer-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-divide-and-conquer-divide-and-conquer-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-divide-and-conquer-descending-divide-and-conquer-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-divide-and-conquer-right-by-k-divide-and-conquer-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-divide-and-conquer-left-by-k-divide-and-conquer-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-divide-and-conquer-divide-and-conquer-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-divide-and-conquer-divide-and-conquer-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-divide-and-conquer-divide-and-conquer-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-divide-and-conquer-divide-and-conquer-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-divide-and-conquer-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-divide-and-conquer-divide-and-conquer-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-divide-and-conquer-divide-and-conquer-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-divide-and-conquer-divide-and-conquer-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-divide-and-conquer-divide-and-conquer-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-divide-and-conquer-divide-and-conquer-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-divide-and-conquer-divide-and-conquer-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-divide-and-conquer-divide-and-conquer-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-divide-and-conquer-divide-and-conquer-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-divide-and-conquer-divide-and-conquer-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-divide-and-conquer-divide-and-conquer-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-divide-and-conquer-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-divide-and-conquer-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-divide-and-conquer-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-divide-and-conquer-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-divide-and-conquer-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-divide-and-conquer-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-divide-and-conquer-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-divide-and-conquer-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-divide-and-conquer-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-divide-and-conquer-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-divide-and-conquer-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-divide-and-conquer-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-divide-and-conquer-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-divide-and-conquer-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-divide-and-conquer-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-divide-and-conquer-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-divide-and-conquer-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-divide-and-conquer-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-divide-and-conquer-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-divide-and-conquer-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-divide-and-conquer-divide-and-conquer-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-divide-and-conquer-divide-and-conquer-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-divide-and-conquer-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-divide-and-conquer-divide-and-conquer-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-divide-and-conquer-divide-and-conquer-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-divide-and-conquer-divide-and-conquer-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-divide-and-conquer-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-divide-and-conquer-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-divide-and-conquer-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-divide-and-conquer-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-divide-and-conquer-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-divide-and-conquer-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-divide-and-conquer-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-divide-and-conquer-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-divide-and-conquer-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-divide-and-conquer-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-divide-and-conquer-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-divide-and-conquer-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-divide-and-conquer-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-divide-and-conquer-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-divide-and-conquer-divide-and-conquer-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-divide-and-conquer-divide-and-conquer-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-divide-and-conquer-divide-and-conquer-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-divide-and-conquer-divide-and-conquer-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-divide-and-conquer-divide-and-conquer-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-divide-and-conquer-divide-and-conquer-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-divide-and-conquer-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-divide-and-conquer-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-divide-and-conquer-divide-and-conquer-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-divide-and-conquer-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-divide-and-conquer-divide-and-conquer-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-divide-and-conquer-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-divide-and-conquer-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-divide-and-conquer-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-divide-and-conquer-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-divide-and-conquer-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-divide-and-conquer-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-divide-and-conquer-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-divide-and-conquer-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-divide-and-conquer-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-divide-and-conquer-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-divide-and-conquer-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-divide-and-conquer-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-divide-and-conquer-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-divide-and-conquer-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-divide-and-conquer-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-divide-and-conquer-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-divide-and-conquer-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-divide-and-conquer-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-divide-and-conquer-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-dynamic-programming-dp-dp-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-dynamic-programming-dp-dp-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-dynamic-programming-dp-dp-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-dynamic-programming-dp-dp-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-dynamic-programming-dp-dp-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-dynamic-programming-dp-dp-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-dynamic-programming-dp-dp-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-dynamic-programming-dp-dp-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-dynamic-programming-dp-dp-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-dynamic-programming-dp-dp-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-dynamic-programming-dp-dp-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-dynamic-programming-dp-dp-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-dynamic-programming-dp-descending-dp-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-dynamic-programming-dp-right-by-k-dp-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-dynamic-programming-dp-left-by-k-dp-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-dynamic-programming-dp-dp-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-dynamic-programming-dp-dp-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-dynamic-programming-dp-dp-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-dynamic-programming-dp-dp-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-dp-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-dynamic-programming-dp-dp-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-dynamic-programming-dp-dp-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-dynamic-programming-dp-dp-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-dynamic-programming-dp-dp-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-dynamic-programming-dp-dp-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-dynamic-programming-dp-dp-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-dynamic-programming-dp-dp-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-dynamic-programming-dp-dp-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-dynamic-programming-dp-dp-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-dynamic-programming-dp-dp-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-dp-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-dp-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-dp-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-dp-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-dp-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-dp-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-dp-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-dp-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-dp-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-dp-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-dp-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-dp-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-dp-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-dp-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-dp-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-dp-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-dp-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-dp-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-dp-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-dp-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-dynamic-programming-dp-dp-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-dynamic-programming-dp-dp-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-dp-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-dynamic-programming-dp-dp-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-dynamic-programming-dp-dp-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-dynamic-programming-dp-dp-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-dp-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-dp-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-dp-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-dp-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-dp-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-dp-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-dp-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-dp-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-dp-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-dp-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-dp-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-dp-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-dp-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-dp-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-dynamic-programming-dp-dp-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-dynamic-programming-dp-dp-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-dynamic-programming-dp-dp-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-dynamic-programming-dp-dp-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-dynamic-programming-dp-dp-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-dynamic-programming-dp-dp-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-dp-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-dp-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-dynamic-programming-dp-dp-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-dp-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-dynamic-programming-dp-dp-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-dp-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-dp-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-dp-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-dp-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-dp-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-dp-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-dp-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-dp-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-dp-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-dp-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-dp-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-dp-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-dp-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-dp-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-dp-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-dp-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-dp-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-dp-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-dp-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-disjoint-set-union-dsu-dsu-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-disjoint-set-union-dsu-dsu-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-disjoint-set-union-dsu-dsu-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-disjoint-set-union-dsu-dsu-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-disjoint-set-union-dsu-dsu-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-disjoint-set-union-dsu-dsu-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-disjoint-set-union-dsu-dsu-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-disjoint-set-union-dsu-dsu-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-disjoint-set-union-dsu-dsu-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-disjoint-set-union-dsu-dsu-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-disjoint-set-union-dsu-dsu-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-disjoint-set-union-dsu-dsu-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-disjoint-set-union-dsu-descending-dsu-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-disjoint-set-union-dsu-right-by-k-dsu-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-disjoint-set-union-dsu-left-by-k-dsu-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-disjoint-set-union-dsu-dsu-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-disjoint-set-union-dsu-dsu-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-disjoint-set-union-dsu-dsu-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-disjoint-set-union-dsu-dsu-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-dsu-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-disjoint-set-union-dsu-dsu-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-disjoint-set-union-dsu-dsu-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-disjoint-set-union-dsu-dsu-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-disjoint-set-union-dsu-dsu-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-disjoint-set-union-dsu-dsu-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-disjoint-set-union-dsu-dsu-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-disjoint-set-union-dsu-dsu-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-disjoint-set-union-dsu-dsu-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-disjoint-set-union-dsu-dsu-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-disjoint-set-union-dsu-dsu-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-dsu-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-dsu-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-dsu-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-dsu-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-dsu-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-dsu-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-dsu-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-dsu-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-dsu-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-dsu-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-dsu-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-dsu-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-dsu-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-dsu-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-dsu-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-dsu-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-dsu-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-dsu-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-dsu-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-dsu-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-disjoint-set-union-dsu-dsu-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-disjoint-set-union-dsu-dsu-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-dsu-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-disjoint-set-union-dsu-dsu-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-disjoint-set-union-dsu-dsu-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-disjoint-set-union-dsu-dsu-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-dsu-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-dsu-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-dsu-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-dsu-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-dsu-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-dsu-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-dsu-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-dsu-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-dsu-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-dsu-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-dsu-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-dsu-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-dsu-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-dsu-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-disjoint-set-union-dsu-dsu-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-disjoint-set-union-dsu-dsu-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-disjoint-set-union-dsu-dsu-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-disjoint-set-union-dsu-dsu-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-disjoint-set-union-dsu-dsu-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-disjoint-set-union-dsu-dsu-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-dsu-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-dsu-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-disjoint-set-union-dsu-dsu-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-dsu-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-disjoint-set-union-dsu-dsu-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-dsu-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-dsu-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-dsu-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-dsu-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-dsu-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-dsu-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-dsu-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-dsu-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-dsu-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-dsu-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-dsu-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-dsu-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-dsu-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-dsu-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-dsu-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-dsu-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-dsu-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-dsu-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-dsu-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-fenwick-tree-bit-fenwick-tree-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-fenwick-tree-bit-fenwick-tree-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-fenwick-tree-bit-fenwick-tree-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-fenwick-tree-bit-fenwick-tree-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-fenwick-tree-bit-fenwick-tree-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-fenwick-tree-bit-fenwick-tree-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-fenwick-tree-bit-fenwick-tree-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-fenwick-tree-bit-fenwick-tree-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-fenwick-tree-bit-fenwick-tree-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-fenwick-tree-bit-fenwick-tree-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-fenwick-tree-bit-fenwick-tree-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-fenwick-tree-bit-fenwick-tree-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-fenwick-tree-bit-descending-fenwick-tree-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-fenwick-tree-bit-right-by-k-fenwick-tree-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-fenwick-tree-bit-left-by-k-fenwick-tree-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-fenwick-tree-bit-fenwick-tree-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-fenwick-tree-bit-fenwick-tree-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-fenwick-tree-bit-fenwick-tree-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-fenwick-tree-bit-fenwick-tree-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-fenwick-tree-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-fenwick-tree-bit-fenwick-tree-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-fenwick-tree-bit-fenwick-tree-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-fenwick-tree-bit-fenwick-tree-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-fenwick-tree-bit-fenwick-tree-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-fenwick-tree-bit-fenwick-tree-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-fenwick-tree-bit-fenwick-tree-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-fenwick-tree-bit-fenwick-tree-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-fenwick-tree-bit-fenwick-tree-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-fenwick-tree-bit-fenwick-tree-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-fenwick-tree-bit-fenwick-tree-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-fenwick-tree-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-fenwick-tree-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-fenwick-tree-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-fenwick-tree-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-fenwick-tree-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-fenwick-tree-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-fenwick-tree-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-fenwick-tree-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-fenwick-tree-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-fenwick-tree-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-fenwick-tree-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-fenwick-tree-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-fenwick-tree-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-fenwick-tree-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-fenwick-tree-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-fenwick-tree-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-fenwick-tree-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-fenwick-tree-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-fenwick-tree-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-fenwick-tree-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-fenwick-tree-bit-fenwick-tree-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-fenwick-tree-bit-fenwick-tree-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-fenwick-tree-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-fenwick-tree-bit-fenwick-tree-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-fenwick-tree-bit-fenwick-tree-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-fenwick-tree-bit-fenwick-tree-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-fenwick-tree-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-fenwick-tree-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-fenwick-tree-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-fenwick-tree-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-fenwick-tree-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-fenwick-tree-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-fenwick-tree-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-fenwick-tree-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-fenwick-tree-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-fenwick-tree-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-fenwick-tree-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-fenwick-tree-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-fenwick-tree-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-fenwick-tree-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-fenwick-tree-bit-fenwick-tree-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-fenwick-tree-bit-fenwick-tree-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-fenwick-tree-bit-fenwick-tree-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-fenwick-tree-bit-fenwick-tree-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-fenwick-tree-bit-fenwick-tree-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-fenwick-tree-bit-fenwick-tree-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-fenwick-tree-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-fenwick-tree-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-fenwick-tree-bit-fenwick-tree-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-fenwick-tree-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-fenwick-tree-bit-fenwick-tree-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-fenwick-tree-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-fenwick-tree-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-fenwick-tree-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-fenwick-tree-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-fenwick-tree-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-fenwick-tree-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-fenwick-tree-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-fenwick-tree-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-fenwick-tree-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-fenwick-tree-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-fenwick-tree-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-fenwick-tree-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-fenwick-tree-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-fenwick-tree-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-fenwick-tree-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-fenwick-tree-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-fenwick-tree-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-fenwick-tree-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-fenwick-tree-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-game-theory-game-theory-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-game-theory-game-theory-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-game-theory-game-theory-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-game-theory-game-theory-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-game-theory-game-theory-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-game-theory-game-theory-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-game-theory-game-theory-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-game-theory-game-theory-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-game-theory-game-theory-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-game-theory-game-theory-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-game-theory-game-theory-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-game-theory-game-theory-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-game-theory-descending-game-theory-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-game-theory-right-by-k-game-theory-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-game-theory-left-by-k-game-theory-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-game-theory-game-theory-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-game-theory-game-theory-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-game-theory-game-theory-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-game-theory-game-theory-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-game-theory-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-game-theory-game-theory-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-game-theory-game-theory-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-game-theory-game-theory-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-game-theory-game-theory-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-game-theory-game-theory-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-game-theory-game-theory-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-game-theory-game-theory-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-game-theory-game-theory-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-game-theory-game-theory-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-game-theory-game-theory-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-game-theory-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-game-theory-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-game-theory-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-game-theory-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-game-theory-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-game-theory-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-game-theory-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-game-theory-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-game-theory-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-game-theory-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-game-theory-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-game-theory-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-game-theory-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-game-theory-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-game-theory-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-game-theory-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-game-theory-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-game-theory-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-game-theory-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-game-theory-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-game-theory-game-theory-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-game-theory-game-theory-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-game-theory-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-game-theory-game-theory-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-game-theory-game-theory-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-game-theory-game-theory-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-game-theory-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-game-theory-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-game-theory-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-game-theory-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-game-theory-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-game-theory-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-game-theory-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-game-theory-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-game-theory-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-game-theory-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-game-theory-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-game-theory-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-game-theory-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-game-theory-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-game-theory-game-theory-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-game-theory-game-theory-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-game-theory-game-theory-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-game-theory-game-theory-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-game-theory-game-theory-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-game-theory-game-theory-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-game-theory-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-game-theory-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-game-theory-game-theory-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-game-theory-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-game-theory-game-theory-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-game-theory-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-game-theory-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-game-theory-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-game-theory-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-game-theory-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-game-theory-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-game-theory-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-game-theory-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-game-theory-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-game-theory-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-game-theory-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-game-theory-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-game-theory-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-game-theory-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-game-theory-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-game-theory-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-game-theory-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-game-theory-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-game-theory-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-graphs-graphs-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-graphs-graphs-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-graphs-graphs-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-graphs-graphs-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-graphs-graphs-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-graphs-graphs-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-graphs-graphs-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-graphs-graphs-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-graphs-graphs-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-graphs-graphs-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-graphs-graphs-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-graphs-graphs-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-graphs-descending-graphs-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-graphs-right-by-k-graphs-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-graphs-left-by-k-graphs-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-graphs-graphs-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-graphs-graphs-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-graphs-graphs-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-graphs-graphs-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-graphs-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-graphs-graphs-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-graphs-graphs-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-graphs-graphs-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-graphs-graphs-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-graphs-graphs-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-graphs-graphs-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-graphs-graphs-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-graphs-graphs-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-graphs-graphs-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-graphs-graphs-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-graphs-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-graphs-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-graphs-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-graphs-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-graphs-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-graphs-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-graphs-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-graphs-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-graphs-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-graphs-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-graphs-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-graphs-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-graphs-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-graphs-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-graphs-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-graphs-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-graphs-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-graphs-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-graphs-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-graphs-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-graphs-graphs-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-graphs-graphs-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-graphs-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-graphs-graphs-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-graphs-graphs-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-graphs-graphs-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-graphs-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-graphs-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-graphs-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-graphs-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-graphs-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-graphs-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-graphs-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-graphs-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-graphs-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-graphs-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-graphs-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-graphs-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-graphs-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-graphs-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-graphs-graphs-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-graphs-graphs-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-graphs-graphs-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-graphs-graphs-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-graphs-graphs-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-graphs-graphs-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-graphs-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-graphs-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-graphs-graphs-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-graphs-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-graphs-graphs-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-graphs-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-graphs-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-graphs-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-graphs-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-graphs-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-graphs-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-graphs-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-graphs-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-graphs-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-graphs-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-graphs-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-graphs-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-graphs-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-graphs-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-graphs-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-graphs-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-graphs-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-graphs-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-graphs-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-greedy-algorithms-greedy-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-greedy-algorithms-greedy-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-greedy-algorithms-greedy-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-greedy-algorithms-greedy-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-greedy-algorithms-greedy-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-greedy-algorithms-greedy-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-greedy-algorithms-greedy-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-greedy-algorithms-greedy-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-greedy-algorithms-greedy-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-greedy-algorithms-greedy-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-greedy-algorithms-greedy-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-greedy-algorithms-greedy-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-greedy-algorithms-descending-greedy-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-greedy-algorithms-right-by-k-greedy-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-greedy-algorithms-left-by-k-greedy-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-greedy-algorithms-greedy-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-greedy-algorithms-greedy-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-greedy-algorithms-greedy-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-greedy-algorithms-greedy-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-greedy-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-greedy-algorithms-greedy-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-greedy-algorithms-greedy-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-greedy-algorithms-greedy-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-greedy-algorithms-greedy-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-greedy-algorithms-greedy-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-greedy-algorithms-greedy-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-greedy-algorithms-greedy-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-greedy-algorithms-greedy-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-greedy-algorithms-greedy-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-greedy-algorithms-greedy-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-greedy-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-greedy-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-greedy-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-greedy-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-greedy-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-greedy-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-greedy-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-greedy-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-greedy-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-greedy-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-greedy-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-greedy-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-greedy-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-greedy-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-greedy-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-greedy-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-greedy-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-greedy-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-greedy-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-greedy-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-greedy-algorithms-greedy-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-greedy-algorithms-greedy-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-greedy-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-greedy-algorithms-greedy-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-greedy-algorithms-greedy-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-greedy-algorithms-greedy-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-greedy-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-greedy-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-greedy-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-greedy-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-greedy-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-greedy-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-greedy-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-greedy-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-greedy-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-greedy-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-greedy-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-greedy-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-greedy-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-greedy-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-greedy-algorithms-greedy-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-greedy-algorithms-greedy-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-greedy-algorithms-greedy-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-greedy-algorithms-greedy-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-greedy-algorithms-greedy-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-greedy-algorithms-greedy-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-greedy-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-greedy-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-greedy-algorithms-greedy-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-greedy-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-greedy-algorithms-greedy-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-greedy-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-greedy-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-greedy-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-greedy-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-greedy-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-greedy-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-greedy-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-greedy-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-greedy-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-greedy-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-greedy-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-greedy-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-greedy-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-greedy-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-greedy-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-greedy-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-greedy-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-greedy-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-greedy-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-hashing-hashing-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-hashing-hashing-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-hashing-hashing-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-hashing-hashing-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-hashing-hashing-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-hashing-hashing-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-hashing-hashing-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-hashing-hashing-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-hashing-hashing-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-hashing-hashing-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-hashing-hashing-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-hashing-hashing-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-hashing-descending-hashing-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-hashing-right-by-k-hashing-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-hashing-left-by-k-hashing-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-hashing-hashing-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-hashing-hashing-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-hashing-hashing-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-hashing-hashing-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-hashing-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-hashing-hashing-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-hashing-hashing-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-hashing-hashing-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-hashing-hashing-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-hashing-hashing-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-hashing-hashing-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-hashing-hashing-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-hashing-hashing-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-hashing-hashing-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-hashing-hashing-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-hashing-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-hashing-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-hashing-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-hashing-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-hashing-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-hashing-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-hashing-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-hashing-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-hashing-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-hashing-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-hashing-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-hashing-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-hashing-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-hashing-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-hashing-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-hashing-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-hashing-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-hashing-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-hashing-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-hashing-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-hashing-hashing-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-hashing-hashing-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-hashing-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-hashing-hashing-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-hashing-hashing-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-hashing-hashing-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-hashing-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-hashing-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-hashing-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-hashing-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-hashing-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-hashing-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-hashing-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-hashing-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-hashing-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-hashing-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-hashing-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-hashing-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-hashing-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-hashing-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-hashing-hashing-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-hashing-hashing-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-hashing-hashing-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-hashing-hashing-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-hashing-hashing-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-hashing-hashing-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-hashing-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-hashing-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-hashing-hashing-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-hashing-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-hashing-hashing-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-hashing-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-hashing-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-hashing-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-hashing-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-hashing-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-hashing-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-hashing-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-hashing-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-hashing-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-hashing-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-hashing-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-hashing-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-hashing-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-hashing-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-hashing-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-hashing-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-hashing-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-hashing-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-hashing-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-heap-priority-queue-heap-priority-queue-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-heap-priority-queue-heap-priority-queue-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-heap-priority-queue-heap-priority-queue-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-heap-priority-queue-heap-priority-queue-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-heap-priority-queue-heap-priority-queue-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-heap-priority-queue-heap-priority-queue-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-heap-priority-queue-heap-priority-queue-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-heap-priority-queue-heap-priority-queue-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-heap-priority-queue-heap-priority-queue-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-heap-priority-queue-heap-priority-queue-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-heap-priority-queue-heap-priority-queue-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-heap-priority-queue-heap-priority-queue-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-heap-priority-queue-descending-heap-priority-queue-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-heap-priority-queue-right-by-k-heap-priority-queue-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-heap-priority-queue-left-by-k-heap-priority-queue-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-heap-priority-queue-heap-priority-queue-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-heap-priority-queue-heap-priority-queue-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-heap-priority-queue-heap-priority-queue-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-heap-priority-queue-heap-priority-queue-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-heap-priority-queue-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-heap-priority-queue-heap-priority-queue-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-heap-priority-queue-heap-priority-queue-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-heap-priority-queue-heap-priority-queue-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-heap-priority-queue-heap-priority-queue-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-heap-priority-queue-heap-priority-queue-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-heap-priority-queue-heap-priority-queue-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-heap-priority-queue-heap-priority-queue-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-heap-priority-queue-heap-priority-queue-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-heap-priority-queue-heap-priority-queue-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-heap-priority-queue-heap-priority-queue-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-heap-priority-queue-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-heap-priority-queue-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-heap-priority-queue-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-heap-priority-queue-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-heap-priority-queue-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-heap-priority-queue-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-heap-priority-queue-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-heap-priority-queue-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-heap-priority-queue-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-heap-priority-queue-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-heap-priority-queue-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-heap-priority-queue-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-heap-priority-queue-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-heap-priority-queue-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-heap-priority-queue-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-heap-priority-queue-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-heap-priority-queue-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-heap-priority-queue-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-heap-priority-queue-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-heap-priority-queue-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-heap-priority-queue-heap-priority-queue-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-heap-priority-queue-heap-priority-queue-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-heap-priority-queue-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-heap-priority-queue-heap-priority-queue-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-heap-priority-queue-heap-priority-queue-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-heap-priority-queue-heap-priority-queue-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-heap-priority-queue-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-heap-priority-queue-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-heap-priority-queue-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-heap-priority-queue-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-heap-priority-queue-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-heap-priority-queue-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-heap-priority-queue-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-heap-priority-queue-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-heap-priority-queue-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-heap-priority-queue-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-heap-priority-queue-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-heap-priority-queue-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-heap-priority-queue-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-heap-priority-queue-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-heap-priority-queue-heap-priority-queue-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-heap-priority-queue-heap-priority-queue-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-heap-priority-queue-heap-priority-queue-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-heap-priority-queue-heap-priority-queue-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-heap-priority-queue-heap-priority-queue-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-heap-priority-queue-heap-priority-queue-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-heap-priority-queue-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-heap-priority-queue-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-heap-priority-queue-heap-priority-queue-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-heap-priority-queue-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-heap-priority-queue-heap-priority-queue-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-heap-priority-queue-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-heap-priority-queue-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-heap-priority-queue-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-heap-priority-queue-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-heap-priority-queue-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-heap-priority-queue-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-heap-priority-queue-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-heap-priority-queue-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-heap-priority-queue-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-heap-priority-queue-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-heap-priority-queue-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-heap-priority-queue-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-heap-priority-queue-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-heap-priority-queue-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-heap-priority-queue-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-heap-priority-queue-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-heap-priority-queue-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-heap-priority-queue-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-heap-priority-queue-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-heap-heap-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-heap-heap-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-heap-heap-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-heap-heap-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-heap-heap-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-heap-heap-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-heap-heap-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-heap-heap-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-heap-heap-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-heap-heap-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-heap-heap-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-heap-heap-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-heap-descending-heap-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-heap-right-by-k-heap-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-heap-left-by-k-heap-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-heap-heap-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-heap-heap-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-heap-heap-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-heap-heap-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-heap-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-heap-heap-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-heap-heap-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-heap-heap-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-heap-heap-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-heap-heap-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-heap-heap-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-heap-heap-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-heap-heap-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-heap-heap-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-heap-heap-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-heap-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-heap-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-heap-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-heap-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-heap-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-heap-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-heap-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-heap-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-heap-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-heap-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-heap-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-heap-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-heap-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-heap-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-heap-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-heap-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-heap-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-heap-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-heap-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-heap-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-heap-heap-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-heap-heap-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-heap-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-heap-heap-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-heap-heap-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-heap-heap-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-heap-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-heap-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-heap-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-heap-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-heap-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-heap-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-heap-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-heap-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-heap-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-heap-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-heap-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-heap-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-heap-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-heap-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-heap-heap-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-heap-heap-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-heap-heap-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-heap-heap-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-heap-heap-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-heap-heap-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-heap-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-heap-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-heap-heap-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-heap-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-heap-heap-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-heap-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-heap-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-heap-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-heap-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-heap-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-heap-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-heap-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-heap-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-heap-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-heap-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-heap-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-heap-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-heap-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-heap-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-heap-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-heap-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-heap-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-heap-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-heap-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-heavy-light-decomposition-hld-hld-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-heavy-light-decomposition-hld-hld-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-heavy-light-decomposition-hld-hld-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-heavy-light-decomposition-hld-hld-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-heavy-light-decomposition-hld-hld-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-heavy-light-decomposition-hld-hld-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-heavy-light-decomposition-hld-hld-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-heavy-light-decomposition-hld-hld-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-heavy-light-decomposition-hld-hld-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-heavy-light-decomposition-hld-hld-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-heavy-light-decomposition-hld-hld-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-heavy-light-decomposition-hld-hld-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-heavy-light-decomposition-hld-descending-hld-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-heavy-light-decomposition-hld-right-by-k-hld-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-heavy-light-decomposition-hld-left-by-k-hld-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-heavy-light-decomposition-hld-hld-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-heavy-light-decomposition-hld-hld-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-heavy-light-decomposition-hld-hld-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-heavy-light-decomposition-hld-hld-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-hld-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-heavy-light-decomposition-hld-hld-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-heavy-light-decomposition-hld-hld-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-heavy-light-decomposition-hld-hld-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-heavy-light-decomposition-hld-hld-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-heavy-light-decomposition-hld-hld-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-heavy-light-decomposition-hld-hld-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-heavy-light-decomposition-hld-hld-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-heavy-light-decomposition-hld-hld-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-heavy-light-decomposition-hld-hld-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-heavy-light-decomposition-hld-hld-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-hld-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-hld-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-hld-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-hld-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-hld-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-hld-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-hld-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-hld-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-hld-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-hld-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-hld-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-hld-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-hld-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-hld-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-hld-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-hld-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-hld-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-hld-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-hld-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-hld-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-heavy-light-decomposition-hld-hld-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-heavy-light-decomposition-hld-hld-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-hld-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-heavy-light-decomposition-hld-hld-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-heavy-light-decomposition-hld-hld-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-heavy-light-decomposition-hld-hld-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-hld-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-hld-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-hld-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-hld-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-hld-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-hld-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-hld-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-hld-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-hld-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-hld-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-hld-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-hld-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-hld-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-hld-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-heavy-light-decomposition-hld-hld-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-heavy-light-decomposition-hld-hld-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-heavy-light-decomposition-hld-hld-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-heavy-light-decomposition-hld-hld-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-heavy-light-decomposition-hld-hld-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-heavy-light-decomposition-hld-hld-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-hld-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-hld-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-heavy-light-decomposition-hld-hld-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-hld-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-heavy-light-decomposition-hld-hld-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-hld-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-hld-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-hld-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-hld-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-hld-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-hld-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-hld-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-hld-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-hld-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-hld-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-hld-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-hld-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-hld-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-hld-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-hld-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-hld-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-hld-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-hld-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-hld-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-kmp-algorithm-kmp-algorithm-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-kmp-algorithm-kmp-algorithm-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-kmp-algorithm-kmp-algorithm-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-kmp-algorithm-kmp-algorithm-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-kmp-algorithm-kmp-algorithm-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-kmp-algorithm-kmp-algorithm-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-kmp-algorithm-kmp-algorithm-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-kmp-algorithm-kmp-algorithm-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-kmp-algorithm-kmp-algorithm-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-kmp-algorithm-kmp-algorithm-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-kmp-algorithm-kmp-algorithm-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-kmp-algorithm-kmp-algorithm-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-kmp-algorithm-descending-kmp-algorithm-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-kmp-algorithm-right-by-k-kmp-algorithm-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-kmp-algorithm-left-by-k-kmp-algorithm-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-kmp-algorithm-kmp-algorithm-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-kmp-algorithm-kmp-algorithm-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-kmp-algorithm-kmp-algorithm-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-kmp-algorithm-kmp-algorithm-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-kmp-algorithm-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-kmp-algorithm-kmp-algorithm-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-kmp-algorithm-kmp-algorithm-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-kmp-algorithm-kmp-algorithm-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-kmp-algorithm-kmp-algorithm-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-kmp-algorithm-kmp-algorithm-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-kmp-algorithm-kmp-algorithm-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-kmp-algorithm-kmp-algorithm-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-kmp-algorithm-kmp-algorithm-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-kmp-algorithm-kmp-algorithm-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-kmp-algorithm-kmp-algorithm-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-kmp-algorithm-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-kmp-algorithm-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-kmp-algorithm-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-kmp-algorithm-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-kmp-algorithm-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-kmp-algorithm-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-kmp-algorithm-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-kmp-algorithm-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-kmp-algorithm-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-kmp-algorithm-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-kmp-algorithm-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-kmp-algorithm-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-kmp-algorithm-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-kmp-algorithm-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-kmp-algorithm-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-kmp-algorithm-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-kmp-algorithm-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-kmp-algorithm-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-kmp-algorithm-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-kmp-algorithm-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-kmp-algorithm-kmp-algorithm-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-kmp-algorithm-kmp-algorithm-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-kmp-algorithm-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-kmp-algorithm-kmp-algorithm-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-kmp-algorithm-kmp-algorithm-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-kmp-algorithm-kmp-algorithm-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-kmp-algorithm-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-kmp-algorithm-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-kmp-algorithm-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-kmp-algorithm-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-kmp-algorithm-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-kmp-algorithm-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-kmp-algorithm-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-kmp-algorithm-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-kmp-algorithm-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-kmp-algorithm-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-kmp-algorithm-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-kmp-algorithm-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-kmp-algorithm-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-kmp-algorithm-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-kmp-algorithm-kmp-algorithm-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-kmp-algorithm-kmp-algorithm-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-kmp-algorithm-kmp-algorithm-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-kmp-algorithm-kmp-algorithm-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-kmp-algorithm-kmp-algorithm-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-kmp-algorithm-kmp-algorithm-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-kmp-algorithm-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-kmp-algorithm-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-kmp-algorithm-kmp-algorithm-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-kmp-algorithm-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-kmp-algorithm-kmp-algorithm-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-kmp-algorithm-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-kmp-algorithm-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-kmp-algorithm-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-kmp-algorithm-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-kmp-algorithm-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-kmp-algorithm-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-kmp-algorithm-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-kmp-algorithm-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-kmp-algorithm-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-kmp-algorithm-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-kmp-algorithm-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-kmp-algorithm-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-kmp-algorithm-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-kmp-algorithm-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-kmp-algorithm-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-kmp-algorithm-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-kmp-algorithm-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-kmp-algorithm-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-kmp-algorithm-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-linked-list-linked-list-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-linked-list-linked-list-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-linked-list-linked-list-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-linked-list-linked-list-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-linked-list-linked-list-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-linked-list-linked-list-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-linked-list-linked-list-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-linked-list-linked-list-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-linked-list-linked-list-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-linked-list-linked-list-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-linked-list-linked-list-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-linked-list-linked-list-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-linked-list-descending-linked-list-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-linked-list-right-by-k-linked-list-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-linked-list-left-by-k-linked-list-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-linked-list-linked-list-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-linked-list-linked-list-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-linked-list-linked-list-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-linked-list-linked-list-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-linked-list-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-linked-list-linked-list-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-linked-list-linked-list-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-linked-list-linked-list-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-linked-list-linked-list-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-linked-list-linked-list-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-linked-list-linked-list-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-linked-list-linked-list-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-linked-list-linked-list-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-linked-list-linked-list-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-linked-list-linked-list-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-linked-list-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-linked-list-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-linked-list-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-linked-list-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-linked-list-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-linked-list-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-linked-list-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-linked-list-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-linked-list-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-linked-list-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-linked-list-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-linked-list-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-linked-list-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-linked-list-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-linked-list-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-linked-list-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-linked-list-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-linked-list-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-linked-list-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-linked-list-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-linked-list-linked-list-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-linked-list-linked-list-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-linked-list-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-linked-list-linked-list-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-linked-list-linked-list-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-linked-list-linked-list-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-linked-list-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-linked-list-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-linked-list-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-linked-list-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-linked-list-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-linked-list-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-linked-list-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-linked-list-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-linked-list-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-linked-list-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-linked-list-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-linked-list-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-linked-list-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-linked-list-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-linked-list-linked-list-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-linked-list-linked-list-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-linked-list-linked-list-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-linked-list-linked-list-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-linked-list-linked-list-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-linked-list-linked-list-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-linked-list-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-linked-list-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-linked-list-linked-list-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-linked-list-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-linked-list-linked-list-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-linked-list-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-linked-list-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-linked-list-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-linked-list-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-linked-list-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-linked-list-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-linked-list-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-linked-list-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-linked-list-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-linked-list-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-linked-list-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-linked-list-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-linked-list-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-linked-list-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-linked-list-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-linked-list-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-linked-list-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-linked-list-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-linked-list-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-mathematics-mathematics-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-mathematics-mathematics-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-mathematics-mathematics-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-mathematics-mathematics-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-mathematics-mathematics-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-mathematics-mathematics-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-mathematics-mathematics-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-mathematics-mathematics-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-mathematics-mathematics-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-mathematics-mathematics-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-mathematics-mathematics-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-mathematics-mathematics-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-mathematics-descending-mathematics-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-mathematics-right-by-k-mathematics-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-mathematics-left-by-k-mathematics-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-mathematics-mathematics-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-mathematics-mathematics-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-mathematics-mathematics-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-mathematics-mathematics-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-mathematics-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-mathematics-mathematics-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-mathematics-mathematics-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-mathematics-mathematics-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-mathematics-mathematics-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-mathematics-mathematics-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-mathematics-mathematics-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-mathematics-mathematics-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-mathematics-mathematics-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-mathematics-mathematics-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-mathematics-mathematics-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-mathematics-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-mathematics-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-mathematics-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-mathematics-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-mathematics-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-mathematics-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-mathematics-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-mathematics-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-mathematics-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-mathematics-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-mathematics-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-mathematics-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-mathematics-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-mathematics-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-mathematics-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-mathematics-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-mathematics-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-mathematics-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-mathematics-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-mathematics-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-mathematics-mathematics-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-mathematics-mathematics-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-mathematics-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-mathematics-mathematics-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-mathematics-mathematics-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-mathematics-mathematics-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-mathematics-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-mathematics-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-mathematics-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-mathematics-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-mathematics-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-mathematics-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-mathematics-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-mathematics-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-mathematics-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-mathematics-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-mathematics-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-mathematics-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-mathematics-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-mathematics-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-mathematics-mathematics-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-mathematics-mathematics-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-mathematics-mathematics-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-mathematics-mathematics-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-mathematics-mathematics-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-mathematics-mathematics-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-mathematics-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-mathematics-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-mathematics-mathematics-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-mathematics-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-mathematics-mathematics-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-mathematics-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-mathematics-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-mathematics-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-mathematics-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-mathematics-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-mathematics-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-mathematics-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-mathematics-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-mathematics-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-mathematics-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-mathematics-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-mathematics-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-mathematics-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-mathematics-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-mathematics-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-mathematics-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-mathematics-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-mathematics-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-mathematics-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-meet-in-the-middle-meet-in-the-middle-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-meet-in-the-middle-meet-in-the-middle-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-meet-in-the-middle-meet-in-the-middle-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-meet-in-the-middle-meet-in-the-middle-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-meet-in-the-middle-meet-in-the-middle-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-meet-in-the-middle-meet-in-the-middle-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-meet-in-the-middle-meet-in-the-middle-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-meet-in-the-middle-meet-in-the-middle-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-meet-in-the-middle-meet-in-the-middle-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-meet-in-the-middle-meet-in-the-middle-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-meet-in-the-middle-meet-in-the-middle-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-meet-in-the-middle-meet-in-the-middle-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-meet-in-the-middle-descending-meet-in-the-middle-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-meet-in-the-middle-right-by-k-meet-in-the-middle-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-meet-in-the-middle-left-by-k-meet-in-the-middle-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-meet-in-the-middle-meet-in-the-middle-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-meet-in-the-middle-meet-in-the-middle-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-meet-in-the-middle-meet-in-the-middle-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-meet-in-the-middle-meet-in-the-middle-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-meet-in-the-middle-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-meet-in-the-middle-meet-in-the-middle-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-meet-in-the-middle-meet-in-the-middle-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-meet-in-the-middle-meet-in-the-middle-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-meet-in-the-middle-meet-in-the-middle-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-meet-in-the-middle-meet-in-the-middle-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-meet-in-the-middle-meet-in-the-middle-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-meet-in-the-middle-meet-in-the-middle-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-meet-in-the-middle-meet-in-the-middle-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-meet-in-the-middle-meet-in-the-middle-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-meet-in-the-middle-meet-in-the-middle-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-meet-in-the-middle-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-meet-in-the-middle-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-meet-in-the-middle-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-meet-in-the-middle-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-meet-in-the-middle-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-meet-in-the-middle-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-meet-in-the-middle-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-meet-in-the-middle-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-meet-in-the-middle-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-meet-in-the-middle-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-meet-in-the-middle-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-meet-in-the-middle-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-meet-in-the-middle-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-meet-in-the-middle-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-meet-in-the-middle-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-meet-in-the-middle-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-meet-in-the-middle-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-meet-in-the-middle-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-meet-in-the-middle-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-meet-in-the-middle-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-meet-in-the-middle-meet-in-the-middle-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-meet-in-the-middle-meet-in-the-middle-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-meet-in-the-middle-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-meet-in-the-middle-meet-in-the-middle-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-meet-in-the-middle-meet-in-the-middle-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-meet-in-the-middle-meet-in-the-middle-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-meet-in-the-middle-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-meet-in-the-middle-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-meet-in-the-middle-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-meet-in-the-middle-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-meet-in-the-middle-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-meet-in-the-middle-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-meet-in-the-middle-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-meet-in-the-middle-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-meet-in-the-middle-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-meet-in-the-middle-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-meet-in-the-middle-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-meet-in-the-middle-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-meet-in-the-middle-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-meet-in-the-middle-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-meet-in-the-middle-meet-in-the-middle-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-meet-in-the-middle-meet-in-the-middle-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-meet-in-the-middle-meet-in-the-middle-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-meet-in-the-middle-meet-in-the-middle-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-meet-in-the-middle-meet-in-the-middle-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-meet-in-the-middle-meet-in-the-middle-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-meet-in-the-middle-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-meet-in-the-middle-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-meet-in-the-middle-meet-in-the-middle-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-meet-in-the-middle-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-meet-in-the-middle-meet-in-the-middle-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-meet-in-the-middle-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-meet-in-the-middle-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-meet-in-the-middle-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-meet-in-the-middle-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-meet-in-the-middle-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-meet-in-the-middle-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-meet-in-the-middle-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-meet-in-the-middle-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-meet-in-the-middle-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-meet-in-the-middle-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-meet-in-the-middle-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-meet-in-the-middle-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-meet-in-the-middle-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-meet-in-the-middle-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-meet-in-the-middle-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-meet-in-the-middle-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-meet-in-the-middle-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-meet-in-the-middle-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-meet-in-the-middle-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-monotonic-queue-monotonic-queue-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-monotonic-queue-monotonic-queue-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-monotonic-queue-monotonic-queue-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-monotonic-queue-monotonic-queue-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-monotonic-queue-monotonic-queue-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-monotonic-queue-monotonic-queue-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-monotonic-queue-monotonic-queue-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-monotonic-queue-monotonic-queue-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-monotonic-queue-monotonic-queue-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-monotonic-queue-monotonic-queue-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-monotonic-queue-monotonic-queue-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-monotonic-queue-monotonic-queue-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-monotonic-queue-descending-monotonic-queue-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-monotonic-queue-right-by-k-monotonic-queue-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-monotonic-queue-left-by-k-monotonic-queue-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-monotonic-queue-monotonic-queue-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-monotonic-queue-monotonic-queue-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-monotonic-queue-monotonic-queue-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-monotonic-queue-monotonic-queue-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-monotonic-queue-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-monotonic-queue-monotonic-queue-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-monotonic-queue-monotonic-queue-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-monotonic-queue-monotonic-queue-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-monotonic-queue-monotonic-queue-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-monotonic-queue-monotonic-queue-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-monotonic-queue-monotonic-queue-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-monotonic-queue-monotonic-queue-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-monotonic-queue-monotonic-queue-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-monotonic-queue-monotonic-queue-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-monotonic-queue-monotonic-queue-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-monotonic-queue-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-monotonic-queue-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-monotonic-queue-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-monotonic-queue-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-monotonic-queue-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-monotonic-queue-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-monotonic-queue-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-monotonic-queue-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-monotonic-queue-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-monotonic-queue-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-monotonic-queue-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-monotonic-queue-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-monotonic-queue-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-monotonic-queue-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-monotonic-queue-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-monotonic-queue-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-monotonic-queue-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-monotonic-queue-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-monotonic-queue-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-monotonic-queue-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-monotonic-queue-monotonic-queue-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-monotonic-queue-monotonic-queue-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-monotonic-queue-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-monotonic-queue-monotonic-queue-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-monotonic-queue-monotonic-queue-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-monotonic-queue-monotonic-queue-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-monotonic-queue-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-monotonic-queue-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-monotonic-queue-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-monotonic-queue-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-monotonic-queue-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-monotonic-queue-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-monotonic-queue-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-monotonic-queue-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-monotonic-queue-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-monotonic-queue-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-monotonic-queue-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-monotonic-queue-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-monotonic-queue-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-monotonic-queue-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-monotonic-queue-monotonic-queue-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-monotonic-queue-monotonic-queue-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-monotonic-queue-monotonic-queue-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-monotonic-queue-monotonic-queue-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-monotonic-queue-monotonic-queue-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-monotonic-queue-monotonic-queue-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-monotonic-queue-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-monotonic-queue-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-monotonic-queue-monotonic-queue-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-monotonic-queue-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-monotonic-queue-monotonic-queue-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-monotonic-queue-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-monotonic-queue-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-monotonic-queue-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-monotonic-queue-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-monotonic-queue-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-monotonic-queue-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-monotonic-queue-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-monotonic-queue-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-monotonic-queue-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-monotonic-queue-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-monotonic-queue-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-monotonic-queue-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-monotonic-queue-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-monotonic-queue-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-monotonic-queue-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-monotonic-queue-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-monotonic-queue-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-monotonic-queue-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-monotonic-queue-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-monotonic-stack-monotonic-stack-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-monotonic-stack-monotonic-stack-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-monotonic-stack-monotonic-stack-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-monotonic-stack-monotonic-stack-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-monotonic-stack-monotonic-stack-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-monotonic-stack-monotonic-stack-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-monotonic-stack-monotonic-stack-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-monotonic-stack-monotonic-stack-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-monotonic-stack-monotonic-stack-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-monotonic-stack-monotonic-stack-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-monotonic-stack-monotonic-stack-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-monotonic-stack-monotonic-stack-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-monotonic-stack-descending-monotonic-stack-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-monotonic-stack-right-by-k-monotonic-stack-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-monotonic-stack-left-by-k-monotonic-stack-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-monotonic-stack-monotonic-stack-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-monotonic-stack-monotonic-stack-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-monotonic-stack-monotonic-stack-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-monotonic-stack-monotonic-stack-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-monotonic-stack-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-monotonic-stack-monotonic-stack-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-monotonic-stack-monotonic-stack-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-monotonic-stack-monotonic-stack-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-monotonic-stack-monotonic-stack-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-monotonic-stack-monotonic-stack-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-monotonic-stack-monotonic-stack-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-monotonic-stack-monotonic-stack-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-monotonic-stack-monotonic-stack-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-monotonic-stack-monotonic-stack-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-monotonic-stack-monotonic-stack-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-monotonic-stack-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-monotonic-stack-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-monotonic-stack-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-monotonic-stack-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-monotonic-stack-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-monotonic-stack-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-monotonic-stack-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-monotonic-stack-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-monotonic-stack-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-monotonic-stack-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-monotonic-stack-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-monotonic-stack-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-monotonic-stack-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-monotonic-stack-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-monotonic-stack-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-monotonic-stack-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-monotonic-stack-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-monotonic-stack-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-monotonic-stack-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-monotonic-stack-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-monotonic-stack-monotonic-stack-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-monotonic-stack-monotonic-stack-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-monotonic-stack-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-monotonic-stack-monotonic-stack-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-monotonic-stack-monotonic-stack-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-monotonic-stack-monotonic-stack-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-monotonic-stack-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-monotonic-stack-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-monotonic-stack-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-monotonic-stack-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-monotonic-stack-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-monotonic-stack-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-monotonic-stack-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-monotonic-stack-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-monotonic-stack-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-monotonic-stack-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-monotonic-stack-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-monotonic-stack-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-monotonic-stack-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-monotonic-stack-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-monotonic-stack-monotonic-stack-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-monotonic-stack-monotonic-stack-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-monotonic-stack-monotonic-stack-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-monotonic-stack-monotonic-stack-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-monotonic-stack-monotonic-stack-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-monotonic-stack-monotonic-stack-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-monotonic-stack-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-monotonic-stack-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-monotonic-stack-monotonic-stack-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-monotonic-stack-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-monotonic-stack-monotonic-stack-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-monotonic-stack-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-monotonic-stack-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-monotonic-stack-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-monotonic-stack-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-monotonic-stack-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-monotonic-stack-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-monotonic-stack-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-monotonic-stack-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-monotonic-stack-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-monotonic-stack-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-monotonic-stack-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-monotonic-stack-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-monotonic-stack-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-monotonic-stack-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-monotonic-stack-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-monotonic-stack-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-monotonic-stack-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-monotonic-stack-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-monotonic-stack-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-mos-algorithm-mos-algorithm-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-mos-algorithm-mos-algorithm-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-mos-algorithm-mos-algorithm-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-mos-algorithm-mos-algorithm-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-mos-algorithm-mos-algorithm-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-mos-algorithm-mos-algorithm-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-mos-algorithm-mos-algorithm-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-mos-algorithm-mos-algorithm-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-mos-algorithm-mos-algorithm-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-mos-algorithm-mos-algorithm-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-mos-algorithm-mos-algorithm-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-mos-algorithm-mos-algorithm-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-mos-algorithm-descending-mos-algorithm-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-mos-algorithm-right-by-k-mos-algorithm-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-mos-algorithm-left-by-k-mos-algorithm-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-mos-algorithm-mos-algorithm-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-mos-algorithm-mos-algorithm-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-mos-algorithm-mos-algorithm-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-mos-algorithm-mos-algorithm-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-mos-algorithm-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-mos-algorithm-mos-algorithm-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-mos-algorithm-mos-algorithm-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-mos-algorithm-mos-algorithm-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-mos-algorithm-mos-algorithm-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-mos-algorithm-mos-algorithm-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-mos-algorithm-mos-algorithm-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-mos-algorithm-mos-algorithm-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-mos-algorithm-mos-algorithm-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-mos-algorithm-mos-algorithm-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-mos-algorithm-mos-algorithm-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-mos-algorithm-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-mos-algorithm-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-mos-algorithm-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-mos-algorithm-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-mos-algorithm-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-mos-algorithm-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-mos-algorithm-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-mos-algorithm-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-mos-algorithm-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-mos-algorithm-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-mos-algorithm-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-mos-algorithm-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-mos-algorithm-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-mos-algorithm-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-mos-algorithm-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-mos-algorithm-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-mos-algorithm-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-mos-algorithm-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-mos-algorithm-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-mos-algorithm-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-mos-algorithm-mos-algorithm-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-mos-algorithm-mos-algorithm-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-mos-algorithm-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-mos-algorithm-mos-algorithm-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-mos-algorithm-mos-algorithm-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-mos-algorithm-mos-algorithm-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-mos-algorithm-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-mos-algorithm-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-mos-algorithm-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-mos-algorithm-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-mos-algorithm-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-mos-algorithm-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-mos-algorithm-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-mos-algorithm-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-mos-algorithm-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-mos-algorithm-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-mos-algorithm-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-mos-algorithm-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-mos-algorithm-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-mos-algorithm-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-mos-algorithm-mos-algorithm-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-mos-algorithm-mos-algorithm-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-mos-algorithm-mos-algorithm-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-mos-algorithm-mos-algorithm-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-mos-algorithm-mos-algorithm-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-mos-algorithm-mos-algorithm-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-mos-algorithm-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-mos-algorithm-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-mos-algorithm-mos-algorithm-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-mos-algorithm-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-mos-algorithm-mos-algorithm-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-mos-algorithm-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-mos-algorithm-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-mos-algorithm-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-mos-algorithm-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-mos-algorithm-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-mos-algorithm-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-mos-algorithm-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-mos-algorithm-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-mos-algorithm-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-mos-algorithm-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-mos-algorithm-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-mos-algorithm-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-mos-algorithm-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-mos-algorithm-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-mos-algorithm-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-mos-algorithm-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-mos-algorithm-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-mos-algorithm-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-mos-algorithm-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-minimum-spanning-tree-mst-mst-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-minimum-spanning-tree-mst-mst-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-minimum-spanning-tree-mst-mst-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-minimum-spanning-tree-mst-mst-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-minimum-spanning-tree-mst-mst-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-minimum-spanning-tree-mst-mst-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-minimum-spanning-tree-mst-mst-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-minimum-spanning-tree-mst-mst-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-minimum-spanning-tree-mst-mst-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-minimum-spanning-tree-mst-mst-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-minimum-spanning-tree-mst-mst-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-minimum-spanning-tree-mst-mst-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-minimum-spanning-tree-mst-descending-mst-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-minimum-spanning-tree-mst-right-by-k-mst-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-minimum-spanning-tree-mst-left-by-k-mst-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-minimum-spanning-tree-mst-mst-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-minimum-spanning-tree-mst-mst-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-minimum-spanning-tree-mst-mst-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-minimum-spanning-tree-mst-mst-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-mst-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-minimum-spanning-tree-mst-mst-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-minimum-spanning-tree-mst-mst-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-minimum-spanning-tree-mst-mst-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-minimum-spanning-tree-mst-mst-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-minimum-spanning-tree-mst-mst-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-minimum-spanning-tree-mst-mst-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-minimum-spanning-tree-mst-mst-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-minimum-spanning-tree-mst-mst-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-minimum-spanning-tree-mst-mst-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-minimum-spanning-tree-mst-mst-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-mst-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-mst-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-mst-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-mst-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-mst-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-mst-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-mst-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-mst-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-mst-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-mst-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-mst-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-mst-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-mst-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-mst-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-mst-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-mst-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-mst-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-mst-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-mst-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-mst-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-minimum-spanning-tree-mst-mst-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-minimum-spanning-tree-mst-mst-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-mst-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-minimum-spanning-tree-mst-mst-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-minimum-spanning-tree-mst-mst-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-minimum-spanning-tree-mst-mst-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-mst-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-mst-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-mst-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-mst-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-mst-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-mst-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-mst-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-mst-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-mst-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-mst-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-mst-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-mst-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-mst-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-mst-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-minimum-spanning-tree-mst-mst-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-minimum-spanning-tree-mst-mst-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-minimum-spanning-tree-mst-mst-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-minimum-spanning-tree-mst-mst-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-minimum-spanning-tree-mst-mst-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-minimum-spanning-tree-mst-mst-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-mst-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-mst-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-minimum-spanning-tree-mst-mst-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-mst-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-minimum-spanning-tree-mst-mst-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-mst-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-mst-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-mst-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-mst-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-mst-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-mst-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-mst-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-mst-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-mst-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-mst-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-mst-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-mst-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-mst-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-mst-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-mst-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-mst-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-mst-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-mst-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-mst-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-network-flow-network-flow-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-network-flow-network-flow-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-network-flow-network-flow-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-network-flow-network-flow-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-network-flow-network-flow-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-network-flow-network-flow-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-network-flow-network-flow-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-network-flow-network-flow-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-network-flow-network-flow-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-network-flow-network-flow-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-network-flow-network-flow-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-network-flow-network-flow-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-network-flow-descending-network-flow-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-network-flow-right-by-k-network-flow-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-network-flow-left-by-k-network-flow-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-network-flow-network-flow-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-network-flow-network-flow-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-network-flow-network-flow-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-network-flow-network-flow-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-network-flow-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-network-flow-network-flow-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-network-flow-network-flow-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-network-flow-network-flow-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-network-flow-network-flow-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-network-flow-network-flow-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-network-flow-network-flow-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-network-flow-network-flow-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-network-flow-network-flow-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-network-flow-network-flow-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-network-flow-network-flow-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-network-flow-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-network-flow-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-network-flow-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-network-flow-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-network-flow-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-network-flow-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-network-flow-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-network-flow-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-network-flow-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-network-flow-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-network-flow-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-network-flow-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-network-flow-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-network-flow-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-network-flow-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-network-flow-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-network-flow-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-network-flow-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-network-flow-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-network-flow-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-network-flow-network-flow-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-network-flow-network-flow-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-network-flow-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-network-flow-network-flow-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-network-flow-network-flow-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-network-flow-network-flow-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-network-flow-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-network-flow-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-network-flow-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-network-flow-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-network-flow-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-network-flow-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-network-flow-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-network-flow-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-network-flow-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-network-flow-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-network-flow-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-network-flow-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-network-flow-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-network-flow-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-network-flow-network-flow-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-network-flow-network-flow-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-network-flow-network-flow-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-network-flow-network-flow-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-network-flow-network-flow-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-network-flow-network-flow-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-network-flow-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-network-flow-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-network-flow-network-flow-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-network-flow-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-network-flow-network-flow-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-network-flow-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-network-flow-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-network-flow-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-network-flow-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-network-flow-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-network-flow-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-network-flow-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-network-flow-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-network-flow-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-network-flow-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-network-flow-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-network-flow-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-network-flow-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-network-flow-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-network-flow-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-network-flow-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-network-flow-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-network-flow-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-network-flow-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-number-theory-number-theory-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-number-theory-number-theory-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-number-theory-number-theory-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-number-theory-number-theory-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-number-theory-number-theory-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-number-theory-number-theory-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-number-theory-number-theory-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-number-theory-number-theory-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-number-theory-number-theory-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-number-theory-number-theory-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-number-theory-number-theory-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-number-theory-number-theory-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-number-theory-descending-number-theory-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-number-theory-right-by-k-number-theory-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-number-theory-left-by-k-number-theory-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-number-theory-number-theory-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-number-theory-number-theory-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-number-theory-number-theory-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-number-theory-number-theory-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-number-theory-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-number-theory-number-theory-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-number-theory-number-theory-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-number-theory-number-theory-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-number-theory-number-theory-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-number-theory-number-theory-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-number-theory-number-theory-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-number-theory-number-theory-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-number-theory-number-theory-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-number-theory-number-theory-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-number-theory-number-theory-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-number-theory-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-number-theory-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-number-theory-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-number-theory-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-number-theory-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-number-theory-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-number-theory-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-number-theory-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-number-theory-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-number-theory-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-number-theory-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-number-theory-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-number-theory-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-number-theory-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-number-theory-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-number-theory-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-number-theory-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-number-theory-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-number-theory-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-number-theory-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-number-theory-number-theory-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-number-theory-number-theory-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-number-theory-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-number-theory-number-theory-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-number-theory-number-theory-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-number-theory-number-theory-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-number-theory-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-number-theory-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-number-theory-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-number-theory-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-number-theory-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-number-theory-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-number-theory-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-number-theory-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-number-theory-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-number-theory-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-number-theory-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-number-theory-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-number-theory-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-number-theory-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-number-theory-number-theory-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-number-theory-number-theory-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-number-theory-number-theory-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-number-theory-number-theory-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-number-theory-number-theory-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-number-theory-number-theory-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-number-theory-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-number-theory-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-number-theory-number-theory-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-number-theory-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-number-theory-number-theory-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-number-theory-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-number-theory-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-number-theory-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-number-theory-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-number-theory-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-number-theory-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-number-theory-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-number-theory-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-number-theory-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-number-theory-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-number-theory-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-number-theory-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-number-theory-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-number-theory-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-number-theory-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-number-theory-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-number-theory-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-number-theory-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-number-theory-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-prefix-sum-prefix-sum-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-prefix-sum-prefix-sum-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-prefix-sum-prefix-sum-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-prefix-sum-prefix-sum-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-prefix-sum-prefix-sum-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-prefix-sum-prefix-sum-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-prefix-sum-prefix-sum-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-prefix-sum-prefix-sum-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-prefix-sum-prefix-sum-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-prefix-sum-prefix-sum-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-prefix-sum-prefix-sum-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-prefix-sum-prefix-sum-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-prefix-sum-descending-prefix-sum-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-prefix-sum-right-by-k-prefix-sum-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-prefix-sum-left-by-k-prefix-sum-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-prefix-sum-prefix-sum-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-prefix-sum-prefix-sum-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-prefix-sum-prefix-sum-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-prefix-sum-prefix-sum-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-prefix-sum-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-prefix-sum-prefix-sum-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-prefix-sum-prefix-sum-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-prefix-sum-prefix-sum-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-prefix-sum-prefix-sum-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-prefix-sum-prefix-sum-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-prefix-sum-prefix-sum-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-prefix-sum-prefix-sum-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-prefix-sum-prefix-sum-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-prefix-sum-prefix-sum-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-prefix-sum-prefix-sum-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-prefix-sum-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-prefix-sum-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-prefix-sum-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-prefix-sum-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-prefix-sum-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-prefix-sum-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-prefix-sum-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-prefix-sum-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-prefix-sum-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-prefix-sum-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-prefix-sum-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-prefix-sum-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-prefix-sum-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-prefix-sum-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-prefix-sum-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-prefix-sum-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-prefix-sum-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-prefix-sum-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-prefix-sum-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-prefix-sum-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-prefix-sum-prefix-sum-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-prefix-sum-prefix-sum-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-prefix-sum-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-prefix-sum-prefix-sum-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-prefix-sum-prefix-sum-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-prefix-sum-prefix-sum-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-prefix-sum-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-prefix-sum-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-prefix-sum-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-prefix-sum-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-prefix-sum-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-prefix-sum-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-prefix-sum-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-prefix-sum-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-prefix-sum-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-prefix-sum-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-prefix-sum-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-prefix-sum-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-prefix-sum-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-prefix-sum-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-prefix-sum-prefix-sum-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-prefix-sum-prefix-sum-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-prefix-sum-prefix-sum-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-prefix-sum-prefix-sum-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-prefix-sum-prefix-sum-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-prefix-sum-prefix-sum-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-prefix-sum-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-prefix-sum-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-prefix-sum-prefix-sum-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-prefix-sum-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-prefix-sum-prefix-sum-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-prefix-sum-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-prefix-sum-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-prefix-sum-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-prefix-sum-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-prefix-sum-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-prefix-sum-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-prefix-sum-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-prefix-sum-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-prefix-sum-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-prefix-sum-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-prefix-sum-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-prefix-sum-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-prefix-sum-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-prefix-sum-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-prefix-sum-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-prefix-sum-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-prefix-sum-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-prefix-sum-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-prefix-sum-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-queue-queue-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-queue-queue-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-queue-queue-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-queue-queue-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-queue-queue-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-queue-queue-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-queue-queue-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-queue-queue-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-queue-queue-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-queue-queue-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-queue-queue-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-queue-queue-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-queue-descending-queue-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-queue-right-by-k-queue-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-queue-left-by-k-queue-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-queue-queue-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-queue-queue-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-queue-queue-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-queue-queue-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-queue-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-queue-queue-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-queue-queue-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-queue-queue-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-queue-queue-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-queue-queue-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-queue-queue-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-queue-queue-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-queue-queue-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-queue-queue-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-queue-queue-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-queue-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-queue-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-queue-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-queue-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-queue-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-queue-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-queue-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-queue-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-queue-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-queue-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-queue-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-queue-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-queue-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-queue-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-queue-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-queue-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-queue-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-queue-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-queue-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-queue-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-queue-queue-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-queue-queue-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-queue-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-queue-queue-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-queue-queue-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-queue-queue-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-queue-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-queue-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-queue-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-queue-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-queue-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-queue-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-queue-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-queue-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-queue-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-queue-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-queue-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-queue-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-queue-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-queue-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-queue-queue-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-queue-queue-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-queue-queue-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-queue-queue-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-queue-queue-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-queue-queue-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-queue-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-queue-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-queue-queue-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-queue-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-queue-queue-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-queue-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-queue-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-queue-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-queue-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-queue-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-queue-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-queue-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-queue-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-queue-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-queue-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-queue-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-queue-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-queue-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-queue-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-queue-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-queue-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-queue-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-queue-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-queue-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-rabin-karp-algorithm-rabin-karp-algorithm-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-rabin-karp-algorithm-rabin-karp-algorithm-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-rabin-karp-algorithm-rabin-karp-algorithm-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-rabin-karp-algorithm-rabin-karp-algorithm-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-rabin-karp-algorithm-rabin-karp-algorithm-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-rabin-karp-algorithm-rabin-karp-algorithm-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-rabin-karp-algorithm-rabin-karp-algorithm-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-rabin-karp-algorithm-rabin-karp-algorithm-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-rabin-karp-algorithm-rabin-karp-algorithm-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-rabin-karp-algorithm-rabin-karp-algorithm-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-rabin-karp-algorithm-rabin-karp-algorithm-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-rabin-karp-algorithm-rabin-karp-algorithm-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-rabin-karp-algorithm-descending-rabin-karp-algorithm-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-rabin-karp-algorithm-right-by-k-rabin-karp-algorithm-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-rabin-karp-algorithm-left-by-k-rabin-karp-algorithm-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-rabin-karp-algorithm-rabin-karp-algorithm-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-rabin-karp-algorithm-rabin-karp-algorithm-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-rabin-karp-algorithm-rabin-karp-algorithm-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-rabin-karp-algorithm-rabin-karp-algorithm-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-rabin-karp-algorithm-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-rabin-karp-algorithm-rabin-karp-algorithm-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-rabin-karp-algorithm-rabin-karp-algorithm-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-rabin-karp-algorithm-rabin-karp-algorithm-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-rabin-karp-algorithm-rabin-karp-algorithm-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-rabin-karp-algorithm-rabin-karp-algorithm-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-rabin-karp-algorithm-rabin-karp-algorithm-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-rabin-karp-algorithm-rabin-karp-algorithm-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-rabin-karp-algorithm-rabin-karp-algorithm-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-rabin-karp-algorithm-rabin-karp-algorithm-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-rabin-karp-algorithm-rabin-karp-algorithm-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-rabin-karp-algorithm-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-rabin-karp-algorithm-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-rabin-karp-algorithm-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-rabin-karp-algorithm-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-rabin-karp-algorithm-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-rabin-karp-algorithm-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-rabin-karp-algorithm-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-rabin-karp-algorithm-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-rabin-karp-algorithm-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-rabin-karp-algorithm-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-rabin-karp-algorithm-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-rabin-karp-algorithm-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-rabin-karp-algorithm-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-rabin-karp-algorithm-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-rabin-karp-algorithm-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-rabin-karp-algorithm-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-rabin-karp-algorithm-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-rabin-karp-algorithm-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-rabin-karp-algorithm-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-rabin-karp-algorithm-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-rabin-karp-algorithm-rabin-karp-algorithm-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-rabin-karp-algorithm-rabin-karp-algorithm-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-rabin-karp-algorithm-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-rabin-karp-algorithm-rabin-karp-algorithm-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-rabin-karp-algorithm-rabin-karp-algorithm-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-rabin-karp-algorithm-rabin-karp-algorithm-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-rabin-karp-algorithm-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-rabin-karp-algorithm-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-rabin-karp-algorithm-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-rabin-karp-algorithm-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-rabin-karp-algorithm-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-rabin-karp-algorithm-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-rabin-karp-algorithm-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-rabin-karp-algorithm-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-rabin-karp-algorithm-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-rabin-karp-algorithm-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-rabin-karp-algorithm-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-rabin-karp-algorithm-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-rabin-karp-algorithm-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-rabin-karp-algorithm-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-rabin-karp-algorithm-rabin-karp-algorithm-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-rabin-karp-algorithm-rabin-karp-algorithm-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-rabin-karp-algorithm-rabin-karp-algorithm-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-rabin-karp-algorithm-rabin-karp-algorithm-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-rabin-karp-algorithm-rabin-karp-algorithm-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-rabin-karp-algorithm-rabin-karp-algorithm-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-rabin-karp-algorithm-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-rabin-karp-algorithm-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-rabin-karp-algorithm-rabin-karp-algorithm-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-rabin-karp-algorithm-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-rabin-karp-algorithm-rabin-karp-algorithm-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-rabin-karp-algorithm-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-rabin-karp-algorithm-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-rabin-karp-algorithm-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-rabin-karp-algorithm-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-rabin-karp-algorithm-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-rabin-karp-algorithm-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-rabin-karp-algorithm-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-rabin-karp-algorithm-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-rabin-karp-algorithm-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-rabin-karp-algorithm-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-rabin-karp-algorithm-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-rabin-karp-algorithm-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-rabin-karp-algorithm-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-rabin-karp-algorithm-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-rabin-karp-algorithm-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-rabin-karp-algorithm-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-rabin-karp-algorithm-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-rabin-karp-algorithm-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-rabin-karp-algorithm-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-recursion-recursion-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-recursion-recursion-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-recursion-recursion-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-recursion-recursion-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-recursion-recursion-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-recursion-recursion-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-recursion-recursion-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-recursion-recursion-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-recursion-recursion-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-recursion-recursion-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-recursion-recursion-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-recursion-recursion-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-recursion-descending-recursion-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-recursion-right-by-k-recursion-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-recursion-left-by-k-recursion-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-recursion-recursion-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-recursion-recursion-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-recursion-recursion-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-recursion-recursion-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-recursion-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-recursion-recursion-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-recursion-recursion-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-recursion-recursion-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-recursion-recursion-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-recursion-recursion-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-recursion-recursion-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-recursion-recursion-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-recursion-recursion-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-recursion-recursion-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-recursion-recursion-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-recursion-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-recursion-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-recursion-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-recursion-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-recursion-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-recursion-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-recursion-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-recursion-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-recursion-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-recursion-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-recursion-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-recursion-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-recursion-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-recursion-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-recursion-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-recursion-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-recursion-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-recursion-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-recursion-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-recursion-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-recursion-recursion-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-recursion-recursion-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-recursion-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-recursion-recursion-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-recursion-recursion-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-recursion-recursion-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-recursion-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-recursion-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-recursion-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-recursion-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-recursion-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-recursion-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-recursion-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-recursion-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-recursion-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-recursion-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-recursion-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-recursion-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-recursion-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-recursion-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-recursion-recursion-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-recursion-recursion-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-recursion-recursion-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-recursion-recursion-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-recursion-recursion-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-recursion-recursion-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-recursion-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-recursion-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-recursion-recursion-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-recursion-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-recursion-recursion-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-recursion-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-recursion-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-recursion-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-recursion-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-recursion-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-recursion-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-recursion-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-recursion-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-recursion-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-recursion-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-recursion-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-recursion-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-recursion-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-recursion-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-recursion-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-recursion-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-recursion-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-recursion-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-recursion-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-rolling-hash-rolling-hash-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-rolling-hash-rolling-hash-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-rolling-hash-rolling-hash-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-rolling-hash-rolling-hash-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-rolling-hash-rolling-hash-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-rolling-hash-rolling-hash-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-rolling-hash-rolling-hash-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-rolling-hash-rolling-hash-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-rolling-hash-rolling-hash-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-rolling-hash-rolling-hash-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-rolling-hash-rolling-hash-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-rolling-hash-rolling-hash-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-rolling-hash-descending-rolling-hash-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-rolling-hash-right-by-k-rolling-hash-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-rolling-hash-left-by-k-rolling-hash-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-rolling-hash-rolling-hash-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-rolling-hash-rolling-hash-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-rolling-hash-rolling-hash-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-rolling-hash-rolling-hash-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-rolling-hash-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-rolling-hash-rolling-hash-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-rolling-hash-rolling-hash-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-rolling-hash-rolling-hash-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-rolling-hash-rolling-hash-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-rolling-hash-rolling-hash-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-rolling-hash-rolling-hash-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-rolling-hash-rolling-hash-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-rolling-hash-rolling-hash-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-rolling-hash-rolling-hash-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-rolling-hash-rolling-hash-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-rolling-hash-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-rolling-hash-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-rolling-hash-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-rolling-hash-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-rolling-hash-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-rolling-hash-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-rolling-hash-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-rolling-hash-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-rolling-hash-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-rolling-hash-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-rolling-hash-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-rolling-hash-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-rolling-hash-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-rolling-hash-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-rolling-hash-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-rolling-hash-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-rolling-hash-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-rolling-hash-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-rolling-hash-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-rolling-hash-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-rolling-hash-rolling-hash-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-rolling-hash-rolling-hash-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-rolling-hash-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-rolling-hash-rolling-hash-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-rolling-hash-rolling-hash-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-rolling-hash-rolling-hash-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-rolling-hash-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-rolling-hash-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-rolling-hash-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-rolling-hash-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-rolling-hash-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-rolling-hash-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-rolling-hash-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-rolling-hash-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-rolling-hash-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-rolling-hash-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-rolling-hash-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-rolling-hash-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-rolling-hash-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-rolling-hash-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-rolling-hash-rolling-hash-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-rolling-hash-rolling-hash-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-rolling-hash-rolling-hash-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-rolling-hash-rolling-hash-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-rolling-hash-rolling-hash-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-rolling-hash-rolling-hash-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-rolling-hash-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-rolling-hash-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-rolling-hash-rolling-hash-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-rolling-hash-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-rolling-hash-rolling-hash-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-rolling-hash-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-rolling-hash-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-rolling-hash-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-rolling-hash-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-rolling-hash-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-rolling-hash-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-rolling-hash-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-rolling-hash-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-rolling-hash-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-rolling-hash-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-rolling-hash-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-rolling-hash-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-rolling-hash-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-rolling-hash-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-rolling-hash-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-rolling-hash-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-rolling-hash-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-rolling-hash-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-rolling-hash-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-strongly-connected-components-scc-scc-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-strongly-connected-components-scc-scc-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-strongly-connected-components-scc-scc-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-strongly-connected-components-scc-scc-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-strongly-connected-components-scc-scc-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-strongly-connected-components-scc-scc-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-strongly-connected-components-scc-scc-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-strongly-connected-components-scc-scc-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-strongly-connected-components-scc-scc-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-strongly-connected-components-scc-scc-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-strongly-connected-components-scc-scc-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-strongly-connected-components-scc-scc-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-strongly-connected-components-scc-descending-scc-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-strongly-connected-components-scc-right-by-k-scc-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-strongly-connected-components-scc-left-by-k-scc-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-strongly-connected-components-scc-scc-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-strongly-connected-components-scc-scc-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-strongly-connected-components-scc-scc-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-strongly-connected-components-scc-scc-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-scc-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-strongly-connected-components-scc-scc-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-strongly-connected-components-scc-scc-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-strongly-connected-components-scc-scc-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-strongly-connected-components-scc-scc-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-strongly-connected-components-scc-scc-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-strongly-connected-components-scc-scc-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-strongly-connected-components-scc-scc-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-strongly-connected-components-scc-scc-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-strongly-connected-components-scc-scc-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-strongly-connected-components-scc-scc-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-scc-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-scc-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-scc-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-scc-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-scc-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-scc-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-scc-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-scc-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-scc-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-scc-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-scc-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-scc-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-scc-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-scc-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-scc-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-scc-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-scc-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-scc-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-scc-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-scc-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-strongly-connected-components-scc-scc-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-strongly-connected-components-scc-scc-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-scc-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-strongly-connected-components-scc-scc-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-strongly-connected-components-scc-scc-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-strongly-connected-components-scc-scc-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-scc-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-scc-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-scc-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-scc-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-scc-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-scc-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-scc-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-scc-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-scc-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-scc-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-scc-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-scc-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-scc-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-scc-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-strongly-connected-components-scc-scc-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-strongly-connected-components-scc-scc-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-strongly-connected-components-scc-scc-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-strongly-connected-components-scc-scc-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-strongly-connected-components-scc-scc-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-strongly-connected-components-scc-scc-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-scc-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-scc-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-strongly-connected-components-scc-scc-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-scc-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-strongly-connected-components-scc-scc-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-scc-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-scc-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-scc-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-scc-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-scc-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-scc-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-scc-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-scc-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-scc-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-scc-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-scc-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-scc-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-scc-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-scc-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-scc-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-scc-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-scc-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-scc-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-scc-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-searching-searching-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-searching-searching-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-searching-searching-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-searching-searching-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-searching-searching-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-searching-searching-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-searching-searching-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-searching-searching-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-searching-searching-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-searching-searching-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-searching-searching-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-searching-searching-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-searching-descending-searching-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-searching-right-by-k-searching-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-searching-left-by-k-searching-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-searching-searching-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-searching-searching-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-searching-searching-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-searching-searching-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-searching-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-searching-searching-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-searching-searching-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-searching-searching-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-searching-searching-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-searching-searching-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-searching-searching-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-searching-searching-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-searching-searching-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-searching-searching-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-searching-searching-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-searching-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-searching-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-searching-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-searching-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-searching-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-searching-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-searching-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-searching-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-searching-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-searching-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-searching-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-searching-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-searching-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-searching-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-searching-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-searching-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-searching-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-searching-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-searching-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-searching-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-searching-searching-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-searching-searching-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-searching-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-searching-searching-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-searching-searching-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-searching-searching-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-searching-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-searching-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-searching-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-searching-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-searching-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-searching-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-searching-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-searching-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-searching-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-searching-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-searching-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-searching-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-searching-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-searching-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-searching-searching-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-searching-searching-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-searching-searching-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-searching-searching-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-searching-searching-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-searching-searching-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-searching-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-searching-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-searching-searching-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-searching-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-searching-searching-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-searching-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-searching-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-searching-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-searching-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-searching-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-searching-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-searching-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-searching-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-searching-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-searching-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-searching-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-searching-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-searching-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-searching-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-searching-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-searching-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-searching-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-searching-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-searching-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-segment-tree-segment-tree-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-segment-tree-segment-tree-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-segment-tree-segment-tree-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-segment-tree-segment-tree-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-segment-tree-segment-tree-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-segment-tree-segment-tree-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-segment-tree-segment-tree-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-segment-tree-segment-tree-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-segment-tree-segment-tree-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-segment-tree-segment-tree-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-segment-tree-segment-tree-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-segment-tree-segment-tree-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-segment-tree-descending-segment-tree-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-segment-tree-right-by-k-segment-tree-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-segment-tree-left-by-k-segment-tree-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-segment-tree-segment-tree-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-segment-tree-segment-tree-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-segment-tree-segment-tree-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-segment-tree-segment-tree-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-segment-tree-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-segment-tree-segment-tree-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-segment-tree-segment-tree-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-segment-tree-segment-tree-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-segment-tree-segment-tree-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-segment-tree-segment-tree-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-segment-tree-segment-tree-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-segment-tree-segment-tree-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-segment-tree-segment-tree-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-segment-tree-segment-tree-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-segment-tree-segment-tree-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-segment-tree-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-segment-tree-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-segment-tree-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-segment-tree-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-segment-tree-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-segment-tree-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-segment-tree-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-segment-tree-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-segment-tree-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-segment-tree-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-segment-tree-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-segment-tree-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-segment-tree-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-segment-tree-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-segment-tree-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-segment-tree-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-segment-tree-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-segment-tree-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-segment-tree-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-segment-tree-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-segment-tree-segment-tree-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-segment-tree-segment-tree-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-segment-tree-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-segment-tree-segment-tree-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-segment-tree-segment-tree-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-segment-tree-segment-tree-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-segment-tree-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-segment-tree-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-segment-tree-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-segment-tree-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-segment-tree-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-segment-tree-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-segment-tree-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-segment-tree-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-segment-tree-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-segment-tree-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-segment-tree-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-segment-tree-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-segment-tree-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-segment-tree-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-segment-tree-segment-tree-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-segment-tree-segment-tree-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-segment-tree-segment-tree-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-segment-tree-segment-tree-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-segment-tree-segment-tree-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-segment-tree-segment-tree-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-segment-tree-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-segment-tree-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-segment-tree-segment-tree-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-segment-tree-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-segment-tree-segment-tree-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-segment-tree-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-segment-tree-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-segment-tree-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-segment-tree-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-segment-tree-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-segment-tree-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-segment-tree-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-segment-tree-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-segment-tree-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-segment-tree-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-segment-tree-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-segment-tree-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-segment-tree-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-segment-tree-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-segment-tree-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-segment-tree-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-segment-tree-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-segment-tree-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-segment-tree-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-shortest-path-algorithms-shortest-path-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-shortest-path-algorithms-shortest-path-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-shortest-path-algorithms-shortest-path-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-shortest-path-algorithms-shortest-path-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-shortest-path-algorithms-shortest-path-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-shortest-path-algorithms-shortest-path-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-shortest-path-algorithms-shortest-path-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-shortest-path-algorithms-shortest-path-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-shortest-path-algorithms-shortest-path-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-shortest-path-algorithms-shortest-path-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-shortest-path-algorithms-shortest-path-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-shortest-path-algorithms-shortest-path-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-shortest-path-algorithms-descending-shortest-path-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-shortest-path-algorithms-right-by-k-shortest-path-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-shortest-path-algorithms-left-by-k-shortest-path-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-shortest-path-algorithms-shortest-path-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-shortest-path-algorithms-shortest-path-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-shortest-path-algorithms-shortest-path-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-shortest-path-algorithms-shortest-path-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-shortest-path-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-shortest-path-algorithms-shortest-path-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-shortest-path-algorithms-shortest-path-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-shortest-path-algorithms-shortest-path-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-shortest-path-algorithms-shortest-path-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-shortest-path-algorithms-shortest-path-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-shortest-path-algorithms-shortest-path-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-shortest-path-algorithms-shortest-path-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-shortest-path-algorithms-shortest-path-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-shortest-path-algorithms-shortest-path-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-shortest-path-algorithms-shortest-path-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-shortest-path-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-shortest-path-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-shortest-path-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-shortest-path-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-shortest-path-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-shortest-path-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-shortest-path-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-shortest-path-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-shortest-path-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-shortest-path-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-shortest-path-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-shortest-path-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-shortest-path-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-shortest-path-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-shortest-path-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-shortest-path-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-shortest-path-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-shortest-path-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-shortest-path-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-shortest-path-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-shortest-path-algorithms-shortest-path-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-shortest-path-algorithms-shortest-path-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-shortest-path-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-shortest-path-algorithms-shortest-path-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-shortest-path-algorithms-shortest-path-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-shortest-path-algorithms-shortest-path-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-shortest-path-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-shortest-path-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-shortest-path-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-shortest-path-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-shortest-path-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-shortest-path-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-shortest-path-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-shortest-path-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-shortest-path-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-shortest-path-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-shortest-path-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-shortest-path-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-shortest-path-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-shortest-path-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-shortest-path-algorithms-shortest-path-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-shortest-path-algorithms-shortest-path-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-shortest-path-algorithms-shortest-path-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-shortest-path-algorithms-shortest-path-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-shortest-path-algorithms-shortest-path-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-shortest-path-algorithms-shortest-path-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-shortest-path-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-shortest-path-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-shortest-path-algorithms-shortest-path-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-shortest-path-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-shortest-path-algorithms-shortest-path-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-shortest-path-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-shortest-path-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-shortest-path-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-shortest-path-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-shortest-path-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-shortest-path-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-shortest-path-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-shortest-path-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-shortest-path-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-shortest-path-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-shortest-path-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-shortest-path-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-shortest-path-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-shortest-path-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-shortest-path-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-shortest-path-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-shortest-path-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-shortest-path-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-shortest-path-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-sliding-window-sliding-window-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-sliding-window-sliding-window-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-sliding-window-sliding-window-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-sliding-window-sliding-window-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-sliding-window-sliding-window-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-sliding-window-sliding-window-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-sliding-window-sliding-window-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-sliding-window-sliding-window-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-sliding-window-sliding-window-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-sliding-window-sliding-window-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-sliding-window-sliding-window-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-sliding-window-sliding-window-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-sliding-window-descending-sliding-window-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-sliding-window-right-by-k-sliding-window-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-sliding-window-left-by-k-sliding-window-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-sliding-window-sliding-window-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-sliding-window-sliding-window-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-sliding-window-sliding-window-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-sliding-window-sliding-window-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-sliding-window-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-sliding-window-sliding-window-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-sliding-window-sliding-window-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-sliding-window-sliding-window-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-sliding-window-sliding-window-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-sliding-window-sliding-window-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-sliding-window-sliding-window-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-sliding-window-sliding-window-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-sliding-window-sliding-window-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-sliding-window-sliding-window-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-sliding-window-sliding-window-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-sliding-window-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-sliding-window-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-sliding-window-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-sliding-window-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-sliding-window-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-sliding-window-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-sliding-window-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-sliding-window-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-sliding-window-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-sliding-window-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-sliding-window-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-sliding-window-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-sliding-window-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-sliding-window-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-sliding-window-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-sliding-window-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-sliding-window-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-sliding-window-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-sliding-window-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-sliding-window-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-sliding-window-sliding-window-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-sliding-window-sliding-window-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-sliding-window-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-sliding-window-sliding-window-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-sliding-window-sliding-window-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-sliding-window-sliding-window-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-sliding-window-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-sliding-window-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-sliding-window-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-sliding-window-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-sliding-window-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-sliding-window-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-sliding-window-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-sliding-window-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-sliding-window-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-sliding-window-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-sliding-window-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-sliding-window-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-sliding-window-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-sliding-window-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-sliding-window-sliding-window-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-sliding-window-sliding-window-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-sliding-window-sliding-window-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-sliding-window-sliding-window-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-sliding-window-sliding-window-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-sliding-window-sliding-window-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-sliding-window-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-sliding-window-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-sliding-window-sliding-window-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-sliding-window-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-sliding-window-sliding-window-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-sliding-window-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-sliding-window-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-sliding-window-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-sliding-window-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-sliding-window-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-sliding-window-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-sliding-window-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-sliding-window-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-sliding-window-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-sliding-window-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-sliding-window-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-sliding-window-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-sliding-window-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-sliding-window-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-sliding-window-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-sliding-window-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-sliding-window-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-sliding-window-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-sliding-window-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-sorting-sorting-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-sorting-sorting-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-sorting-sorting-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-sorting-sorting-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-sorting-sorting-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-sorting-sorting-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-sorting-sorting-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-sorting-sorting-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-sorting-sorting-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-sorting-sorting-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-sorting-sorting-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-sorting-sorting-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-sorting-descending-sorting-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-sorting-right-by-k-sorting-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-sorting-left-by-k-sorting-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-sorting-sorting-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-sorting-sorting-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-sorting-sorting-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-sorting-sorting-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-sorting-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-sorting-sorting-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-sorting-sorting-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-sorting-sorting-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-sorting-sorting-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-sorting-sorting-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-sorting-sorting-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-sorting-sorting-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-sorting-sorting-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-sorting-sorting-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-sorting-sorting-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-sorting-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-sorting-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-sorting-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-sorting-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-sorting-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-sorting-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-sorting-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-sorting-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-sorting-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-sorting-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-sorting-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-sorting-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-sorting-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-sorting-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-sorting-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-sorting-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-sorting-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-sorting-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-sorting-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-sorting-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-sorting-sorting-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-sorting-sorting-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-sorting-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-sorting-sorting-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-sorting-sorting-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-sorting-sorting-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-sorting-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-sorting-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-sorting-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-sorting-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-sorting-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-sorting-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-sorting-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-sorting-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-sorting-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-sorting-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-sorting-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-sorting-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-sorting-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-sorting-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-sorting-sorting-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-sorting-sorting-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-sorting-sorting-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-sorting-sorting-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-sorting-sorting-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-sorting-sorting-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-sorting-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-sorting-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-sorting-sorting-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-sorting-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-sorting-sorting-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-sorting-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-sorting-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-sorting-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-sorting-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-sorting-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-sorting-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-sorting-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-sorting-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-sorting-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-sorting-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-sorting-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-sorting-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-sorting-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-sorting-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-sorting-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-sorting-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-sorting-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-sorting-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-sorting-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-sparse-table-sparse-table-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-sparse-table-sparse-table-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-sparse-table-sparse-table-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-sparse-table-sparse-table-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-sparse-table-sparse-table-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-sparse-table-sparse-table-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-sparse-table-sparse-table-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-sparse-table-sparse-table-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-sparse-table-sparse-table-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-sparse-table-sparse-table-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-sparse-table-sparse-table-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-sparse-table-sparse-table-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-sparse-table-descending-sparse-table-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-sparse-table-right-by-k-sparse-table-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-sparse-table-left-by-k-sparse-table-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-sparse-table-sparse-table-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-sparse-table-sparse-table-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-sparse-table-sparse-table-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-sparse-table-sparse-table-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-sparse-table-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-sparse-table-sparse-table-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-sparse-table-sparse-table-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-sparse-table-sparse-table-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-sparse-table-sparse-table-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-sparse-table-sparse-table-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-sparse-table-sparse-table-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-sparse-table-sparse-table-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-sparse-table-sparse-table-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-sparse-table-sparse-table-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-sparse-table-sparse-table-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-sparse-table-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-sparse-table-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-sparse-table-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-sparse-table-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-sparse-table-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-sparse-table-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-sparse-table-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-sparse-table-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-sparse-table-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-sparse-table-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-sparse-table-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-sparse-table-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-sparse-table-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-sparse-table-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-sparse-table-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-sparse-table-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-sparse-table-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-sparse-table-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-sparse-table-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-sparse-table-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-sparse-table-sparse-table-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-sparse-table-sparse-table-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-sparse-table-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-sparse-table-sparse-table-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-sparse-table-sparse-table-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-sparse-table-sparse-table-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-sparse-table-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-sparse-table-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-sparse-table-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-sparse-table-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-sparse-table-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-sparse-table-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-sparse-table-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-sparse-table-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-sparse-table-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-sparse-table-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-sparse-table-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-sparse-table-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-sparse-table-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-sparse-table-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-sparse-table-sparse-table-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-sparse-table-sparse-table-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-sparse-table-sparse-table-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-sparse-table-sparse-table-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-sparse-table-sparse-table-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-sparse-table-sparse-table-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-sparse-table-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-sparse-table-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-sparse-table-sparse-table-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-sparse-table-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-sparse-table-sparse-table-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-sparse-table-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-sparse-table-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-sparse-table-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-sparse-table-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-sparse-table-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-sparse-table-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-sparse-table-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-sparse-table-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-sparse-table-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-sparse-table-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-sparse-table-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-sparse-table-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-sparse-table-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-sparse-table-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-sparse-table-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-sparse-table-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-sparse-table-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-sparse-table-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-sparse-table-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-square-root-decomposition-sqrt-decomposition-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-square-root-decomposition-sqrt-decomposition-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-square-root-decomposition-sqrt-decomposition-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-square-root-decomposition-sqrt-decomposition-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-square-root-decomposition-sqrt-decomposition-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-square-root-decomposition-sqrt-decomposition-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-square-root-decomposition-sqrt-decomposition-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-square-root-decomposition-sqrt-decomposition-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-square-root-decomposition-sqrt-decomposition-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-square-root-decomposition-sqrt-decomposition-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-square-root-decomposition-sqrt-decomposition-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-square-root-decomposition-sqrt-decomposition-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-square-root-decomposition-descending-sqrt-decomposition-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-square-root-decomposition-right-by-k-sqrt-decomposition-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-square-root-decomposition-left-by-k-sqrt-decomposition-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-square-root-decomposition-sqrt-decomposition-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-square-root-decomposition-sqrt-decomposition-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-square-root-decomposition-sqrt-decomposition-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-square-root-decomposition-sqrt-decomposition-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-sqrt-decomposition-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-square-root-decomposition-sqrt-decomposition-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-square-root-decomposition-sqrt-decomposition-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-square-root-decomposition-sqrt-decomposition-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-square-root-decomposition-sqrt-decomposition-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-square-root-decomposition-sqrt-decomposition-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-square-root-decomposition-sqrt-decomposition-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-square-root-decomposition-sqrt-decomposition-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-square-root-decomposition-sqrt-decomposition-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-square-root-decomposition-sqrt-decomposition-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-square-root-decomposition-sqrt-decomposition-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-sqrt-decomposition-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-sqrt-decomposition-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-sqrt-decomposition-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-sqrt-decomposition-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-sqrt-decomposition-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-sqrt-decomposition-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-sqrt-decomposition-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-sqrt-decomposition-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-sqrt-decomposition-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-sqrt-decomposition-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-sqrt-decomposition-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-sqrt-decomposition-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-sqrt-decomposition-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-sqrt-decomposition-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-sqrt-decomposition-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-sqrt-decomposition-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-sqrt-decomposition-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-sqrt-decomposition-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-sqrt-decomposition-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-sqrt-decomposition-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-square-root-decomposition-sqrt-decomposition-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-square-root-decomposition-sqrt-decomposition-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-sqrt-decomposition-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-square-root-decomposition-sqrt-decomposition-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-square-root-decomposition-sqrt-decomposition-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-square-root-decomposition-sqrt-decomposition-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-sqrt-decomposition-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-sqrt-decomposition-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-sqrt-decomposition-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-sqrt-decomposition-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-sqrt-decomposition-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-sqrt-decomposition-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-sqrt-decomposition-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-sqrt-decomposition-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-sqrt-decomposition-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-sqrt-decomposition-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-sqrt-decomposition-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-sqrt-decomposition-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-sqrt-decomposition-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-sqrt-decomposition-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-square-root-decomposition-sqrt-decomposition-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-square-root-decomposition-sqrt-decomposition-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-square-root-decomposition-sqrt-decomposition-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-square-root-decomposition-sqrt-decomposition-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-square-root-decomposition-sqrt-decomposition-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-square-root-decomposition-sqrt-decomposition-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-sqrt-decomposition-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-sqrt-decomposition-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-square-root-decomposition-sqrt-decomposition-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-sqrt-decomposition-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-square-root-decomposition-sqrt-decomposition-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-sqrt-decomposition-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-sqrt-decomposition-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-sqrt-decomposition-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-sqrt-decomposition-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-sqrt-decomposition-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-sqrt-decomposition-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-sqrt-decomposition-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-sqrt-decomposition-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-sqrt-decomposition-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-sqrt-decomposition-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-sqrt-decomposition-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-sqrt-decomposition-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-sqrt-decomposition-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-sqrt-decomposition-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-sqrt-decomposition-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-sqrt-decomposition-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-sqrt-decomposition-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-sqrt-decomposition-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-sqrt-decomposition-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-stack-stack-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-stack-stack-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-stack-stack-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-stack-stack-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-stack-stack-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-stack-stack-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-stack-stack-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-stack-stack-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-stack-stack-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-stack-stack-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-stack-stack-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-stack-stack-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-stack-descending-stack-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-stack-right-by-k-stack-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-stack-left-by-k-stack-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-stack-stack-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-stack-stack-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-stack-stack-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-stack-stack-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-stack-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-stack-stack-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-stack-stack-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-stack-stack-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-stack-stack-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-stack-stack-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-stack-stack-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-stack-stack-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-stack-stack-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-stack-stack-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-stack-stack-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-stack-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-stack-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-stack-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-stack-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-stack-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-stack-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-stack-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-stack-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-stack-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-stack-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-stack-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-stack-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-stack-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-stack-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-stack-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-stack-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-stack-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-stack-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-stack-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-stack-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-stack-stack-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-stack-stack-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-stack-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-stack-stack-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-stack-stack-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-stack-stack-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-stack-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-stack-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-stack-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-stack-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-stack-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-stack-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-stack-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-stack-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-stack-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-stack-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-stack-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-stack-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-stack-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-stack-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-stack-stack-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-stack-stack-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-stack-stack-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-stack-stack-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-stack-stack-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-stack-stack-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-stack-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-stack-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-stack-stack-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-stack-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-stack-stack-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-stack-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-stack-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-stack-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-stack-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-stack-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-stack-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-stack-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-stack-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-stack-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-stack-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-stack-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-stack-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-stack-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-stack-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-stack-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-stack-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-stack-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-stack-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-stack-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-string-algorithms-string-algorithms-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-string-algorithms-string-algorithms-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-string-algorithms-string-algorithms-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-string-algorithms-string-algorithms-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-string-algorithms-string-algorithms-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-string-algorithms-string-algorithms-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-string-algorithms-string-algorithms-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-string-algorithms-string-algorithms-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-string-algorithms-string-algorithms-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-string-algorithms-string-algorithms-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-string-algorithms-string-algorithms-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-string-algorithms-string-algorithms-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-string-algorithms-descending-string-algorithms-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-string-algorithms-right-by-k-string-algorithms-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-string-algorithms-left-by-k-string-algorithms-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-string-algorithms-string-algorithms-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-string-algorithms-string-algorithms-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-string-algorithms-string-algorithms-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-string-algorithms-string-algorithms-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-string-algorithms-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-string-algorithms-string-algorithms-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-string-algorithms-string-algorithms-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-string-algorithms-string-algorithms-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-string-algorithms-string-algorithms-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-string-algorithms-string-algorithms-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-string-algorithms-string-algorithms-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-string-algorithms-string-algorithms-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-string-algorithms-string-algorithms-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-string-algorithms-string-algorithms-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-string-algorithms-string-algorithms-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-string-algorithms-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-string-algorithms-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-string-algorithms-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-string-algorithms-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-string-algorithms-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-string-algorithms-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-string-algorithms-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-string-algorithms-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-string-algorithms-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-string-algorithms-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-string-algorithms-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-string-algorithms-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-string-algorithms-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-string-algorithms-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-string-algorithms-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-string-algorithms-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-string-algorithms-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-string-algorithms-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-string-algorithms-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-string-algorithms-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-string-algorithms-string-algorithms-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-string-algorithms-string-algorithms-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-string-algorithms-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-string-algorithms-string-algorithms-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-string-algorithms-string-algorithms-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-string-algorithms-string-algorithms-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-string-algorithms-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-string-algorithms-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-string-algorithms-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-string-algorithms-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-string-algorithms-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-string-algorithms-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-string-algorithms-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-string-algorithms-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-string-algorithms-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-string-algorithms-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-string-algorithms-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-string-algorithms-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-string-algorithms-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-string-algorithms-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-string-algorithms-string-algorithms-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-string-algorithms-string-algorithms-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-string-algorithms-string-algorithms-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-string-algorithms-string-algorithms-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-string-algorithms-string-algorithms-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-string-algorithms-string-algorithms-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-string-algorithms-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-string-algorithms-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-string-algorithms-string-algorithms-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-string-algorithms-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-string-algorithms-string-algorithms-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-string-algorithms-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-string-algorithms-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-string-algorithms-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-string-algorithms-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-string-algorithms-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-string-algorithms-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-string-algorithms-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-string-algorithms-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-string-algorithms-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-string-algorithms-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-string-algorithms-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-string-algorithms-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-string-algorithms-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-string-algorithms-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-string-algorithms-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-string-algorithms-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-string-algorithms-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-string-algorithms-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-string-algorithms-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'reverse-string-strings-1': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+    { id: '2', input: '[\\"a\\"]', expected_output: '[\\"a\\"]', is_hidden: true },
+  ],
+  'valid-anagram-strings-2': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '\\"rat\\",\\"car\\"', expected_output: 'false', is_hidden: true },
+  ],
+  'valid-palindrome-strings-3': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '\\"race a car\\"', expected_output: 'false', is_hidden: true },
+  ],
+  'longest-substring-without-repeating-strings-4': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+    { id: '2', input: '\\"bbbbb\\"', expected_output: '1', is_hidden: true },
+  ],
+  'longest-repeating-character-replacement-strings-5': [
+    { id: '1', input: '\\"ABAB\\", 2', expected_output: '4', is_hidden: false },
+    { id: '2', input: '\\"AABABBA\\", 1', expected_output: '4', is_hidden: true },
+  ],
+  'string-to-integer-atoi-strings-6': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+    { id: '2', input: '\\"4193 with words\\"', expected_output: '4193', is_hidden: true },
+  ],
+  'longest-common-prefix-strings-7': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+    { id: '2', input: '[\\"dog\\",\\"racecar\\",\\"car\\"]', expected_output: '\\"\\"', is_hidden: true },
+  ],
+  'valid-parentheses-strings-8': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '\\"(]\\"', expected_output: 'false', is_hidden: true },
+  ],
+  'generate-parentheses-strings-9': [
+    { id: '1', input: '3', expected_output: '[\\"((()))\\",\\"(()())\\",\\"(())()\\",\\"()(())\\",\\"()()()\\"]', is_hidden: false },
+  ],
+  'group-anagrams-strings-10': [
+    { id: '1', input: '[\\"\\"]', expected_output: '[[\\"\\"]]', is_hidden: false },
+  ],
+  'count-and-say-strings-11': [
+    { id: '1', input: '1', expected_output: '\\"1\\"', is_hidden: false },
+    { id: '2', input: '4', expected_output: '\\"1211\\"', is_hidden: true },
+  ],
+  'longest-palindromic-substring-strings-12': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-compression-strings-13': [
+    { id: '1', input: '[\\"a\\",\\"a\\",\\"b\\",\\"b\\",\\"c\\",\\"c\\",\\"c\\"]', expected_output: '6', is_hidden: false },
+  ],
+  'multiply-strings-strings-14': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'compare-version-numbers-strings-15': [
+    { id: '1', input: '\\"1.01\\",\\"1.001\\"', expected_output: '0', is_hidden: false },
+  ],
+  'integer-to-roman-strings-16': [
+    { id: '1', input: '58', expected_output: '\\"LVIII\\"', is_hidden: false },
+  ],
+  'roman-to-integer-strings-17': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'zigzag-conversion-strings-18': [
+    { id: '1', input: '\\"PAYPALISHIRING\\", 3', expected_output: '\\"PAHNAPLSIIGYIR\\"', is_hidden: false },
+  ],
+  'simplify-path-strings-19': [
+    { id: '1', input: '\\"/home//foo/\\"', expected_output: '\\"/home/foo\\"', is_hidden: false },
+  ],
+  'minimum-remove-to-make-valid-parentheses-strings-20': [
+    { id: '1', input: '\\"a)b(c)d\\"', expected_output: '\\"ab(c)d\\"', is_hidden: false },
+  ],
+  'longest-common-subsequence-strings-21': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-strings-22': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'longest-palindromic-subsequence-strings-23': [
+    { id: '1', input: '\\"bbbab\\"', expected_output: '4', is_hidden: false },
+  ],
+  'word-break-strings-24': [
+    { id: '1', input: '\\"leetcode\\",[\\"leet\\",\\"code\\"]', expected_output: 'true', is_hidden: false },
+  ],
+  'word-break-ii-strings-25': [
+    { id: '1', input: '\\"catsanddog\\",[\\"cat\\",\\"cats\\",\\"and\\",\\"sand\\",\\"dog\\"]', expected_output: '[\\"cats and dog\\",\\"cat sand dog\\"]', is_hidden: false },
+  ],
+  'decode-ways-strings-26': [
+    { id: '1', input: '\\"12\\"', expected_output: '2', is_hidden: false },
+  ],
+  'distinct-subsequences-strings-27': [
+    { id: '1', input: '\\"rabbbit\\",\\"rabbit\\"', expected_output: '3', is_hidden: false },
+  ],
+  'reverse-words-in-string-strings-28': [
+    { id: '1', input: '\\"  hello world  \\"', expected_output: '\\"world hello\\"', is_hidden: false },
+  ],
+  'longest-substring-with-at-most-k-distinct-strings-29': [
+    { id: '1', input: '\\"eceba\\", 2', expected_output: '3', is_hidden: false },
+  ],
+  'substring-with-concatenation-all-words-strings-30': [
+    { id: '1', input: '\\"barfoothefoobarman\\",[\\"foo\\",\\"bar\\"]', expected_output: '[0,9]', is_hidden: false },
+  ],
+  'valid-palindrome-ii-strings-31': [
+    { id: '1', input: '\\"abca\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-valid-parentheses-strings-32': [
+    { id: '1', input: '\\"(()\\"', expected_output: '2', is_hidden: false },
+  ],
+  'minimum-window-substring-strings-33': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'permutation-in-string-strings-34': [
+    { id: '1', input: '\\"ab\\",\\"eidbaooo\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'find-all-anagrams-in-string-strings-35': [
+    { id: '1', input: '\\"cbaebabacd\\",\\"abc\\"', expected_output: '[0,6]', is_hidden: false },
+  ],
+  'string-to-integer-manual-strings-36': [
+    { id: '1', input: '\\"42\\"', expected_output: '42', is_hidden: false },
+  ],
+  'first-unique-character-in-string-strings-37': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'ransom-note-strings-38': [
+    { id: '1', input: '\\"aa\\",\\"aab\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'jewels-and-stones-strings-39': [
+    { id: '1', input: '\\"aA\\",\\"aAAbbbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'is-subsequence-strings-40': [
+    { id: '1', input: '\\"abc\\",\\"ahbgdc\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-vowels-of-string-strings-41': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '\\"leotcede\\"', is_hidden: false },
+  ],
+  'valid-number-strings-42': [
+    { id: '1', input: '\\"0\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'integer-break-strings-43': [
+    { id: '1', input: '10', expected_output: '36', is_hidden: false },
+  ],
+  'rotate-string-strings-44': [
+    { id: '1', input: '\\"abcde\\",\\"cdeab\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'repeated-string-match-strings-45': [
+    { id: '1', input: '\\"abcd\\",\\"cdabcdab\\"', expected_output: '3', is_hidden: false },
+  ],
+  'custom-sort-string-strings-46': [
+    { id: '1', input: '\\"cba\\",\\"abcd\\"', expected_output: '\\"cbad\\"', is_hidden: false },
+  ],
+  'reorganize-string-strings-47': [
+    { id: '1', input: '\\"aab\\"', expected_output: '\\"aba\\"', is_hidden: false },
+  ],
+  'minimum-number-of-steps-to-make-two-strings-anagram-strings-48': [
+    { id: '1', input: '\\"bab\\",\\"aba\\"', expected_output: '1', is_hidden: false },
+  ],
+  'length-of-last-word-strings-49': [
+    { id: '1', input: '\\"Hello World\\"', expected_output: '5', is_hidden: false },
+  ],
+  'detect-capital-strings-50': [
+    { id: '1', input: '\\"USA\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'excel-sheet-column-number-strings-51': [
+    { id: '1', input: '\\"AB\\"', expected_output: '28', is_hidden: false },
+  ],
+  'excel-sheet-column-title-strings-52': [
+    { id: '1', input: '28', expected_output: '\\"AB\\"', is_hidden: false },
+  ],
+  'word-pattern-strings-53': [
+    { id: '1', input: '\\"abba\\",\\"dog cat cat dog\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'number-of-segments-in-string-strings-54': [
+    { id: '1', input: '\\"Hello, my name is John\\"', expected_output: '5', is_hidden: false },
+  ],
+  'valid-word-abbreviation-strings-55': [
+    { id: '1', input: '\\"substitution\\",\\"s10n\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'minimum-length-of-string-after-deleting-similar-ends-strings-56': [
+    { id: '1', input: '\\"cabaabac\\"', expected_output: '0', is_hidden: false },
+  ],
+  'remove-all-adjacent-duplicates-strings-57': [
+    { id: '1', input: '\\"abbaca\\"', expected_output: '\\"ca\\"', is_hidden: false },
+  ],
+  'remove-all-adjacent-duplicates-ii-strings-58': [
+    { id: '1', input: '\\"pbbcggttciiippooaais\\", 2', expected_output: '\\"ps\\"', is_hidden: false },
+  ],
+  'check-if-two-strings-are-equivalent-strings-59': [
+    { id: '1', input: '[\\"ab\\",\\"c\\"],[\\"a\\",\\"bc\\"]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-prefix-of-word-strings-60': [
+    { id: '1', input: '\\"abcdefd\\",\\"d\\"', expected_output: '\\"dcbaefd\\"', is_hidden: false },
+  ],
+  'truncate-sentence-strings-61': [
+    { id: '1', input: '\\"Hello how are you\\", 3', expected_output: '\\"Hello how are\\"', is_hidden: false },
+  ],
+  'sort-the-people-strings-62': [
+    { id: '1', input: '[\\"Mary\\",\\"John\\",\\"Emma\\"],[180,165,170]', expected_output: '[\\"Mary\\",\\"Emma\\",\\"John\\"]', is_hidden: false },
+  ],
+  'capitalize-the-title-strings-63': [
+    { id: '1', input: '\\"i lOve leetcode\\"', expected_output: '\\"i Love Leetcode\\"', is_hidden: false },
+  ],
+  'sort-vowels-in-string-strings-64': [
+    { id: '1', input: '\\"lEetcOde\\"', expected_output: '\\"lEOtcede\\"', is_hidden: false },
+  ],
+  'check-if-one-string-swap-makes-equal-strings-65': [
+    { id: '1', input: '\\"bank\\",\\"kanb\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'number-of-strings-that-appear-as-substrings-strings-66': [
+    { id: '1', input: '[\\"a\\",\\"abc\\",\\"bc\\",\\"d\\"],\\"abc\\"', expected_output: '3', is_hidden: false },
+  ],
+  'largest-odd-number-in-string-strings-67': [
+    { id: '1', input: '\\"4206\\"', expected_output: '\\"\\"', is_hidden: false },
+  ],
+  'largest-3-same-digit-number-in-string-strings-68': [
+    { id: '1', input: '\\"2300019\\"', expected_output: '\\"000\\"', is_hidden: false },
+  ],
+  'maximum-value-of-a-string-strings-69': [
+    { id: '1', input: '[\\"alic3\\",\\"bob\\",\\"3\\",\\"4\\",\\"00000\\"]', expected_output: '5', is_hidden: false },
+  ],
+  'sort-characters-by-frequency-strings-70': [
+    { id: '1', input: '\\"tree\\"', expected_output: '\\"eert\\"', is_hidden: false },
+  ],
+  'check-if-two-string-arrays-are-equivalent-strings-71': [
+    { id: '1', input: '[\\"ab\\",\\"c\\"],[\\"a\\",\\"bc\\"]', expected_output: 'true', is_hidden: false },
+  ],
+  'largest-number-at-least-twice-of-others-strings-72': [
+    { id: '1', input: '[1,2,3,4]', expected_output: '-1', is_hidden: false },
+  ],
+  'number-of-good-pairs-strings-73': [
+    { id: '1', input: '[1,1,1,1]', expected_output: '6', is_hidden: false },
+  ],
+  'check-if-sentence-is-pangram-strings-74': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: 'false', is_hidden: false },
+  ],
+  'check-if-all-a-appears-before-all-b-strings-75': [
+    { id: '1', input: '\\"abab\\"', expected_output: 'false', is_hidden: false },
+  ],
+  'count-the-number-of-vowel-strings-in-range-strings-76': [
+    { id: '1', input: '[\\"hey\\",\\"aeo\\",\\"mu\\",\\"ooo\\",\\"artro\\"], 1, 4', expected_output: '3', is_hidden: false },
+  ],
+  'maximum-number-of-words-in-sentence-strings-77': [
+    { id: '1', input: '[\\"please wait\\",\\"continue to fight\\",\\"continue to win\\"]', expected_output: '3', is_hidden: false },
+  ],
+  'reverse-odd-levels-of-binary-tree-strings-78': [
+    { id: '1', input: '[7,13,11]', expected_output: '[7,11,13]', is_hidden: false },
+  ],
+  'string-matching-in-array-strings-79': [
+    { id: '1', input: '[\\"leetcoder\\",\\"leetcode\\",\\"od\\",\\"hamlet\\",\\"am\\"]', expected_output: '[\\"leetcode\\",\\"od\\"]', is_hidden: false },
+  ],
+  'string-compression-iii-strings-80': [
+    { id: '1', input: '\\"aaaaaaaaaaaaaabb\\"', expected_output: '\\"9a5a2b\\"', is_hidden: false },
+  ],
+  'longest-common-suffix-strings-81': [
+    { id: '1', input: '[\\"a\\"],[\\"b\\"]', expected_output: '[\\"\\"]', is_hidden: false },
+  ],
+  'sentence-similarity-iii-strings-82': [
+    { id: '1', input: '\\"of\\",\\"A great way\\"', expected_output: 'false', is_hidden: false },
+  ],
+  'largest-substring-between-two-equal-characters-strings-83': [
+    { id: '1', input: '\\"aa\\"', expected_output: '0', is_hidden: false },
+  ],
+  'count-common-words-with-one-occurrence-strings-84': [
+    { id: '1', input: '[\\"a\\",\\"ab\\"],[\\"a\\",\\"a\\",\\"ab\\"]', expected_output: '1', is_hidden: false },
+  ],
+  'sort-the-string-strings-85': [
+    { id: '1', input: '\\"rat\\"', expected_output: '\\"art\\"', is_hidden: false },
+  ],
+  'valid-parenthesis-string-strings-86': [
+    { id: '1', input: '\\"(*))\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'check-if-word-equals-summation-of-two-words-strings-87': [
+    { id: '1', input: '\\"aaa\\",\\"a\\",\\"aab\\"', expected_output: 'false', is_hidden: false },
+  ],
+  'remove-palindromic-subsequences-strings-88': [
+    { id: '1', input: '\\"abb\\"', expected_output: '2', is_hidden: false },
+  ],
+  'maximize-the-confusion-of-an-exam-strings-89': [
+    { id: '1', input: '\\"TFFT\\", 1', expected_output: '3', is_hidden: false },
+  ],
+  'maximum-repeating-substring-strings-90': [
+    { id: '1', input: '\\"ababc\\",\\"ba\\"', expected_output: '-1', is_hidden: false },
+  ],
+  'string-without-aaa-or-bbb-strings-91': [
+    { id: '1', input: '4,1', expected_output: '\\"aabaa\\"', is_hidden: false },
+  ],
+  'longest-uncommon-subsequence-i-strings-92': [
+    { id: '1', input: '\\"aaa\\",\\"bbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'longest-uncommon-subsequence-ii-strings-93': [
+    { id: '1', input: '[\\"aaa\\",\\"aaa\\",\\"aa\\"]', expected_output: '-1', is_hidden: false },
+  ],
+  'camelcase-matching-strings-94': [
+    { id: '1', input: '[\\"FooBar\\",\\"FooBarTest\\",\\"FootBall\\",\\"FrameBuffer\\",\\"ForceFeedBack\\"], \\"FB\\"', expected_output: '[true,false,true,false,false]', is_hidden: false },
+  ],
+  'shortest-distance-to-target-string-in-circular-array-strings-95': [
+    { id: '1', input: '[\\"a\\",\\"b\\",\\"leetc\\",\\"ets\\",\\"le\\"], \\"leets\\", 0', expected_output: '-1', is_hidden: false },
+  ],
+  'longest-common-prefix-after-at-most-one-removal-strings-96': [
+    { id: '1', input: '[\\"ab\\",\\"abc\\"]', expected_output: '2', is_hidden: false },
+  ],
+  'most-common-word-strings-97': [
+    { id: '1', input: '\\"a.\\",[]', expected_output: '\\"a\\"', is_hidden: false },
+  ],
+  'reverse-string-ii-strings-98': [
+    { id: '1', input: '\\"abcdefg\\", 2', expected_output: '\\"bacdfeg\\"', is_hidden: false },
+  ],
+  'most-frequent-vowel-and-consonant-strings-99': [
+    { id: '1', input: '\\"aeiaeia\\"', expected_output: '3', is_hidden: false },
+  ],
+  'custom-sort-string-ii-strings-100': [
+    { id: '1', input: '\\"bcafg\\",\\"abcd\\"', expected_output: '\\"bcad\\"', is_hidden: false },
+  ],
+  'find-element-in-suffix-array-suffix-array-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-suffix-array-suffix-array-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-suffix-array-suffix-array-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-suffix-array-suffix-array-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-suffix-array-suffix-array-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-suffix-array-suffix-array-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-suffix-array-suffix-array-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-suffix-array-suffix-array-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-suffix-array-suffix-array-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-suffix-array-suffix-array-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-suffix-array-suffix-array-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-suffix-array-suffix-array-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-suffix-array-descending-suffix-array-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-suffix-array-right-by-k-suffix-array-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-suffix-array-left-by-k-suffix-array-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-suffix-array-suffix-array-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-suffix-array-suffix-array-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-suffix-array-suffix-array-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-suffix-array-suffix-array-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-suffix-array-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-suffix-array-suffix-array-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-suffix-array-suffix-array-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-suffix-array-suffix-array-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-suffix-array-suffix-array-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-suffix-array-suffix-array-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-suffix-array-suffix-array-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-suffix-array-suffix-array-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-suffix-array-suffix-array-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-suffix-array-suffix-array-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-suffix-array-suffix-array-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-suffix-array-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-suffix-array-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-suffix-array-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-suffix-array-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-suffix-array-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-suffix-array-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-suffix-array-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-suffix-array-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-suffix-array-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-suffix-array-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-suffix-array-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-suffix-array-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-suffix-array-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-suffix-array-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-suffix-array-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-suffix-array-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-suffix-array-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-suffix-array-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-suffix-array-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-suffix-array-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-suffix-array-suffix-array-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-suffix-array-suffix-array-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-suffix-array-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-suffix-array-suffix-array-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-suffix-array-suffix-array-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-suffix-array-suffix-array-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-suffix-array-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-suffix-array-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-suffix-array-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-suffix-array-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-suffix-array-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-suffix-array-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-suffix-array-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-suffix-array-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-suffix-array-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-suffix-array-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-suffix-array-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-suffix-array-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-suffix-array-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-suffix-array-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-suffix-array-suffix-array-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-suffix-array-suffix-array-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-suffix-array-suffix-array-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-suffix-array-suffix-array-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-suffix-array-suffix-array-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-suffix-array-suffix-array-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-suffix-array-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-suffix-array-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-suffix-array-suffix-array-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-suffix-array-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-suffix-array-suffix-array-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-suffix-array-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-suffix-array-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-suffix-array-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-suffix-array-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-suffix-array-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-suffix-array-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-suffix-array-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-suffix-array-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-suffix-array-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-suffix-array-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-suffix-array-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-suffix-array-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-suffix-array-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-suffix-array-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-suffix-array-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-suffix-array-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-suffix-array-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-suffix-array-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-suffix-array-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-suffix-tree-suffix-tree-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-suffix-tree-suffix-tree-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-suffix-tree-suffix-tree-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-suffix-tree-suffix-tree-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-suffix-tree-suffix-tree-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-suffix-tree-suffix-tree-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-suffix-tree-suffix-tree-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-suffix-tree-suffix-tree-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-suffix-tree-suffix-tree-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-suffix-tree-suffix-tree-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-suffix-tree-suffix-tree-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-suffix-tree-suffix-tree-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-suffix-tree-descending-suffix-tree-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-suffix-tree-right-by-k-suffix-tree-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-suffix-tree-left-by-k-suffix-tree-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-suffix-tree-suffix-tree-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-suffix-tree-suffix-tree-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-suffix-tree-suffix-tree-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-suffix-tree-suffix-tree-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-suffix-tree-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-suffix-tree-suffix-tree-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-suffix-tree-suffix-tree-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-suffix-tree-suffix-tree-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-suffix-tree-suffix-tree-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-suffix-tree-suffix-tree-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-suffix-tree-suffix-tree-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-suffix-tree-suffix-tree-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-suffix-tree-suffix-tree-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-suffix-tree-suffix-tree-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-suffix-tree-suffix-tree-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-suffix-tree-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-suffix-tree-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-suffix-tree-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-suffix-tree-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-suffix-tree-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-suffix-tree-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-suffix-tree-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-suffix-tree-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-suffix-tree-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-suffix-tree-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-suffix-tree-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-suffix-tree-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-suffix-tree-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-suffix-tree-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-suffix-tree-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-suffix-tree-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-suffix-tree-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-suffix-tree-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-suffix-tree-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-suffix-tree-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-suffix-tree-suffix-tree-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-suffix-tree-suffix-tree-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-suffix-tree-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-suffix-tree-suffix-tree-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-suffix-tree-suffix-tree-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-suffix-tree-suffix-tree-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-suffix-tree-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-suffix-tree-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-suffix-tree-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-suffix-tree-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-suffix-tree-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-suffix-tree-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-suffix-tree-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-suffix-tree-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-suffix-tree-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-suffix-tree-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-suffix-tree-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-suffix-tree-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-suffix-tree-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-suffix-tree-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-suffix-tree-suffix-tree-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-suffix-tree-suffix-tree-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-suffix-tree-suffix-tree-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-suffix-tree-suffix-tree-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-suffix-tree-suffix-tree-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-suffix-tree-suffix-tree-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-suffix-tree-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-suffix-tree-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-suffix-tree-suffix-tree-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-suffix-tree-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-suffix-tree-suffix-tree-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-suffix-tree-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-suffix-tree-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-suffix-tree-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-suffix-tree-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-suffix-tree-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-suffix-tree-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-suffix-tree-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-suffix-tree-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-suffix-tree-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-suffix-tree-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-suffix-tree-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-suffix-tree-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-suffix-tree-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-suffix-tree-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-suffix-tree-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-suffix-tree-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-suffix-tree-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-suffix-tree-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-suffix-tree-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-topological-sort-topological-sort-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-topological-sort-topological-sort-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-topological-sort-topological-sort-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-topological-sort-topological-sort-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-topological-sort-topological-sort-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-topological-sort-topological-sort-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-topological-sort-topological-sort-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-topological-sort-topological-sort-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-topological-sort-topological-sort-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-topological-sort-topological-sort-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-topological-sort-topological-sort-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-topological-sort-topological-sort-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-topological-sort-descending-topological-sort-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-topological-sort-right-by-k-topological-sort-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-topological-sort-left-by-k-topological-sort-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-topological-sort-topological-sort-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-topological-sort-topological-sort-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-topological-sort-topological-sort-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-topological-sort-topological-sort-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-topological-sort-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-topological-sort-topological-sort-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-topological-sort-topological-sort-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-topological-sort-topological-sort-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-topological-sort-topological-sort-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-topological-sort-topological-sort-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-topological-sort-topological-sort-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-topological-sort-topological-sort-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-topological-sort-topological-sort-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-topological-sort-topological-sort-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-topological-sort-topological-sort-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-topological-sort-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-topological-sort-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-topological-sort-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-topological-sort-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-topological-sort-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-topological-sort-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-topological-sort-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-topological-sort-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-topological-sort-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-topological-sort-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-topological-sort-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-topological-sort-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-topological-sort-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-topological-sort-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-topological-sort-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-topological-sort-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-topological-sort-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-topological-sort-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-topological-sort-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-topological-sort-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-topological-sort-topological-sort-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-topological-sort-topological-sort-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-topological-sort-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-topological-sort-topological-sort-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-topological-sort-topological-sort-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-topological-sort-topological-sort-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-topological-sort-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-topological-sort-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-topological-sort-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-topological-sort-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-topological-sort-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-topological-sort-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-topological-sort-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-topological-sort-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-topological-sort-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-topological-sort-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-topological-sort-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-topological-sort-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-topological-sort-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-topological-sort-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-topological-sort-topological-sort-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-topological-sort-topological-sort-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-topological-sort-topological-sort-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-topological-sort-topological-sort-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-topological-sort-topological-sort-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-topological-sort-topological-sort-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-topological-sort-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-topological-sort-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-topological-sort-topological-sort-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-topological-sort-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-topological-sort-topological-sort-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-topological-sort-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-topological-sort-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-topological-sort-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-topological-sort-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-topological-sort-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-topological-sort-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-topological-sort-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-topological-sort-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-topological-sort-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-topological-sort-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-topological-sort-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-topological-sort-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-topological-sort-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-topological-sort-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-topological-sort-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-topological-sort-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-topological-sort-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-topological-sort-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-topological-sort-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-trees-trees-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-trees-trees-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-trees-trees-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-trees-trees-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-trees-trees-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-trees-trees-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-trees-trees-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-trees-trees-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-trees-trees-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-trees-trees-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-trees-trees-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-trees-trees-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-trees-descending-trees-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-trees-right-by-k-trees-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-trees-left-by-k-trees-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-trees-trees-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-trees-trees-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-trees-trees-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-trees-trees-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-trees-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-trees-trees-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-trees-trees-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-trees-trees-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-trees-trees-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-trees-trees-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-trees-trees-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-trees-trees-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-trees-trees-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-trees-trees-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-trees-trees-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-trees-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-trees-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-trees-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-trees-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-trees-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-trees-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-trees-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-trees-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-trees-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-trees-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-trees-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-trees-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-trees-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-trees-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-trees-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-trees-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-trees-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-trees-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-trees-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-trees-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-trees-trees-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-trees-trees-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-trees-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-trees-trees-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-trees-trees-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-trees-trees-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-trees-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-trees-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-trees-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-trees-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-trees-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-trees-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-trees-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-trees-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-trees-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-trees-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-trees-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-trees-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-trees-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-trees-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-trees-trees-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-trees-trees-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-trees-trees-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-trees-trees-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-trees-trees-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-trees-trees-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-trees-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-trees-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-trees-trees-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-trees-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-trees-trees-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-trees-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-trees-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-trees-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-trees-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-trees-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-trees-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-trees-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-trees-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-trees-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-trees-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-trees-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-trees-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-trees-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-trees-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-trees-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-trees-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-trees-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-trees-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-trees-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-trie-trie-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-trie-trie-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-trie-trie-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-trie-trie-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-trie-trie-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-trie-trie-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-trie-trie-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-trie-trie-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-trie-trie-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-trie-trie-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-trie-trie-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-trie-trie-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-trie-descending-trie-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-trie-right-by-k-trie-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-trie-left-by-k-trie-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-trie-trie-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-trie-trie-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-trie-trie-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-trie-trie-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-trie-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-trie-trie-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-trie-trie-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-trie-trie-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-trie-trie-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-trie-trie-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-trie-trie-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-trie-trie-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-trie-trie-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-trie-trie-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-trie-trie-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-trie-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-trie-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-trie-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-trie-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-trie-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-trie-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-trie-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-trie-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-trie-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-trie-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-trie-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-trie-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-trie-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-trie-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-trie-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-trie-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-trie-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-trie-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-trie-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-trie-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-trie-trie-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-trie-trie-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-trie-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-trie-trie-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-trie-trie-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-trie-trie-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-trie-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-trie-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-trie-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-trie-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-trie-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-trie-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-trie-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-trie-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-trie-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-trie-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-trie-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-trie-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-trie-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-trie-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-trie-trie-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-trie-trie-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-trie-trie-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-trie-trie-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-trie-trie-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-trie-trie-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-trie-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-trie-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-trie-trie-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-trie-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-trie-trie-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-trie-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-trie-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-trie-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-trie-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-trie-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-trie-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-trie-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-trie-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-trie-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-trie-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-trie-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-trie-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-trie-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-trie-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-trie-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-trie-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-trie-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-trie-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-trie-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-two-pointers-two-pointers-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-two-pointers-two-pointers-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-two-pointers-two-pointers-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-two-pointers-two-pointers-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-two-pointers-two-pointers-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-two-pointers-two-pointers-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-two-pointers-two-pointers-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-two-pointers-two-pointers-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-two-pointers-two-pointers-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-two-pointers-two-pointers-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-two-pointers-two-pointers-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-two-pointers-two-pointers-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-two-pointers-descending-two-pointers-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-two-pointers-right-by-k-two-pointers-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-two-pointers-left-by-k-two-pointers-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-two-pointers-two-pointers-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-two-pointers-two-pointers-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-two-pointers-two-pointers-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-two-pointers-two-pointers-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-two-pointers-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-two-pointers-two-pointers-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-two-pointers-two-pointers-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-two-pointers-two-pointers-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-two-pointers-two-pointers-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-two-pointers-two-pointers-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-two-pointers-two-pointers-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-two-pointers-two-pointers-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-two-pointers-two-pointers-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-two-pointers-two-pointers-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-two-pointers-two-pointers-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-two-pointers-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-two-pointers-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-two-pointers-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-two-pointers-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-two-pointers-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-two-pointers-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-two-pointers-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-two-pointers-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-two-pointers-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-two-pointers-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-two-pointers-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-two-pointers-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-two-pointers-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-two-pointers-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-two-pointers-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-two-pointers-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-two-pointers-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-two-pointers-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-two-pointers-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-two-pointers-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-two-pointers-two-pointers-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-two-pointers-two-pointers-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-two-pointers-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-two-pointers-two-pointers-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-two-pointers-two-pointers-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-two-pointers-two-pointers-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-two-pointers-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-two-pointers-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-two-pointers-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-two-pointers-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-two-pointers-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-two-pointers-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-two-pointers-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-two-pointers-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-two-pointers-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-two-pointers-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-two-pointers-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-two-pointers-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-two-pointers-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-two-pointers-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-two-pointers-two-pointers-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-two-pointers-two-pointers-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-two-pointers-two-pointers-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-two-pointers-two-pointers-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-two-pointers-two-pointers-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-two-pointers-two-pointers-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-two-pointers-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-two-pointers-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-two-pointers-two-pointers-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-two-pointers-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-two-pointers-two-pointers-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-two-pointers-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-two-pointers-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-two-pointers-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-two-pointers-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-two-pointers-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-two-pointers-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-two-pointers-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-two-pointers-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-two-pointers-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-two-pointers-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-two-pointers-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-two-pointers-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-two-pointers-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-two-pointers-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-two-pointers-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-two-pointers-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-two-pointers-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-two-pointers-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-two-pointers-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'find-element-in-z-algorithm-z-algorithm-1': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 6', expected_output: '-1', is_hidden: true },
+  ],
+  'binary-search-in-z-algorithm-z-algorithm-2': [
+    { id: '1', input: '[1,2,3,4,5], 3', expected_output: '2', is_hidden: false },
+    { id: '2', input: '[1,2,3,4,5], 1', expected_output: '0', is_hidden: true },
+  ],
+  'first-occurrence-in-z-algorithm-z-algorithm-3': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: '[1,1,1,1], 1', expected_output: '0', is_hidden: true },
+  ],
+  'last-occurrence-in-z-algorithm-z-algorithm-4': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'count-occurrences-in-z-algorithm-z-algorithm-5': [
+    { id: '1', input: '[1,2,2,2,3,4], 2', expected_output: '3', is_hidden: false },
+  ],
+  'find-maximum-in-z-algorithm-z-algorithm-6': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '9', is_hidden: false },
+    { id: '2', input: '[-1,-2,-3]', expected_output: '-1', is_hidden: true },
+  ],
+  'find-minimum-in-z-algorithm-z-algorithm-7': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '1', is_hidden: false },
+  ],
+  'sum-of-z-algorithm-z-algorithm-8': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '15', is_hidden: false },
+  ],
+  'product-of-z-algorithm-z-algorithm-9': [
+    { id: '1', input: '[2,3,4]', expected_output: '24', is_hidden: false },
+  ],
+  'contains-duplicate-in-z-algorithm-z-algorithm-10': [
+    { id: '1', input: '[1,2,3,1]', expected_output: 'true', is_hidden: false },
+  ],
+  'reverse-z-algorithm-z-algorithm-11': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+  ],
+  'sort-z-algorithm-z-algorithm-12': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[1,1,2,3,4,5,6,9]', is_hidden: false },
+  ],
+  'sort-z-algorithm-descending-z-algorithm-13': [
+    { id: '1', input: '[3,1,4,1,5,9,2,6]', expected_output: '[9,6,5,4,3,2,1,1]', is_hidden: false },
+  ],
+  'rotate-z-algorithm-right-by-k-z-algorithm-14': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 3', expected_output: '[5,6,7,1,2,3,4]', is_hidden: false },
+  ],
+  'rotate-z-algorithm-left-by-k-z-algorithm-15': [
+    { id: '1', input: '[1,2,3,4,5,6,7], 2', expected_output: '[3,4,5,6,7,1,2]', is_hidden: false },
+  ],
+  'move-zeros-in-z-algorithm-z-algorithm-16': [
+    { id: '1', input: '[0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+  ],
+  'rearrange-even-odd-in-z-algorithm-z-algorithm-17': [
+    { id: '1', input: '[1,2,3,4,5,6]', expected_output: '[2,4,6,1,3,5]', is_hidden: false },
+  ],
+  'sort-array-by-parity-in-z-algorithm-z-algorithm-18': [
+    { id: '1', input: '[3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+  ],
+  'sort-colors-in-z-algorithm-z-algorithm-19': [
+    { id: '1', input: '[2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+  ],
+  'sort-array-squared-z-algorithm-20': [
+    { id: '1', input: '[-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+  ],
+  'count-frequency-in-z-algorithm-z-algorithm-21': [
+    { id: '1', input: '[1,2,2,3,3,3]', expected_output: '{1:1,2:2,3:3}', is_hidden: false },
+  ],
+  'find-duplicate-in-z-algorithm-z-algorithm-22': [
+    { id: '1', input: '[1,3,4,2,2]', expected_output: '2', is_hidden: false },
+  ],
+  'single-number-in-z-algorithm-z-algorithm-23': [
+    { id: '1', input: '[4,1,2,1,2]', expected_output: '4', is_hidden: false },
+  ],
+  'missing-number-in-z-algorithm-z-algorithm-24': [
+    { id: '1', input: '[3,0,1]', expected_output: '2', is_hidden: false },
+  ],
+  'majority-element-in-z-algorithm-z-algorithm-25': [
+    { id: '1', input: '[3,2,3]', expected_output: '3', is_hidden: false },
+  ],
+  'two-sum-in-z-algorithm-z-algorithm-26': [
+    { id: '1', input: '[2,7,11,15], 9', expected_output: '[0,1]', is_hidden: false },
+  ],
+  'three-sum-in-z-algorithm-z-algorithm-27': [
+    { id: '1', input: '[-1,0,1,2,-1,-4]', expected_output: '[[-1,-1,2],[-1,0,1]]', is_hidden: false },
+  ],
+  'kth-largest-in-z-algorithm-z-algorithm-28': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '5', is_hidden: false },
+  ],
+  'kth-smallest-in-z-algorithm-z-algorithm-29': [
+    { id: '1', input: '[3,2,1,5,6,4], 2', expected_output: '2', is_hidden: false },
+  ],
+  'top-k-frequent-in-z-algorithm-z-algorithm-30': [
+    { id: '1', input: '[1,1,1,2,2,3], 2', expected_output: '[1,2]', is_hidden: false },
+  ],
+  'max-subarray-sum-kadane-z-algorithm-31': [
+    { id: '1', input: '[-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+  ],
+  'min-subarray-sum-z-algorithm-32': [
+    { id: '1', input: '[3,-2,5,-1]', expected_output: '-3', is_hidden: false },
+  ],
+  'max-product-subarray-z-algorithm-33': [
+    { id: '1', input: '[2,3,-2,4]', expected_output: '6', is_hidden: false },
+  ],
+  'subarray-sum-equals-k-z-algorithm-34': [
+    { id: '1', input: '[1,1,1], 2', expected_output: '2', is_hidden: false },
+  ],
+  'longest-subarray-sum-k-z-algorithm-35': [
+    { id: '1', input: '[1,-1,5,-2,3], 3', expected_output: '4', is_hidden: false },
+  ],
+  'min-size-subarray-sum-z-algorithm-36': [
+    { id: '1', input: '7, [2,3,1,2,4,3]', expected_output: '2', is_hidden: false },
+  ],
+  'max-consecutive-ones-with-k-flips-z-algorithm-37': [
+    { id: '1', input: '[1,1,0,0,1,1,1,0,1], 1', expected_output: '6', is_hidden: false },
+  ],
+  'longest-substring-without-repeating-z-algorithm-38': [
+    { id: '1', input: '\\"abcabcbb\\"', expected_output: '3', is_hidden: false },
+  ],
+  'max-vowels-in-substring-z-algorithm-39': [
+    { id: '1', input: '\\"abciiidef\\", 3', expected_output: '3', is_hidden: false },
+  ],
+  'minimum-window-substring-z-algorithm-40': [
+    { id: '1', input: '\\"ADOBECODEBANC\\",\\"ABC\\"', expected_output: '\\"BANC\\"', is_hidden: false },
+  ],
+  'fibonacci-number-z-algorithm-41': [
+    { id: '1', input: '4', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '1', is_hidden: true },
+  ],
+  'climbing-stairs-z-algorithm-42': [
+    { id: '1', input: '3', expected_output: '3', is_hidden: false },
+    { id: '2', input: '2', expected_output: '2', is_hidden: true },
+  ],
+  'house-robber-z-algorithm-43': [
+    { id: '1', input: '[1,2,3,1]', expected_output: '4', is_hidden: false },
+  ],
+  'house-robber-ii-z-algorithm-44': [
+    { id: '1', input: '[2,3,2]', expected_output: '3', is_hidden: false },
+  ],
+  'longest-increasing-subsequence-z-algorithm-45': [
+    { id: '1', input: '[10,9,2,5,3,7,101,18]', expected_output: '4', is_hidden: false },
+  ],
+  'longest-common-subsequence-z-algorithm-46': [
+    { id: '1', input: '\\"abcde\\",\\"ace\\"', expected_output: '3', is_hidden: false },
+  ],
+  'edit-distance-z-algorithm-47': [
+    { id: '1', input: '\\"horse\\",\\"ros\\"', expected_output: '3', is_hidden: false },
+  ],
+  'coin-change-z-algorithm-48': [
+    { id: '1', input: '[1,5,10,25], 30', expected_output: '2', is_hidden: false },
+  ],
+  'coin-change-ii-z-algorithm-49': [
+    { id: '1', input: '5, [1,2,5]', expected_output: '4', is_hidden: false },
+  ],
+  '0-1-knapsack-z-algorithm-50': [
+    { id: '1', input: '[1,2,3], [10,15,40], 6', expected_output: '55', is_hidden: false },
+  ],
+  'bfs-traversal-of-z-algorithm-z-algorithm-51': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'dfs-traversal-of-z-algorithm-z-algorithm-52': [
+    { id: '1', input: '[[2,4],[1,3],[2,4],[1,3]]', expected_output: '[1,2,4,3]', is_hidden: false },
+  ],
+  'count-connected-components-z-algorithm-53': [
+    { id: '1', input: '5, [[0,1],[1,2],[3,4]]', expected_output: '2', is_hidden: false },
+  ],
+  'shortest-path-in-z-algorithm-z-algorithm-54': [
+    { id: '1', input: '[[1,3],[0,2],[1,3],[0,2]], 0, 3', expected_output: '2', is_hidden: false },
+  ],
+  'detect-cycle-in-z-algorithm-z-algorithm-55': [
+    { id: '1', input: '4, [[0,1],[1,2],[2,3],[3,0]]', expected_output: 'true', is_hidden: false },
+  ],
+  'topological-sort-of-z-algorithm-z-algorithm-56': [
+    { id: '1', input: '4, [[1,0],[2,0],[3,1],[3,2]]', expected_output: '[0,1,2,3]', is_hidden: false },
+  ],
+  'number-of-islands-z-algorithm-57': [
+    { id: '1', input: '[[\\"1\\",\\"1\\",\\"0\\"],[\\"1\\",\\"1\\",\\"0\\"],[\\"0\\",\\"0\\",\\"1\\"]]', expected_output: '2', is_hidden: false },
+  ],
+  'pacific-atlantic-water-flow-z-algorithm-58': [
+    { id: '1', input: '[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]', expected_output: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]', is_hidden: false },
+  ],
+  'word-search-z-algorithm-59': [
+    { id: '1', input: '[[\\"A\\",\\"B\\",\\"C\\",\\"E\\"],[\\"S\\",\\"F\\",\\"C\\",\\"S\\"],[\\"A\\",\\"D\\",\\"E\\",\\"E\\"]], \\"ABCCED\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'clone-graph-z-algorithm-60': [
+    { id: '1', input: '1', expected_output: '1', is_hidden: false },
+  ],
+  'reverse-string-z-algorithm-61': [
+    { id: '1', input: '[\\"h\\",\\"e\\",\\"l\\",\\"l\\",\\"o\\"]', expected_output: '[\\"o\\",\\"l\\",\\"l\\",\\"e\\",\\"h\\"]', is_hidden: false },
+  ],
+  'valid-anagram-z-algorithm-62': [
+    { id: '1', input: '\\"anagram\\",\\"nagaram\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'valid-palindrome-z-algorithm-63': [
+    { id: '1', input: '\\"A man, a plan, a canal: Panama\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'longest-common-prefix-z-algorithm-64': [
+    { id: '1', input: '[\\"flower\\",\\"flow\\",\\"flight\\"]', expected_output: '\\"fl\\"', is_hidden: false },
+  ],
+  'valid-parentheses-z-algorithm-65': [
+    { id: '1', input: '\\"()[]{}\\"', expected_output: 'true', is_hidden: false },
+  ],
+  'first-unique-character-z-algorithm-66': [
+    { id: '1', input: '\\"leetcode\\"', expected_output: '0', is_hidden: false },
+  ],
+  'group-anagrams-z-algorithm-67': [
+    { id: '1', input: '[\\"eat\\",\\"tea\\",\\"tan\\",\\"ate\\",\\"nat\\",\\"bat\\"]', expected_output: '[[\\"bat\\"],[\\"nat\\",\\"tan\\"],[\\"ate\\",\\"eat\\",\\"tea\\"]]', is_hidden: false },
+  ],
+  'longest-palindromic-substring-z-algorithm-68': [
+    { id: '1', input: '\\"babad\\"', expected_output: '\\"bab\\"', is_hidden: false },
+  ],
+  'string-to-integer-atoi-z-algorithm-69': [
+    { id: '1', input: '\\"   -42\\"', expected_output: '-42', is_hidden: false },
+  ],
+  'roman-to-integer-z-algorithm-70': [
+    { id: '1', input: '\\"LVIII\\"', expected_output: '58', is_hidden: false },
+  ],
+  'max-depth-of-z-algorithm-z-algorithm-71': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+  ],
+  'min-depth-of-z-algorithm-z-algorithm-72': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '2', is_hidden: false },
+  ],
+  'invert-z-algorithm-z-algorithm-73': [
+    { id: '1', input: '[4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+  ],
+  'validate-z-algorithm-z-algorithm-74': [
+    { id: '1', input: '[2,1,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'symmetric-z-algorithm-z-algorithm-75': [
+    { id: '1', input: '[1,2,2,3,4,4,3]', expected_output: 'true', is_hidden: false },
+  ],
+  'level-order-of-z-algorithm-z-algorithm-76': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+  ],
+  'zigzag-level-order-z-algorithm-77': [
+    { id: '1', input: '[3,9,20,null,null,15,7]', expected_output: '[[3],[20,9],[15,7]]', is_hidden: false },
+  ],
+  'right-side-view-z-algorithm-78': [
+    { id: '1', input: '[1,2,3,null,5,null,4]', expected_output: '[1,3,4]', is_hidden: false },
+  ],
+  'diameter-of-z-algorithm-z-algorithm-79': [
+    { id: '1', input: '[1,2,3,4,5]', expected_output: '3', is_hidden: false },
+  ],
+  'lowest-common-ancestor-z-algorithm-80': [
+    { id: '1', input: '[3,5,1,6,2,0,8,null,null,7,4], 5, 1', expected_output: '3', is_hidden: false },
+  ],
+  'factorial-of-z-algorithm-z-algorithm-81': [
+    { id: '1', input: '5', expected_output: '120', is_hidden: false },
+    { id: '2', input: '0', expected_output: '1', is_hidden: true },
+  ],
+  'power-of-two-z-algorithm-82': [
+    { id: '1', input: '16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '3', expected_output: 'false', is_hidden: true },
+  ],
+  'power-of-three-z-algorithm-83': [
+    { id: '1', input: '27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: '0', expected_output: 'false', is_hidden: true },
+  ],
+  'sqrt-x-z-algorithm-84': [
+    { id: '1', input: '4', expected_output: '2', is_hidden: false },
+    { id: '2', input: '8', expected_output: '2', is_hidden: true },
+  ],
+  'count-primes-z-algorithm-85': [
+    { id: '1', input: '10', expected_output: '4', is_hidden: false },
+  ],
+  'reverse-integer-z-algorithm-86': [
+    { id: '1', input: '123', expected_output: '321', is_hidden: false },
+    { id: '2', input: '-123', expected_output: '-321', is_hidden: true },
+  ],
+  'palindrome-number-z-algorithm-87': [
+    { id: '1', input: '121', expected_output: 'true', is_hidden: false },
+  ],
+  'gcd-of-two-numbers-z-algorithm-88': [
+    { id: '1', input: '12, 8', expected_output: '4', is_hidden: false },
+  ],
+  'lcm-of-two-numbers-z-algorithm-89': [
+    { id: '1', input: '4, 6', expected_output: '12', is_hidden: false },
+  ],
+  'number-of-digits-z-algorithm-90': [
+    { id: '1', input: '12345', expected_output: '5', is_hidden: false },
+  ],
+  'xor-of-all-numbers-z-algorithm-91': [
+    { id: '1', input: '[1,2,3]', expected_output: '0', is_hidden: false },
+  ],
+  'count-set-bits-z-algorithm-92': [
+    { id: '1', input: '11', expected_output: '3', is_hidden: false },
+  ],
+  'power-function-z-algorithm-93': [
+    { id: '1', input: '2.0, 10', expected_output: '1024.0', is_hidden: false },
+  ],
+  'reverse-bits-z-algorithm-94': [
+    { id: '1', input: '43261596', expected_output: '964176192', is_hidden: false },
+  ],
+  'missing-number-in-range-z-algorithm-95': [
+    { id: '1', input: '[0,1,3]', expected_output: '2', is_hidden: false },
+  ],
+  'plus-one-z-algorithm-96': [
+    { id: '1', input: '[1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+  ],
+  'add-binary-z-algorithm-97': [
+    { id: '1', input: '\\"11\\",\\"1\\"', expected_output: '\\"100\\"', is_hidden: false },
+  ],
+  'multiply-strings-z-algorithm-98': [
+    { id: '1', input: '\\"123\\",\\"456\\"', expected_output: '\\"56088\\"', is_hidden: false },
+  ],
+  'intersection-of-arrays-z-algorithm-99': [
+    { id: '1', input: '[1,2,2,1], [2,2]', expected_output: '[2]', is_hidden: false },
+  ],
+  'union-of-arrays-z-algorithm-100': [
+    { id: '1', input: '[1,2,3], [2,3,4]', expected_output: '[1,2,3,4]', is_hidden: false },
+  ],
+  'trap-rain': [
+    { id: '1', input: 'height = [0,1,0,2,1,0,1,3,2,1,2,1]', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'height = [0,1,0,2,1,0,1,3,2,1,2,1]', expected_output: '6', is_hidden: true },
+  ],
+  'jump-2': [
+    { id: '1', input: 'nums = [2,3,1,1,4]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [2,3,1,1,4]', expected_output: '2', is_hidden: true },
+  ],
+  'spiral': [
+    { id: '1', input: 'matrix = [[1,2,3],[4,5,6],[7,8,9]]', expected_output: '[1,2,3,6,9,8,7,4,5]', is_hidden: false },
+    { id: '2', input: 'matrix = [[1,2,3],[4,5,6],[7,8,9]]', expected_output: '[1,2,3,6,9,8,7,4,5]', is_hidden: true },
+  ],
+  'spiral-ii': [
+    { id: '1', input: 'n = 3', expected_output: '[[1,2,3],[8,9,4],[7,6,5]]', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: '[[1,2,3],[8,9,4],[7,6,5]]', is_hidden: true },
+  ],
+  'set-zero': [
+    { id: '1', input: 'matrix = [[1,1,1],[1,0,1],[1,1,1]]', expected_output: '[[1,0,1],[0,0,0],[1,0,1]]', is_hidden: false },
+    { id: '2', input: 'matrix = [[1,1,1],[1,0,1],[1,1,1]]', expected_output: '[[1,0,1],[0,0,0],[1,0,1]]', is_hidden: true },
+  ],
+  'rotate-img': [
+    { id: '1', input: 'matrix = [[1,2,3],[4,5,6],[7,8,9]]', expected_output: '[[7,4,1],[8,5,2],[9,6,3]]', is_hidden: false },
+    { id: '2', input: 'matrix = [[1,2,3],[4,5,6],[7,8,9]]', expected_output: '[[7,4,1],[8,5,2],[9,6,3]]', is_hidden: true },
+  ],
+  'game-life': [
+    { id: '1', input: 'board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]', expected_output: '[[0,0,0],[1,0,1],[0,1,1],[0,1,0]]', is_hidden: false },
+    { id: '2', input: 'board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]', expected_output: '[[0,0,0],[1,0,1],[0,1,1],[0,1,0]]', is_hidden: true },
+  ],
+  'sudoku': [
+    { id: '1', input: 'valid board', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'valid board', expected_output: 'true', is_hidden: true },
+  ],
+  'long-consec': [
+    { id: '1', input: 'nums = [100,4,200,1,3,2]', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [100,4,200,1,3,2]', expected_output: '4', is_hidden: true },
+  ],
+  'sub-sum-k': [
+    { id: '1', input: 'nums = [1,1,1], k = 2', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,1], k = 2', expected_output: '2', is_hidden: true },
+  ],
+  'max-prod': [
+    { id: '1', input: 'nums = [2,3,-2,4]', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'nums = [2,3,-2,4]', expected_output: '6', is_hidden: true },
+  ],
+  'min-stk': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'prod-self': [
+    { id: '1', input: 'nums = [1,2,3,4]', expected_output: '[24,12,8,6]', is_hidden: false },
+    { id: '2', input: 'nums = [1,2,3,4]', expected_output: '[24,12,8,6]', is_hidden: true },
+  ],
+  'maj-elem': [
+    { id: '1', input: 'nums = [3,2,3]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'nums = [3,2,3]', expected_output: '3', is_hidden: true },
+  ],
+  'maj-2': [
+    { id: '1', input: 'nums = [3,2,3]', expected_output: '[3]', is_hidden: false },
+    { id: '2', input: 'nums = [3,2,3]', expected_output: '[3]', is_hidden: true },
+  ],
+  'find-dups': [
+    { id: '1', input: 'nums = [4,3,2,7,8,2,3,1]', expected_output: '[2,3]', is_hidden: false },
+    { id: '2', input: 'nums = [4,3,2,7,8,2,3,1]', expected_output: '[2,3]', is_hidden: true },
+  ],
+  'miss-num': [
+    { id: '1', input: 'nums = [3,0,1]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [3,0,1]', expected_output: '2', is_hidden: true },
+  ],
+  'find-dup': [
+    { id: '1', input: 'nums = [1,3,4,2,2]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,3,4,2,2]', expected_output: '2', is_hidden: true },
+  ],
+  'next-perm': [
+    { id: '1', input: 'nums = [1,2,3]', expected_output: '[1,3,2]', is_hidden: false },
+    { id: '2', input: 'nums = [1,2,3]', expected_output: '[1,3,2]', is_hidden: true },
+  ],
+  'rev-words': [
+    { id: '1', input: 's = "the sky is blue"', expected_output: '"blue is sky the"', is_hidden: false },
+    { id: '2', input: 's = "the sky is blue"', expected_output: '"blue is sky the"', is_hidden: true },
+  ],
+  'sort-col': [
+    { id: '1', input: 'nums = [2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+    { id: '2', input: 'nums = [2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: true },
+  ],
+  'word-srch': [
+    { id: '1', input: 'standard board, "ABCCED"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'standard board, "ABCCED"', expected_output: 'true', is_hidden: true },
+  ],
+  'h-index': [
+    { id: '1', input: 'citations = [3,0,6,1,5]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'citations = [3,0,6,1,5]', expected_output: '3', is_hidden: true },
+  ],
+  'long-sub-norep': [
+    { id: '1', input: 's = "abcabcbb"', expected_output: '3', is_hidden: false },
+    { id: '2', input: 's = "abcabcbb"', expected_output: '3', is_hidden: true },
+  ],
+  'long-pal': [
+    { id: '1', input: 's = "babad"', expected_output: '"bab"', is_hidden: false },
+    { id: '2', input: 's = "babad"', expected_output: '"bab"', is_hidden: true },
+  ],
+  'valid-anag': [
+    { id: '1', input: 's = "anagram", t = "nagaram"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "anagram", t = "nagaram"', expected_output: 'true', is_hidden: true },
+  ],
+  'grp-anag': [
+    { id: '1', input: 'strs = ["eat","tea","tan","ate","nat","bat"]', expected_output: '[["bat"],["nat","tan"],["ate","eat","tea"]]', is_hidden: false },
+    { id: '2', input: 'strs = ["eat","tea","tan","ate","nat","bat"]', expected_output: '[["bat"],["nat","tan"],["ate","eat","tea"]]', is_hidden: true },
+  ],
+  'long-com-pre': [
+    { id: '1', input: 'strs = ["flower","flow","flight"]', expected_output: '"fl"', is_hidden: false },
+    { id: '2', input: 'strs = ["flower","flow","flight"]', expected_output: '"fl"', is_hidden: true },
+  ],
+  'atoi': [
+    { id: '1', input: 's = "42"', expected_output: '42', is_hidden: false },
+    { id: '2', input: 's = "42"', expected_output: '42', is_hidden: true },
+  ],
+  'strstr': [
+    { id: '1', input: 'haystack = "sadbutsad", needle = "sad"', expected_output: '0', is_hidden: false },
+    { id: '2', input: 'haystack = "sadbutsad", needle = "sad"', expected_output: '0', is_hidden: true },
+  ],
+  'count-say': [
+    { id: '1', input: 'n = 4', expected_output: '"1211"', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: '"1211"', is_hidden: true },
+  ],
+  'simp-path': [
+    { id: '1', input: 'path = "/home/"', expected_output: '"/home"', is_hidden: false },
+    { id: '2', input: 'path = "/home/"', expected_output: '"/home"', is_hidden: true },
+  ],
+  'text-just': [
+    { id: '1', input: 'standard input', expected_output: 'formatted output', is_hidden: false },
+    { id: '2', input: 'standard input', expected_output: 'formatted output', is_hidden: true },
+  ],
+  'wd-brk': [
+    { id: '1', input: 's = "leetcode", wordDict = ["leet","code"]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "leetcode", wordDict = ["leet","code"]', expected_output: 'true', is_hidden: true },
+  ],
+  'let-comb': [
+    { id: '1', input: 'digits = "23"', expected_output: '["ad","ae","af","bd","be","bf","cd","ce","cf"]', is_hidden: false },
+    { id: '2', input: 'digits = "23"', expected_output: '["ad","ae","af","bd","be","bf","cd","ce","cf"]', is_hidden: true },
+  ],
+  'val-pal': [
+    { id: '1', input: 's = "A man, a plan, a canal: Panama"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "A man, a plan, a canal: Panama"', expected_output: 'true', is_hidden: true },
+  ],
+  'min-rem-par': [
+    { id: '1', input: 's = "lee(t(c)o)de)"', expected_output: '"lee(t(c)o)de"', is_hidden: false },
+    { id: '2', input: 's = "lee(t(c)o)de)"', expected_output: '"lee(t(c)o)de"', is_hidden: true },
+  ],
+  'long-rep-rep': [
+    { id: '1', input: 's = "ABAB", k = 2', expected_output: '4', is_hidden: false },
+    { id: '2', input: 's = "ABAB", k = 2', expected_output: '4', is_hidden: true },
+  ],
+  'dec-str': [
+    { id: '1', input: 's = "3[a]2[bc]"', expected_output: '"aaabcbc"', is_hidden: false },
+    { id: '2', input: 's = "3[a]2[bc]"', expected_output: '"aaabcbc"', is_hidden: true },
+  ],
+  'str-compr': [
+    { id: '1', input: 'chars = ["a","a","b","b","c","c","c"]', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'chars = ["a","a","b","b","c","c","c"]', expected_output: '6', is_hidden: true },
+  ],
+  'long-sub-k': [
+    { id: '1', input: 's = "aaabb", k = 3', expected_output: '3', is_hidden: false },
+    { id: '2', input: 's = "aaabb", k = 3', expected_output: '3', is_hidden: true },
+  ],
+  'rev-let': [
+    { id: '1', input: 's = "ab-cd"', expected_output: '"dc-ba"', is_hidden: false },
+    { id: '2', input: 's = "ab-cd"', expected_output: '"dc-ba"', is_hidden: true },
+  ],
+  'mul-str': [
+    { id: '1', input: 'num1 = "2", num2 = "3"', expected_output: '"6"', is_hidden: false },
+    { id: '2', input: 'num1 = "2", num2 = "3"', expected_output: '"6"', is_hidden: true },
+  ],
+  'int-roman': [
+    { id: '1', input: 'num = 58', expected_output: '"LVIII"', is_hidden: false },
+    { id: '2', input: 'num = 58', expected_output: '"LVIII"', is_hidden: true },
+  ],
+  'roman-int': [
+    { id: '1', input: 's = "III"', expected_output: '3', is_hidden: false },
+    { id: '2', input: 's = "III"', expected_output: '3', is_hidden: true },
+  ],
+  'cmp-ver': [
+    { id: '1', input: 'version1 = "1.01", version2 = "1.001"', expected_output: '0', is_hidden: false },
+    { id: '2', input: 'version1 = "1.01", version2 = "1.001"', expected_output: '0', is_hidden: true },
+  ],
+  'add-bin': [
+    { id: '1', input: 'a = "11", b = "1"', expected_output: '"100"', is_hidden: false },
+    { id: '2', input: 'a = "11", b = "1"', expected_output: '"100"', is_hidden: true },
+  ],
+  'two-sum-2': [
+    { id: '1', input: 'numbers = [2,7,11,15], target = 9', expected_output: '[1,2]', is_hidden: false },
+    { id: '2', input: 'numbers = [2,7,11,15], target = 9', expected_output: '[1,2]', is_hidden: true },
+  ],
+  'top-k-freq': [
+    { id: '1', input: 'nums = [1,1,1,2,2,3], k = 2', expected_output: '[1,2]', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,1,2,2,3], k = 2', expected_output: '[1,2]', is_hidden: true },
+  ],
+  'lru': [
+    { id: '1', input: 'LRUCache(2) ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'LRUCache(2) ops', expected_output: 'works', is_hidden: true },
+  ],
+  'rnd-set': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'des-hm': [
+    { id: '1', input: 'put, get, remove', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'put, get, remove', expected_output: 'works', is_hidden: true },
+  ],
+  'k-diff': [
+    { id: '1', input: 'nums = [3,1,4,1,5,9,2,6,5,3,5], k = 2', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'nums = [3,1,4,1,5,9,2,6,5,3,5], k = 2', expected_output: '6', is_hidden: true },
+  ],
+  'wd-pat': [
+    { id: '1', input: 'pattern = "abba", s = "dog cat cat dog"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'pattern = "abba", s = "dog cat cat dog"', expected_output: 'true', is_hidden: true },
+  ],
+  'iso-str': [
+    { id: '1', input: 's = "egg", t = "add"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "egg", t = "add"', expected_output: 'true', is_hidden: true },
+  ],
+  'all-anag': [
+    { id: '1', input: 's = "cbaebabacd", p = "abc"', expected_output: '[0,6]', is_hidden: false },
+    { id: '2', input: 's = "cbaebabacd", p = "abc"', expected_output: '[0,6]', is_hidden: true },
+  ],
+  'logger': [
+    { id: '1', input: 'shouldPrintMessage', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'shouldPrintMessage', expected_output: 'true', is_hidden: true },
+  ],
+  'frac-rec': [
+    { id: '1', input: '4/333', expected_output: '"0.(012)"', is_hidden: false },
+    { id: '2', input: '4/333', expected_output: '"0.(012)"', is_hidden: true },
+  ],
+  'des-tw': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'most-freq-sub': [
+    { id: '1', input: 'root = [5,2,-3]', expected_output: '[2,-3,4]', is_hidden: false },
+    { id: '2', input: 'root = [5,2,-3]', expected_output: '[2,-3,4]', is_hidden: true },
+  ],
+  'time-kv': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'snap-arr': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'des-hs': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'sub-sum-2': [
+    { id: '1', input: 'nums = [1,1,1], k = 2', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,1], k = 2', expected_output: '2', is_hidden: true },
+  ],
+  'des-skl': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'ls-amkd': [
+    { id: '1', input: 's = "eceba", k = 2', expected_output: '3', is_hidden: false },
+    { id: '2', input: 's = "eceba", k = 2', expected_output: '3', is_hidden: true },
+  ],
+  'rev-ll': [
+    { id: '1', input: 'head = [1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5]', expected_output: '[5,4,3,2,1]', is_hidden: true },
+  ],
+  'mrg-2-ll': [
+    { id: '1', input: 'list1 = [1,2,4], list2 = [1,3,4]', expected_output: '[1,1,2,3,4,4]', is_hidden: false },
+    { id: '2', input: 'list1 = [1,2,4], list2 = [1,3,4]', expected_output: '[1,1,2,3,4,4]', is_hidden: true },
+  ],
+  'add-2-num': [
+    { id: '1', input: 'l1 = [2,4,3], l2 = [5,6,4]', expected_output: '[7,0,8]', is_hidden: false },
+    { id: '2', input: 'l1 = [2,4,3], l2 = [5,6,4]', expected_output: '[7,0,8]', is_hidden: true },
+  ],
+  'rem-nth-end': [
+    { id: '1', input: 'head = [1,2,3,4,5], n = 2', expected_output: '[1,2,3,5]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5], n = 2', expected_output: '[1,2,3,5]', is_hidden: true },
+  ],
+  'll-cycle': [
+    { id: '1', input: 'head = [3,2,0,-4], pos = 1', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'head = [3,2,0,-4], pos = 1', expected_output: 'true', is_hidden: true },
+  ],
+  'mrg-k-ll': [
+    { id: '1', input: 'lists standard', expected_output: 'merged', is_hidden: false },
+    { id: '2', input: 'lists standard', expected_output: 'merged', is_hidden: true },
+  ],
+  'swp-pairs': [
+    { id: '1', input: 'head = [1,2,3,4]', expected_output: '[2,1,4,3]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4]', expected_output: '[2,1,4,3]', is_hidden: true },
+  ],
+  'rev-k-grp': [
+    { id: '1', input: 'head = [1,2,3,4,5], k = 2', expected_output: '[2,1,4,3,5]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5], k = 2', expected_output: '[2,1,4,3,5]', is_hidden: true },
+  ],
+  'rm-dup-sorted': [
+    { id: '1', input: 'head = [1,1,2]', expected_output: '[1,2]', is_hidden: false },
+    { id: '2', input: 'head = [1,1,2]', expected_output: '[1,2]', is_hidden: true },
+  ],
+  'part-ll': [
+    { id: '1', input: 'head = [1,4,3,2,5,2], x = 3', expected_output: '[1,2,2,4,3,5]', is_hidden: false },
+    { id: '2', input: 'head = [1,4,3,2,5,2], x = 3', expected_output: '[1,2,2,4,3,5]', is_hidden: true },
+  ],
+  'rot-ll': [
+    { id: '1', input: 'head = [1,2,3,4,5], k = 2', expected_output: '[4,5,1,2,3]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5], k = 2', expected_output: '[4,5,1,2,3]', is_hidden: true },
+  ],
+  'rev-ll-2': [
+    { id: '1', input: 'head = [1,2,3,4,5], left = 2, right = 4', expected_output: '[1,4,3,2,5]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5], left = 2, right = 4', expected_output: '[1,4,3,2,5]', is_hidden: true },
+  ],
+  'des-ll': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'sort-ll': [
+    { id: '1', input: 'head = [4,2,1,3]', expected_output: '[1,2,3,4]', is_hidden: false },
+    { id: '2', input: 'head = [4,2,1,3]', expected_output: '[1,2,3,4]', is_hidden: true },
+  ],
+  'reord-ll': [
+    { id: '1', input: 'head = [1,2,3,4]', expected_output: '[1,4,2,3]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4]', expected_output: '[1,4,2,3]', is_hidden: true },
+  ],
+  'pal-ll': [
+    { id: '1', input: 'head = [1,2,2,1]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'head = [1,2,2,1]', expected_output: 'true', is_hidden: true },
+  ],
+  'odd-even-ll': [
+    { id: '1', input: 'head = [1,2,3,4,5]', expected_output: '[1,3,5,2,4]', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5]', expected_output: '[1,3,5,2,4]', is_hidden: true },
+  ],
+  'mid-ll': [
+    { id: '1', input: 'head = [1,2,3,4,5]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'head = [1,2,3,4,5]', expected_output: '3', is_hidden: true },
+  ],
+  'cbll': [
+    { id: '1', input: 'head = [1,0,1]', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'head = [1,0,1]', expected_output: '5', is_hidden: true },
+  ],
+  'val-par': [
+    { id: '1', input: 's = "()"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "()"', expected_output: 'true', is_hidden: true },
+  ],
+  'min-stk-2': [
+    { id: '1', input: 'standard ops', expected_output: '-3', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: '-3', is_hidden: true },
+  ],
+  'eval-rpn': [
+    { id: '1', input: 'tokens = ["2","1","+","3","*"]', expected_output: '9', is_hidden: false },
+    { id: '2', input: 'tokens = ["2","1","+","3","*"]', expected_output: '9', is_hidden: true },
+  ],
+  'daily-temp': [
+    { id: '1', input: 'temperatures = [73,74,75,71,69,72,76,73]', expected_output: '[1,1,4,2,1,1,0,0]', is_hidden: false },
+    { id: '2', input: 'temperatures = [73,74,75,71,69,72,76,73]', expected_output: '[1,1,4,2,1,1,0,0]', is_hidden: true },
+  ],
+  'car-fleet-2': [
+    { id: '1', input: 'cars standard', expected_output: 'times', is_hidden: false },
+    { id: '2', input: 'cars standard', expected_output: 'times', is_hidden: true },
+  ],
+  'basic-calc': [
+    { id: '1', input: 's = "1 + 1"', expected_output: '2', is_hidden: false },
+    { id: '2', input: 's = "1 + 1"', expected_output: '2', is_hidden: true },
+  ],
+  'lrh': [
+    { id: '1', input: 'heights = [2,1,5,6,2,3]', expected_output: '10', is_hidden: false },
+    { id: '2', input: 'heights = [2,1,5,6,2,3]', expected_output: '10', is_hidden: true },
+  ],
+  'trap-rain-2': [
+    { id: '1', input: 'heightMap standard', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'heightMap standard', expected_output: '4', is_hidden: true },
+  ],
+  'ast-coll': [
+    { id: '1', input: 'asteroids = [5,10,-5]', expected_output: '[5,10]', is_hidden: false },
+    { id: '2', input: 'asteroids = [5,10,-5]', expected_output: '[5,10]', is_hidden: true },
+  ],
+  'dec-str-2': [
+    { id: '1', input: 's = "3[a]2[bc]"', expected_output: '"aaabcbc"', is_hidden: false },
+    { id: '2', input: 's = "3[a]2[bc]"', expected_output: '"aaabcbc"', is_hidden: true },
+  ],
+  'nge-2': [
+    { id: '1', input: 'nums = [1,2,1]', expected_output: '[2,-1,2]', is_hidden: false },
+    { id: '2', input: 'nums = [1,2,1]', expected_output: '[2,-1,2]', is_hidden: true },
+  ],
+  'max-freq-stk': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'impl-q-stk': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'impl-stk-q': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'long-val-par': [
+    { id: '1', input: 's = "(()"', expected_output: '2', is_hidden: false },
+    { id: '2', input: 's = "(()"', expected_output: '2', is_hidden: true },
+  ],
+  'rm-adj-2': [
+    { id: '1', input: 's = "deeedbbcccbdaa", k = 3', expected_output: '"aa"', is_hidden: false },
+    { id: '2', input: 's = "deeedbbcccbdaa", k = 3', expected_output: '"aa"', is_hidden: true },
+  ],
+  'clf': [
+    { id: '1', input: 'logs standard', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'logs standard', expected_output: '2', is_hidden: true },
+  ],
+  'des-cq': [
+    { id: '1', input: 'MyCircularQueue(3) ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'MyCircularQueue(3) ops', expected_output: 'works', is_hidden: true },
+  ],
+  'swm': [
+    { id: '1', input: 'nums = [1,3,-1,-3,5,3,6,7], k = 3', expected_output: '[3,3,5,5,6,7]', is_hidden: false },
+    { id: '2', input: 'nums = [1,3,-1,-3,5,3,6,7], k = 3', expected_output: '[3,3,5,5,6,7]', is_hidden: true },
+  ],
+  'des-hc': [
+    { id: '1', input: 'hit(1), hit(2), hit(3), getHits(4)', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'hit(1), hit(2), hit(3), getHits(4)', expected_output: '3', is_hidden: true },
+  ],
+  'sssa-k': [
+    { id: '1', input: 'nums = [1], k = 1', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'nums = [1], k = 1', expected_output: '1', is_hidden: true },
+  ],
+  'nrc': [
+    { id: '1', input: 'ping(1), ping(100), ping(3001)', expected_output: '1,2,3', is_hidden: false },
+    { id: '2', input: 'ping(1), ping(100), ping(3001)', expected_output: '1,2,3', is_hidden: true },
+  ],
+  'rev-cards': [
+    { id: '1', input: 'deck = [17,13,11,2,3,5,7]', expected_output: '[2,13,3,11,5,17,7]', is_hidden: false },
+    { id: '2', input: 'deck = [17,13,11,2,3,5,7]', expected_output: '[2,13,3,11,5,17,7]', is_hidden: true },
+  ],
+  'max-cir-sum': [
+    { id: '1', input: 'nums = [1,-2,3,-2]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'nums = [1,-2,3,-2]', expected_output: '3', is_hidden: true },
+  ],
+  'gas-2': [
+    { id: '1', input: 'gas = [1,2,3,4,5], cost = [3,4,5,1,2]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'gas = [1,2,3,4,5], cost = [3,4,5,1,2]', expected_output: '3', is_hidden: true },
+  ],
+  'rot-orange': [
+    { id: '1', input: 'grid = [[2,1,1],[1,1,0],[0,1,1]]', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'grid = [[2,1,1],[1,1,0],[0,1,1]]', expected_output: '4', is_hidden: true },
+  ],
+  'perf-sq': [
+    { id: '1', input: 'n = 12', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'n = 12', expected_output: '3', is_hidden: true },
+  ],
+  'min-kn': [
+    { id: '1', input: 'x = 2, y = 1', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'x = 2, y = 1', expected_output: '1', is_hidden: true },
+  ],
+  'fr-cir': [
+    { id: '1', input: 'M = [[1,1,0],[1,1,0],[0,0,1]]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'M = [[1,1,0],[1,1,0],[0,0,1]]', expected_output: '2', is_hidden: true },
+  ],
+  'course-2': [
+    { id: '1', input: 'numCourses = 2, prereqs = [[1,0]]', expected_output: '[0,1]', is_hidden: false },
+    { id: '2', input: 'numCourses = 2, prereqs = [[1,0]]', expected_output: '[0,1]', is_hidden: true },
+  ],
+  'kth-lar': [
+    { id: '1', input: 'nums = [3,2,1,5,6,4], k = 2', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'nums = [3,2,1,5,6,4], k = 2', expected_output: '5', is_hidden: true },
+  ],
+  'top-k-wd': [
+    { id: '1', input: 'words = ["i","love","leetcode","i","love","coding"], k = 2', expected_output: '["i","love"]', is_hidden: false },
+    { id: '2', input: 'words = ["i","love","leetcode","i","love","coding"], k = 2', expected_output: '["i","love"]', is_hidden: true },
+  ],
+  'k-clos': [
+    { id: '1', input: 'points = [[1,3],[-2,2]], k = 1', expected_output: '[[-2,2]]', is_hidden: false },
+    { id: '2', input: 'points = [[1,3],[-2,2]], k = 1', expected_output: '[[-2,2]]', is_hidden: true },
+  ],
+  'last-st': [
+    { id: '1', input: 'stones = [2,7,4,1,8,1]', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'stones = [2,7,4,1,8,1]', expected_output: '1', is_hidden: true },
+  ],
+  'reorg-str': [
+    { id: '1', input: 's = "aab"', expected_output: '"aba"', is_hidden: false },
+    { id: '2', input: 's = "aab"', expected_output: '"aba"', is_hidden: true },
+  ],
+  'score-par': [
+    { id: '1', input: 's = "()"', expected_output: '1', is_hidden: false },
+    { id: '2', input: 's = "()"', expected_output: '1', is_hidden: true },
+  ],
+  'ug-2': [
+    { id: '1', input: 'n = 10', expected_output: '12', is_hidden: false },
+    { id: '2', input: 'n = 10', expected_output: '12', is_hidden: true },
+  ],
+  'inv-bt': [
+    { id: '1', input: 'root = [4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: false },
+    { id: '2', input: 'root = [4,2,7,1,3,6,9]', expected_output: '[4,7,2,9,6,3,1]', is_hidden: true },
+  ],
+  'max-dp-bt': [
+    { id: '1', input: 'root = [3,9,20,null,null,15,7]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'root = [3,9,20,null,null,15,7]', expected_output: '3', is_hidden: true },
+  ],
+  'same-bt': [
+    { id: '1', input: 'p = [1,2,3], q = [1,2,3]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'p = [1,2,3], q = [1,2,3]', expected_output: 'true', is_hidden: true },
+  ],
+  'sub-another': [
+    { id: '1', input: 'root = [3,4,5,1,2], subRoot = [4,1,2]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'root = [3,4,5,1,2], subRoot = [4,1,2]', expected_output: 'true', is_hidden: true },
+  ],
+  'lvl-ord': [
+    { id: '1', input: 'root = [3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: false },
+    { id: '2', input: 'root = [3,9,20,null,null,15,7]', expected_output: '[[3],[9,20],[15,7]]', is_hidden: true },
+  ],
+  'val-bst': [
+    { id: '1', input: 'root = [2,1,3]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'root = [2,1,3]', expected_output: 'true', is_hidden: true },
+  ],
+  'kth-bst-2': [
+    { id: '1', input: 'root = [3,1,4,null,2], k = 1', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'root = [3,1,4,null,2], k = 1', expected_output: '1', is_hidden: true },
+  ],
+  'max-ps': [
+    { id: '1', input: 'root = [-10,9,20,null,null,15,7]', expected_output: '42', is_hidden: false },
+    { id: '2', input: 'root = [-10,9,20,null,null,15,7]', expected_output: '42', is_hidden: true },
+  ],
+  'sum-r-l': [
+    { id: '1', input: 'root = [1,2,3]', expected_output: '25', is_hidden: false },
+    { id: '2', input: 'root = [1,2,3]', expected_output: '25', is_hidden: true },
+  ],
+  'ubst': [
+    { id: '1', input: 'n = 3', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: '5', is_hidden: true },
+  ],
+  'house-3': [
+    { id: '1', input: 'root = [3,2,3,null,3,null,1]', expected_output: '7', is_hidden: false },
+    { id: '2', input: 'root = [3,2,3,null,3,null,1]', expected_output: '7', is_hidden: true },
+  ],
+  'val-bst-2': [
+    { id: '1', input: 'root = [2,1,3]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'root = [2,1,3]', expected_output: 'true', is_hidden: true },
+  ],
+  'conv-arr-bst': [
+    { id: '1', input: 'nums = [-10,-3,0,5,9]', expected_output: '[0,-3,9,-10,null,5]', is_hidden: false },
+    { id: '2', input: 'nums = [-10,-3,0,5,9]', expected_output: '[0,-3,9,-10,null,5]', is_hidden: true },
+  ],
+  'con-pre-bst': [
+    { id: '1', input: 'preorder = [8,5,1,7,10,12]', expected_output: '[8,5,10,1,7,null,12]', is_hidden: false },
+    { id: '2', input: 'preorder = [8,5,1,7,10,12]', expected_output: '[8,5,10,1,7,null,12]', is_hidden: true },
+  ],
+  'find-mode': [
+    { id: '1', input: 'root = [1,null,2,2]', expected_output: '[2]', is_hidden: false },
+    { id: '2', input: 'root = [1,null,2,2]', expected_output: '[2]', is_hidden: true },
+  ],
+  'ubst-2': [
+    { id: '1', input: 'n = 3', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: 'list', is_hidden: true },
+  ],
+  'max-area': [
+    { id: '1', input: 'grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]]', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]]', expected_output: '6', is_hidden: true },
+  ],
+  'fib': [
+    { id: '1', input: 'n = 2', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'n = 2', expected_output: '1', is_hidden: true },
+  ],
+  'climb-2': [
+    { id: '1', input: 'n = 2', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'n = 2', expected_output: '2', is_hidden: true },
+  ],
+  'pow-2': [
+    { id: '1', input: 'n = 16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'n = 16', expected_output: 'true', is_hidden: true },
+  ],
+  'rev-str-2': [
+    { id: '1', input: 's = ["h","e","l","l","o"]', expected_output: '["o","l","l","e","h"]', is_hidden: false },
+    { id: '2', input: 's = ["h","e","l","l","o"]', expected_output: '["o","l","l","e","h"]', is_hidden: true },
+  ],
+  'gen-par': [
+    { id: '1', input: 'n = 3', expected_output: '["((()))","(()())","(())()","()(())","()()()"]', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: '["((()))","(()())","(())()","()(())","()()()"]', is_hidden: true },
+  ],
+  'perms': [
+    { id: '1', input: 'nums = [1,2,3]', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'nums = [1,2,3]', expected_output: 'list', is_hidden: true },
+  ],
+  'perms-2': [
+    { id: '1', input: 'nums = [1,1,2]', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,2]', expected_output: 'list', is_hidden: true },
+  ],
+  'combs': [
+    { id: '1', input: 'n = 4, k = 2', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 4, k = 2', expected_output: 'list', is_hidden: true },
+  ],
+  'n-queens-2': [
+    { id: '1', input: 'n = 4', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: '2', is_hidden: true },
+  ],
+  'pow-x-n': [
+    { id: '1', input: 'x = 2.0, n = 10', expected_output: '1024.0', is_hidden: false },
+    { id: '2', input: 'x = 2.0, n = 10', expected_output: '1024.0', is_hidden: true },
+  ],
+  'strob-2': [
+    { id: '1', input: 'n = 2', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 2', expected_output: 'list', is_hidden: true },
+  ],
+  'ba-r': [
+    { id: '1', input: 'n = 4', expected_output: '[2,1,4,3]', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: '[2,1,4,3]', is_hidden: true },
+  ],
+  'swm-2': [
+    { id: '1', input: 'nums = [1,3,-1,-3,5,3,6,7], k = 3', expected_output: '[3,3,5,5,6,7]', is_hidden: false },
+    { id: '2', input: 'nums = [1,3,-1,-3,5,3,6,7], k = 3', expected_output: '[3,3,5,5,6,7]', is_hidden: true },
+  ],
+  'des-cdq': [
+    { id: '1', input: 'MyCircularDeque(3) ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'MyCircularDeque(3) ops', expected_output: 'works', is_hidden: true },
+  ],
+  'des-fmb': [
+    { id: '1', input: 'standard ops', expected_output: 'works', is_hidden: false },
+    { id: '2', input: 'standard ops', expected_output: 'works', is_hidden: true },
+  ],
+  'max-ch': [
+    { id: '1', input: 'arr = [4,3,2,1,0]', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'arr = [4,3,2,1,0]', expected_output: '1', is_hidden: true },
+  ],
+  'lin-s-2': [
+    { id: '1', input: 'nums = [4,5,6,7,0,1,2], target = 0', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [4,5,6,7,0,1,2], target = 0', expected_output: '4', is_hidden: true },
+  ],
+  'fflp-2': [
+    { id: '1', input: 'nums = [5,7,7,8,8,10], target = 8', expected_output: '[3,4]', is_hidden: false },
+    { id: '2', input: 'nums = [5,7,7,8,8,10], target = 8', expected_output: '[3,4]', is_hidden: true },
+  ],
+  'srsa-2': [
+    { id: '1', input: 'nums = [4,5,6,7,0,1,2], target = 0', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [4,5,6,7,0,1,2], target = 0', expected_output: '4', is_hidden: true },
+  ],
+  'fmrs-2': [
+    { id: '1', input: 'nums = [3,4,5,1,2]', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'nums = [3,4,5,1,2]', expected_output: '1', is_hidden: true },
+  ],
+  's2dm-2': [
+    { id: '1', input: 'matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5', expected_output: 'true', is_hidden: true },
+  ],
+  'fpe-2': [
+    { id: '1', input: 'nums = [1,2,3,1]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,2,3,1]', expected_output: '2', is_hidden: true },
+  ],
+  'cnnsm': [
+    { id: '1', input: 'grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]', expected_output: '8', is_hidden: false },
+    { id: '2', input: 'grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]', expected_output: '8', is_hidden: true },
+  ],
+  'fslgt': [
+    { id: '1', input: 'letters = ["c","f","j"], target = "a"', expected_output: '"c"', is_hidden: false },
+    { id: '2', input: 'letters = ["c","f","j"], target = "a"', expected_output: '"c"', is_hidden: true },
+  ],
+  'gnhl-2': [
+    { id: '1', input: 'n = 10', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'n = 10', expected_output: '6', is_hidden: true },
+  ],
+  'sip': [
+    { id: '1', input: 'nums = [1,3,5,6], target = 5', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,3,5,6], target = 5', expected_output: '2', is_hidden: true },
+  ],
+  'ftdn': [
+    { id: '1', input: 'nums = [1,3,4,2,2]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,3,4,2,2]', expected_output: '2', is_hidden: true },
+  ],
+  'med-2sa': [
+    { id: '1', input: 'nums1 = [1,3], nums2 = [2]', expected_output: '2.0', is_hidden: false },
+    { id: '2', input: 'nums1 = [1,3], nums2 = [2]', expected_output: '2.0', is_hidden: true },
+  ],
+  'keb': [
+    { id: '1', input: 'piles = [3,6,7,11], h = 8', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'piles = [3,6,7,11], h = 8', expected_output: '4', is_hidden: true },
+  ],
+  'sa-2': [
+    { id: '1', input: 'nums = [5,2,3,1]', expected_output: '[1,2,3,5]', is_hidden: false },
+    { id: '2', input: 'nums = [5,2,3,1]', expected_output: '[1,2,3,5]', is_hidden: true },
+  ],
+  'sc-2': [
+    { id: '1', input: 'nums = [2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: false },
+    { id: '2', input: 'nums = [2,0,2,1,1,0]', expected_output: '[0,0,1,1,2,2]', is_hidden: true },
+  ],
+  'ln': [
+    { id: '1', input: 'nums = [10,2]', expected_output: '"210"', is_hidden: false },
+    { id: '2', input: 'nums = [10,2]', expected_output: '"210"', is_hidden: true },
+  ],
+  'va-2': [
+    { id: '1', input: 's = "anagram", t = "nagaram"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "anagram", t = "nagaram"', expected_output: 'true', is_hidden: true },
+  ],
+  'ws-22': [
+    { id: '1', input: 'nums = [1,5,1,1,6,4]', expected_output: '[1,6,1,5,1,4]', is_hidden: false },
+    { id: '2', input: 'nums = [1,5,1,1,6,4]', expected_output: '[1,6,1,5,1,4]', is_hidden: true },
+  ],
+  'stabp': [
+    { id: '1', input: 'nums = [3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: false },
+    { id: '2', input: 'nums = [3,1,2,4]', expected_output: '[2,4,3,1]', is_hidden: true },
+  ],
+  'scbf': [
+    { id: '1', input: 's = "tree"', expected_output: '"eert"', is_hidden: false },
+    { id: '2', input: 's = "tree"', expected_output: '"eert"', is_hidden: true },
+  ],
+  'tkfe': [
+    { id: '1', input: 'nums = [1,1,1,2,2,3], k = 2', expected_output: '[1,2]', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,1,2,2,3], k = 2', expected_output: '[1,2]', is_hidden: true },
+  ],
+  'kle-2': [
+    { id: '1', input: 'nums = [3,2,1,5,6,4], k = 2', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'nums = [3,2,1,5,6,4], k = 2', expected_output: '5', is_hidden: true },
+  ],
+  'mi': [
+    { id: '1', input: 'intervals = [[1,3],[2,6],[8,10],[15,18]]', expected_output: '[[1,6],[8,10],[15,18]]', is_hidden: false },
+    { id: '2', input: 'intervals = [[1,3],[2,6],[8,10],[15,18]]', expected_output: '[[1,6],[8,10],[15,18]]', is_hidden: true },
+  ],
+  'lpt': [
+    { id: '1', input: 'nums = [2,1,2]', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'nums = [2,1,2]', expected_output: '5', is_hidden: true },
+  ],
+  'ap': [
+    { id: '1', input: 'nums = [1,4,3,2]', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [1,4,3,2]', expected_output: '4', is_hidden: true },
+  ],
+  'mncycg': [
+    { id: '1', input: 'piles = [2,4,1,2]', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'piles = [2,4,1,2]', expected_output: '4', is_hidden: true },
+  ],
+  'sabif': [
+    { id: '1', input: 'nums = [1,1,2,2,2,3]', expected_output: '[3,1,1,2,2,2]', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,2,2,2,3]', expected_output: '[3,1,1,2,2,2]', is_hidden: true },
+  ],
+  'sabp-2': [
+    { id: '1', input: 'nums = [4,2,5,7]', expected_output: '[4,5,2,7]', is_hidden: false },
+    { id: '2', input: 'nums = [4,2,5,7]', expected_output: '[4,5,2,7]', is_hidden: true },
+  ],
+  'bs-2': [
+    { id: '1', input: 'nums = [-1,0,3,5,9,12], target = 9', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [-1,0,3,5,9,12], target = 9', expected_output: '4', is_hidden: true },
+  ],
+  'fmrs-3': [
+    { id: '1', input: 'nums = [4,5,6,7,0,1,2]', expected_output: '0', is_hidden: false },
+    { id: '2', input: 'nums = [4,5,6,7,0,1,2]', expected_output: '0', is_hidden: true },
+  ],
+  'srsa-3': [
+    { id: '1', input: 'nums = [4,5,6,7,0,1,2], target = 0', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [4,5,6,7,0,1,2], target = 0', expected_output: '4', is_hidden: true },
+  ],
+  'cpslt': [
+    { id: '1', input: 'nums = [-1,1,2,3,1], target = 2', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'nums = [-1,1,2,3,1], target = 2', expected_output: '3', is_hidden: true },
+  ],
+  'fcntz': [
+    { id: '1', input: 'nums = [-4,-2,1,4,8]', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'nums = [-4,-2,1,4,8]', expected_output: '1', is_hidden: true },
+  ],
+  'piama': [
+    { id: '1', input: 'arr = [0,10,5,2]', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'arr = [0,10,5,2]', expected_output: '1', is_hidden: true },
+  ],
+  'fioftfo': [
+    { id: '1', input: 'haystack = "sadbutsad", needle = "sad"', expected_output: '0', is_hidden: false },
+    { id: '2', input: 'haystack = "sadbutsad", needle = "sad"', expected_output: '0', is_hidden: true },
+  ],
+  'seiasa': [
+    { id: '1', input: 'nums = [1,1,2,3,3,4,4,8,8]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,2,3,3,4,4,8,8]', expected_output: '2', is_hidden: true },
+  ],
+  'ts-2iis': [
+    { id: '1', input: 'numbers = [2,7,11,15], target = 9', expected_output: '[1,2]', is_hidden: false },
+    { id: '2', input: 'numbers = [2,7,11,15], target = 9', expected_output: '[1,2]', is_hidden: true },
+  ],
+  '3s-2': [
+    { id: '1', input: 'nums = [-1,0,1,2,-1,-4]', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'nums = [-1,0,1,2,-1,-4]', expected_output: 'list', is_hidden: true },
+  ],
+  'cwmw-2': [
+    { id: '1', input: 'height = [1,8,6,2,5,4,8,3,7]', expected_output: '49', is_hidden: false },
+    { id: '2', input: 'height = [1,8,6,2,5,4,8,3,7]', expected_output: '49', is_hidden: true },
+  ],
+  'trw-2': [
+    { id: '1', input: 'height = [0,1,0,2,1,0,1,3,2,1,2,1]', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'height = [0,1,0,2,1,0,1,3,2,1,2,1]', expected_output: '6', is_hidden: true },
+  ],
+  'vp-2': [
+    { id: '1', input: 's = "A man, a plan, a canal: Panama"', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 's = "A man, a plan, a canal: Panama"', expected_output: 'true', is_hidden: true },
+  ],
+  'rdfsa-2': [
+    { id: '1', input: 'nums = [1,1,1,2,2,3]', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,1,2,2,3]', expected_output: '5', is_hidden: true },
+  ],
+  'mz-2': [
+    { id: '1', input: 'nums = [0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: false },
+    { id: '2', input: 'nums = [0,1,0,3,12]', expected_output: '[1,3,12,0,0]', is_hidden: true },
+  ],
+  'rwis-2': [
+    { id: '1', input: 's = "the sky is blue"', expected_output: '"blue is sky the"', is_hidden: false },
+    { id: '2', input: 's = "the sky is blue"', expected_output: '"blue is sky the"', is_hidden: true },
+  ],
+  'sosfa': [
+    { id: '1', input: 'nums = [-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: false },
+    { id: '2', input: 'nums = [-4,-1,0,3,10]', expected_output: '[0,1,9,16,100]', is_hidden: true },
+  ],
+  'pl': [
+    { id: '1', input: 's = "ababcbacadefegdehijhklij"', expected_output: '[9,7,8]', is_hidden: false },
+    { id: '2', input: 's = "ababcbacadefegdehijhklij"', expected_output: '[9,7,8]', is_hidden: true },
+  ],
+  'lmia': [
+    { id: '1', input: 'arr = [2,1,4,7,3,2,5]', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'arr = [2,1,4,7,3,2,5]', expected_output: '5', is_hidden: true },
+  ],
+  'push-dom': [
+    { id: '1', input: 'dominoes = ".L.R...LR..L.."', expected_output: '"LL.RR.LLRRLL.."', is_hidden: false },
+    { id: '2', input: 'dominoes = ".L.R...LR..L.."', expected_output: '"LL.RR.LLRRLL.."', is_hidden: true },
+  ],
+  'msssk': [
+    { id: '1', input: 'nums = [2,1,5,1,3,2], k = 3', expected_output: '9', is_hidden: false },
+    { id: '2', input: 'nums = [2,1,5,1,3,2], k = 3', expected_output: '9', is_hidden: true },
+  ],
+  'lswrc-2': [
+    { id: '1', input: 's = "abcabcbb"', expected_output: '3', is_hidden: false },
+    { id: '2', input: 's = "abcabcbb"', expected_output: '3', is_hidden: true },
+  ],
+  'mco-3': [
+    { id: '1', input: 'nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2', expected_output: '6', is_hidden: true },
+  ],
+  'piv-idx': [
+    { id: '1', input: 'nums = [1,7,3,6,5,6]', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'nums = [1,7,3,6,5,6]', expected_output: '3', is_hidden: true },
+  ],
+  'ftha': [
+    { id: '1', input: 'gain = [-5,1,5,0,-7]', expected_output: '1', is_hidden: false },
+    { id: '2', input: 'gain = [-5,1,5,0,-7]', expected_output: '1', is_hidden: true },
+  ],
+  'sn-2': [
+    { id: '1', input: 'nums = [4,1,2,1,2]', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'nums = [4,1,2,1,2]', expected_output: '4', is_hidden: true },
+  ],
+  'noob-2': [
+    { id: '1', input: 'n = 11', expected_output: '3', is_hidden: false },
+    { id: '2', input: 'n = 11', expected_output: '3', is_hidden: true },
+  ],
+  'cb-2': [
+    { id: '1', input: 'n = 5', expected_output: '[0,1,1,2,1,2]', is_hidden: false },
+    { id: '2', input: 'n = 5', expected_output: '[0,1,1,2,1,2]', is_hidden: true },
+  ],
+  'rb-2': [
+    { id: '1', input: 'n = 43261596', expected_output: '964176192', is_hidden: false },
+    { id: '2', input: 'n = 43261596', expected_output: '964176192', is_hidden: true },
+  ],
+  'mn-2': [
+    { id: '1', input: 'nums = [3,0,1]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [3,0,1]', expected_output: '2', is_hidden: true },
+  ],
+  'bawor': [
+    { id: '1', input: 'left = 5, right = 7', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'left = 5, right = 7', expected_output: '4', is_hidden: true },
+  ],
+  'pof': [
+    { id: '1', input: 'n = 16', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'n = 16', expected_output: 'true', is_hidden: true },
+  ],
+  'bw-2': [
+    { id: '1', input: 'turnedOn = 1', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'turnedOn = 1', expected_output: 'list', is_hidden: true },
+  ],
+  'citsotnzni': [
+    { id: '1', input: 'n = 11', expected_output: '[2,9]', is_hidden: false },
+    { id: '2', input: 'n = 11', expected_output: '[2,9]', is_hidden: true },
+  ],
+  'ri-2': [
+    { id: '1', input: 'x = 123', expected_output: '321', is_hidden: false },
+    { id: '2', input: 'x = 123', expected_output: '321', is_hidden: true },
+  ],
+  'pn-2': [
+    { id: '1', input: 'x = 121', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'x = 121', expected_output: 'true', is_hidden: true },
+  ],
+  'fb-2': [
+    { id: '1', input: 'n = 15', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 15', expected_output: 'list', is_hidden: true },
+  ],
+  'ftz': [
+    { id: '1', input: 'n = 100', expected_output: '24', is_hidden: false },
+    { id: '2', input: 'n = 100', expected_output: '24', is_hidden: true },
+  ],
+  'sqrt-2': [
+    { id: '1', input: 'x = 8', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'x = 8', expected_output: '2', is_hidden: true },
+  ],
+  'pxn-2': [
+    { id: '1', input: 'x = 2.0, n = -2', expected_output: '0.25', is_hidden: false },
+    { id: '2', input: 'x = 2.0, n = -2', expected_output: '0.25', is_hidden: true },
+  ],
+  'escn-2': [
+    { id: '1', input: 's = "AB"', expected_output: '28', is_hidden: false },
+    { id: '2', input: 's = "AB"', expected_output: '28', is_hidden: true },
+  ],
+  'esct': [
+    { id: '1', input: 'columnNumber = 28', expected_output: '"AB"', is_hidden: false },
+    { id: '2', input: 'columnNumber = 28', expected_output: '"AB"', is_hidden: true },
+  ],
+  'fact-2': [
+    { id: '1', input: 'n = 5', expected_output: '120', is_hidden: false },
+    { id: '2', input: 'n = 5', expected_output: '120', is_hidden: true },
+  ],
+  'ps-22': [
+    { id: '1', input: 'n = 3, k = 3', expected_output: '"213"', is_hidden: false },
+    { id: '2', input: 'n = 3, k = 3', expected_output: '"213"', is_hidden: true },
+  ],
+  'itr': [
+    { id: '1', input: 'num = 3', expected_output: '"III"', is_hidden: false },
+    { id: '2', input: 'num = 3', expected_output: '"III"', is_hidden: true },
+  ],
+  'rti': [
+    { id: '1', input: 's = "MCMXCIV"', expected_output: '1994', is_hidden: false },
+    { id: '2', input: 's = "MCMXCIV"', expected_output: '1994', is_hidden: true },
+  ],
+  'hn-2': [
+    { id: '1', input: 'n = 19', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'n = 19', expected_output: 'true', is_hidden: true },
+  ],
+  'un-2': [
+    { id: '1', input: 'n = 10', expected_output: '12', is_hidden: false },
+    { id: '2', input: 'n = 10', expected_output: '12', is_hidden: true },
+  ],
+  'cp-2': [
+    { id: '1', input: 'n = 10', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'n = 10', expected_output: '4', is_hidden: true },
+  ],
+  'pot': [
+    { id: '1', input: 'n = 27', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'n = 27', expected_output: 'true', is_hidden: true },
+  ],
+  'po-2': [
+    { id: '1', input: 'digits = [1,2,3]', expected_output: '[1,2,4]', is_hidden: false },
+    { id: '2', input: 'digits = [1,2,3]', expected_output: '[1,2,4]', is_hidden: true },
+  ],
+  'mpotn': [
+    { id: '1', input: 'nums = [1,2,3,4]', expected_output: '24', is_hidden: false },
+    { id: '2', input: 'nums = [1,2,3,4]', expected_output: '24', is_hidden: true },
+  ],
+  'nd-2': [
+    { id: '1', input: 'n = 11', expected_output: '0', is_hidden: false },
+    { id: '2', input: 'n = 11', expected_output: '0', is_hidden: true },
+  ],
+  'jg-3': [
+    { id: '1', input: 'nums = [2,3,1,1,4]', expected_output: 'true', is_hidden: false },
+    { id: '2', input: 'nums = [2,3,1,1,4]', expected_output: 'true', is_hidden: true },
+  ],
+  'rs-2': [
+    { id: '1', input: 's = "aab"', expected_output: '"aba"', is_hidden: false },
+    { id: '2', input: 's = "aab"', expected_output: '"aba"', is_hidden: true },
+  ],
+  'max-swap': [
+    { id: '1', input: 'num = 2736', expected_output: '7236', is_hidden: false },
+    { id: '2', input: 'num = 2736', expected_output: '7236', is_hidden: true },
+  ],
+  'lcoapn-2': [
+    { id: '1', input: 'digits = "23"', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'digits = "23"', expected_output: 'list', is_hidden: true },
+  ],
+  'gp-2': [
+    { id: '1', input: 'n = 3', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: 'list', is_hidden: true },
+  ],
+  'n-queens-3': [
+    { id: '1', input: 'n = 4', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: 'list', is_hidden: true },
+  ],
+  'n-queens-22': [
+    { id: '1', input: 'n = 4', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: '2', is_hidden: true },
+  ],
+  'ms-3': [
+    { id: '1', input: 'nums = [-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: false },
+    { id: '2', input: 'nums = [-2,1,-3,4,-1,2,1,-5,4]', expected_output: '6', is_hidden: true },
+  ],
+  'ba-2': [
+    { id: '1', input: 'n = 4', expected_output: '[2,1,4,3]', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: '[2,1,4,3]', is_hidden: true },
+  ],
+  'cbfp-3': [
+    { id: '1', input: 'preorder = [8,5,1,7,10,12]', expected_output: 'tree', is_hidden: false },
+    { id: '2', input: 'preorder = [8,5,1,7,10,12]', expected_output: 'tree', is_hidden: true },
+  ],
+  'ubs-3': [
+    { id: '1', input: 'n = 3', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: '5', is_hidden: true },
+  ],
+  'ubs-22': [
+    { id: '1', input: 'n = 3', expected_output: 'list', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: 'list', is_hidden: true },
+  ],
+  'jg-4': [
+    { id: '1', input: 'nums = [2,3,1,1,4]', expected_output: '2', is_hidden: false },
+    { id: '2', input: 'nums = [2,3,1,1,4]', expected_output: '2', is_hidden: true },
+  ],
+  'ib-2': [
+    { id: '1', input: 'n = 10', expected_output: '36', is_hidden: false },
+    { id: '2', input: 'n = 10', expected_output: '36', is_hidden: true },
+  ],
+  'csvs': [
+    { id: '1', input: 'n = 2', expected_output: '15', is_hidden: false },
+    { id: '2', input: 'n = 2', expected_output: '15', is_hidden: true },
+  ],
+  'cas-2': [
+    { id: '1', input: 'n = 4', expected_output: '"1211"', is_hidden: false },
+    { id: '2', input: 'n = 4', expected_output: '"1211"', is_hidden: true },
+  ],
+  'ds-22': [
+    { id: '1', input: 's = "3[a]2[bc]"', expected_output: '"aaabcbc"', is_hidden: false },
+    { id: '2', input: 's = "3[a]2[bc]"', expected_output: '"aaabcbc"', is_hidden: true },
+  ],
+  'cp-3': [
+    { id: '1', input: 'n = 10', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'n = 10', expected_output: '4', is_hidden: true },
+  ],
+  'ctb-2': [
+    { id: '1', input: 'n = 2', expected_output: '"110"', is_hidden: false },
+    { id: '2', input: 'n = 2', expected_output: '"110"', is_hidden: true },
+  ],
+  'et': [
+    { id: '1', input: 'n = 5', expected_output: '4', is_hidden: false },
+    { id: '2', input: 'n = 5', expected_output: '4', is_hidden: true },
+  ],
+  'cn': [
+    { id: '1', input: 'n = 3', expected_output: '5', is_hidden: false },
+    { id: '2', input: 'n = 3', expected_output: '5', is_hidden: true },
+  ],
 };

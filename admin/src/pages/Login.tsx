@@ -21,8 +21,22 @@ export default function Login() {
       localStorage.setItem('admin_token', res.data.token)
       toast.success('Welcome Admin!')
       navigate('/')
-    } catch {
-      toast.error('Invalid credentials')
+    } catch (err: any) {
+      const status = err.response?.status
+      const message = err.response?.data?.error || err.message
+      
+      if (status === 404) {
+        toast.error(`Login endpoint not found (404). API may be down.`)
+      } else if (status === 401) {
+        toast.error('Invalid credentials')
+      } else if (status >= 500) {
+        toast.error(`Server error: ${message}`)
+      } else if (!err.response) {
+        toast.error(`Network error: Cannot reach backend at ${import.meta.env.VITE_API_URL || 'default URL'}`)
+      } else {
+        toast.error(message || 'Login failed')
+      }
+      console.error('[admin-login-error]', { status, message, url: import.meta.env.VITE_API_URL })
     } finally {
       setLoading(false)
     }

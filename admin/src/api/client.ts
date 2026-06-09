@@ -1,7 +1,11 @@
 import axios from 'axios'
 import toast from 'react-hot-toast'
 
-const api = axios.create({ baseURL: '/api' })
+const envApiUrl = import.meta.env.VITE_API_URL?.trim()
+const baseURL = envApiUrl
+  ? envApiUrl.replace(/\/+$/, '') + '/api'
+  : '/api'
+const api = axios.create({ baseURL })
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('admin_token')
