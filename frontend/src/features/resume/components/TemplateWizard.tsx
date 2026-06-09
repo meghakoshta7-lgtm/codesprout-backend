@@ -638,86 +638,12 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
 
           {/* right: live preview */}
           <div className="w-[55%] overflow-y-auto p-6" style={{ backgroundColor: '#e8e6e1' }}>
-            <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden" style={{ minHeight: '800px' }}>
-              {/* header */}
-              <div className="p-6" style={{ backgroundColor: bg }}>
-                <div className="text-xl font-bold" style={{ color: accent }}>{form.name || 'Your Name'}</div>
-                <div className="text-sm text-gray-500 mt-1">{form.email || 'email@example.com'}{form.phone ? ` | ${form.phone}` : ''}</div>
-                {(form.linkedin || form.github) && (
-                  <div className="text-xs text-gray-400 mt-1 flex gap-3">
-                    {form.linkedin && <span>{form.linkedin}</span>}
-                    {form.github && <span>{form.github}</span>}
-                  </div>
-                )}
-              </div>
-
-              <div className="p-6 space-y-5">
-                {form.summary && (
-                  <div>
-                    <div className="text-xs font-bold uppercase border-b-2 pb-1 mb-2" style={{ borderColor: accent, color: accent }}>Professional Summary</div>
-                    <p className="text-xs text-gray-600 leading-relaxed whitespace-pre-wrap">{form.summary}</p>
-                  </div>
-                )}
-
-                {form.experience.some(e => e.role || e.company) && (
-                  <div>
-                    <div className="text-xs font-bold uppercase border-b-2 pb-1 mb-2" style={{ borderColor: accent, color: accent }}>Experience</div>
-                    {form.experience.filter(e => e.role || e.company).map((exp, i) => (
-                      <div key={i} className="mb-3">
-                        <div className="flex justify-between"><span className="text-xs font-semibold text-gray-800">{exp.role}</span><span className="text-[10px] text-gray-400">{exp.duration}</span></div>
-                        <div className="text-[11px] text-gray-500">{exp.company}</div>
-                        {exp.description && <div className="text-[11px] text-gray-600 mt-1 whitespace-pre-wrap">{exp.description}</div>}
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {form.education.some(e => e.degree || e.institution) && (
-                  <div>
-                    <div className="text-xs font-bold uppercase border-b-2 pb-1 mb-2" style={{ borderColor: accent, color: accent }}>Education</div>
-                    {form.education.filter(e => e.degree || e.institution).map((edu, i) => (
-                      <div key={i} className="mb-2">
-                        <div className="flex justify-between"><span className="text-xs font-semibold text-gray-800">{edu.degree}</span><span className="text-[10px] text-gray-400">{edu.year}</span></div>
-                        <div className="text-[11px] text-gray-500">{edu.institution}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {form.skills && (
-                  <div>
-                    <div className="text-xs font-bold uppercase border-b-2 pb-1 mb-2" style={{ borderColor: accent, color: accent }}>Technical Skills</div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {form.skills.split(',').map((s, i) => s.trim() && <span key={i} className="text-[10px] px-2 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{s.trim()}</span>)}
-                    </div>
-                  </div>
-                )}
-
-                {form.projects.some(p => p.title) && (
-                  <div>
-                    <div className="text-xs font-bold uppercase border-b-2 pb-1 mb-2" style={{ borderColor: accent, color: accent }}>Projects</div>
-                    {form.projects.filter(p => p.title).map((proj, i) => (
-                      <div key={i} className="mb-3">
-                        <div className="text-xs font-semibold text-gray-800">{proj.title}{proj.link ? <span className="text-[10px] text-gray-400 ml-2">{proj.link}</span> : ''}</div>
-                        {proj.description && <div className="text-[11px] text-gray-600 mt-1 whitespace-pre-wrap">{proj.description}</div>}
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {form.certifications.some(c => c.name) && (
-                  <div>
-                    <div className="text-xs font-bold uppercase border-b-2 pb-1 mb-2" style={{ borderColor: accent, color: accent }}>Certifications</div>
-                    {form.certifications.filter(c => c.name).map((cert, i) => (
-                      <div key={i} className="mb-1">
-                        <span className="text-xs font-semibold text-gray-800">{cert.name}</span>
-                        <span className="text-[10px] text-gray-400 ml-2">{cert.issuer}{cert.year ? ` • ${cert.year}` : ''}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+            <ResumePreview
+              template={selectedTemplate}
+              form={form}
+              accent={accent}
+              bg={bg}
+            />
           </div>
         </div>
       </motion.div>
@@ -725,6 +651,190 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
   }
 
   return null;
+}
+
+/* ─── template-aware resume preview ───────────────────────────────────── */
+
+function ResumePreview({ template, form, accent, bg }: {
+  template: Template | null; form: any; accent: string; bg: string;
+}) {
+  const isTwoCol = template?.columns === 2;
+  const tid = template?.id || '';
+
+  // shared section renderers
+  const Summary = () => form.summary ? (
+    <div className="mb-4"><SectionTitle text="Professional Summary" accent={accent} /><p className="text-xs text-gray-600 leading-relaxed whitespace-pre-wrap">{form.summary}</p></div>
+  ) : null;
+
+  const Experience = () => form.experience.some((e: any) => e.role || e.company) ? (
+    <div className="mb-4"><SectionTitle text="Experience" accent={accent} />
+      {form.experience.filter((e: any) => e.role || e.company).map((exp: any, i: number) => (
+        <div key={i} className="mb-2">
+          <div className="flex justify-between items-start"><span className="text-xs font-semibold text-gray-800">{exp.role}</span><span className="text-[10px] text-gray-400 whitespace-nowrap ml-2">{exp.duration}</span></div>
+          <div className="text-[11px] text-gray-500">{exp.company}</div>
+          {exp.description && <div className="text-[11px] text-gray-600 mt-0.5 whitespace-pre-wrap">{exp.description}</div>}
+        </div>
+      ))}
+    </div>
+  ) : null;
+
+  const Education = () => form.education.some((e: any) => e.degree || e.institution) ? (
+    <div className="mb-4"><SectionTitle text="Education" accent={accent} />
+      {form.education.filter((e: any) => e.degree || e.institution).map((edu: any, i: number) => (
+        <div key={i} className="mb-1.5">
+          <div className="flex justify-between"><span className="text-xs font-semibold text-gray-800">{edu.degree}</span><span className="text-[10px] text-gray-400">{edu.year}</span></div>
+          <div className="text-[11px] text-gray-500">{edu.institution}</div>
+        </div>
+      ))}
+    </div>
+  ) : null;
+
+  const Skills = () => form.skills ? (
+    <div className="mb-4"><SectionTitle text={tid.includes('ai') ? 'ML/AI Skills' : 'Technical Skills'} accent={accent} />
+      <div className="flex flex-wrap gap-1">
+        {form.skills.split(',').map((s: string, i: number) => s.trim() && (
+          tid.includes('ai') || tid === 'frontend' || tid === 'frontend-advanced'
+            ? <span key={i} className="text-[10px] px-1.5 py-0.5 rounded text-white" style={{ backgroundColor: accent }}>{s.trim()}</span>
+            : <span key={i} className="text-[10px] px-1.5 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{s.trim()}</span>
+        ))}
+      </div>
+    </div>
+  ) : null;
+
+  const Projects = () => form.projects.some((p: any) => p.title) ? (
+    <div className="mb-4"><SectionTitle text="Projects" accent={accent} />
+      {form.projects.filter((p: any) => p.title).map((proj: any, i: number) => (
+        <div key={i} className="mb-2">
+          <div className="text-xs font-semibold text-gray-800">{proj.title}{proj.link ? <span className="text-[10px] text-gray-400 ml-2">{proj.link}</span> : ''}</div>
+          {proj.description && <div className="text-[11px] text-gray-600 mt-0.5 whitespace-pre-wrap">{proj.description}</div>}
+        </div>
+      ))}
+    </div>
+  ) : null;
+
+  const Certs = () => form.certifications.some((c: any) => c.name) ? (
+    <div className="mb-4"><SectionTitle text="Certifications" accent={accent} />
+      {form.certifications.filter((c: any) => c.name).map((cert: any, i: number) => (
+        <div key={i} className="mb-0.5 text-xs"><span className="font-semibold text-gray-800">{cert.name}</span><span className="text-gray-400 ml-1">{cert.issuer}{cert.year ? ` • ${cert.year}` : ''}</span></div>
+      ))}
+    </div>
+  ) : null;
+
+  /* ── Single column layout (ATS, SDE, Backend) ── */
+  const SingleColumn = () => (
+    <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden" style={{ minHeight: '800px' }}>
+      {/* header */}
+      <div className="p-6" style={{ backgroundColor: bg }}>
+        <div className="text-xl font-bold" style={{ color: accent }}>{form.name || 'Your Name'}</div>
+        {tid === 'backend' ? (
+          <div className="flex items-center gap-2 mt-1 text-[11px] text-gray-500">
+            {form.email && <span>{form.email}</span>}{form.phone && <span>| {form.phone}</span>}
+          </div>
+        ) : (
+          <div className="flex items-center gap-3 mt-1 text-[11px] text-gray-500">
+            {form.email && <span>{form.email}</span>}
+            {form.phone && <span>{form.phone}</span>}
+            {form.linkedin && <span>{form.linkedin.replace('https://', '')}</span>}
+            {form.github && <span>{form.github.replace('https://', '')}</span>}
+          </div>
+        )}
+        {tid === 'backend' && (form.linkedin || form.github) && (
+          <div className="text-[10px] text-gray-400 mt-1 flex gap-2">
+            {form.linkedin && <span>{form.linkedin}</span>}{form.github && <span>{form.github}</span>}
+          </div>
+        )}
+      </div>
+      <div className="p-6 space-y-4">
+        <Summary /><Experience /><Education /><Skills /><Projects /><Certs />
+      </div>
+    </div>
+  );
+
+  /* ── Two column layout (Frontend, AI/ML) ── */
+  const TwoColumn = () => (
+    <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden flex" style={{ minHeight: '800px' }}>
+      {/* sidebar */}
+      <div className="w-[35%] p-4 flex flex-col" style={{ backgroundColor: accent }}>
+        <div className="w-12 h-12 rounded-full bg-white/20 mx-auto mb-3" />
+        <div className="mb-4">
+          <div className="text-[9px] font-bold text-white/90 uppercase tracking-wide mb-1.5">Contact</div>
+          <div className="space-y-0.5 text-[9px] text-white/70 break-all">
+            {form.email && <div>{form.email}</div>}
+            {form.phone && <div>{form.phone}</div>}
+            {form.linkedin && <div>{form.linkedin}</div>}
+            {form.github && <div>{form.github}</div>}
+          </div>
+        </div>
+        <div className="mb-4">
+          <div className="text-[9px] font-bold text-white/90 uppercase tracking-wide mb-1.5">Education</div>
+          {form.education.filter((e: any) => e.degree || e.institution).map((edu: any, i: number) => (
+            <div key={i} className="mb-1.5">
+              <div className="text-[9px] font-semibold text-white/90">{edu.degree}</div>
+              <div className="text-[8px] text-white/70">{edu.institution}</div>
+              <div className="text-[8px] text-white/50">{edu.year}</div>
+            </div>
+          ))}
+        </div>
+        <div>
+          <div className="text-[9px] font-bold text-white/90 uppercase tracking-wide mb-1.5">Skills</div>
+          <div className="flex flex-wrap gap-1">
+            {form.skills.split(',').map((s: string, i: number) => s.trim() && (
+              <span key={i} className="text-[7px] px-1.5 py-0.5 rounded bg-white/10 text-white/80">{s.trim()}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* main */}
+      <div className="w-[65%] p-5 space-y-3" style={{ backgroundColor: bg }}>
+        <div>
+          <div className="text-lg font-bold" style={{ color: accent }}>{form.name || 'Your Name'}</div>
+          <div className="text-[11px] text-gray-500 mt-0.5">
+            {form.email || 'email@example.com'} {form.phone && `| ${form.phone}`}
+          </div>
+        </div>
+        <Summary /><Experience /><Projects /><Certs />
+      </div>
+    </div>
+  );
+
+  /* ── Fullstack layout (sidebar + main, different styling) ── */
+  const FullstackLayout = () => (
+    <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden flex" style={{ minHeight: '800px' }}>
+      <div className="w-[30%] p-4 flex flex-col gap-3" style={{ backgroundColor: accent }}>
+        <div className="w-12 h-12 rounded-full bg-white/20 mx-auto" />
+        <div>
+          <div className="text-[9px] font-bold text-white/90 uppercase mb-1">Contact</div>
+          <div className="space-y-0.5 text-[8px] text-white/70 break-all">
+            {form.email && <div>{form.email}</div>}
+            {form.phone && <div>{form.phone}</div>}
+            {form.linkedin && <div>{form.linkedin}</div>}
+            {form.github && <div>{form.github}</div>}
+          </div>
+        </div>
+        <div>
+          <div className="text-[9px] font-bold text-white/90 uppercase mb-1">Skills</div>
+          <div className="space-y-0.5">
+            {form.skills.split(',').map((s: string, i: number) => s.trim() && (
+              <div key={i} className="text-[8px] text-white/70">{s.trim()}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex-1 p-5 space-y-3" style={{ backgroundColor: bg }}>
+        <div className="text-xl font-bold" style={{ color: accent }}>{form.name || 'Your Name'}</div>
+        <Summary /><Experience /><Education /><Projects /><Certs />
+      </div>
+    </div>
+  );
+
+  // pick layout based on template id
+  if (tid === 'fullstack') return <FullstackLayout />;
+  if (isTwoCol) return <TwoColumn />;
+  return <SingleColumn />;
+}
+
+function SectionTitle({ text, accent }: { text: string; accent: string }) {
+  return <div className="text-[10px] font-bold uppercase border-b-2 pb-0.5 mb-1.5" style={{ borderColor: accent, color: accent }}>{text}</div>;
 }
 
 /* ─── reusable form components ──────────────────────────────────────────── */
