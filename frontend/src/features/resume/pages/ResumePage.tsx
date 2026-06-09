@@ -19,7 +19,7 @@ interface ResumeAnalysis {
   project_suggestions: string[]; skill_suggestions: string[]; template_recommendation: string;
   ats_friendly: number; project_score: number; rewrite_suggestions: { original: string; rewritten: string }[];
 }
-interface Resume { id: string; title: string; score?: number; created_at: string; sections: ResumeSection[]; raw_text?: string; analysis?: ResumeAnalysis; }
+interface Resume { id: string; title: string; score?: ResumeScore; created_at: string; sections: ResumeSection[]; raw_text?: string; analysis?: ResumeAnalysis; }
 
 const strengthColor: Record<string, string> = { Low: 'text-rose-400 bg-rose-500/10', Medium: 'text-amber-400 bg-amber-500/10', High: 'text-emerald-400 bg-emerald-500/10' };
 
@@ -235,8 +235,8 @@ export default function ResumePage() {
                             </div>
                           </div>
                           <div className="flex items-center gap-2 shrink-0">
-                            {r.score !== null && r.score !== undefined && (
-                              <span className={`text-sm font-bold ${r.score >= 70 ? 'text-emerald-400' : r.score >= 40 ? 'text-amber-400' : 'text-rose-400'}`}>{r.score}/100</span>
+                            {r.score?.total !== undefined && (
+                              <span className={`text-sm font-bold ${r.score.total >= 70 ? 'text-emerald-400' : r.score.total >= 40 ? 'text-amber-400' : 'text-rose-400'}`}>{r.score.total}/100</span>
                             )}
                             <button onClick={(e) => { e.stopPropagation(); handleDelete(r.id); }} className="p-1.5 rounded-lg hover:bg-rose-500/20 text-slate-500 hover:text-rose-400 transition-colors"><Trash2 className="w-4 h-4" /></button>
                           </div>
