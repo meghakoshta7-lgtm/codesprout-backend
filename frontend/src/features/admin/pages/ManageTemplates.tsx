@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Plus, Edit3, Trash2, Lock, Unlock, Eye, X, Crown, Check, Copy } from 'lucide-react';
+import { Search, Plus, Edit3, Trash2, Lock, Unlock, Eye, X, Crown, Check, Copy, Layout } from 'lucide-react';
 import AdminSidebar from '../components/AdminSidebar';
 import toast from 'react-hot-toast';
 
@@ -9,7 +9,7 @@ interface TemplateData {
   name: string;
   description: string;
   is_ats_friendly: boolean;
-  columns: number;
+  columns: 1 | 2;
   colors: string[];
   isPremium: boolean;
   price: number;
