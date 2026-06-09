@@ -1340,7 +1340,7 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
   const filtered = templates.filter(t => {
     if (filter === 'all') return true;
     if (filter === 'simple') return t.is_ats_friendly;
-    if (filter === 'professional') return t.category === 'professional';
+    if (filter === 'professional') return t.category === 'professional' || t.id === 'professional' || t.category?.includes('professional');
     if (filter === 'modern') return t.columns === 2;
     if (filter === 'creative') return !t.is_ats_friendly;
     return true;
