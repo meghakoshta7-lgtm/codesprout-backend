@@ -7,7 +7,7 @@ import {
   Zap, Shield, Star, ThumbsUp, MessageSquare, PenTool, Copy, Check,
 } from 'lucide-react';
 import { resumeApi } from '../api/resumeApi';
-import TemplateGallery from '../components/TemplateGallery';
+import TemplateWizard from '../components/TemplateWizard';
 import toast from 'react-hot-toast';
 import SEO from '@/shared/components/SEO';
 
@@ -35,6 +35,7 @@ export default function ResumePage() {
   const [rewritten, setRewritten] = useState('');
   const [rewriting, setRewriting] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [wizardOpen, setWizardOpen] = useState(false);
 
   const loadResumes = useCallback(async () => {
     try {
@@ -371,205 +372,33 @@ export default function ResumePage() {
             )}
 
             {/* === TAB: BUILDER === */}
-            {tab === 'builder' && (
-              <motion.div key="builder" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-6">
-                <BuilderPanel selectedAnalysis={selected?.analysis} />
+            {tab === 'builder' && !wizardOpen && (
+              <motion.div key="builder" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
+                <div className="rounded-2xl border border-white/10 p-8 shadow-2xl shadow-purple-900/40 text-center" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
+                  <Layout className="w-12 h-12 text-violet-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Build Your Resume</h3>
+                  <p className="text-sm text-slate-400 mb-6 max-w-md mx-auto">Choose a template, import your existing resume or start from scratch, and build a professional resume.</p>
+                  <button onClick={() => setWizardOpen(true)} className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25">
+                    Start Building
+                  </button>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
       </div>
+
+      {/* Template Wizard Modal */}
+      {wizardOpen && (
+        <TemplateWizard
+          onComplete={(data) => {
+            toast.success('Resume saved!');
+            setWizardOpen(false);
+            setTab('analysis');
+          }}
+          onCancel={() => setWizardOpen(false)}
+        />
+      )}
     </>
-  );
-}
-
-function BuilderPanel({ selectedAnalysis }: { selectedAnalysis?: ResumeAnalysis }) {
-  const [templates, setTemplates] = useState<any[]>([]);
-  const [selectedTemplate, setSelectedTemplate] = useState('ats-beginner');
-  const [form, setForm] = useState({
-    name: '', email: '', phone: '', linkedin: '', github: '', skills: '',
-    experience: [{ role: '', company: '', duration: '', description: '' }],
-    education: [{ degree: '', institution: '', year: '' }],
-    projects: [{ title: '', description: '', link: '' }],
-    certifications: [{ name: '', issuer: '', year: '' }],
-    summary: '',
-  });
-
-  useEffect(() => {
-    resumeApi.getTemplates().then(r => setTemplates(r.data.templates || [])).catch(() => {});
-    if (selectedAnalysis?.template_recommendation) {
-      const found = templates.find(t => t.name.toLowerCase() === selectedAnalysis.template_recommendation.toLowerCase());
-      if (found) setSelectedTemplate(found.id);
-    }
-  }, [selectedAnalysis]);
-
-  const active = templates.find(t => t.id === selectedTemplate) || templates[0];
-
-  const addEntry = (field: 'experience' | 'education' | 'projects' | 'certifications') => {
-    const blank: Record<string, any> = {
-      experience: { role: '', company: '', duration: '', description: '' },
-      education: { degree: '', institution: '', year: '' },
-      projects: { title: '', description: '', link: '' },
-      certifications: { name: '', issuer: '', year: '' },
-    };
-    setForm(f => ({ ...f, [field]: [...f[field], blank[field]] }));
-  };
-
-  const removeEntry = (field: 'experience' | 'education' | 'projects' | 'certifications', idx: number) => {
-    setForm(f => ({ ...f, [field]: f[field].filter((_: any, i: number) => i !== idx) }));
-  };
-
-  const updateEntry = (field: 'experience' | 'education' | 'projects' | 'certifications', idx: number, key: string, val: string) => {
-    setForm(f => {
-      const arr = [...f[field]];
-      arr[idx] = { ...arr[idx], [key]: val };
-      return { ...f, [field]: arr };
-    });
-  };
-
-  return (
-    <>
-      <TemplateGallery
-        templates={templates}
-        selected={selectedTemplate}
-        onSelect={setSelectedTemplate}
-        recommended={selectedAnalysis?.template_recommendation}
-      />
-
-      {/* Builder Form */}
-      <div className="rounded-2xl border border-white/10 p-6 shadow-2xl shadow-purple-900/40" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-white flex items-center gap-2"><PenTool className="w-5 h-5 text-violet-400" /> Resume Builder</h3>
-          {active && (
-            <div className="flex items-center gap-3 text-xs text-slate-400">
-              <span className="flex items-center gap-1"><Layout className="w-3 h-3" /> {active.name}</span>
-              <span className={`px-2 py-0.5 rounded ${active.is_ats_friendly ? 'bg-emerald-500/10 text-emerald-400' : 'bg-amber-500/10 text-amber-400'}`}>
-                {active.is_ats_friendly ? 'ATS' : 'Creative'}
-              </span>
-            </div>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* LEFT: Personal Info + Skills */}
-          <div className="space-y-5">
-            <SectionCard title="Personal Info" icon={<PenTool className="w-4 h-4 text-violet-400" />}>
-              <div>
-                <label className="block text-xs font-medium text-slate-400 mb-1">Full Name</label>
-                <input type="text" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" placeholder="John Doe" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-xs font-medium text-slate-400 mb-1">Email</label>
-                  <input type="email" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" placeholder="john@example.com" />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-slate-400 mb-1">Phone</label>
-                  <input type="tel" value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" placeholder="+91 9876543210" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-xs font-medium text-slate-400 mb-1">LinkedIn</label>
-                  <input type="url" value={form.linkedin} onChange={e => setForm(f => ({ ...f, linkedin: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" placeholder="linkedin.com/in/..." />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-slate-400 mb-1">GitHub</label>
-                  <input type="url" value={form.github} onChange={e => setForm(f => ({ ...f, github: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" placeholder="github.com/..." />
-                </div>
-              </div>
-            </SectionCard>
-
-            <SectionCard title="Summary" icon={<FileText className="w-4 h-4 text-violet-400" />}>
-              <textarea value={form.summary} onChange={e => setForm(f => ({ ...f, summary: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" rows={3} placeholder="Brief professional summary..." />
-            </SectionCard>
-
-            <SectionCard title="Education" icon={<BookOpen className="w-4 h-4 text-violet-400" />}>
-              {form.education.map((e, i) => (
-                <div key={i} className="p-3 rounded-lg bg-white/5 border border-white/5 space-y-2 relative">
-                  <button onClick={() => removeEntry('education', i)} className="absolute top-2 right-2 text-slate-500 hover:text-rose-400 text-xs">✕</button>
-                  <div className="grid grid-cols-2 gap-2">
-                    <input type="text" value={e.degree} onChange={v => updateEntry('education', i, 'degree', v.target.value)} className="col-span-2 p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Degree (B.Tech CSE)" />
-                    <input type="text" value={e.institution} onChange={v => updateEntry('education', i, 'institution', v.target.value)} className="p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Institution" />
-                    <input type="text" value={e.year} onChange={v => updateEntry('education', i, 'year', v.target.value)} className="p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Year" />
-                  </div>
-                </div>
-              ))}
-              <button onClick={() => addEntry('education')} className="w-full mt-2 py-1.5 rounded-lg border border-dashed border-white/10 text-xs text-slate-400 hover:text-white hover:border-white/20 transition-colors">+ Add Education</button>
-            </SectionCard>
-
-            <SectionCard title="Skills" icon={<Code2 className="w-4 h-4 text-violet-400" />}>
-              <input type="text" value={form.skills} onChange={e => setForm(f => ({ ...f, skills: e.target.value }))} className="w-full p-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50" placeholder="React, Node.js, Python, SQL" />
-              <p className="text-[10px] text-slate-500 mt-1">Comma separated</p>
-            </SectionCard>
-          </div>
-
-          {/* RIGHT: Experience + Projects + Certs */}
-          <div className="space-y-5">
-            <SectionCard title="Experience" icon={<TrendingUp className="w-4 h-4 text-violet-400" />}>
-              {form.experience.map((exp, i) => (
-                <div key={i} className="p-3 rounded-lg bg-white/5 border border-white/5 space-y-2 relative mb-2">
-                  <button onClick={() => removeEntry('experience', i)} className="absolute top-2 right-2 text-slate-500 hover:text-rose-400 text-xs">✕</button>
-                  <div className="grid grid-cols-2 gap-2">
-                    <input type="text" value={exp.role} onChange={v => updateEntry('experience', i, 'role', v.target.value)} className="p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Role" />
-                    <input type="text" value={exp.company} onChange={v => updateEntry('experience', i, 'company', v.target.value)} className="p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Company" />
-                    <input type="text" value={exp.duration} onChange={v => updateEntry('experience', i, 'duration', v.target.value)} className="col-span-2 p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Duration (Jun 2023 - Present)" />
-                  </div>
-                  <textarea value={exp.description} onChange={v => updateEntry('experience', i, 'description', v.target.value)} className="w-full p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" rows={2} placeholder="Describe your role & achievements..." />
-                </div>
-              ))}
-              <button onClick={() => addEntry('experience')} className="w-full py-1.5 rounded-lg border border-dashed border-white/10 text-xs text-slate-400 hover:text-white hover:border-white/20 transition-colors">+ Add Experience</button>
-            </SectionCard>
-
-            <SectionCard title="Projects" icon={<Code2 className="w-4 h-4 text-violet-400" />}>
-              {form.projects.map((proj, i) => (
-                <div key={i} className="p-3 rounded-lg bg-white/5 border border-white/5 space-y-2 relative mb-2">
-                  <button onClick={() => removeEntry('projects', i)} className="absolute top-2 right-2 text-slate-500 hover:text-rose-400 text-xs">✕</button>
-                  <input type="text" value={proj.title} onChange={v => updateEntry('projects', i, 'title', v.target.value)} className="w-full p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Project Title" />
-                  <textarea value={proj.description} onChange={v => updateEntry('projects', i, 'description', v.target.value)} className="w-full p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" rows={2} placeholder="Description & tech used..." />
-                  <input type="url" value={proj.link} onChange={v => updateEntry('projects', i, 'link', v.target.value)} className="w-full p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="GitHub link / demo URL" />
-                </div>
-              ))}
-              <button onClick={() => addEntry('projects')} className="w-full py-1.5 rounded-lg border border-dashed border-white/10 text-xs text-slate-400 hover:text-white hover:border-white/20 transition-colors">+ Add Project</button>
-            </SectionCard>
-
-            <SectionCard title="Certifications" icon={<Award className="w-4 h-4 text-violet-400" />}>
-              {form.certifications.map((cert, i) => (
-                <div key={i} className="p-3 rounded-lg bg-white/5 border border-white/5 space-y-2 relative mb-2">
-                  <button onClick={() => removeEntry('certifications', i)} className="absolute top-2 right-2 text-slate-500 hover:text-rose-400 text-xs">✕</button>
-                  <input type="text" value={cert.name} onChange={v => updateEntry('certifications', i, 'name', v.target.value)} className="w-full p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Certification Name" />
-                  <div className="grid grid-cols-2 gap-2">
-                    <input type="text" value={cert.issuer} onChange={v => updateEntry('certifications', i, 'issuer', v.target.value)} className="p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Issuer" />
-                    <input type="text" value={cert.year} onChange={v => updateEntry('certifications', i, 'year', v.target.value)} className="p-2 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:ring-1 focus:ring-violet-500/50" placeholder="Year" />
-                  </div>
-                </div>
-              ))}
-              <button onClick={() => addEntry('certifications')} className="w-full py-1.5 rounded-lg border border-dashed border-white/10 text-xs text-slate-400 hover:text-white hover:border-white/20 transition-colors">+ Add Certification</button>
-            </SectionCard>
-          </div>
-        </div>
-
-        {/* Action buttons */}
-        <div className="flex items-center justify-between mt-8 pt-6 border-t border-white/10">
-          <p className="text-xs text-slate-500">Template: <span className="text-white">{active?.name || 'ATS Beginner'}</span></p>
-          <div className="flex gap-3">
-            <button onClick={() => setForm({ name: '', email: '', phone: '', linkedin: '', github: '', skills: '', experience: [{ role: '', company: '', duration: '', description: '' }], education: [{ degree: '', institution: '', year: '' }], projects: [{ title: '', description: '', link: '' }], certifications: [{ name: '', issuer: '', year: '' }], summary: '' })}
-              className="px-4 py-2 rounded-xl border border-white/10 text-sm text-slate-400 hover:text-white transition-colors">Clear</button>
-            <button className="px-6 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium text-sm hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/30 inline-flex items-center gap-2">
-              <Download className="w-4 h-4" /> Download PDF
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-function SectionCard({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) {
-  return (
-    <div className="p-4 rounded-xl bg-white/5 border border-white/5">
-      <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">{icon}{title}</h4>
-      <div className="space-y-3">{children}</div>
-    </div>
   );
 }
