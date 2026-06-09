@@ -142,9 +142,10 @@ export default function CodeEditor({ slug, template }: CodeEditorProps) {
     setSubmitResult(null);
     setActiveTab('result');
     try {
+      const token = localStorage.getItem('token');
       const res = await fetch('/api/execute/run', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...(token ? { 'Authorization': `Bearer ${token}` } : {}) },
         body: JSON.stringify({ code, language, slug }),
       });
       const data: RunResponse = await res.json();
@@ -162,9 +163,10 @@ export default function CodeEditor({ slug, template }: CodeEditorProps) {
     setSubmitResult(null);
     setActiveTab('result');
     try {
+      const token = localStorage.getItem('token');
       const res = await fetch('/api/execute/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...(token ? { 'Authorization': `Bearer ${token}` } : {}) },
         body: JSON.stringify({ code, language, slug }),
       });
       const data: SubmitResponse = await res.json();
