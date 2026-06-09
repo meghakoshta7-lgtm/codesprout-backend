@@ -172,11 +172,11 @@ export default function ResumePage() {
             {tab === 'upload' && (
               <motion.div key="upload" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-6">
                 {/* Upload card */}
-                <div className="rounded-2xl border border-white/10 p-8 shadow-2xl shadow-purple-900/40" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
+                <div className="rounded-2xl border border-white/10 p-4 sm:p-8 shadow-2xl shadow-purple-900/40" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
                   <div
                     onDragOver={(e) => e.preventDefault()}
                     onDrop={(e) => { e.preventDefault(); const f = e.dataTransfer.files[0]; if (f) setFile(f); }}
-                    className={`border-2 border-dashed rounded-2xl p-12 text-center transition-all ${file ? 'border-violet-500/50 bg-violet-500/5' : 'border-white/10 hover:border-violet-500/30'}`}
+                    className={`border-2 border-dashed rounded-2xl p-6 sm:p-12 text-center transition-all ${file ? 'border-violet-500/50 bg-violet-500/5' : 'border-white/10 hover:border-violet-500/30'}`}
                   >
                     {file ? (
                       <div>
@@ -374,7 +374,7 @@ export default function ResumePage() {
             {/* === TAB: BUILDER === */}
             {tab === 'builder' && !wizardOpen && (
               <motion.div key="builder" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
-                <div className="rounded-2xl border border-white/10 p-8 shadow-2xl shadow-purple-900/40 text-center" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
+                <div className="rounded-2xl border border-white/10 p-4 sm:p-8 shadow-2xl shadow-purple-900/40 text-center" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
                   <Layout className="w-12 h-12 text-violet-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">Build Your Resume</h3>
                   <p className="text-sm text-slate-400 mb-6 max-w-md mx-auto">Choose a template, import your existing resume or start from scratch, and build a professional resume.</p>
