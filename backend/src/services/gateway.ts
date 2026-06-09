@@ -29,7 +29,7 @@ app.use('/auth', authLimiter);
 
 const globalLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 500,
+  max: 1000,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) =>
@@ -50,7 +50,7 @@ app.use(globalLimiter);
 
 const notificationsLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 300,
+  max: 600,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) => req.method === 'OPTIONS',
