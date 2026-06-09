@@ -262,22 +262,6 @@ router.get('/list', authenticate, (req: AuthRequest, res: Response) => {
   res.json({ resumes: list });
 });
 
-router.get('/:id', authenticate, (req: AuthRequest, res: Response) => {
-  const db = getDb();
-  const found = (db.resumes || []).find(r => r.id === req.params.id && r.user_id === req.user!.id);
-  if (!found) return res.status(404).json({ error: 'Resume not found' });
-  res.json(found);
-});
-
-router.delete('/:id', authenticate, (req: AuthRequest, res: Response) => {
-  const db = getDb();
-  const idx = (db.resumes || []).findIndex(r => r.id === req.params.id && r.user_id === req.user!.id);
-  if (idx < 0) return res.status(404).json({ error: 'Resume not found' });
-  db.resumes.splice(idx, 1);
-  saveDb();
-  res.json({ success: true });
-});
-
 router.get('/templates', (_req: Request, res: Response) => {
   res.json({ templates: TEMPLATES });
 });
@@ -293,6 +277,22 @@ router.post('/rewrite', authenticate, async (req: AuthRequest, res: Response) =>
   } catch (e: any) {
     res.status(500).json({ error: e.message || 'Rewrite failed' });
   }
+});
+
+router.get('/:id', authenticate, (req: AuthRequest, res: Response) => {
+  const db = getDb();
+  const found = (db.resumes || []).find(r => r.id === req.params.id && r.user_id === req.user!.id);
+  if (!found) return res.status(404).json({ error: 'Resume not found' });
+  res.json(found);
+});
+
+router.delete('/:id', authenticate, (req: AuthRequest, res: Response) => {
+  const db = getDb();
+  const idx = (db.resumes || []).findIndex(r => r.id === req.params.id && r.user_id === req.user!.id);
+  if (idx < 0) return res.status(404).json({ error: 'Resume not found' });
+  db.resumes.splice(idx, 1);
+  saveDb();
+  res.json({ success: true });
 });
 
 export default router;
