@@ -29,99 +29,198 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
 
   const layouts: Record<string, React.ReactNode> = {
     'ats-beginner': (
-      <div className="flex h-full">
-        <div className="w-[32%] h-full p-2 flex flex-col gap-2" style={{ backgroundColor: accent }}>
-          <div className="w-6 h-6 rounded-full bg-white/20 mx-auto" />
-          <div className="space-y-1 mt-1">
-            {['Contact', 'Skills', 'Links'].map(s => <div key={s} className="text-[5px] font-bold text-white/90 uppercase">{s}</div>)}
-            <div className="space-y-0.5">{['React', 'Node.js', 'TS', 'Python', 'SQL'].map(sk => <div key={sk} className="text-[4px] text-white/70">{sk}</div>)}</div>
+      <div className="flex h-full text-[10px]">
+        <div className="w-[35%] h-full p-3 flex flex-col gap-2" style={{ backgroundColor: accent }}>
+          <div className="w-10 h-10 rounded-full bg-white/20 mx-auto" />
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase tracking-wide">Contact</div>
+            <div className="text-[7px] text-white/70 mt-1 space-y-0.5">
+              <div>john@email.com</div>
+              <div>+1 234 567 890</div>
+              <div>linkedin.com/in/john</div>
+              <div>github.com/john</div>
+            </div>
+          </div>
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase tracking-wide">Skills</div>
+            <div className="flex flex-wrap gap-1 mt-1">
+              {['React','Node.js','TypeScript','Python','SQL'].map(s => <span key={s} className="text-[6px] px-1.5 py-0.5 rounded bg-white/10 text-white/80">{s}</span>)}
+            </div>
           </div>
         </div>
-        <div className="flex-1 p-2 space-y-2" style={{ backgroundColor: bg }}>
-          <div className="h-1.5 w-20 rounded" style={{ backgroundColor: accent }} />
-          <div className="h-1 w-16 rounded bg-gray-300" />
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase border-b" style={{ borderColor: accent }}>Experience</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-3/4 rounded bg-gray-200" /></div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase border-b" style={{ borderColor: accent }}>Education</div><div className="h-1 w-full rounded bg-gray-200" /></div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase border-b" style={{ borderColor: accent }}>Projects</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-4/5 rounded bg-gray-200" /></div>
+        <div className="flex-1 p-3 space-y-2" style={{ backgroundColor: bg }}>
+          <div><div className="text-sm font-bold" style={{ color: accent }}>John Doe</div><div className="text-[8px] text-gray-500">Software Engineer</div></div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Experience</div>
+            <div className="text-[7px] text-gray-600 mt-1"><span className="font-semibold">Senior Dev</span> - Tech Co. <span className="text-gray-400">2022-Present</span></div>
+            <div className="text-[7px] text-gray-600"><span className="font-semibold">Developer</span> - StartupX <span className="text-gray-400">2020-2022</span></div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Education</div>
+            <div className="text-[7px] text-gray-600 mt-1">B.Tech Computer Science - University Name</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Projects</div>
+            <div className="text-[7px] text-gray-600 mt-1">E-Commerce Platform - React, Node.js, MongoDB</div>
+          </div>
         </div>
       </div>
     ),
     'sde': (
-      <div className="flex h-full">
-        <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
-          <div className="text-center border-b pb-1" style={{ borderColor: accent }}>
-            <div className="h-1.5 w-16 rounded mx-auto" style={{ backgroundColor: accent }} />
-            <div className="h-0.5 w-12 rounded bg-gray-300 mx-auto mt-0.5" />
+      <div className="flex h-full text-[10px]" style={{ backgroundColor: bg }}>
+        <div className="w-full p-3 space-y-2">
+          <div className="text-center pb-2 border-b-2" style={{ borderColor: accent }}>
+            <div className="text-sm font-bold" style={{ color: accent }}>John Doe</div>
+            <div className="text-[8px] text-gray-500">Software Engineer</div>
+            <div className="text-[7px] text-gray-400 mt-0.5">john@email.com | +1 234 567 890</div>
           </div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Skills</div>
-            <div className="flex flex-wrap gap-0.5">{['Java', 'Python', 'SQL', 'Docker', 'AWS', 'Redis', 'Kafka'].map(sk => <span key={sk} className="text-[3.5px] px-1 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{sk}</span>)}</div>
+          <div className="flex flex-wrap gap-1 justify-center">
+            {['Java','Python','SQL','Docker','AWS','Redis','Kafka','Microservices'].map(s => <span key={s} className="text-[6px] px-1.5 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{s}</span>)}
           </div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Experience</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-5/6 rounded bg-gray-200" /><div className="h-1 w-3/4 rounded bg-gray-200" /></div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Education</div><div className="h-1 w-full rounded bg-gray-200" /></div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Experience</div>
+            <div className="text-[7px] text-gray-600 mt-1">Senior Software Engineer at Tech Company (2022-Present)</div>
+            <div className="text-[7px] text-gray-600">Led microservices architecture serving 1M+ users</div>
+            <div className="text-[7px] text-gray-600 mt-1">Software Developer at StartupX (2020-2022)</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Education</div>
+            <div className="text-[7px] text-gray-600 mt-1">B.Tech Computer Science - University Name (2020-2024)</div>
+          </div>
         </div>
       </div>
     ),
     'frontend': (
-      <div className="flex h-full">
-        <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
-          <div className="flex items-center gap-2 border-b pb-1" style={{ borderColor: accent }}>
-            <div className="h-5 w-5 rounded-full" style={{ backgroundColor: accent }} />
-            <div><div className="h-1.5 w-14 rounded" style={{ backgroundColor: accent }} /><div className="h-0.5 w-10 rounded bg-gray-300 mt-0.5" /></div>
+      <div className="flex h-full text-[10px]">
+        <div className="w-[35%] h-full p-3 flex flex-col gap-2" style={{ backgroundColor: accent }}>
+          <div className="w-10 h-10 rounded-full bg-white/20 mx-auto" />
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">Contact</div>
+            <div className="text-[7px] text-white/70 mt-1 space-y-0.5">
+              <div>john@email.com</div>
+              <div>+1 234 567 890</div>
+              <div>linkedin.com/in/john</div>
+            </div>
           </div>
-          <div className="grid grid-cols-3 gap-1">{['React', 'TS', 'Tailwind', 'Next.js', 'Redux', 'CSS3'].map(sk => <div key={sk} className="text-[4px] px-1 py-0.5 rounded text-center text-white" style={{ backgroundColor: accent }}>{sk}</div>)}</div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Experience</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-4/5 rounded bg-gray-200" /></div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Projects</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-3/4 rounded bg-gray-200" /></div>
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">Skills</div>
+            <div className="flex flex-wrap gap-1 mt-1">
+              {['React','TypeScript','Tailwind','Next.js','Redux','CSS3','GraphQL'].map(s => <span key={s} className="text-[6px] px-1.5 py-0.5 rounded bg-white/10 text-white/80">{s}</span>)}
+            </div>
+          </div>
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">Education</div>
+            <div className="text-[7px] text-white/70 mt-1">B.Tech CSE</div>
+            <div className="text-[6px] text-white/50">University (2020-2024)</div>
+          </div>
+        </div>
+        <div className="flex-1 p-3 space-y-2" style={{ backgroundColor: bg }}>
+          <div className="pb-1 border-b-2" style={{ borderColor: accent }}>
+            <div className="text-sm font-bold" style={{ color: accent }}>John Doe</div>
+            <div className="text-[8px] text-gray-500">Frontend Developer</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase" style={{ color: accent }}>Experience</div>
+            <div className="text-[7px] text-gray-600 mt-1"><span className="font-semibold">Senior Frontend Dev</span> - Tech Co. (2022-Present)</div>
+            <div className="text-[7px] text-gray-600 ml-2">Built scalable React apps with 99.9% uptime</div>
+            <div className="text-[7px] text-gray-600 mt-1"><span className="font-semibold">Frontend Dev</span> - StartupX (2020-2022)</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase" style={{ color: accent }}>Projects</div>
+            <div className="text-[7px] text-gray-600 mt-1">Design System - React, Storybook, Tailwind</div>
+          </div>
         </div>
       </div>
     ),
     'backend': (
-      <div className="flex h-full">
-        <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
-          <div className="text-center border-b pb-1" style={{ borderColor: accent }}>
-            <div className="h-1.5 w-16 rounded mx-auto" style={{ backgroundColor: accent }} />
-            <div className="h-0.5 w-12 rounded bg-gray-300 mx-auto mt-0.5" />
+      <div className="flex h-full text-[10px]" style={{ backgroundColor: bg }}>
+        <div className="w-full p-3 space-y-2">
+          <div className="text-center pb-2 border-b-2" style={{ borderColor: accent }}>
+            <div className="text-sm font-bold" style={{ color: accent }}>John Doe</div>
+            <div className="text-[8px] text-gray-500">Backend Developer</div>
+            <div className="text-[7px] text-gray-400 mt-0.5">john@email.com | linkedin.com/in/john</div>
           </div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Skills</div>
-            <div className="flex flex-wrap gap-0.5">{['Java', 'Python', 'SQL', 'Docker', 'AWS', 'Redis', 'Kafka'].map(sk => <span key={sk} className="text-[3.5px] px-1 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{sk}</span>)}</div>
+          <div className="flex flex-wrap gap-1">
+            {['Java','Python','Node.js','SQL','Docker','AWS','Redis','Kafka','PostgreSQL'].map(s => <span key={s} className="text-[6px] px-1.5 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{s}</span>)}
           </div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Experience</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-5/6 rounded bg-gray-200" /><div className="h-1 w-3/4 rounded bg-gray-200" /></div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Experience</div>
+            <div className="text-[7px] text-gray-600 mt-1">Backend Engineer at Tech Co. (2022-Present)</div>
+            <div className="text-[7px] text-gray-600">Designed REST APIs handling 10M+ requests/day</div>
+            <div className="text-[7px] text-gray-600 mt-1">Junior Developer at StartupX (2020-2022)</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Education</div>
+            <div className="text-[7px] text-gray-600 mt-1">B.Tech Computer Science</div>
+          </div>
         </div>
       </div>
     ),
     'ai-ml': (
-      <div className="flex h-full">
-        <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
+      <div className="flex h-full text-[10px]">
+        <div className="w-[35%] h-full p-3 flex flex-col gap-2" style={{ backgroundColor: accent }}>
+          <div className="w-10 h-10 rounded-full bg-white/20 mx-auto" />
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">Contact</div>
+            <div className="text-[7px] text-white/70 mt-1 space-y-0.5">
+              <div>john@email.com</div>
+              <div>linkedin.com/in/john</div>
+              <div>github.com/john</div>
+            </div>
+          </div>
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">ML/AI Skills</div>
+            <div className="flex flex-wrap gap-1 mt-1">
+              {['TensorFlow','PyTorch','Scikit-learn','NLP','CV','Deep Learning','LLMs'].map(s => <span key={s} className="text-[6px] px-1.5 py-0.5 rounded bg-white/10 text-white/80">{s}</span>)}
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 p-3 space-y-2" style={{ backgroundColor: bg }}>
           <div className="flex justify-between items-start border-b pb-1" style={{ borderColor: accent }}>
-            <div><div className="h-1.5 w-14 rounded" style={{ backgroundColor: accent }} /><div className="h-0.5 w-10 rounded bg-gray-300 mt-0.5" /></div>
-            <div className="space-y-0.5 text-right"><div className="h-0.5 w-10 rounded bg-gray-300" /><div className="h-0.5 w-8 rounded bg-gray-300" /></div>
+            <div><div className="text-sm font-bold" style={{ color: accent }}>John Doe</div><div className="text-[8px] text-gray-500">ML Engineer</div></div>
+            <div className="text-right text-[7px] text-gray-400"><div>Ph.D. AI</div><div>Stanford</div></div>
           </div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>ML/AI Skills</div>
-            <div className="grid grid-cols-2 gap-0.5">{['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'CV', 'Deep Learning'].map(sk => <div key={sk} className="text-[3.5px] px-1 py-0.5 rounded text-white text-center" style={{ backgroundColor: accent }}>{sk}</div>)}</div>
+          <div><div className="text-[8px] font-bold uppercase" style={{ color: accent }}>Experience</div>
+            <div className="text-[7px] text-gray-600 mt-1">ML Engineer at AI Corp (2022-Present)</div>
+            <div className="text-[7px] text-gray-600">Built NLP pipelines processing 1M+ docs/day</div>
           </div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Projects</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-4/5 rounded bg-gray-200" /></div>
+          <div><div className="text-[8px] font-bold uppercase" style={{ color: accent }}>Projects</div>
+            <div className="text-[7px] text-gray-600 mt-1">Image Classification - ResNet, PyTorch, 95% accuracy</div>
+          </div>
         </div>
       </div>
     ),
     'fullstack': (
-      <div className="flex h-full">
-        <div className="w-[30%] h-full p-1.5 flex flex-col gap-1.5" style={{ backgroundColor: accent }}>
-          <div className="w-5 h-5 rounded-full bg-white/20 mx-auto" />
-          <div className="text-[4px] text-white/90 font-bold uppercase">Skills</div>
-          <div className="space-y-0.5">{['React', 'Node.js', 'TS', 'Python', 'SQL', 'Docker', 'AWS'].map(sk => <div key={sk} className="text-[3.5px] text-white/70">{sk}</div>)}</div>
+      <div className="flex h-full text-[10px]">
+        <div className="w-[35%] h-full p-3 flex flex-col gap-2" style={{ backgroundColor: accent }}>
+          <div className="w-10 h-10 rounded-full bg-white/20 mx-auto" />
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">Contact</div>
+            <div className="text-[7px] text-white/70 mt-1 space-y-0.5">
+              <div>john@email.com</div>
+              <div>+1 234 567 890</div>
+              <div>linkedin.com/in/john</div>
+              <div>github.com/john</div>
+            </div>
+          </div>
+          <div>
+            <div className="text-[8px] font-bold text-white/90 uppercase">Skills</div>
+            <div className="flex flex-wrap gap-1 mt-1">
+              {['React','Node.js','TypeScript','Python','SQL','Docker','AWS'].map(s => <span key={s} className="text-[6px] px-1.5 py-0.5 rounded bg-white/10 text-white/80">{s}</span>)}
+            </div>
+          </div>
         </div>
-        <div className="flex-1 p-2 space-y-1.5" style={{ backgroundColor: bg }}>
-          <div className="h-1.5 w-16 rounded" style={{ backgroundColor: accent }} />
-          <div className="h-0.5 w-12 rounded bg-gray-300" />
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Experience</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-4/5 rounded bg-gray-200" /></div>
-          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Projects</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-5/6 rounded bg-gray-200" /></div>
+        <div className="flex-1 p-3 space-y-2" style={{ backgroundColor: bg }}>
+          <div><div className="text-sm font-bold" style={{ color: accent }}>John Doe</div><div className="text-[8px] text-gray-500">Full Stack Developer</div></div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Experience</div>
+            <div className="text-[7px] text-gray-600 mt-1">Full Stack Dev at Tech Co. (2022-Present)</div>
+            <div className="text-[7px] text-gray-600">Built full-stack apps with React + Node.js</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Projects</div>
+            <div className="text-[7px] text-gray-600 mt-1">E-Commerce Platform - Full stack with Stripe</div>
+          </div>
+          <div><div className="text-[8px] font-bold uppercase border-b" style={{ borderColor: accent, color: accent }}>Education</div>
+            <div className="text-[7px] text-gray-600 mt-1">B.Tech Computer Science</div>
+          </div>
         </div>
       </div>
     ),
   };
 
   return (
-    <div className="w-full h-full rounded overflow-hidden border border-gray-200" style={{ backgroundColor: bg }}>
-      {layouts[type] || layouts['sde-beginner']}
+    <div className="w-full h-full rounded overflow-hidden border border-gray-200/30" style={{ backgroundColor: bg }}>
+      {layouts[type] || layouts['ats-beginner']}
     </div>
   );
 }
