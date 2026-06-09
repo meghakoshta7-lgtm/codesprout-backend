@@ -1285,39 +1285,7 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
     setStep(2);
   };
 
-  const FALLBACK_TEMPLATES: Template[] = [
-    { id: 'ats-beginner', name: 'ATS Beginner', description: 'Clean single-column layout optimized for ATS parsers', is_ats_friendly: true, columns: 1, colors: ['#1e293b', '#f8fafc'] },
-    { id: 'sde', name: 'SDE Resume', description: 'Software engineering focused with technical skills emphasis', is_ats_friendly: true, columns: 1, colors: ['#0f172a', '#e2e8f0'] },
-    { id: 'frontend', name: 'Frontend Resume', description: 'Modern layout with visual portfolio & project highlights', is_ats_friendly: false, columns: 2, colors: ['#312e81', '#f0f9ff'] },
-    { id: 'backend', name: 'Backend Resume', description: 'System design & architecture focused clean format', is_ats_friendly: true, columns: 1, colors: ['#1e3a5f', '#f1f5f9'] },
-    { id: 'ai-ml', name: 'AI/ML Resume', description: 'Research & model-focused layout for data scientists', is_ats_friendly: false, columns: 2, colors: ['#581c87', '#fdf4ff'] },
-    { id: 'fullstack', name: 'Full Stack Resume', description: 'Versatile format balancing frontend & backend skills', is_ats_friendly: true, columns: 1, colors: ['#0d9488', '#f0fdfa'] },
-    { id: 'executive', name: 'Executive Resume', description: 'Leadership-focused layout for senior management roles', is_ats_friendly: true, columns: 1, colors: ['#1e3a8a', '#f8fafc'] },
-    { id: 'minimalist', name: 'Minimalist Resume', description: 'Clean, spacious design with elegant typography', is_ats_friendly: true, columns: 1, colors: ['#475569', '#ffffff'] },
-    { id: 'creative', name: 'Creative Resume', description: 'Bold gradient header with portfolio metrics section', is_ats_friendly: false, columns: 1, colors: ['#7c3aed', '#fdf4ff'] },
-    { id: 'technical', name: 'Technical Resume', description: 'Skills-first layout with visual proficiency bars', is_ats_friendly: true, columns: 1, colors: ['#0369a1', '#f0f9ff'] },
-    { id: 'academic', name: 'Academic Resume', description: 'Research & publication focused for academia roles', is_ats_friendly: false, columns: 1, colors: ['#b91c1c', '#fef2f2'] },
-    { id: 'modern-professional', name: 'Modern Professional CV', description: 'Dark sidebar with photo, About Me, Skills & Language sections', is_ats_friendly: false, columns: 2, colors: ['#2d3748', '#ffffff'] },
-    { id: 'blackwhite-minimalist', name: 'Black White Minimalist', description: 'Clean black & white single-column, ATS-friendly', is_ats_friendly: true, columns: 1, colors: ['#1a1a1a', '#ffffff'] },
-    { id: 'bluegray-simple', name: 'Blue & Gray Professional', description: 'Blue sidebar right with Skills, Languages & References', is_ats_friendly: false, columns: 2, colors: ['#1a365d', '#f7fafc'] },
-    { id: 'professional-modern', name: 'Professional Modern', description: 'Centered name, About Me, Skills & References layout', is_ats_friendly: true, columns: 1, colors: ['#2d3748', '#f7fafc'] },
-    { id: 'grayblue-sidebar', name: 'Gray Blue Sidebar', description: 'Gray-blue sidebar left with photo, contact, education & skills', is_ats_friendly: false, columns: 2, colors: ['#4a5568', '#ffffff'] },
-    { id: 'dark-sidebar-photo', name: 'Dark Sidebar Photo', description: 'Dark sidebar left with photo, education, skills & references', is_ats_friendly: false, columns: 2, colors: ['#1a202c', '#ffffff'] },
-    { id: 'gray-sidebar-right', name: 'Gray Sidebar Right', description: 'White main left, gray sidebar right with photo & skills', is_ats_friendly: false, columns: 2, colors: ['#4a5568', '#ffffff'] },
-    { id: 'centered-light', name: 'Centered Light', description: 'Centered layout with summary, education, skills & experience', is_ats_friendly: true, columns: 1, colors: ['#2d3748', '#f7fafc'] },
-    { id: 'brown-sidebar', name: 'Brown Sidebar', description: 'White main left, brown sidebar right with photo & skills', is_ats_friendly: false, columns: 2, colors: ['#744210', '#ffffff'] },
-    { id: 'dark-sidebar-right', name: 'Dark Sidebar Right', description: 'White main left, dark sidebar right with photo & contact', is_ats_friendly: false, columns: 2, colors: ['#1a202c', '#ffffff'] },
-    { id: 'blank-canvas', name: 'Blank Canvas Builder', description: 'Fully editable blank canvas — add/remove sections, upload photo, two-column professional layout', is_ats_friendly: true, columns: 2, colors: ['#2563eb', '#ffffff'] },
-    { id: 'blue-sidebar-profile', name: 'Blue Sidebar Profile', description: 'Blue sidebar left with photo, skills, languages & interests, two-column', is_ats_friendly: false, columns: 2, colors: ['#1e3a5f', '#ffffff'] },
-    { id: 'orange-sidebar-profile', name: 'Orange Sidebar Profile', description: 'Orange/peach sidebar left with photo, contact, education & skills', is_ats_friendly: false, columns: 2, colors: ['#c2410c', '#ffffff'] },
-    /* ── Premium Templates (₹5 each) ── */
-    { id: 'grayblue-premium', name: 'Gray Blue Pro✨', description: 'Premium gray-blue sidebar layout with enhanced design ★', is_ats_friendly: false, columns: 2, colors: ['#4a5568', '#ffffff'], isPremium: true },
-    { id: 'dark-photo-premium', name: 'Dark Photo Pro✨', description: 'Premium dark sidebar with photo & refined typography ★', is_ats_friendly: false, columns: 2, colors: ['#1a202c', '#ffffff'], isPremium: true },
-    { id: 'gray-right-premium', name: 'Gray Right Pro✨', description: 'Premium gray sidebar right with elegant spacing ★', is_ats_friendly: false, columns: 2, colors: ['#4a5568', '#ffffff'], isPremium: true },
-    { id: 'centered-premium', name: 'Centered Pro✨', description: 'Premium centered single-column with pro finishing ★', is_ats_friendly: true, columns: 1, colors: ['#2d3748', '#f7fafc'], isPremium: true },
-    { id: 'brown-premium', name: 'Brown Pro✨', description: 'Premium brown sidebar with advanced styling ★', is_ats_friendly: false, columns: 2, colors: ['#744210', '#ffffff'], isPremium: true },
-    { id: 'dark-right-premium', name: 'Dark Right Pro✨', description: 'Premium dark sidebar right with photo & contact ★', is_ats_friendly: false, columns: 2, colors: ['#1a202c', '#ffffff'], isPremium: true },
-  ];
+  const FALLBACK_TEMPLATES: Template[] = [];
 
   useEffect(() => {
     resumeApi.getTemplates()
