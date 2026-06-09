@@ -2468,35 +2468,48 @@ function ResumePreview({ template, form, accent, bg }: {
     const accentColor = '#2563eb';
     return (
       <div className="mx-auto max-w-[210mm] bg-white" style={{ minHeight: '297mm', fontFamily: 'Inter, system-ui, sans-serif' }}>
-        {/* Header */}
-        <div className="flex gap-6 p-8 pb-5 border-b border-gray-200">
+        {/* Top accent bar */}
+        <div className="h-2" style={{ backgroundColor: accentColor }} />
+
+        {/* Header Section */}
+        <div className="flex gap-8 px-8 pt-7 pb-5">
           {form.photo ? (
-            <div className="w-28 h-28 rounded-xl overflow-hidden shrink-0 border-2 border-gray-100"><img src={form.photo} alt="Profile" className="w-full h-full object-cover" /></div>
+            <div className="w-28 h-28 rounded-full overflow-hidden shrink-0 border-4 border-white shadow-lg"><img src={form.photo} alt="Profile" className="w-full h-full object-cover" /></div>
           ) : (
-            <div className="w-28 h-28 rounded-xl shrink-0 border-2 border-dashed border-gray-300 flex items-center justify-center bg-gray-50">
-              <svg className="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+            <div className="w-28 h-28 rounded-full shrink-0 border-3 border-dashed border-gray-300 flex items-center justify-center bg-gray-50 shadow-sm">
+              <svg className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
             </div>
           )}
-          <div className="flex-1 min-w-0">
-            <h1 className="text-2xl font-bold text-gray-900 tracking-tight" style={{ color: accentColor }}>{form.name || 'Your Name'}</h1>
-            <p className="text-sm text-gray-500 mt-0.5">{form.summary ? form.summary.split(' ').slice(0, 6).join(' ') + (form.summary.split(' ').length > 6 ? '...' : '') : 'Job Title / Professional Role'}</p>
-            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[11px] text-gray-500">
-              {form.phone && <span className="flex items-center gap-1">📞 {form.phone}</span>}
-              {form.email && <span className="flex items-center gap-1">✉️ {form.email}</span>}
-              {form.address && <span className="flex items-center gap-1">📍 {form.address}</span>}
-              {form.linkedin && <span className="flex items-center gap-1">🔗 {form.linkedin}</span>}
+          <div className="flex-1 min-w-0 self-center">
+            <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">{form.name || 'Your Name'}</h1>
+            <div className="w-12 h-1 rounded-full mt-2 mb-2" style={{ backgroundColor: accentColor }} />
+            <p className="text-sm text-gray-500 font-medium">{form.summary ? form.summary.split(' ').slice(0, 8).join(' ') + (form.summary.split(' ').length > 8 ? '...' : '') : 'Job Title / Professional Role'}</p>
+            <div className="flex flex-wrap gap-x-5 gap-y-1 mt-2.5 text-[11px] text-gray-500">
+              {form.email && <span className="flex items-center gap-1.5"><span style={{ color: accentColor }}>✉</span> {form.email}</span>}
+              {form.phone && <span className="flex items-center gap-1.5"><span style={{ color: accentColor }}>📞</span> {form.phone}</span>}
+              {form.address && <span className="flex items-center gap-1.5"><span style={{ color: accentColor }}>📍</span> {form.address}</span>}
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-gray-400">
+              {form.linkedin && <span className="flex items-center gap-1.5"><span style={{ color: accentColor }}>🔗</span> {form.linkedin}</span>}
+              {form.github && <span className="flex items-center gap-1.5"><span style={{ color: accentColor }}>🐙</span> {form.github}</span>}
             </div>
           </div>
         </div>
 
+        {/* Thin divider */}
+        <div className="mx-8 border-t border-gray-200" />
+
         {/* Body: Two Column */}
-        <div className="flex">
-          {/* Left Sidebar (30%) */}
-          <div className="w-[30%] p-6 pr-4 space-y-5 bg-gray-50/50">
-            {/* Profile Summary */}
+        <div className="flex px-8 pt-5 pb-8 gap-6">
+          {/* Left Sidebar (32%) */}
+          <div className="w-[32%] space-y-5 shrink-0">
+            {/* Profile / Summary */}
             {form.summary && (
               <div>
-                <h3 className="text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: accentColor }}>Profile</h3>
+                <h3 className="text-[9px] font-bold uppercase tracking-[0.12em] mb-2.5 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Profile
+                </h3>
                 <p className="text-[11px] text-gray-600 leading-relaxed whitespace-pre-wrap">{form.summary}</p>
               </div>
             )}
@@ -2504,10 +2517,13 @@ function ResumePreview({ template, form, accent, bg }: {
             {/* Skills */}
             {form.skills && (
               <div>
-                <h3 className="text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: accentColor }}>Skills</h3>
+                <h3 className="text-[9px] font-bold uppercase tracking-[0.12em] mb-2.5 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Skills
+                </h3>
                 <div className="flex flex-wrap gap-1.5">
                   {form.skills.split(',').map((s: string, i: number) => s.trim() && (
-                    <span key={i} className="text-[10px] px-2 py-0.5 rounded-md border" style={{ borderColor: accentColor + '30', color: accentColor, backgroundColor: accentColor + '08' }}>{s.trim()}</span>
+                    <span key={i} className="text-[10px] px-2.5 py-1 rounded-md font-medium" style={{ color: accentColor, backgroundColor: accentColor + '10' }}>{s.trim()}</span>
                   ))}
                 </div>
               </div>
@@ -2516,13 +2532,22 @@ function ResumePreview({ template, form, accent, bg }: {
             {/* Education */}
             {form.education.some((e: any) => e.degree || e.institution) && (
               <div>
-                <h3 className="text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: accentColor }}>Education</h3>
-                <div className="space-y-2">
+                <h3 className="text-[9px] font-bold uppercase tracking-[0.12em] mb-2.5 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Education
+                </h3>
+                <div className="space-y-3">
                   {form.education.filter((e: any) => e.degree || e.institution).map((edu: any, i: number) => (
-                    <div key={i} className="border-l-2 pl-2.5" style={{ borderColor: accentColor }}>
-                      <div className="text-[11px] font-semibold text-gray-800">{edu.degree}</div>
-                      <div className="text-[10px] text-gray-500">{edu.institution}</div>
-                      <div className="text-[9px] text-gray-400">{edu.year}</div>
+                    <div key={i} className="flex gap-2.5">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 rounded-full mt-1 shrink-0" style={{ backgroundColor: accentColor }} />
+                        {i < form.education.filter((e: any) => e.degree || e.institution).length - 1 && <div className="w-px flex-1 mt-0.5" style={{ backgroundColor: accentColor + '30' }} />}
+                      </div>
+                      <div className="pb-1">
+                        <div className="text-[11px] font-semibold text-gray-800">{edu.degree}</div>
+                        <div className="text-[10px] text-gray-500">{edu.institution}</div>
+                        <div className="text-[9px] text-gray-400 mt-0.5">{edu.year}</div>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -2532,66 +2557,107 @@ function ResumePreview({ template, form, accent, bg }: {
             {/* Certifications */}
             {form.certifications.some((c: any) => c.name) && (
               <div>
-                <h3 className="text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: accentColor }}>Certifications</h3>
-                <div className="space-y-1">
+                <h3 className="text-[9px] font-bold uppercase tracking-[0.12em] mb-2.5 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Certifications
+                </h3>
+                <div className="space-y-2">
                   {form.certifications.filter((c: any) => c.name).map((cert: any, i: number) => (
-                    <div key={i} className="text-[11px]"><span className="font-medium text-gray-800">{cert.name}</span><span className="text-gray-400 ml-1">{cert.issuer}</span></div>
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-[9px] mt-0.5" style={{ color: accentColor }}>✓</span>
+                      <div>
+                        <div className="text-[11px] font-medium text-gray-800">{cert.name}</div>
+                        {cert.issuer && <div className="text-[9px] text-gray-400">{cert.issuer}</div>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Languages */}
+            {form.certifications.filter((c: any) => c.name && !c.issuer && !c.year).length > 0 && (
+              <div>
+                <h3 className="text-[9px] font-bold uppercase tracking-[0.12em] mb-2 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Languages
+                </h3>
+                <div className="space-y-1">
+                  {form.certifications.filter((c: any) => c.name && !c.issuer && !c.year).map((lang: any, i: number) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <div className="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden">
+                        <div className="h-full rounded-full" style={{ width: '80%', backgroundColor: accentColor }} />
+                      </div>
+                      <span className="text-[10px] text-gray-600 w-12 text-right">{lang.name}</span>
+                    </div>
                   ))}
                 </div>
               </div>
             )}
           </div>
 
-          {/* Right Main (70%) */}
-          <div className="w-[70%] p-6 pl-4 space-y-5 border-l border-gray-100">
+          {/* Vertical divider */}
+          <div className="w-px bg-gray-200 shrink-0 self-stretch" />
+
+          {/* Right Main (65%) */}
+          <div className="flex-1 space-y-5 min-w-0">
             {/* Work Experience */}
             {form.experience.some((e: any) => e.role || e.company) && (
               <div>
-                <h3 className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: accentColor }}>Work Experience</h3>
-                {form.experience.filter((e: any) => e.role || e.company).map((exp: any, i: number) => (
-                  <div key={i} className="mb-4 pb-3 border-b border-gray-100 last:border-0 last:pb-0 last:mb-0">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <div className="text-sm font-semibold text-gray-800">{exp.role}</div>
-                        <div className="text-[11px] text-gray-500">{exp.company}</div>
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.12em] mb-3 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Work Experience
+                </h3>
+                <div className="space-y-4">
+                  {form.experience.filter((e: any) => e.role || e.company).map((exp: any, i: number) => (
+                    <div key={i} className="relative pl-4 border-l-2 pb-3" style={{ borderColor: accentColor + '30' }}>
+                      <div className="absolute -left-[5px] top-1 w-2 h-2 rounded-full" style={{ backgroundColor: accentColor }} />
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <div className="text-sm font-semibold text-gray-800">{exp.role}</div>
+                          <div className="text-[10px] font-medium text-gray-500">{exp.company}</div>
+                        </div>
+                        <span className="text-[9px] font-medium whitespace-nowrap ml-2 mt-0.5 px-2 py-0.5 rounded-full" style={{ color: accentColor, backgroundColor: accentColor + '10' }}>{exp.duration}</span>
                       </div>
-                      <span className="text-[10px] text-gray-400 whitespace-nowrap ml-2 mt-0.5">{exp.duration}</span>
+                      {exp.description && (
+                        <ul className="mt-1.5 space-y-0.5">
+                          {exp.description.split('\n').filter(Boolean).map((line: string, j: number) => (
+                            <li key={j} className="text-[11px] text-gray-600 flex items-start gap-2">
+                              <span className="text-[7px] mt-1 shrink-0" style={{ color: accentColor }}>●</span>
+                              <span>{line}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                    {exp.description && (
-                      <ul className="mt-1.5 space-y-0.5">
-                        {exp.description.split('\n').filter(Boolean).map((line: string, j: number) => (
-                          <li key={j} className="text-[11px] text-gray-600 flex items-start gap-1.5">
-                            <span className="text-[8px] mt-0.5 shrink-0" style={{ color: accentColor }}>●</span>
-                            <span>{line}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
 
             {/* Projects */}
             {form.projects.some((p: any) => p.title) && (
               <div>
-                <h3 className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: accentColor }}>Projects</h3>
-                {form.projects.filter((p: any) => p.title).map((proj: any, i: number) => (
-                  <div key={i} className="mb-3 pb-2 border-b border-gray-100 last:border-0 last:pb-0 last:mb-0">
-                    <div className="text-sm font-semibold text-gray-800">{proj.title}{proj.link ? <span className="text-[10px] text-gray-400 font-normal ml-2">{proj.link}</span> : ''}</div>
-                    {proj.description && <div className="text-[11px] text-gray-600 mt-0.5 whitespace-pre-wrap">{proj.description}</div>}
-                  </div>
-                ))}
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.12em] mb-3 flex items-center gap-2" style={{ color: accentColor }}>
+                  <span className="w-1 h-3.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                  Projects
+                </h3>
+                <div className="space-y-3">
+                  {form.projects.filter((p: any) => p.title).map((proj: any, i: number) => (
+                    <div key={i} className="rounded-lg p-3" style={{ backgroundColor: accentColor + '06', borderLeft: `3px solid ${accentColor}` }}>
+                      <div className="flex justify-between items-start">
+                        <div className="text-sm font-semibold text-gray-800">{proj.title}</div>
+                        {proj.link && <span className="text-[9px] text-gray-400 ml-2 shrink-0">{proj.link}</span>}
+                      </div>
+                      {proj.description && <div className="text-[11px] text-gray-600 mt-1 whitespace-pre-wrap">{proj.description}</div>}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
-            {/* Languages (from certifications that don't have issuer) */}
-            {form.certifications.filter((c: any) => c.name && !c.issuer).length > 0 && (
-              <div>
-                <h3 className="text-[11px] font-bold uppercase tracking-wider mb-2" style={{ color: accentColor }}>Languages</h3>
-                <div className="text-[11px] text-gray-600">{form.certifications.filter((c: any) => c.name && !c.issuer).map((c: any) => c.name).join(' · ')}</div>
-              </div>
-            )}
+            {/* Languages Section (standalone, not from certs) */}
+            {form.certifications.some((c: any) => c.name && c.issuer && c.year) && form.education.length === 0 && form.projects.length === 0 && form.experience.length === 0 && form.summary && !form.skills ? null : null}
           </div>
         </div>
       </div>
