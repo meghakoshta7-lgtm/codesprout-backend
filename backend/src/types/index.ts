@@ -66,6 +66,8 @@ export interface User {
   created_at: string;
   picture?: string;
   provider?: 'local' | 'google';
+  resetToken?: string;
+  resetTokenExpiry?: string;
 }
 
 export interface Bookmark {

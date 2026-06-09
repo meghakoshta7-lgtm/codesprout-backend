@@ -6,4 +6,6 @@ export const authApi = {
   register: (payload: RegisterPayload) => api.post<AuthResponse>('/auth/register', payload),
   me: () => api.get('/auth/me'),
   google: (credential: string) => api.post<AuthResponse & { isNew?: boolean }>('/auth/google', { credential }),
+  forgotPassword: (email: string) => api.post<{ message: string }>('/auth/forgot-password', { email }),
+  resetPassword: (token: string, password: string) => api.post<{ message: string }>('/auth/reset-password', { token, password }),
 };

@@ -411,9 +411,9 @@ function LoginContent() {
                         <input type="checkbox" className="rounded border-white/20 bg-white/5 text-violet-500 focus:ring-violet-500/30" />
                         Remember me
                       </label>
-                      <a href="#" className="text-violet-400 hover:text-violet-300 transition-colors">
+                      <Link to="/forgot-password" className="text-violet-400 hover:text-violet-300 transition-colors">
                         Forgot password?
-                      </a>
+                      </Link>
                     </div>
                   )}
 

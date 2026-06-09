@@ -1,10 +1,10 @@
 import { Router, Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
-import { getAllUsers, getUserByEmail, getUserById, addUser } from '../data/db';
+import { getAllUsers, getUserByEmail, getUserById, addUser, getDb, saveDb } from '../data/db';
 import { generateToken, authenticate, AuthRequest } from '../middleware/auth';
 import { sendWelcomeNotification } from '../services/notifications';
-import { sendWelcomeEmail } from '../services/email';
-import { maskEmail } from '../services/crypto';
+import { sendWelcomeEmail, sendPasswordResetEmail } from '../services/email';
+import { maskEmail, generateOpaqueToken } from '../services/crypto';
 import { isPremiumFresh, getSubscription } from '../data/store';
 
 const router = Router();
@@ -149,6 +149,57 @@ router.post('/google', async (req: Request, res: Response) => {
 
   const token = generateToken({ id: finalUser.id, email: finalUser.email, role: finalUser.role, name: finalUser.name });
   res.json({ token, user: publicUser(finalUser), isNew });
+});
+
+router.post('/forgot-password', async (req: Request, res: Response) => {
+  const { email } = req.body;
+  if (!email) return res.status(400).json({ error: 'Email is required' });
+
+  const user = getUserByEmail(email);
+  if (!user) {
+    // Don't reveal if email exists — always return success
+    return res.json({ message: 'If that email is registered, a password reset link has been sent.' });
+  }
+
+  const token = generateOpaqueToken(32);
+  const expiry = new Date(Date.now() + 3600000).toISOString(); // 1 hour
+
+  const db = getDb();
+  const idx = db.users.findIndex(u => u.id === user.id);
+  if (idx === -1) return res.status(500).json({ error: 'User not found in database' });
+  db.users[idx] = { ...db.users[idx], resetToken: token, resetTokenExpiry: expiry };
+  saveDb();
+
+  const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/reset-password?token=${token}&email=${encodeURIComponent(email)}`;
+
+  try {
+    await sendPasswordResetEmail(user.email, user.name, resetLink);
+  } catch (e) {
+    console.error('[auth] forgot-password email send failed:', e);
+  }
+
+  res.json({ message: 'If that email is registered, a password reset link has been sent.' });
+});
+
+router.post('/reset-password', async (req: Request, res: Response) => {
+  const { token, password } = req.body;
+  if (!token || !password) return res.status(400).json({ error: 'Token and password are required' });
+  if (password.length < 6) return res.status(400).json({ error: 'Password must be at least 6 characters' });
+
+  const db = getDb();
+  const user = db.users.find(u => u.resetToken === token);
+  if (!user) return res.status(400).json({ error: 'Invalid or expired reset token' });
+
+  if (!user.resetTokenExpiry || new Date(user.resetTokenExpiry) < new Date()) {
+    return res.status(400).json({ error: 'Reset token has expired' });
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const idx = db.users.findIndex(u => u.id === user.id);
+  db.users[idx] = { ...db.users[idx], password: hashedPassword, resetToken: undefined, resetTokenExpiry: undefined };
+  saveDb();
+
+  res.json({ message: 'Password reset successfully. You can now log in with your new password.' });
 });
 
 export default router;

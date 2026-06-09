@@ -8,6 +8,7 @@ import publicStatsRouter from '../routes/publicStats';
 import adminRouter from '../routes/admin';
 import shopRouter from '../routes/shop';
 import shopPurchasesRouter from '../routes/shopPurchases';
+import { isRazorpayEnabled } from '../services/razorpay';
 import { initDb } from '../data/db';
 import { questions, topics, cheatSheets, users, patternDetails } from '../data/seed';
 import { TEST_CASES } from '../data/testCases';
@@ -46,5 +47,8 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
   await initDb(questions, topics, cheatSheets, users, testCaseData, patternDetails);
   app.listen(PORT, () => {
     console.log(`[content-service] running on http://localhost:${PORT}`);
+    console.log(`[content-config] RAZORPAY_KEY_ID=${process.env.RAZORPAY_KEY_ID ? 'SET (' + process.env.RAZORPAY_KEY_ID.slice(0,8) + '...)' : 'NOT SET'}`);
+    console.log(`[content-config] RAZORPAY_KEY_SECRET=${process.env.RAZORPAY_KEY_SECRET ? 'SET' : 'NOT SET'}`);
+    console.log(`[content-config] isRazorpayEnabled=${isRazorpayEnabled()}`);
   });
 })();

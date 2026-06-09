@@ -7,6 +7,8 @@ import QuestionsPage from '@/features/questions/pages/QuestionsPage';
 import PatternsPage from '@/features/patterns/pages/PatternsPage';
 import DifficultyPage from '@/features/difficulty/pages/DifficultyPage';
 import LoginPage from '@/features/auth/pages/LoginPage';
+import ForgotPasswordPage from '@/features/auth/pages/ForgotPasswordPage';
+import ResetPasswordPage from '@/features/auth/pages/ResetPasswordPage';
 import PricingPage from '@/features/subscription/pages/PricingPage';
 import LeaderboardPage from '@/features/leaderboard/pages/LeaderboardPage';
 import InterviewPrepPage from '@/features/interview/pages/InterviewPrepPage';
@@ -758,6 +760,8 @@ export const router = createBrowserRouter([
       { path: 'medium', element: <DifficultyPage /> },
       { path: 'hard', element: <DifficultyPage /> },
       { path: 'login', element: <LoginPage /> },
+      { path: 'forgot-password', element: <ForgotPasswordPage /> },
+      { path: 'reset-password', element: <ResetPasswordPage /> },
       { path: 'shop', element: <ShopPage /> },
       { path: 'pricing', element: <PricingPage /> },
       { path: 'interview-prep', element: <InterviewPrepPage /> },
