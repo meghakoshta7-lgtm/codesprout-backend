@@ -28,7 +28,7 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
   const bg = colors?.[1] || '#f8fafc';
 
   const layouts: Record<string, React.ReactNode> = {
-    'sde-beginner': (
+    'ats-beginner': (
       <div className="flex h-full">
         <div className="w-[32%] h-full p-2 flex flex-col gap-2" style={{ backgroundColor: accent }}>
           <div className="w-6 h-6 rounded-full bg-white/20 mx-auto" />
@@ -46,8 +46,21 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
         </div>
       </div>
     ),
-    'sde-intermediate': null as any,
-    'sde-advanced': null as any,
+    'sde': (
+      <div className="flex h-full">
+        <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
+          <div className="text-center border-b pb-1" style={{ borderColor: accent }}>
+            <div className="h-1.5 w-16 rounded mx-auto" style={{ backgroundColor: accent }} />
+            <div className="h-0.5 w-12 rounded bg-gray-300 mx-auto mt-0.5" />
+          </div>
+          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Skills</div>
+            <div className="flex flex-wrap gap-0.5">{['Java', 'Python', 'SQL', 'Docker', 'AWS', 'Redis', 'Kafka'].map(sk => <span key={sk} className="text-[3.5px] px-1 py-0.5 rounded border" style={{ borderColor: accent, color: accent }}>{sk}</span>)}</div>
+          </div>
+          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Experience</div><div className="h-1 w-full rounded bg-gray-200" /><div className="h-1 w-5/6 rounded bg-gray-200" /><div className="h-1 w-3/4 rounded bg-gray-200" /></div>
+          <div className="space-y-1"><div className="text-[5px] font-bold uppercase" style={{ color: accent }}>Education</div><div className="h-1 w-full rounded bg-gray-200" /></div>
+        </div>
+      </div>
+    ),
     'frontend': (
       <div className="flex h-full">
         <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
@@ -61,7 +74,6 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
         </div>
       </div>
     ),
-    'frontend-advanced': null as any,
     'backend': (
       <div className="flex h-full">
         <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
@@ -76,7 +88,6 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
         </div>
       </div>
     ),
-    'backend-advanced': null as any,
     'ai-ml': (
       <div className="flex h-full">
         <div className="w-full p-2 space-y-1.5" style={{ backgroundColor: bg }}>
@@ -107,11 +118,6 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
       </div>
     ),
   };
-
-  // clone null layouts from their base
-  ['sde-intermediate', 'sde-advanced', 'frontend-advanced', 'backend-advanced'].forEach(k => {
-    if (!layouts[k]) layouts[k] = layouts[k.replace('-intermediate', '').replace('-advanced', '')];
-  });
 
   return (
     <div className="w-full h-full rounded overflow-hidden border border-gray-200" style={{ backgroundColor: bg }}>
@@ -224,8 +230,22 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
     summary: '',
   });
 
+  const FALLBACK_TEMPLATES: Template[] = [
+    { id: 'ats-beginner', name: 'ATS Beginner', description: 'Clean single-column layout optimized for ATS parsers', is_ats_friendly: true, columns: 1, colors: ['#1e293b', '#f8fafc'] },
+    { id: 'sde', name: 'SDE Resume', description: 'Software engineering focused with technical skills emphasis', is_ats_friendly: true, columns: 1, colors: ['#0f172a', '#e2e8f0'] },
+    { id: 'frontend', name: 'Frontend Resume', description: 'Modern layout with visual portfolio & project highlights', is_ats_friendly: false, columns: 2, colors: ['#312e81', '#f0f9ff'] },
+    { id: 'backend', name: 'Backend Resume', description: 'System design & architecture focused clean format', is_ats_friendly: true, columns: 1, colors: ['#1e3a5f', '#f1f5f9'] },
+    { id: 'ai-ml', name: 'AI/ML Resume', description: 'Research & model-focused layout for data scientists', is_ats_friendly: false, columns: 2, colors: ['#581c87', '#fdf4ff'] },
+    { id: 'fullstack', name: 'Full Stack Resume', description: 'Versatile format balancing frontend & backend skills', is_ats_friendly: true, columns: 1, colors: ['#0d9488', '#f0fdfa'] },
+  ];
+
   useEffect(() => {
-    resumeApi.getTemplates().then(r => setTemplates(r.data.templates || [])).catch(() => {});
+    resumeApi.getTemplates()
+      .then(r => {
+        const t = r.data.templates || [];
+        setTemplates(t.length > 0 ? t : FALLBACK_TEMPLATES);
+      })
+      .catch(() => setTemplates(FALLBACK_TEMPLATES));
   }, []);
 
   const filtered = templates.filter(t => {
