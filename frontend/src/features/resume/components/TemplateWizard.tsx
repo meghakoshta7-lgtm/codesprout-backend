@@ -336,11 +336,11 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
   /* ── STEP 1: Template Gallery ──────────────────────────────────────── */
   if (step === 1) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen" style={{ backgroundColor: '#faf9f6' }}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-gray-900">
         {/* header */}
         <div className="max-w-6xl mx-auto px-6 pt-10 pb-6">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Start building your resume</h1>
-          <p className="text-gray-500 text-lg">Choose a design you like. You can customize or switch it later.</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Start building your resume</h1>
+          <p className="text-slate-400 text-lg">Choose a design you like. You can customize or switch it later.</p>
         </div>
 
         {/* filter tabs */}
@@ -356,8 +356,8 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
               onClick={() => setFilter(f.key)}
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all border ${
                 filter === f.key
-                  ? 'bg-gray-900 text-white border-gray-900'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
+                  ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white border-transparent shadow-lg shadow-violet-500/25'
+                  : 'bg-white/5 text-slate-400 border-white/10 hover:border-violet-500/50 hover:text-white'
               }`}
             >
               {f.label}
@@ -377,13 +377,13 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
                 className="cursor-pointer group"
                 onClick={() => { setSelectedTemplate(t); setStep(2); }}
               >
-                <div className="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 shadow-lg hover:shadow-2xl hover:shadow-violet-500/10 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-violet-500/50">
                   <div className="h-64 overflow-hidden">
                     <MiniResume type={t.id} colors={t.colors || ['#6d28d9', '#f8fafc']} />
                   </div>
-                  <div className="p-4 border-t border-gray-100">
-                    <p className="text-sm font-semibold text-gray-800">{t.name}</p>
-                    <p className="text-xs text-gray-500 mt-1">{t.description}</p>
+                  <div className="p-4 border-t border-white/10">
+                    <p className="text-sm font-semibold text-white">{t.name}</p>
+                    <p className="text-xs text-slate-500 mt-1">{t.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -397,32 +397,32 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
   /* ── STEP 2: Template Detail Popup ─────────────────────────────────── */
   if (step === 2 && selectedTemplate) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex shadow-2xl">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
+        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex shadow-2xl border border-white/10" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', backdropFilter: 'blur(20px)' }}>
           {/* left: large preview */}
-          <div className="w-[55%] p-6 overflow-y-auto" style={{ backgroundColor: '#f5f5f0' }}>
+          <div className="w-[55%] p-6 overflow-y-auto bg-gray-800/50">
             <LargeResumePreview template={selectedTemplate} />
           </div>
           {/* right: info */}
           <div className="w-[45%] p-8 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedTemplate.name}</h2>
-            <p className="text-gray-500 mb-6 leading-relaxed">{selectedTemplate.description}</p>
-            <ul className="space-y-3 mb-8 text-sm text-gray-600">
-              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gray-400" /> A4 / US-Letter Size</li>
-              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Editable Text</li>
-              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Fully customizable</li>
-              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Print ready format</li>
-              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-gray-400" /> Online resume with shareable link</li>
+            <h2 className="text-3xl font-bold text-white mb-4">{selectedTemplate.name}</h2>
+            <p className="text-slate-400 mb-6 leading-relaxed">{selectedTemplate.description}</p>
+            <ul className="space-y-3 mb-8 text-sm text-slate-400">
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-violet-400" /> A4 / US-Letter Size</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-violet-400" /> Editable Text</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-violet-400" /> Fully customizable</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-violet-400" /> Print ready format</li>
+              <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-violet-400" /> Online resume with shareable link</li>
             </ul>
             <div className="flex gap-3">
-              <button onClick={() => setStep(3)} className="flex-1 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors">
+              <button onClick={() => setStep(3)} className="flex-1 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25">
                 Use this template
               </button>
-              <button onClick={() => setStep(1)} className="px-6 py-3 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors">
+              <button onClick={() => setStep(1)} className="px-6 py-3 rounded-xl border border-white/10 text-slate-400 hover:bg-white/5 hover:text-white transition-colors">
                 Back
               </button>
             </div>
-            <button onClick={onCancel} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200">
+            <button onClick={onCancel} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-slate-400 hover:bg-white/20 hover:text-white">
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -434,18 +434,18 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
   /* ── STEP 3: Import or Start Blank Popup ───────────────────────────── */
   if (step === 3) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-2xl max-w-lg w-full p-8 shadow-2xl relative">
-          <button onClick={() => setStep(2)} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
+        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="rounded-2xl max-w-lg w-full p-8 shadow-2xl border border-white/10 relative" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', backdropFilter: 'blur(20px)' }}>
+          <button onClick={() => setStep(2)} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-slate-400 hover:bg-white/20 hover:text-white">
             <X className="w-4 h-4" />
           </button>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Import your existing resume</h2>
-          <p className="text-gray-500 mb-8">Start faster by prefilling your resume content.</p>
+          <h2 className="text-2xl font-bold text-white mb-2">Import your existing resume</h2>
+          <p className="text-slate-400 mb-8">Start faster by prefilling your resume content.</p>
           <div className="space-y-4">
-            <button onClick={() => setStep(4)} className="w-full py-4 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 text-lg">
+            <button onClick={() => setStep(4)} className="w-full py-4 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25 flex items-center justify-center gap-2 text-lg">
               <Upload className="w-5 h-5" /> Import resume
             </button>
-            <button onClick={handleStartBlank} className="w-full py-4 rounded-xl border-2 border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-colors text-lg">
+            <button onClick={handleStartBlank} className="w-full py-4 rounded-xl border-2 border-white/10 text-slate-300 font-semibold hover:bg-white/5 hover:text-white transition-colors text-lg">
               Start from blank
             </button>
           </div>
@@ -457,19 +457,19 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
   /* ── STEP 4: File Upload / Paste Text Popup ────────────────────────── */
   if (step === 4) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white rounded-2xl max-w-lg w-full p-8 shadow-2xl relative">
-          <button onClick={() => setStep(3)} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
+        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="rounded-2xl max-w-lg w-full p-8 shadow-2xl border border-white/10 relative" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', backdropFilter: 'blur(20px)' }}>
+          <button onClick={() => setStep(3)} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-slate-400 hover:bg-white/20 hover:text-white">
             <X className="w-4 h-4" />
           </button>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Import Resume</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Import Resume</h2>
 
           {/* tabs */}
           <div className="flex gap-2 mb-6">
-            <button onClick={() => setImportMode('file')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${importMode === 'file' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
+            <button onClick={() => setImportMode('file')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${importMode === 'file' ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/25' : 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white'}`}>
               Resume File
             </button>
-            <button onClick={() => setImportMode('paste')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${importMode === 'paste' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
+            <button onClick={() => setImportMode('paste')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${importMode === 'paste' ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/25' : 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white'}`}>
               Paste Text
             </button>
           </div>
@@ -479,23 +479,23 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
               <input ref={fileRef} type="file" accept=".pdf,.docx,.png,.jpg,.jpeg" className="hidden" onChange={e => { if (e.target.files?.[0]) handleFileUpload(e.target.files[0]); }} />
               <div
                 onClick={() => fileRef.current?.click()}
-                className="border-2 border-dashed border-gray-300 rounded-xl p-12 text-center cursor-pointer hover:border-gray-400 hover:bg-gray-50 transition-all"
+                className="border-2 border-dashed border-white/10 rounded-xl p-12 text-center cursor-pointer hover:border-violet-500/50 hover:bg-white/5 transition-all"
               >
                 {uploading ? (
                   <div className="flex flex-col items-center gap-3">
-                    <Loader2 className="w-10 h-10 text-gray-400 animate-spin" />
-                    <p className="text-gray-500">Uploading...</p>
+                    <Loader2 className="w-10 h-10 text-slate-400 animate-spin" />
+                    <p className="text-slate-400">Uploading...</p>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-                      <FileText className="w-8 h-8 text-gray-400" />
+                    <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                      <FileText className="w-8 h-8 text-slate-400" />
                     </div>
                     <div>
-                      <p className="text-gray-600 font-medium">Choose a file or drag and drop it here</p>
-                      <p className="text-gray-400 text-sm mt-1">.pdf, .docx, .png, .jpeg, .jpg</p>
+                      <p className="text-slate-300 font-medium">Choose a file or drag and drop it here</p>
+                      <p className="text-slate-500 text-sm mt-1">.pdf, .docx, .png, .jpeg, .jpg</p>
                     </div>
-                    <button className="mt-2 px-6 py-2.5 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors">
+                    <button className="mt-2 px-6 py-2.5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-medium hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25">
                       Select Resume
                     </button>
                   </div>
@@ -508,7 +508,7 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
                 value={pasteText}
                 onChange={e => setPasteText(e.target.value)}
                 placeholder="Paste your resume content here..."
-                className="w-full h-48 border border-gray-200 rounded-xl p-4 text-sm text-gray-700 resize-none focus:outline-none focus:ring-2 focus:ring-gray-900/20 focus:border-gray-400"
+                className="w-full h-48 bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-white placeholder-slate-500 resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50"
               />
               <button
                 onClick={() => {
@@ -517,7 +517,7 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
                   toast.success('Content imported!');
                   setStep(5);
                 }}
-                className="mt-4 w-full py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors"
+                className="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25"
               >
                 Import Text
               </button>
@@ -534,16 +534,16 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
     const bg = selectedTemplate?.colors?.[1] || '#f8fafc';
 
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-gray-50">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-gray-900">
         {/* top bar */}
-        <div className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between sticky top-0 z-40">
+        <div className="border-b border-white/10 px-6 py-3 flex items-center justify-between sticky top-0 z-40" style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)', backdropFilter: 'blur(20px)' }}>
           <div className="flex items-center gap-4">
-            <button onClick={() => setStep(1)} className="text-sm text-gray-500 hover:text-gray-700">Templates</button>
-            <ChevronRight className="w-4 h-4 text-gray-300" />
-            <span className="text-sm font-medium text-gray-800">{selectedTemplate?.name || 'Resume'}</span>
+            <button onClick={() => setStep(1)} className="text-sm text-slate-400 hover:text-white">Templates</button>
+            <ChevronRight className="w-4 h-4 text-slate-600" />
+            <span className="text-sm font-medium text-white">{selectedTemplate?.name || 'Resume'}</span>
           </div>
           <div className="flex items-center gap-3">
-            <button onClick={handleFinish} className="px-5 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors flex items-center gap-2">
+            <button onClick={handleFinish} className="px-5 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-medium hover:from-violet-500 hover:to-fuchsia-500 transition-all shadow-lg shadow-violet-500/25 flex items-center gap-2">
               <FileText className="w-4 h-4" /> Save Resume
             </button>
           </div>
@@ -554,7 +554,7 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
           {/* left: form */}
           <div className="w-[45%] overflow-y-auto p-6 space-y-5">
             {/* personal info */}
-            <FormSection title="Personal Information" icon={<div className="w-5 h-5 rounded-full bg-gray-200" />}>
+            <FormSection title="Personal Information" icon={<div className="w-5 h-5 rounded-full bg-violet-400/20" />}>
               <Input label="Full Name" value={form.name} onChange={v => setForm(f => ({ ...f, name: v }))} placeholder="John Doe" />
               <div className="grid grid-cols-2 gap-3">
                 <Input label="Email" value={form.email} onChange={v => setForm(f => ({ ...f, email: v }))} placeholder="john@email.com" />
@@ -572,19 +572,19 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
                 value={form.summary}
                 onChange={e => setForm(f => ({ ...f, summary: e.target.value }))}
                 placeholder="Write a brief professional summary..."
-                className="w-full h-28 border border-gray-200 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400"
+                className="w-full h-28 bg-white/5 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50"
               />
             </FormSection>
 
             {/* experience */}
             <FormSection title="Experience" onAdd={() => addEntry('experience')}>
               {form.experience.map((exp, i) => (
-                <div key={i} className="border border-gray-100 rounded-lg p-3 space-y-2 relative">
-                  {form.experience.length > 1 && <button onClick={() => removeEntry('experience', i)} className="absolute top-2 right-2 text-gray-300 hover:text-red-500"><Trash2 className="w-3.5 h-3.5" /></button>}
+                <div key={i} className="bg-white/5 border border-white/10 rounded-lg p-3 space-y-2 relative">
+                  {form.experience.length > 1 && <button onClick={() => removeEntry('experience', i)} className="absolute top-2 right-2 text-slate-500 hover:text-red-400"><Trash2 className="w-3.5 h-3.5" /></button>}
                   <Input label="Role" value={exp.role} onChange={v => updateEntry('experience', i, 'role', v)} placeholder="Software Engineer" />
                   <Input label="Company" value={exp.company} onChange={v => updateEntry('experience', i, 'company', v)} placeholder="Company Name" />
                   <Input label="Duration" value={exp.duration} onChange={v => updateEntry('experience', i, 'duration', v)} placeholder="2022 - Present" />
-                  <textarea value={exp.description} onChange={e => updateEntry('experience', i, 'description', e.target.value)} placeholder="Description..." className="w-full h-20 border border-gray-200 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400" />
+                  <textarea value={exp.description} onChange={e => updateEntry('experience', i, 'description', e.target.value)} placeholder="Description..." className="w-full h-20 bg-white/5 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50" />
                 </div>
               ))}
             </FormSection>
@@ -592,8 +592,8 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
             {/* education */}
             <FormSection title="Education" onAdd={() => addEntry('education')}>
               {form.education.map((edu, i) => (
-                <div key={i} className="border border-gray-100 rounded-lg p-3 space-y-2 relative">
-                  {form.education.length > 1 && <button onClick={() => removeEntry('education', i)} className="absolute top-2 right-2 text-gray-300 hover:text-red-500"><Trash2 className="w-3.5 h-3.5" /></button>}
+                <div key={i} className="bg-white/5 border border-white/10 rounded-lg p-3 space-y-2 relative">
+                  {form.education.length > 1 && <button onClick={() => removeEntry('education', i)} className="absolute top-2 right-2 text-slate-500 hover:text-red-400"><Trash2 className="w-3.5 h-3.5" /></button>}
                   <Input label="Degree" value={edu.degree} onChange={v => updateEntry('education', i, 'degree', v)} placeholder="B.Tech CSE" />
                   <Input label="Institution" value={edu.institution} onChange={v => updateEntry('education', i, 'institution', v)} placeholder="University Name" />
                   <Input label="Year" value={edu.year} onChange={v => updateEntry('education', i, 'year', v)} placeholder="2020 - 2024" />
@@ -607,18 +607,18 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
                 value={form.skills}
                 onChange={e => setForm(f => ({ ...f, skills: e.target.value }))}
                 placeholder="React, Node.js, TypeScript, Python, SQL..."
-                className="w-full h-20 border border-gray-200 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400"
+                className="w-full h-20 bg-white/5 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50"
               />
             </FormSection>
 
             {/* projects */}
             <FormSection title="Projects" onAdd={() => addEntry('projects')}>
               {form.projects.map((proj, i) => (
-                <div key={i} className="border border-gray-100 rounded-lg p-3 space-y-2 relative">
-                  {form.projects.length > 1 && <button onClick={() => removeEntry('projects', i)} className="absolute top-2 right-2 text-gray-300 hover:text-red-500"><Trash2 className="w-3.5 h-3.5" /></button>}
+                <div key={i} className="bg-white/5 border border-white/10 rounded-lg p-3 space-y-2 relative">
+                  {form.projects.length > 1 && <button onClick={() => removeEntry('projects', i)} className="absolute top-2 right-2 text-slate-500 hover:text-red-400"><Trash2 className="w-3.5 h-3.5" /></button>}
                   <Input label="Title" value={proj.title} onChange={v => updateEntry('projects', i, 'title', v)} placeholder="Project Name" />
                   <Input label="Link" value={proj.link} onChange={v => updateEntry('projects', i, 'link', v)} placeholder="github.com/..." />
-                  <textarea value={proj.description} onChange={e => updateEntry('projects', i, 'description', e.target.value)} placeholder="Description..." className="w-full h-20 border border-gray-200 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400" />
+                  <textarea value={proj.description} onChange={e => updateEntry('projects', i, 'description', e.target.value)} placeholder="Description..." className="w-full h-20 bg-white/5 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-slate-500 resize-none focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50" />
                 </div>
               ))}
             </FormSection>
@@ -626,8 +626,8 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
             {/* certifications */}
             <FormSection title="Certifications" onAdd={() => addEntry('certifications')}>
               {form.certifications.map((cert, i) => (
-                <div key={i} className="border border-gray-100 rounded-lg p-3 space-y-2 relative">
-                  {form.certifications.length > 1 && <button onClick={() => removeEntry('certifications', i)} className="absolute top-2 right-2 text-gray-300 hover:text-red-500"><Trash2 className="w-3.5 h-3.5" /></button>}
+                <div key={i} className="bg-white/5 border border-white/10 rounded-lg p-3 space-y-2 relative">
+                  {form.certifications.length > 1 && <button onClick={() => removeEntry('certifications', i)} className="absolute top-2 right-2 text-slate-500 hover:text-red-400"><Trash2 className="w-3.5 h-3.5" /></button>}
                   <Input label="Name" value={cert.name} onChange={v => updateEntry('certifications', i, 'name', v)} placeholder="Certification Name" />
                   <Input label="Issuer" value={cert.issuer} onChange={v => updateEntry('certifications', i, 'issuer', v)} placeholder="Issuer" />
                   <Input label="Year" value={cert.year} onChange={v => updateEntry('certifications', i, 'year', v)} placeholder="2024" />
@@ -637,7 +637,7 @@ export default function TemplateWizard({ onComplete, onCancel }: Props) {
           </div>
 
           {/* right: live preview */}
-          <div className="w-[55%] overflow-y-auto p-6" style={{ backgroundColor: '#e8e6e1' }}>
+          <div className="w-[55%] overflow-y-auto p-6 bg-gray-800/50">
             <ResumePreview
               template={selectedTemplate}
               form={form}
@@ -843,14 +843,14 @@ function FormSection({ title, icon, children, onAdd }: {
   title: string; icon?: React.ReactNode; children: React.ReactNode; onAdd?: () => void;
 }) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-5">
+    <div className="rounded-xl p-5 border border-white/10 shadow-lg shadow-purple-900/20" style={{ backgroundColor: 'rgba(17, 24, 39, 0.8)', backdropFilter: 'blur(10px)' }}>
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           {icon}
-          <h3 className="text-sm font-semibold text-gray-800">{title}</h3>
+          <h3 className="text-sm font-semibold text-white">{title}</h3>
         </div>
         {onAdd && (
-          <button onClick={onAdd} className="text-xs text-violet-600 hover:text-violet-700 font-medium">+ Add</button>
+          <button onClick={onAdd} className="text-xs text-violet-400 hover:text-violet-300 font-medium">+ Add</button>
         )}
       </div>
       <div className="space-y-3">{children}</div>
@@ -863,13 +863,13 @@ function Input({ label, value, onChange, placeholder }: {
 }) {
   return (
     <div>
-      <label className="block text-xs text-gray-500 mb-1">{label}</label>
+      <label className="block text-xs text-slate-400 mb-1">{label}</label>
       <input
         type="text"
         value={value}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400"
+        className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50"
       />
     </div>
   );
