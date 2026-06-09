@@ -182,6 +182,37 @@ function MiniResume({ type, colors }: { type: string; colors: string[] }) {
         </div>
       </div>
     ),
+    'professional': (
+      <div className="flex h-full text-xs bg-white">
+        <div className="flex-1 p-3 space-y-2" style={{ backgroundColor: bg }}>
+          <div className="text-sm font-bold" style={{ color: accent }}>Sarah Watson</div>
+          <div className="text-[8px] text-gray-500">Web Developer</div>
+          <div className="text-[8px] text-gray-400">hello@watson.org · +1 123 234 3456 · New York</div>
+          <div className="pt-2 border-t" style={{ borderColor: accent }}>
+            <div className="text-[9px] font-semibold text-gray-600 uppercase">Experience</div>
+            <div className="text-[8px] text-gray-600 mt-1">Senior Web Developer at Creative Studio</div>
+            <div className="text-[8px] text-gray-600">Built modern front-end experiences with HTML, CSS, and JavaScript</div>
+          </div>
+          <div className="pt-2 border-t" style={{ borderColor: accent }}>
+            <div className="text-[9px] font-semibold text-gray-600 uppercase">Education</div>
+            <div className="text-[8px] text-gray-600 mt-1">B.Sc. Computer Science - San Francisco Bay University</div>
+          </div>
+        </div>
+        <div className="w-[30%] p-3 bg-yellow-200 flex flex-col gap-2">
+          <div className="w-full h-20 rounded-xl bg-yellow-300/80" />
+          <div className="text-[9px] font-semibold text-gray-700">Languages</div>
+          <div className="text-[8px] text-gray-600">English</div>
+          <div className="text-[8px] text-gray-600">Spanish</div>
+          <div className="pt-2 border-t border-yellow-300"/>
+          <div className="text-[9px] font-semibold text-gray-700 uppercase">Skills</div>
+          <div className="text-[8px] text-gray-600">JavaScript · TypeScript · HTML · CSS · React · Next.js</div>
+        </div>
+      </div>
+    ),
+          </div>
+        </div>
+      </div>
+    ),
     'fullstack': (
       <div className="flex h-full text-xs">
         <div className="w-[35%] h-full p-3 flex flex-col gap-2" style={{ backgroundColor: accent }}>
@@ -2389,6 +2420,68 @@ function ResumePreview({ template, form, accent, bg }: {
     </div>
   );
 
+  const ProfessionalResumeLayout = () => (
+    <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden flex" style={{ minHeight: '820px' }}>
+      <div className="flex-1 p-8 space-y-6" style={{ backgroundColor: '#fff8ed' }}>
+        <div>
+          <div className="text-3xl font-bold text-slate-900">{form.name || 'Sarah Watson'}</div>
+          <div className="text-sm text-slate-500 mt-1">{form.summary || 'Web Developer'}</div>
+          <div className="text-[11px] text-slate-400 mt-3">{form.email || 'hello@watson.org'} · {form.phone || '+1 233 234 3456'} · {form.location || 'New York'}</div>
+        </div>
+        {form.experience.some((e: any) => e.role || e.company) && (
+          <div>
+            <div className="text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500 mb-3">Professional Experience</div>
+            {form.experience.filter((e: any) => e.role || e.company).map((exp: any, i: number) => (
+              <div key={i} className="mb-4">
+                <div className="flex justify-between items-start gap-3">
+                  <div>
+                    <div className="text-sm font-semibold text-slate-900">{exp.role || 'Web Developer'}</div>
+                    <div className="text-[11px] text-slate-500">{exp.company || 'Company Name'}</div>
+                  </div>
+                  <div className="text-[10px] text-slate-400">{exp.duration || '2018 - Present'}</div>
+                </div>
+                {exp.description && <div className="text-[11px] text-slate-600 mt-2 whitespace-pre-wrap">{exp.description}</div>}
+              </div>
+            ))}
+          </div>
+        )}
+        {form.education.some((e: any) => e.degree || e.institution) && (
+          <div>
+            <div className="text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-500 mb-3">Education</div>
+            {form.education.filter((e: any) => e.degree || e.institution).map((edu: any, i: number) => (
+              <div key={i} className="mb-4">
+                <div className="text-sm font-semibold text-slate-900">{edu.degree || 'Bachelor of Science in Computer Science'}</div>
+                <div className="text-[11px] text-slate-500">{edu.institution || 'San Francisco Bay University'}</div>
+                <div className="text-[10px] text-slate-400">{edu.year || '2014 - 2018'}</div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <div className="w-[34%] p-6 bg-[#f7e0b0] flex flex-col gap-5">
+        <div className="h-28 rounded-3xl bg-slate-200 overflow-hidden">
+          {form.photo ? <img src={form.photo} alt="Profile" className="w-full h-full object-cover" /> : <div className="w-full h-full bg-slate-300" />}
+        </div>
+        <div>
+          <div className="text-[9px] font-semibold uppercase tracking-[0.22em] text-slate-500 mb-2">Languages</div>
+          <div className="text-[11px] text-slate-700">{form.languages || 'English, Spanish'}</div>
+        </div>
+        <div>
+          <div className="text-[9px] font-semibold uppercase tracking-[0.22em] text-slate-500 mb-2">Favorite Quote</div>
+          <div className="text-[11px] text-slate-600 italic">{form.quote || 'Great websites aren’t built in a day; they are crafted with passion, dedication, and attention to detail.'}</div>
+        </div>
+        {form.skills && (
+          <div>
+            <div className="text-[9px] font-semibold uppercase tracking-[0.22em] text-slate-500 mb-2">Skills</div>
+            <div className="text-[11px] text-slate-700 space-y-1">
+              {form.skills.split(',').map((s: string, i: number) => s.trim() && <div key={i}>• {s.trim()}</div>)}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
   /* ── Blue & Gray Simple Professional layout ── */
   const BlueGrayLayout = () => (
     <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden flex" style={{ minHeight: '800px' }}>
@@ -3384,6 +3477,7 @@ function ResumePreview({ template, form, accent, bg }: {
     case 'blackwhite-minimalist': return <BlackWhiteLayout />;
     case 'bluegray-simple': return <BlueGrayLayout />;
     case 'professional-modern': return <ProfessionalModernLayout />;
+    case 'professional': return <ProfessionalResumeLayout />;
     case 'grayblue-sidebar': return <GrayBlueSidebarLayout />;
     case 'dark-sidebar-photo': return <DarkSidebarPhotoLayout />;
     case 'gray-sidebar-right': return <GraySidebarRightLayout />;
