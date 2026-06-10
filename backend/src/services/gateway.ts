@@ -21,10 +21,15 @@ app.use(cors({
 // On Render, all users share the proxy IP so limits must be high
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 5000,
+  max: 50000,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) => req.method === 'OPTIONS',
+  keyGenerator: (req) => {
+    const ip = req.ip;
+    const ua = (req.headers['user-agent'] || '').substring(0, 64);
+    return `auth:${ip}:${ua}`;
+  },
   message: { error: 'Too many auth attempts, please try again later.' },
 });
 app.use('/api/auth', authLimiter);

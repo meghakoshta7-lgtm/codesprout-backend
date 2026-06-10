@@ -11,10 +11,9 @@ const api = axios.create({
 
 axiosRetry(api, {
   retries: 2,
-  retryCondition: (error) => error.response?.status === 429,
   retryDelay: axiosRetry.exponentialDelay,
   onRetry: (retryCount, error) => {
-    console.warn(`[429] Retry #${retryCount} for ${error.config?.url}`);
+    console.warn(`Retry #${retryCount} for ${error.config?.url} (${error.response?.status || 'network error'})`);
   },
 });
 
