@@ -14,6 +14,7 @@ interface TemplateData {
   isPremium: boolean;
   price: number;
   sections: string[];
+  category?: string;
 }
 
 const DEFAULT_SECTIONS = ['summary', 'skills', 'experience', 'education', 'projects', 'certifications'];
