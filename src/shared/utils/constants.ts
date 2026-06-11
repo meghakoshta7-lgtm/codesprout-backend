@@ -33,17 +33,6 @@ export const SUBSCRIPTION_PLANS = {
       'All Hard Questions',
     ] as string[],
   },
-  MEDIUM_UNLOCK: {
-    name: 'Medium Unlock',
-    price: 29,
-    features: [
-      'Unlock All Medium Questions',
-      'Step-by-Step Solutions',
-      'Pattern Recognition',
-      'Complexity Analysis',
-      'Basic Approach',
-    ] as string[],
-  },
 } as const;
 
 export const COMPANY_FREQUENCY = ['Google', 'Amazon', 'Microsoft', 'Meta', 'Apple', 'Netflix'] as const;
