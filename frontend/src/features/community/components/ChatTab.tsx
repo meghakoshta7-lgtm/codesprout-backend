@@ -16,7 +16,7 @@ export default function ChatTab({ community, communityId }: { community: Communi
 
   useEffect(() => {
     loadMessages();
-    const interval = setInterval(loadMessages, 5000);
+    const interval = setInterval(loadMessages, 30000);
     return () => clearInterval(interval);
   }, [communityId]);
 
