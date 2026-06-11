@@ -10,7 +10,16 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
 // Trust proxy for correct IP when behind Render's proxy
-app.set('trust proxy', 3);
+app.set('trust proxy', 1);
+
+// Extract real client IP from X-Forwarded-For when behind proxy
+function getClientIP(req: Request): string {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (typeof forwarded === 'string') {
+    return forwarded.split(',')[0].trim();
+  }
+  return req.ip || req.socket.remoteAddress || '0.0.0.0';
+}
 
 app.use(cors({
   origin: (_origin, callback) => callback(null, _origin || true),
@@ -26,7 +35,7 @@ const authLimiter = rateLimit({
   legacyHeaders: false,
   skip: (req) => req.method === 'OPTIONS',
   keyGenerator: (req) => {
-    const ip = req.ip;
+    const ip = getClientIP(req);
     const ua = (req.headers['user-agent'] || '').substring(0, 64);
     return `auth:${ip}:${ua}`;
   },
@@ -50,7 +59,7 @@ const globalLimiter = rateLimit({
   keyGenerator: (req: any) => {
     const token = req.headers['authorization'];
     if (token) return token;
-    return req.ip;
+    return getClientIP(req);
   },
   message: { error: 'Too many requests, please try again later.' },
 });
