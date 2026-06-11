@@ -41,11 +41,11 @@ const SEED_PRODUCTS: ShopProduct[] = [
   { id: 'c4', title: 'Startup Interview Questions', description: 'Questions commonly asked at high-growth startups, full-stack challenges, product sense, and hands-on coding.', category: 'company-specific', price: { amount: 0, label: 'Free' }, icon: '🏢', color: 'from-green-500 to-emerald-600', tags: ['startup', 'general'], author: 'Startup CTOs', pages: 35 },
 
   // ===== CS Notes - Google Drive PDFs =====
-  { id: 'cs1', title: 'Python in One Shot', description: 'Complete Python notes covering all fundamentals, data structures, OOPs, file handling, and more — perfect for quick revision.', category: 'notes', price: 'free', icon: '🐍', color: 'from-yellow-500 to-green-500', tags: ['python', 'programming', 'fundamentals'], author: 'CodeSprout', download_url: 'https://drive.google.com/uc?export=download&id=1WRlBuSVKSwQWzK7BomIXAjWzS-q_ah7_' },
-  { id: 'cs2', title: 'Computer Networking Notes', description: 'Comprehensive networking notes for tech placements — OSI model, TCP/IP, DNS, HTTP, subnetting, and interview questions.', category: 'notes', price: 'free', icon: '🌐', color: 'from-cyan-500 to-blue-500', tags: ['networking', 'tcp-ip', 'osi'], author: 'CodeSprout', download_url: 'https://drive.google.com/uc?export=download&id=1dCY5uxw5coEhGYiMoS7_7CKcwqmIAzTO' },
-  { id: 'cs3', title: 'DBMS Notes', description: 'Database Management System notes — normalization, SQL, transactions, indexing, ACID properties, and interview FAQs.', category: 'notes', price: 'free', icon: '🗄️', color: 'from-purple-500 to-indigo-500', tags: ['dbms', 'database', 'sql'], author: 'CodeSprout', download_url: 'https://drive.google.com/uc?export=download&id=1Um0rz0SwVsHeCzUW-gWEUDbMI4BuozyY' },
-  { id: 'cs4', title: 'Object Oriented Programming', description: 'OOP concepts in depth — classes, inheritance, polymorphism, encapsulation, abstraction with real-world examples.', category: 'notes', price: 'free', icon: '🧩', color: 'from-rose-500 to-pink-500', tags: ['oop', 'programming', 'java', 'cpp'], author: 'CodeSprout', download_url: 'https://drive.google.com/uc?export=download&id=1btS1EaD7KyGUO5raXdJlIM3xnJvFRaMg' },
-  { id: 'cs5', title: 'Operating System Notes', description: 'OS notes covering process management, memory management, file systems, deadlock, CPU scheduling, and interview topics.', category: 'notes', price: 'free', icon: '💻', color: 'from-emerald-500 to-teal-500', tags: ['os', 'operating-system', 'processes'], author: 'CodeSprout', download_url: 'https://drive.google.com/uc?export=download&id=1ld9-zT-oCu4YAt2xR-559s3VTaFTC9af' },
+  { id: 'cs1', title: 'Python in One Shot', description: 'Complete Python notes covering all fundamentals, data structures, OOPs, file handling, and more — perfect for quick revision.', category: 'notes', price: { amount: 29, label: '₹29' }, icon: '🐍', color: 'from-yellow-500 to-green-500', tags: ['python', 'programming', 'fundamentals'], author: 'CodeSprout', download_url: 'https://drive.google.com/file/d/1WRlBuSVKSwQWzK7BomIXAjWzS-q_ah7_/view?usp=sharing' },
+  { id: 'cs2', title: 'Computer Networking Notes', description: 'Comprehensive networking notes for tech placements — OSI model, TCP/IP, DNS, HTTP, subnetting, and interview questions.', category: 'notes', price: { amount: 29, label: '₹29' }, icon: '🌐', color: 'from-cyan-500 to-blue-500', tags: ['networking', 'tcp-ip', 'osi'], author: 'CodeSprout', download_url: 'https://drive.google.com/file/d/1dCY5uxw5coEhGYiMoS7_7CKcwqmIAzTO/view?usp=sharing' },
+  { id: 'cs3', title: 'DBMS Notes', description: 'Database Management System notes — normalization, SQL, transactions, indexing, ACID properties, and interview FAQs.', category: 'notes', price: { amount: 29, label: '₹29' }, icon: '🗄️', color: 'from-purple-500 to-indigo-500', tags: ['dbms', 'database', 'sql'], author: 'CodeSprout', download_url: 'https://drive.google.com/file/d/1Um0rz0SwVsHeCzUW-gWEUDbMI4BuozyY/view?usp=sharing' },
+  { id: 'cs4', title: 'Object Oriented Programming', description: 'OOP concepts in depth — classes, inheritance, polymorphism, encapsulation, abstraction with real-world examples.', category: 'notes', price: { amount: 29, label: '₹29' }, icon: '🧩', color: 'from-rose-500 to-pink-500', tags: ['oop', 'programming', 'java', 'cpp'], author: 'CodeSprout', download_url: 'https://drive.google.com/file/d/1btS1EaD7KyGUO5raXdJlIM3xnJvFRaMg/view?usp=sharing' },
+  { id: 'cs5', title: 'Operating System Notes', description: 'OS notes covering process management, memory management, file systems, deadlock, CPU scheduling, and interview topics.', category: 'notes', price: { amount: 29, label: '₹29' }, icon: '💻', color: 'from-emerald-500 to-teal-500', tags: ['os', 'operating-system', 'processes'], author: 'CodeSprout', download_url: 'https://drive.google.com/file/d/1ld9-zT-oCu4YAt2xR-559s3VTaFTC9af/view?usp=sharing' },
 ];
 
 // Called once at startup to ensure default seed products exist without overwriting custom ones
@@ -64,6 +64,15 @@ export function ensureSeedProducts(): void {
   for (const sp of SEED_PRODUCTS) {
     if (!existingIds.has(sp.id)) {
       db.shopProducts.push({ ...sp, created_at: now, updated_at: now });
+      changed = true;
+    }
+  }
+  // Migrate: update prices for CS notes that were previously free
+  for (const sp of SEED_PRODUCTS) {
+    const existing = db.shopProducts.find((p: ShopProduct) => p.id === sp.id);
+    if (existing && typeof sp.price === 'object' && (existing.price === 'free' || (typeof existing.price === 'object' && existing.price.amount === 0))) {
+      existing.price = sp.price;
+      existing.updated_at = new Date().toISOString();
       changed = true;
     }
   }
