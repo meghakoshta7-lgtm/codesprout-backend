@@ -154,6 +154,7 @@ function PricingContent() {
 
   const plans: (PricingPlan & { popular: boolean })[] = [
     { ...SUBSCRIPTION_PLANS.FREE, popular: false },
+    { ...SUBSCRIPTION_PLANS.MEDIUM_UNLOCK, popular: false },
     { ...SUBSCRIPTION_PLANS.PREMIUM, popular: true },
   ];
 
@@ -167,7 +168,15 @@ function PricingContent() {
         navigate('/login');
         return;
       }
-      navigate('/payment');
+      const params = new URLSearchParams();
+      if (plan.name === 'Medium Unlock') {
+        params.set('plan', 'medium_unlock');
+        params.set('amount', '29');
+      } else {
+        params.set('plan', 'premium');
+        params.set('amount', '49');
+      }
+      navigate(`/payment?${params.toString()}`);
     }
   };
 
@@ -280,7 +289,7 @@ function PricingContent() {
 
       {/* Pricing Cards */}
       <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <PricingCard
               key={plan.name}

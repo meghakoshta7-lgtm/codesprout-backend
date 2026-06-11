@@ -108,7 +108,7 @@ export default function PaymentPage() {
                     <Banknote className="w-10 h-10 text-primary-400" />
                   </div>
                   <h2 className="text-xl font-bold text-white mb-2">Premium Subscription</h2>
-                  <div className="text-5xl font-extrabold text-white mb-1">₹1</div>
+                  <div className="text-5xl font-extrabold text-white mb-1">₹49</div>
                   <p className="text-sm text-slate-400 mb-6">30 days access • All features • No recurring charges</p>
                   <ul className="text-left space-y-3 mb-8 bg-white/5 rounded-xl p-5">
                     {[
@@ -128,7 +128,7 @@ export default function PaymentPage() {
                     ))}
                   </ul>
                   <button onClick={handleInit} disabled={initLoading} className="btn-primary w-full inline-flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25">
-                    {initLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Initializing...</> : <><Sparkles className="w-4 h-4" /> Pay ₹1 - Get Premium</>}
+                    {initLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Initializing...</> : <><Sparkles className="w-4 h-4" /> Pay ₹49 - Get Premium</>}
                   </button>
                 </div>
               </motion.div>

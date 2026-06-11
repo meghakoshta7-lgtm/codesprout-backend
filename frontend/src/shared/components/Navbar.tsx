@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu, X, ChevronDown, BookOpen, LogOut, LayoutDashboard,
-  Star, Shield, Search, Command, Bell, Bookmark, TrendingUp, Gamepad2, ShoppingCart, FileText
+  Star, Shield, Search, Command, Bell, Bookmark, TrendingUp, Gamepad2, ShoppingCart, FileText, UserCircle
 } from 'lucide-react';
 import { cn } from '@/shared/utils/helpers';
 import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
@@ -166,6 +166,9 @@ export default function Navbar() {
                             <p className="text-xs text-white/40 mt-0.5 truncate">{user.email}</p>
                           </div>
                           <div className="p-1.5">
+                            <Link to="/profile" className="flex items-center gap-3 px-3 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/[0.06] rounded-xl transition-colors" onClick={() => setShowUserMenu(false)}>
+                              <UserCircle className="w-4 h-4 text-white/40" /> Profile
+                            </Link>
                             <Link to="/dashboard" className="flex items-center gap-3 px-3 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/[0.06] rounded-xl transition-colors" onClick={() => setShowUserMenu(false)}>
                               <LayoutDashboard className="w-4 h-4 text-white/40" /> Dashboard
                             </Link>
@@ -255,6 +258,9 @@ export default function Navbar() {
                         <p className="text-sm font-semibold text-white">{user.name}</p>
                         <p className="text-xs text-white/40 truncate">{user.email}</p>
                       </div>
+                      <Link to="/profile" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/[0.06] rounded-xl transition-colors">
+                        <UserCircle className="w-4 h-4" /> Profile
+                      </Link>
                       <Link to="/dashboard" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/[0.06] rounded-xl transition-colors">
                         <LayoutDashboard className="w-4 h-4" /> Dashboard
                       </Link>

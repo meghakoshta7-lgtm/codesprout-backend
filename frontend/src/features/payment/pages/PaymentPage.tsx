@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useMemo } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft, CreditCard, Check,
@@ -27,9 +27,17 @@ function daysRemaining(endDate: string): number {
 
 export default function PaymentPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const plan = searchParams.get('plan') || 'premium';
+  const amount = searchParams.get('amount') || '49';
   const { openCheckout, opening: razorpayOpening } = useRazorpayCheckout();
   const [verified, setVerified] = useState(false);
   const [verifyData, setVerifyData] = useState<PaymentVerify | null>(null);
+
+  const planTitle = useMemo(() => {
+    if (plan === 'medium_unlock') return 'Medium Unlock';
+    return 'Premium';
+  }, [plan]);
 
   const handleRazorpayPay = async () => {
     const result = await openCheckout();
@@ -55,7 +63,7 @@ export default function PaymentPage() {
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 200, delay: 0.1 }} className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">
               <CreditCard className="w-8 h-8 text-white" />
             </motion.div>
-            <h1 className="text-3xl font-bold text-white">Upgrade to Premium</h1>
+            <h1 className="text-3xl font-bold text-white">Upgrade to {planTitle}</h1>
             <p className="text-slate-400 mt-1">One-time payment for lifetime access</p>
           </div>
 
@@ -68,10 +76,17 @@ export default function PaymentPage() {
                     <Banknote className="w-10 h-10 text-primary-400" />
                   </div>
                   <h2 className="text-xl font-bold text-white mb-2">Premium Subscription</h2>
-                  <div className="text-5xl font-extrabold text-white mb-1">₹1</div>
-                  <p className="text-sm text-slate-400 mb-6">30 days access • All features • No recurring charges</p>
+                  <div className="text-5xl font-extrabold text-white mb-1">₹{amount}</div>
+                  <p className="text-sm text-slate-400 mb-6">
+                    {plan === 'medium_unlock' ? 'All Medium Questions • Solutions • No recurring charges' : '30 days access • All features • No recurring charges'}
+                  </p>
                   <ul className="text-left space-y-3 mb-8 bg-white/5 rounded-xl p-5">
-                    {[
+                    {plan === 'medium_unlock' ? [
+                      'Unlock all medium difficulty questions',
+                      'Step-by-step solutions included',
+                      'Pattern recognition for every problem',
+                      'Complexity analysis & basic approach',
+                    ] : [
                       'Full access to all 2000+ questions',
                       'Complete cheat sheets with patterns',
                       'Recognition signals & interview notes',
@@ -88,7 +103,7 @@ export default function PaymentPage() {
                     ))}
                   </ul>
                   <button onClick={handleRazorpayPay} disabled={razorpayOpening} className="btn-primary w-full inline-flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25">
-                    {razorpayOpening ? <><Loader2 className="w-4 h-4 animate-spin" /> Opening checkout...</> : <><Zap className="w-4 h-4" /> Pay ₹1 with Razorpay</>}
+                    {razorpayOpening ? <><Loader2 className="w-4 h-4 animate-spin" /> Opening checkout...</> : <><Zap className="w-4 h-4" /> Pay ₹{amount} with Razorpay</>}
                   </button>
                   <p className="text-xs text-slate-500 mt-4">Cards • UPI • NetBanking • Wallets</p>
                 </div>

@@ -21,7 +21,7 @@ export const SUBSCRIPTION_PLANS = {
   FREE: { name: 'Free', price: 0, features: ['Pattern', 'Complexity', 'Basic Approach'] as string[] },
   PREMIUM: {
     name: 'Premium',
-    price: 1,
+    price: 49,
     features: [
       'Recognition Signals',
       'Interview Notes',
@@ -30,6 +30,18 @@ export const SUBSCRIPTION_PLANS = {
       'Pattern Deep Dive',
       'Company Frequency',
       'Related Question Chains',
+      'All Hard Questions',
+    ] as string[],
+  },
+  MEDIUM_UNLOCK: {
+    name: 'Medium Unlock',
+    price: 29,
+    features: [
+      'Unlock All Medium Questions',
+      'Step-by-Step Solutions',
+      'Pattern Recognition',
+      'Complexity Analysis',
+      'Basic Approach',
     ] as string[],
   },
 } as const;
