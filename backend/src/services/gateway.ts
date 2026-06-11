@@ -158,6 +158,7 @@ let RESUME_TEMPLATES: any[] = [
   { id: 'creative', category: 'creative', name: 'Creative Resume', description: 'Bold gradient header with portfolio metrics section', is_ats_friendly: false, columns: 1, colors: ['#7c3aed', '#fdf4ff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'technical', category: 'technical', name: 'Technical Resume', description: 'Skills-first layout with visual proficiency bars', is_ats_friendly: true, columns: 1, colors: ['#0369a1', '#f0f9ff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'professional', category: 'professional', name: 'Professional Resume', description: 'Polished one-page layout with a strong header and balanced sections', is_ats_friendly: true, columns: 1, colors: ['#0f172a', '#e2e8f0', '#ffffff'], is_premium: false, price: 0 },
+  { id: 'professional-blue', category: 'professional', name: 'Professional Blue', description: 'Clean single-column with blue section headers, ATS-friendly corporate layout', is_ats_friendly: true, columns: 1, colors: ['#1a3c6e', '#ffffff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'academic', category: 'academic', name: 'Academic Resume', description: 'Research & publication focused for academia roles', is_ats_friendly: false, columns: 1, colors: ['#b91c1c', '#fef2f2', '#ffffff'], is_premium: false, price: 0 },
 ];
 

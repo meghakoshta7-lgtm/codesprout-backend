@@ -2499,6 +2499,76 @@ function ResumePreview({ template, form, accent, bg }: {
     </div>
   );
 
+  /* ── Professional Blue (image-style corporate) layout ── */
+  const ProfessionalBlueLayout = () => (
+    <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden" style={{ minHeight: '850px' }}>
+      <div className="p-8">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-1">
+          <div className="text-2xl font-bold text-gray-900">{form.name || 'Taylor Greene'}</div>
+          <div className="text-right text-[10px] text-gray-500">
+            <div>{form.phone || '+1 (555) 456-7890'}</div>
+            <div>{form.email || 'taylor@example.com'}</div>
+            <div>{form.location || 'Oklahoma City, OK'}</div>
+          </div>
+        </div>
+        <div className="text-xs text-gray-600 mb-4">{form.summary?.split('.')[0] || 'Chief Technology Officer'}</div>
+
+        {/* Summary */}
+        <p className="text-[11px] text-gray-600 leading-relaxed mb-5">
+          {form.summary || 'Experienced and forward-thinking CTO with 20+ years of extensive experience leading cross-functional tech teams and driving technological advancement.'}
+        </p>
+
+        {/* Professional Experience */}
+        <div className="mb-5">
+          <div className="text-sm font-bold text-[#1a3c6e] mb-1 pb-1 border-b-2 border-[#2c5aa0]">Professional Experience</div>
+          {form.experience.filter((e: any) => e.role || e.company).map((exp: any, i: number) => (
+            <div key={i} className="mb-3">
+              <div className="flex justify-between items-start">
+                <div className="text-[11px] font-bold text-gray-900">{exp.company || 'BlueFish Solutions'}</div>
+                <div className="text-[10px] text-gray-500 shrink-0 ml-2">{exp.duration || 'Jan 2013 - Present'}</div>
+              </div>
+              <div className="text-[11px] font-semibold text-gray-800">{exp.role || 'Chief Technology Officer'}</div>
+              {exp.description && (
+                <ul className="list-disc ml-4 mt-1 space-y-0.5">
+                  {exp.description.split('\n').filter((l: string) => l.trim()).map((line: string, j: number) => (
+                    <li key={j} className="text-[10px] text-gray-600">{line.replace(/^[-•]\s*/, '')}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Education */}
+        <div className="mb-5">
+          <div className="text-sm font-bold text-[#1a3c6e] mb-1 pb-1 border-b-2 border-[#2c5aa0]">Education</div>
+          {form.education.filter((e: any) => e.degree || e.institution).map((edu: any, i: number) => (
+            <div key={i} className="mb-1">
+              <div className="text-[11px] font-semibold text-gray-900">{edu.degree || 'Master of Science in Computer Science'}</div>
+              <div className="text-[10px] text-gray-500">{edu.institution || 'Georgetown University'}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Areas of Expertise */}
+        {form.skills && (
+          <div className="mb-4">
+            <div className="text-sm font-bold text-[#1a3c6e] mb-2 pb-1 border-b-2 border-[#2c5aa0]">Areas of Expertise</div>
+            <div className="grid grid-cols-3 gap-x-4 gap-y-0.5">
+              {form.skills.split(',').map((s: string, i: number) => s.trim() && (
+                <div key={i} className="flex items-start text-[10px] text-gray-600">
+                  <span className="text-gray-900 mr-1">•</span>
+                  <span>{s.trim()}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
   /* ── Blue & Gray Simple Professional layout ── */
   const BlueGrayLayout = () => (
     <div className="mx-auto max-w-[600px] bg-white shadow-2xl rounded-lg overflow-hidden flex" style={{ minHeight: '800px' }}>
@@ -3495,6 +3565,7 @@ function ResumePreview({ template, form, accent, bg }: {
     case 'bluegray-simple': return <BlueGrayLayout />;
     case 'professional-modern': return <ProfessionalModernLayout />;
     case 'professional': return <ProfessionalResumeLayout />;
+    case 'professional-blue': return <ProfessionalBlueLayout />;
     case 'grayblue-sidebar': return <GrayBlueSidebarLayout />;
     case 'dark-sidebar-photo': return <DarkSidebarPhotoLayout />;
     case 'gray-sidebar-right': return <GraySidebarRightLayout />;
