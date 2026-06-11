@@ -26,14 +26,20 @@ app.use(cors({
   credentials: true,
 }));
 
-// Rate limiting disabled in production — handled by Render's infra
-const skipRateLimit = () => process.env.NODE_ENV === 'production' || process.env.DISABLE_RATE_LIMIT === 'true';
+// Rate limiting disabled in production — Render's infra handles this
+// Set ENABLE_RATE_LIMIT=true to re-enable if needed
+const skipRateLimit = () => {
+  if (process.env.ENABLE_RATE_LIMIT === 'true') return false;
+  if (process.env.NODE_ENV === 'production') return true;
+  if (process.env.DISABLE_RATE_LIMIT === 'true') return true;
+  return false;
+};
 
 // Auth-specific rate limiter (stricter — login/register/Google OAuth)
 // On Render, all users share the proxy IP so limits must be high
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: Number(process.env.AUTH_RATE_LIMIT_MAX) || 100000,
+  max: Number(process.env.AUTH_RATE_LIMIT_MAX) || 500000,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) => req.method === 'OPTIONS' || skipRateLimit(),
@@ -66,7 +72,7 @@ app.use('/auth', authLimiter);
 
 const globalLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 200000,
+  max: 1000000,
   standardHeaders: true,
   legacyHeaders: false,
   skip: (req) =>
