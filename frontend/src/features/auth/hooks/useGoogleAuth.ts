@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
 import { authApi } from '../api/authApi';
@@ -50,9 +50,12 @@ async function refreshUserAndSubscription() {
 
 export function useGoogleAuth() {
   const [loading, setLoading] = useState(false);
+  const navigating = useRef(false);
   const navigate = useNavigate();
 
   const handleCredential = useCallback(async (credential: string) => {
+    if (navigating.current) return;
+    navigating.current = true;
     setLoading(true);
     try {
       const res = await authApi.google(credential);
@@ -71,6 +74,7 @@ export function useGoogleAuth() {
       toast.error(err.response?.data?.error || 'Google sign-in failed');
     } finally {
       setLoading(false);
+      navigating.current = false;
     }
   }, [navigate]);
 
@@ -81,7 +85,7 @@ export function useGoogleAuth() {
   });
 
   const login = useCallback(() => {
-    if (loading) return;
+    if (loading || navigating.current) return;
     if (!isConfigured) {
       toast.error('Google sign-in not configured. Set VITE_GOOGLE_CLIENT_ID in .env');
       return;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authApi } from '../api/authApi';
 import { userStorage } from '@/shared/utils/userStorage';
@@ -47,10 +47,12 @@ async function refreshUserAndSubscription() {
 
 export function useLogin() {
   const [loading, setLoading] = useState(false);
+  const navigating = useRef(false);
   const navigate = useNavigate();
 
   const login = async (payload: LoginPayload) => {
-    if (loading) return;
+    if (loading || navigating.current) return;
+    navigating.current = true;
     setLoading(true);
     try {
       const res = await authApi.login(payload);
@@ -65,6 +67,7 @@ export function useLogin() {
       toast.error(err.response?.data?.error || 'Login failed');
     } finally {
       setLoading(false);
+      navigating.current = false;
     }
   };
 
@@ -73,10 +76,12 @@ export function useLogin() {
 
 export function useRegister() {
   const [loading, setLoading] = useState(false);
+  const navigating = useRef(false);
   const navigate = useNavigate();
 
   const register = async (payload: RegisterPayload) => {
-    if (loading) return;
+    if (loading || navigating.current) return;
+    navigating.current = true;
     setLoading(true);
     try {
       await authApi.register(payload);
@@ -92,6 +97,7 @@ export function useRegister() {
       toast.error(err.response?.data?.error || 'Registration failed');
     } finally {
       setLoading(false);
+      navigating.current = false;
     }
   };
 
