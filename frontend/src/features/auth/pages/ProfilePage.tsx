@@ -5,6 +5,7 @@ import { User, Mail, Lock, Camera, Save, Crown, Calendar, Shield, ArrowLeft, Che
 import { authApi } from '@/features/auth/api/authApi';
 import { userStorage } from '@/shared/utils/userStorage';
 import { subscriptionStorage } from '@/shared/utils/subscriptionStorage';
+import { SUBSCRIPTION_PLANS } from '@/shared/utils/constants';
 
 export default function ProfilePage() {
   const [user, setUser] = useState<any>(null);
@@ -259,7 +260,7 @@ export default function ProfilePage() {
             {!user?.is_premium && (
               <Link to="/pricing"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-semibold text-sm hover:from-amber-400 hover:to-yellow-400 transition-all shadow-lg shadow-amber-500/25">
-                <Crown className="w-4 h-4" /> Upgrade to Premium — ₹5/month
+                <Crown className="w-4 h-4" /> Upgrade to Premium — ₹{SUBSCRIPTION_PLANS.PREMIUM.price}/month
               </Link>
             )}
           </motion.div>
