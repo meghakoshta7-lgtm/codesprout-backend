@@ -28,6 +28,10 @@ api.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`;
   }
 
+  if (config.data instanceof FormData) {
+    delete config.headers['Content-Type'];
+  }
+
   // Serve GET from cache if fresh
   if (config.method === 'get' || config.method === 'GET') {
     const cached = getCached<any>(config.url || '');
