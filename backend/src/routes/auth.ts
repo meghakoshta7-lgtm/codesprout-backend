@@ -19,6 +19,7 @@ const publicUser = (u: { id: string; name?: string; email: string; role: string;
 });
 
 router.post('/login', async (req: Request, res: Response) => {
+  console.log("LOGIN HIT", new Date().toISOString(), "ip=", req.ip, "x-forwarded=", req.headers['x-forwarded-for']);
   const { email, password } = req.body;
   if (!email || !password) return res.status(400).json({ error: 'Email and password required' });
 
@@ -36,6 +37,7 @@ router.post('/login', async (req: Request, res: Response) => {
     console.error('[auth] login email error:', e);
   }
 
+  console.log("LOGIN SUCCESS", new Date().toISOString(), "email=", email);
   res.json({ token, user: publicUser(user) });
 });
 
