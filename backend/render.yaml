@@ -1,9 +1,7 @@
 services:
   - type: web
     name: codesprout-backend
-    runtime: node
-    buildCommand: npm install && npm run build && npm install -g pm2
-    startCommand: pm2-runtime start ecosystem.config.cjs
+    runtime: docker
     envVars:
       - key: NODE_ENV
         value: production
@@ -26,7 +24,7 @@ services:
       - key: EMAIL_FROM
         value: "CodeSprout <noreply@codesprout.com>"
       - key: FRONTEND_URL
-        value: https://codesprout-nine.vercel.app
+        value: https://codesproutcom.vercel.app
       - key: UPI_ID
         sync: false
       - key: UPI_PAYEE_NAME
@@ -45,4 +43,16 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: AUTH_SERVICE_URL
+        value: http://127.0.0.1:3001
+      - key: CONTENT_SERVICE_URL
+        value: http://127.0.0.1:3002
+      - key: SOCIAL_SERVICE_URL
+        value: http://127.0.0.1:3003
+      - key: EXECUTION_SERVICE_URL
+        value: http://127.0.0.1:3004
+      - key: PAYMENT_SERVICE_URL
+        value: http://127.0.0.1:3005
+      - key: RESUME_SERVICE_URL
+        value: http://127.0.0.1:3006
     healthCheckPath: /health
