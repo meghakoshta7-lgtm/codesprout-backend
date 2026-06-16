@@ -7,6 +7,7 @@ import {
   Loader2, Shield, Clock, AlertCircle, ChevronRight, Banknote,
   Sparkles, Calendar, Gift, PartyPopper,
 } from 'lucide-react';
+import { SUBSCRIPTION_PLANS } from '@/shared/utils/constants';
 import { usePaymentInit, usePaymentVerify, usePaymentStatus } from '../hooks/usePayment';
 import type { PaymentVerify } from '../types/payment';
 import toast from 'react-hot-toast';
@@ -108,7 +109,7 @@ export default function PaymentPage() {
                     <Banknote className="w-10 h-10 text-primary-400" />
                   </div>
                   <h2 className="text-xl font-bold text-white mb-2">Premium Subscription</h2>
-                  <div className="text-5xl font-extrabold text-white mb-1">₹49</div>
+                  <div className="text-5xl font-extrabold text-white mb-1">₹{SUBSCRIPTION_PLANS.PREMIUM.price}</div>
                   <p className="text-sm text-slate-400 mb-6">30 days access • All features • No recurring charges</p>
                   <ul className="text-left space-y-3 mb-8 bg-white/5 rounded-xl p-5">
                     {[
@@ -128,7 +129,7 @@ export default function PaymentPage() {
                     ))}
                   </ul>
                   <button onClick={handleInit} disabled={initLoading} className="btn-primary w-full inline-flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25">
-                    {initLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Initializing...</> : <><Sparkles className="w-4 h-4" /> Pay ₹49 - Get Premium</>}
+                    {initLoading ? <><Loader2 className="w-4 h-4 animate-spin" /> Initializing...</> : <><Sparkles className="w-4 h-4" /> Pay ₹{SUBSCRIPTION_PLANS.PREMIUM.price} - Get Premium</>}
                   </button>
                 </div>
               </motion.div>
@@ -139,7 +140,7 @@ export default function PaymentPage() {
                 <div className="card p-8 text-center relative overflow-hidden">
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-primary-700" />
                   <h2 className="text-lg font-bold text-white mb-1">Scan & Pay</h2>
-                  <p className="text-sm text-slate-400 mb-6">Pay ₹{payment.amount || 1} via any UPI app</p>
+                  <p className="text-sm text-slate-400 mb-6">Pay ₹{payment.amount || SUBSCRIPTION_PLANS.PREMIUM.price} via any UPI app</p>
 
                   <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-6 mb-5 inline-block shadow-xl">
                     <div className="bg-white rounded-xl p-4">

@@ -34,7 +34,7 @@ services:
       - key: UPI_CURRENCY
         value: INR
       - key: PREMIUM_AMOUNT
-        value: "1"
+        value: "49"
       - key: SUBSCRIPTION_DAYS
         value: "30"
       - key: OPENROUTER_API_KEY
@@ -149,7 +149,7 @@ services:
       - key: UPI_CURRENCY
         value: INR
       - key: PREMIUM_AMOUNT
-        value: "1"
+        value: "49"
       - key: SUBSCRIPTION_DAYS
         value: "30"
       - key: SMTP_HOST
