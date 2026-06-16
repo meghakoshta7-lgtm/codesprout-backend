@@ -4,7 +4,7 @@ export const resumeApi = {
   upload: (file: File) => {
     const fd = new FormData();
     fd.append('resume', file);
-    return api.post('/resume/upload', fd, { headers: { 'Content-Type': 'multipart/form-data' }, timeout: 60000 });
+    return api.post('/resume/upload', fd, { timeout: 60000 });
   },
   analyze: (resumeId?: string, text?: string) => api.post('/resume/analyze', { resume_id: resumeId, text }),
   list: () => api.get('/resume/list'),
