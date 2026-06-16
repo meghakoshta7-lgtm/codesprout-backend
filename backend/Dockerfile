@@ -7,11 +7,10 @@ RUN npm run build && npm install -g pm2
 
 FROM node:20-alpine AS runner
 WORKDIR /app
-RUN apk add --no-cache curl
+RUN apk add --no-cache curl && mkdir -p /app/data
 COPY --from=builder /app/package*.json ./
 RUN npm install --production
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/data ./data
 COPY --from=builder /app/ecosystem.config.cjs ./
 COPY --from=builder /usr/local/lib/node_modules/pm2 ./node_modules/pm2
 RUN ln -s /app/node_modules/pm2/bin/pm2-runtime /usr/local/bin/pm2-runtime
