@@ -28,5 +28,6 @@ app.use('/api/resume', resumeRouter);
     console.log(`[resume-service] running on http://localhost:${PORT}`);
     console.log(`[resume-config] OLLAMA_URL=${process.env.OLLAMA_URL || 'http://localhost:11434'}, MODEL=${process.env.OLLAMA_MODEL || 'llama3.1'}`);
     console.log(`[resume-config] GEMINI_API_KEY=${process.env.GEMINI_API_KEY ? 'SET' : 'NOT SET'}`);
+    console.log(`[resume-config] OPENROUTER_API_KEY=${process.env.OPENROUTER_API_KEY ? 'SET' : 'NOT SET'}`);
   });
 })();

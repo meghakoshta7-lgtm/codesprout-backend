@@ -11,6 +11,9 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434';
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'llama3.1';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
+const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct:free';
 
 // ====== RESUME TEMPLATES ======
 const TEMPLATES: ResumeTemplate[] = [
@@ -140,6 +143,18 @@ async function callGemini(prompt: string): Promise<string> {
   return d?.candidates?.[0]?.content?.parts?.[0]?.text || '';
 }
 
+async function callOpenRouter(prompt: string): Promise<string> {
+  if (!OPENROUTER_API_KEY) throw new Error('OPENROUTER_API_KEY not configured');
+  const r = await fetch(OPENROUTER_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${OPENROUTER_API_KEY}` },
+    body: JSON.stringify({ model: OPENROUTER_MODEL, messages: [{ role: 'user', content: prompt }], max_tokens: 2048 }),
+  });
+  if (!r.ok) { const errBody = await r.text().catch(() => ''); throw new Error(`OpenRouter error ${r.status}: ${errBody}`); }
+  const d: any = await r.json();
+  return d?.choices?.[0]?.message?.content || '';
+}
+
 async function analyzeWithAI(text: string): Promise<{ analysis: Omit<ResumeAnalysis, 'rewrite_suggestions'>; rewrites: { original: string; rewritten: string }[] }> {
   const prompt = `Analyze this resume text. Return STRICT JSON only (no markdown). Format:
 {
@@ -160,12 +175,18 @@ ${text.slice(0, 8000)}`;
 
   let raw: string;
   try {
-    raw = await callOllama(prompt);
-  } catch {
+    raw = await callOpenRouter(prompt);
+  } catch (e1) {
+    console.error('[resume] OpenRouter failed:', (e1 as Error).message);
     try {
       raw = await callGemini(prompt);
-    } catch {
-      raw = '{}';
+    } catch (e2) {
+      console.error('[resume] Gemini failed:', (e2 as Error).message);
+      try {
+        raw = await callOllama(prompt);
+      } catch {
+        raw = '{}';
+      }
     }
   }
 
@@ -316,7 +337,9 @@ router.post('/rewrite', authenticate, async (req: AuthRequest, res: Response) =>
     if (!bulletText) return res.status(400).json({ error: 'Text required' });
     const prompt = `Rewrite this resume bullet point to be more impactful with metrics and strong action verbs. Return ONLY the rewritten version, no explanations.\n\nOriginal: ${bulletText}\n\nRewritten:`;
     let rewritten = '';
-    try { rewritten = await callOllama(prompt); } catch { rewritten = bulletText; }
+    try { rewritten = await callOpenRouter(prompt); } catch {
+      try { rewritten = await callOllama(prompt); } catch { rewritten = bulletText; }
+    }
     res.json({ original: bulletText, rewritten: rewritten.trim() });
   } catch (e: any) {
     res.status(500).json({ error: e.message || 'Rewrite failed' });
