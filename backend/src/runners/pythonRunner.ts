@@ -3,7 +3,7 @@ import { writeFileSync, mkdtempSync, rmSync } from 'fs';
 import { join } from 'path';
 import { tmpdir } from 'os';
 
-const PYTHON_PATH = 'C:\\python-embed\\python.exe';
+const PYTHON_PATH = process.platform === 'win32' ? 'C:\\python-embed\\python.exe' : 'python3';
 
 interface RunResult {
   output: string;

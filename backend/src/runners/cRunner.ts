@@ -16,7 +16,7 @@ export function runC(code: string): RunResult {
 
   try {
     const filePath = join(tmpDir, 'main.c');
-    const binaryPath = join(tmpDir, 'main.exe');
+    const binaryPath = join(tmpDir, process.platform === 'win32' ? 'main.exe' : 'main');
     writeFileSync(filePath, code);
 
     execSync(`gcc "${filePath}" -o "${binaryPath}" -std=c11`, { timeout: 30000, cwd: tmpDir });

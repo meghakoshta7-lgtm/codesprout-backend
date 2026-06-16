@@ -36,7 +36,7 @@ export function submitToJudge0(code: string, language: string, stdin: string = '
 
     const cmd = `curl -s -X POST "${JUDGE0_URL}/submissions?base64_encoded=false&wait=true" -H "Content-Type: application/json" -d @"${payloadFile.replace(/\\/g, '/')}"`;
     
-    const out = execSync(cmd, { timeout: 30000, encoding: 'utf-8', shell: 'cmd.exe' });
+    const out = execSync(cmd, { timeout: 30000, encoding: 'utf-8' });
     const result = JSON.parse(out.trim());
 
     if (!result || result.error) {

@@ -3,7 +3,9 @@ import { writeFileSync, mkdtempSync, rmSync } from 'fs';
 import { join } from 'path';
 import { tmpdir } from 'os';
 
-const EXTRA_PATH = 'C:\\Program Files\\Java\\jdk-17\\bin';
+const IS_WIN = process.platform === 'win32';
+const EXTRA_PATH = IS_WIN ? 'C:\\Program Files\\Java\\jdk-17\\bin' : '/usr/bin';
+const SEP = IS_WIN ? ';' : ':';
 
 interface RunResult {
   output: string;
@@ -21,9 +23,9 @@ export function runJava(code: string): RunResult {
     const filePath = join(tmpDir, `${className}.java`);
     writeFileSync(filePath, code);
 
-    execSync(`javac "${filePath}"`, { timeout: 15000, cwd: tmpDir, env: { ...process.env, PATH: `${EXTRA_PATH};${process.env.PATH}` } });
+    execSync(`javac "${filePath}"`, { timeout: 15000, cwd: tmpDir, env: { ...process.env, PATH: `${EXTRA_PATH}${SEP}${process.env.PATH}` } });
 
-    const result = execSync(`java -cp "${tmpDir}" ${className}`, { timeout: 10000, cwd: tmpDir, env: { ...process.env, PATH: `${EXTRA_PATH};${process.env.PATH}` } });
+    const result = execSync(`java -cp "${tmpDir}" ${className}`, { timeout: 10000, cwd: tmpDir, env: { ...process.env, PATH: `${EXTRA_PATH}${SEP}${process.env.PATH}` } });
 
     const runtime = Date.now() - startTime;
     return {

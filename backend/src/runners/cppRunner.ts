@@ -16,7 +16,7 @@ export function runCpp(code: string): RunResult {
 
   try {
     const filePath = join(tmpDir, 'main.cpp');
-    const binaryPath = join(tmpDir, 'main.exe');
+    const binaryPath = join(tmpDir, process.platform === 'win32' ? 'main.exe' : 'main');
     writeFileSync(filePath, code);
 
     execSync(`g++ "${filePath}" -o "${binaryPath}" -std=c++17`, { timeout: 30000, cwd: tmpDir });
