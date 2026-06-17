@@ -585,7 +585,7 @@ export const newTestCases: Record<string, {id: string; input: string; expected_o
     {id:'2324',input:'root=[1],k=2',expected_output:'false',is_hidden:true},
     {id:'2325',input:'root=[2,1,3],node=1',expected_output:'2',is_hidden:false},
     {id:'2325',input:'root=[5,3,6,2,4,null,null,1],node=3',expected_output:'4',is_hidden:true},
-    {id:'2325',input:'root=[2,1,3],node=3',expected_output:null,is_hidden:true},
+    {id:'2325',input:'root=[2,1,3],node=3',expected_output:'null',is_hidden:true},
     {id:'2326',input:'root=[2,1,3]',expected_output:'[2,1,3]',is_hidden:false},
     {id:'2326',input:'root=[]',expected_output:'[]',is_hidden:true},
     {id:'2326',input:'root=[5,3,7]',expected_output:'[5,3,7]',is_hidden:true},
