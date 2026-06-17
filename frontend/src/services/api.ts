@@ -11,31 +11,22 @@ const api = axios.create({
 
 axiosRetry(api, {
   retries: 4,
-  retryDelay: (retryCount) => {
-    // For 429: use longer delays (2s, 4s, 8s, 16s)
-    return retryCount * 2000;
-  },
+  retryDelay: (retryCount) => retryCount * 2000,
   retryCondition: (error) => {
-    return axiosRetry.isNetworkError(error) || error.response?.status === 429 || error.response?.status === 502 || error.response?.status === 503;
+    return axiosRetry.isNetworkError(error) || [429, 502, 503].includes(error.response?.status ?? 0);
   },
   onRetry: (retryCount, error) => {
-    console.warn(`[api] Retry #${retryCount} for ${error.config?.url} (status: ${error.response?.status || 'network'})`);
+    console.warn(`[api] Retry #${retryCount} ${error.config?.url} (${error.response?.status || 'net'})`);
   },
 });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  if (config.data instanceof FormData) delete config.headers['Content-Type'];
 
-  if (config.data instanceof FormData) {
-    delete config.headers['Content-Type'];
-  }
-
-  // Serve GET from cache if fresh
-  if (config.method === 'get' || config.method === 'GET') {
-    const cached = getCached<any>(config.url || '');
+  if (config.method?.toUpperCase() === 'GET' && config.url) {
+    const cached = getCached<any>(config.url);
     if (cached) {
       config.adapter = () => Promise.resolve({ data: cached, status: 200, statusText: 'OK', headers: config.headers, config });
     }
@@ -46,26 +37,19 @@ api.interceptors.request.use((config) => {
 
 api.interceptors.response.use(
   (res) => {
-    const url = res.config.url || '';
-    const method = res.config.method;
-    // Cache successful GET responses
-    if (method === 'get' && res.status === 200 && url) {
-      setCache(url, res.data);
+    const method = res.config.method?.toUpperCase();
+    if (method === 'GET' && res.status === 200 && res.config.url) {
+      setCache(res.config.url, res.data);
     }
-    // Invalidate cache on mutating requests
-    if (['post', 'put', 'patch', 'delete'].includes(method || '')) {
+    if (['POST', 'PUT', 'PATCH', 'DELETE'].includes(method || '')) {
       clearApiCache();
     }
     return res;
   },
   (err) => {
-    // Invalidate cache on mutating requests
     if (err.config) {
-      const method = err.config.method;
-      const url = err.config.url || '';
-      if (['post', 'put', 'patch', 'delete'].includes(method)) {
-        clearApiCache();
-      }
+      const method = err.config.method?.toUpperCase();
+      if (['POST', 'PUT', 'PATCH', 'DELETE'].includes(method || '')) clearApiCache();
     }
     if (err.response?.status === 401) {
       localStorage.removeItem('token');

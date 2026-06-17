@@ -231,14 +231,11 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
     return res.json({ feedbacks: FEEDBACKS });
   }
 
-  // In-memory cache for frequent GET endpoints
-  const isGet = req.method === 'GET';
-  const isCacheable = isGet && CACHEABLE_PATHS.some(p => path.startsWith(p));
-  if (isCacheable) {
+  // ====== Cache ALL GET requests (short TTL to avoid stale data) ======
+  if (req.method === 'GET') {
     const cacheKey = getCacheKey(path, req);
     const cached = memoryCache.get(cacheKey);
     if (cached && Date.now() < cached.expiry) {
-      console.log(`[gateway] CACHE HIT ${req.originalUrl}`);
       return res.json(cached.data);
     }
   }
@@ -261,21 +258,20 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
 
   if (!target) return res.status(404).json({ error: 'Route not found', path });
 
-  // For cacheable GET requests, use fetch instead of proxy for caching
-  if (isCacheable) {
+  // For ALL GET requests, use fetch for caching
+  if (req.method === 'GET') {
     const cacheKey = getCacheKey(path, req);
     const url = `${target}${req.originalUrl}`;
-    console.log(`[gateway] ${req.method} ${req.originalUrl} -> ${target} (cached)`);
     try {
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       const auth = req.headers['authorization'];
       if (auth) headers['authorization'] = auth as string;
-      const proxyRes = await fetch(url, { headers, signal: AbortSignal.timeout(10000) });
+      const proxyRes = await fetch(url, { headers, signal: AbortSignal.timeout(15000) });
       if (!proxyRes.ok) {
         return res.status(proxyRes.status).json({ error: `Upstream error: ${proxyRes.status}` });
       }
       const data = await proxyRes.json();
-      const ttl = (CACHE_TTL as any)[CACHEABLE_PATHS.find(p => path.startsWith(p))!] || 5 * 60 * 1000;
+      const ttl = (CACHE_TTL as any)[CACHEABLE_PATHS.find(p => path.startsWith(p))!] || 30_000;
       memoryCache.set(cacheKey, { data, expiry: Date.now() + ttl });
       return res.json(data);
     } catch (e: any) {
