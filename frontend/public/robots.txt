@@ -7,4 +7,4 @@ Disallow: /payment
 Disallow: /communities
 Disallow: /login
 
-Sitemap: https://codesprout.com/sitemap.xml
+Sitemap: https://codesprout-beta.vercel.app/sitemap.xml

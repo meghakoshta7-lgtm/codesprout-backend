@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://codesprout.com/</loc>
+    <loc>https://codesprout-beta.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/questions</loc>
+    <loc>https://codesprout-beta.vercel.app/questions</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics</loc>
+    <loc>https://codesprout-beta.vercel.app/topics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/patterns</loc>
+    <loc>https://codesprout-beta.vercel.app/patterns</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/interview-prep</loc>
+    <loc>https://codesprout-beta.vercel.app/interview-prep</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/leaderboard</loc>
+    <loc>https://codesprout-beta.vercel.app/leaderboard</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/pricing</loc>
+    <loc>https://codesprout-beta.vercel.app/pricing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/easy</loc>
+    <loc>https://codesprout-beta.vercel.app/easy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/medium</loc>
+    <loc>https://codesprout-beta.vercel.app/medium</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/hard</loc>
+    <loc>https://codesprout-beta.vercel.app/hard</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/games</loc>
+    <loc>https://codesprout-beta.vercel.app/games</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/arrays</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/arrays</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/strings</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/strings</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/linked-list</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/linked-list</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/trees</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/trees</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/graphs</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/graphs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/dp</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/dp</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/recursion</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/recursion</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/backtracking</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/backtracking</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/stack</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/stack</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/queue</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/queue</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/greedy</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/greedy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/binary-search</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/binary-search</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/heap</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/heap</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/topics/hashing</loc>
+    <loc>https://codesprout-beta.vercel.app/topics/hashing</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/patterns/sliding-window</loc>
+    <loc>https://codesprout-beta.vercel.app/patterns/sliding-window</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/patterns/two-pointers</loc>
+    <loc>https://codesprout-beta.vercel.app/patterns/two-pointers</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/patterns/binary-search</loc>
+    <loc>https://codesprout-beta.vercel.app/patterns/binary-search</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codesprout.com/patterns/dynamic-programming</loc>
+    <loc>https://codesprout-beta.vercel.app/patterns/dynamic-programming</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
