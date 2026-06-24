@@ -78,7 +78,12 @@ export const secureStorage = {
         return JSON.parse(raw) as T;
       }
       const dec = await decryptString(raw);
-      return dec ? (JSON.parse(dec) as T) : null;
+      if (dec) return JSON.parse(dec) as T;
+      try {
+        return JSON.parse(raw) as T;
+      } catch {
+        return null;
+      }
     } catch {
       return null;
     }

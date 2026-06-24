@@ -59,10 +59,10 @@ export function useLogin() {
       localStorage.setItem('token', res.data.token);
       subscriptionStorage.clearAll();
       await userStorage.set(res.data.user);
-      await refreshUserAndSubscription();
       window.dispatchEvent(new Event('codesprout_user_change'));
       toast.success('Welcome back!');
-      navigate('/');
+      navigate('/', { replace: true });
+      refreshUserAndSubscription().catch(() => {});
     } catch (err: any) {
       toast.error(err.response?.data?.error || 'Login failed');
     } finally {

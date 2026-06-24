@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { userStorage } from '@/shared/utils/userStorage';
 
@@ -10,16 +10,43 @@ export default function ProtectedRoute({ children, adminOnly = false }: { childr
     return 'loading';
   });
   const [user, setUser] = useState<any>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (state !== 'loading') return;
     let cancelled = false;
+
+    timeoutRef.current = setTimeout(() => {
+      if (!cancelled) {
+        userStorage.clear();
+        setState('redirect');
+      }
+    }, 5000);
+
     userStorage.get<any>().then((u) => {
       if (cancelled) return;
-      if (!u) setState('redirect');
-      else { setUser(u); setState('done'); }
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (!u) {
+        const token = localStorage.getItem('token');
+        if (token) {
+          userStorage.clear();
+        }
+        setState('redirect');
+      } else {
+        setUser(u);
+        setState('done');
+      }
+    }).catch(() => {
+      if (cancelled) return;
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      userStorage.clear();
+      setState('redirect');
     });
-    return () => { cancelled = true; };
+
+    return () => {
+      cancelled = true;
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, [state]);
 
   if (state === 'redirect') {

@@ -62,14 +62,14 @@ export function useGoogleAuth() {
       localStorage.setItem('token', res.data.token);
       subscriptionStorage.clearAll();
       await userStorage.set(res.data.user);
-      await refreshUserAndSubscription();
       window.dispatchEvent(new Event('codesprout_user_change'));
       if (res.data.isNew) {
         toast.success('Account created with Google! Welcome 🎉');
       } else {
         toast.success('Signed in with Google!');
       }
-      navigate('/');
+      navigate('/', { replace: true });
+      refreshUserAndSubscription().catch(() => {});
     } catch (err: any) {
       toast.error(err.response?.data?.error || 'Google sign-in failed');
     } finally {
