@@ -5,6 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 import multer from 'multer';
 import type { ParsedResume, ResumeSection, ResumeScore, ResumeAnalysis, ResumeTemplate } from '../types';
 
+let pdfParse: any = null;
+let mammoth: any = null;
+try { pdfParse = require('pdf-parse'); } catch (e) { console.warn('[resume] pdf-parse not available:', (e as Error).message); }
+try { mammoth = require('mammoth'); } catch (e) { console.warn('[resume] mammoth not available:', (e as Error).message); }
+
 const router = Router();
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
@@ -74,18 +79,22 @@ function calcScore(sections: ResumeSection[], rawText: string): ResumeScore {
 // ====== TEXT EXTRACTION ======
 async function extractTextFromBuffer(buffer: Buffer, mime: string): Promise<string> {
   if (mime === 'application/pdf' || mime.includes('pdf')) {
-    try {
-      const pdfParse = require('pdf-parse');
-      const data = await pdfParse(buffer);
-      return data.text || '';
-    } catch { return buffer.toString('utf-8').replace(/[^\x20-\x7E\n]/g, ''); }
+    if (pdfParse) {
+      try {
+        const data = await pdfParse(buffer);
+        if (data.text && data.text.trim().length > 10) return data.text;
+      } catch (e: any) { console.error('[resume] pdf-parse error:', e.message); }
+    }
+    return buffer.toString('utf-8').replace(/[^\x20-\x7E\n]/g, '');
   }
   if (mime.includes('word') || mime.includes('docx') || mime.includes('officedocument')) {
-    try {
-      const mammoth = require('mammoth');
-      const r = await mammoth.extractRawText({ buffer });
-      return r.value || '';
-    } catch { return buffer.toString('utf-8'); }
+    if (mammoth) {
+      try {
+        const r = await mammoth.extractRawText({ buffer });
+        if (r.value && r.value.trim().length > 10) return r.value;
+      } catch (e: any) { console.error('[resume] mammoth error:', e.message); }
+    }
+    return buffer.toString('utf-8');
   }
   return buffer.toString('utf-8');
 }

@@ -4,6 +4,11 @@ import cors from 'cors';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 import multer from 'multer';
 
+let pdfParse: any = null;
+let mammoth: any = null;
+try { pdfParse = require('pdf-parse'); } catch (e) { console.warn('[gateway] pdf-parse not available:', (e as Error).message); }
+try { mammoth = require('mammoth'); } catch (e) { console.warn('[gateway] mammoth not available:', (e as Error).message); }
+
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
@@ -88,18 +93,22 @@ let RESUME_TEMPLATES: any[] = [
 
 const extractText = async (buffer: Buffer, mime: string): Promise<string> => {
   if (mime.includes('pdf')) {
-    try {
-      const pdfParse = require('pdf-parse');
-      const data = await pdfParse(buffer);
-      return data.text || '';
-    } catch { return buffer.toString('utf-8').replace(/[^\x20-\x7E\n]/g, ''); }
+    if (pdfParse) {
+      try {
+        const data = await pdfParse(buffer);
+        if (data.text && data.text.trim().length > 10) return data.text;
+      } catch (e: any) { console.error('[gateway] pdf-parse error:', e.message); }
+    }
+    return buffer.toString('utf-8').replace(/[^\x20-\x7E\n]/g, '');
   }
   if (mime.includes('word') || mime.includes('docx') || mime.includes('officedocument')) {
-    try {
-      const mammoth = require('mammoth');
-      const r = await mammoth.extractRawText({ buffer });
-      return r.value || '';
-    } catch { return buffer.toString('utf-8'); }
+    if (mammoth) {
+      try {
+        const r = await mammoth.extractRawText({ buffer });
+        if (r.value && r.value.trim().length > 10) return r.value;
+      } catch (e: any) { console.error('[gateway] mammoth error:', e.message); }
+    }
+    return buffer.toString('utf-8');
   }
   return buffer.toString('utf-8');
 };
@@ -207,20 +216,8 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
     return res.status(201).json({ template: dup });
   }
 
-  // Resume upload & parse served directly from gateway
-  if (path === '/resume/upload') {
-    return resumeUpload.single('resume')(req, res, async (err) => {
-      if (err) return res.status(400).json({ error: 'Upload error', details: err.message });
-      if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
-      try {
-        const text = await extractText(req.file.buffer, req.file.mimetype);
-        const sections = extractSections(text);
-        res.json({ sections, text, filename: req.file.originalname });
-      } catch (e: any) {
-        res.status(500).json({ error: 'Failed to parse resume', details: e.message });
-      }
-    });
-  }
+  // Resume upload & parse — proxy to resume service
+  // (removed direct handler; resume service handles upload, parse, DB save, scoring)
 
   // ====== Feedback ======
   if (path === '/feedback' && req.method === 'POST') {
