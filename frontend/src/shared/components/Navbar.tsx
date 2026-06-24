@@ -211,6 +211,11 @@ export default function Navbar() {
                 <Search className="w-4.5 h-4.5 text-white/60" />
               </button>
               {user && <NotificationBell />}
+              {user && (
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 text-white flex items-center justify-center text-xs font-bold ring-2 ring-purple-500/20">
+                  {user.name?.charAt(0)?.toUpperCase() || 'U'}
+                </div>
+              )}
               <button className="p-2 rounded-xl hover:bg-white/[0.06] transition-colors" onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? <X className="w-5 h-5 text-white/60" /> : <Menu className="w-5 h-5 text-white/60" />}
               </button>
@@ -227,7 +232,7 @@ export default function Navbar() {
               transition={{ duration: 0.2, ease: 'easeInOut' }}
               className="lg:hidden border-t border-white/5 overflow-hidden"
             >
-              <div className="px-4 py-3 space-y-1">
+              <div className="px-4 py-3 space-y-1 max-h-[70vh] overflow-y-auto">
                 <button
                   onClick={() => { setIsOpen(false); setShowSearch(true); }}
                   className="flex items-center gap-2 w-full px-3 py-2.5 rounded-xl border border-white/10 text-white/40 text-sm hover:bg-white/[0.04] transition-colors"
