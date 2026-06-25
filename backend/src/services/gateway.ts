@@ -45,10 +45,10 @@ app.use(cors({
 }));
 
 const SERVICES = {
-  auth: process.env.AUTH_SERVICE_URL || 'http://localhost:3001',
-  content: process.env.CONTENT_SERVICE_URL || 'http://localhost:3002',
-  social: process.env.SOCIAL_SERVICE_URL || 'http://localhost:3003',
-  execution: process.env.EXECUTION_SERVICE_URL || 'http://localhost:3004',
+  auth: process.env.AUTH_SERVICE_URL || 'https://codesprout-auth-production.up.railway.app',
+  content: process.env.CONTENT_SERVICE_URL || 'https://codesprout-content-production.up.railway.app',
+  social: process.env.SOCIAL_SERVICE_URL || 'https://codesprout-social-production.up.railway.app',
+  execution: process.env.EXECUTION_SERVICE_URL || 'https://codesprout-execution-production.up.railway.app',
   payment: process.env.PAYMENT_SERVICE_URL || 'http://localhost:3005',
   resume: process.env.RESUME_SERVICE_URL || 'http://localhost:3006',
 };
