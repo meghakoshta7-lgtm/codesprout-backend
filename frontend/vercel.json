@@ -21,7 +21,7 @@
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://codesprout-gateway-production.up.railway.app/api/$1" },
+    { "source": "/api/(.*)", "destination": "https://codesprout.up.railway.app/api/$1" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/(.*)", "destination": "/index.html" }

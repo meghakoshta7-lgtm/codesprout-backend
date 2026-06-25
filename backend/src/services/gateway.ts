@@ -45,12 +45,12 @@ app.use(cors({
 }));
 
 const SERVICES = {
-  auth: process.env.AUTH_SERVICE_URL || 'https://codesprout-auth-production.up.railway.app',
-  content: process.env.CONTENT_SERVICE_URL || 'https://codesprout-content-production.up.railway.app',
-  social: process.env.SOCIAL_SERVICE_URL || 'https://codesprout-social-production.up.railway.app',
-  execution: process.env.EXECUTION_SERVICE_URL || 'https://codesprout-execution-production.up.railway.app',
-  payment: process.env.PAYMENT_SERVICE_URL || 'http://localhost:3005',
-  resume: process.env.RESUME_SERVICE_URL || 'http://localhost:3006',
+  auth: process.env.AUTH_SERVICE_URL || 'http://127.0.0.1:3001',
+  content: process.env.CONTENT_SERVICE_URL || 'http://127.0.0.1:3002',
+  social: process.env.SOCIAL_SERVICE_URL || 'http://127.0.0.1:3003',
+  execution: process.env.EXECUTION_SERVICE_URL || 'http://127.0.0.1:3004',
+  payment: process.env.PAYMENT_SERVICE_URL || 'http://127.0.0.1:3005',
+  resume: process.env.RESUME_SERVICE_URL || 'http://127.0.0.1:3006',
 };
 
 const proxies = new Map<string, ReturnType<typeof createProxyMiddleware>>();
