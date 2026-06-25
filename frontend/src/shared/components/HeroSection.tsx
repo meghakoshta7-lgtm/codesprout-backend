@@ -439,6 +439,7 @@ export default function HeroSection() {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => setIsPlaying(!isPlaying)}
+                      aria-label={isPlaying ? 'Pause code execution' : 'Play code execution'}
                       className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary-500/20 border border-primary-500/30 flex items-center justify-center hover:bg-primary-500/30 transition-colors"
                     >
                       {isPlaying ? (

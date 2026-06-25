@@ -26,5 +26,19 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+            'vendor-motion': ['framer-motion'],
+            'vendor-ui': ['lucide-react', 'react-hot-toast', '@react-oauth/google'],
+          },
+        },
+      },
+      chunkSizeWarningLimit: 1000,
+      target: 'es2020',
+      minify: 'esbuild',
+    },
   }
 })

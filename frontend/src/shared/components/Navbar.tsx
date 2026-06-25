@@ -107,7 +107,7 @@ export default function Navbar() {
                       'relative flex items-center gap-1.5 px-3 lg:px-3.5 py-1.5 rounded-lg text-[12px] lg:text-[13px] font-medium transition-all duration-200 whitespace-nowrap',
                       active
                         ? 'text-white bg-white/10 shadow-sm'
-                        : 'text-white/45 hover:text-white hover:bg-white/[0.06]'
+                        : 'text-white/60 hover:text-white hover:bg-white/[0.06]'
                     )}
                   >
                     <Icon className={cn('w-3.5 h-3.5 transition-colors', active ? 'text-purple-400' : 'text-white/30')} />
@@ -216,7 +216,7 @@ export default function Navbar() {
                   {user.name?.charAt(0)?.toUpperCase() || 'U'}
                 </div>
               )}
-              <button className="p-2 rounded-xl hover:bg-white/[0.06] transition-colors" onClick={() => setIsOpen(!isOpen)}>
+              <button className="p-2 rounded-xl hover:bg-white/[0.06] transition-colors" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? 'Close menu' : 'Open menu'}>
                 {isOpen ? <X className="w-5 h-5 text-white/60" /> : <Menu className="w-5 h-5 text-white/60" />}
               </button>
             </div>

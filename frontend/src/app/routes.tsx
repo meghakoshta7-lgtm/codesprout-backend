@@ -1,31 +1,47 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState, useRef } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '@/shared/components/Layout';
 import ProtectedRoute from '@/shared/components/ProtectedRoute';
-import TopicsPage from '@/features/topics/pages/TopicsPage';
-import QuestionsPage from '@/features/questions/pages/QuestionsPage';
-import PatternsPage from '@/features/patterns/pages/PatternsPage';
-import DifficultyPage from '@/features/difficulty/pages/DifficultyPage';
-import LoginPage from '@/features/auth/pages/LoginPage';
-import ForgotPasswordPage from '@/features/auth/pages/ForgotPasswordPage';
-import ResetPasswordPage from '@/features/auth/pages/ResetPasswordPage';
-import PricingPage from '@/features/subscription/pages/PricingPage';
-import PrivacyPolicyPage from '@/features/legal/pages/PrivacyPolicyPage';
-import TermsOfServicePage from '@/features/legal/pages/TermsOfServicePage';
-import LeaderboardPage from '@/features/leaderboard/pages/LeaderboardPage';
-import InterviewPrepPage from '@/features/interview/pages/InterviewPrepPage';
-import InterviewSetupPage from '@/features/interview/pages/InterviewSetupPage';
-import InterviewDashboardPage from '@/features/interview/pages/InterviewDashboardPage';
-import InterviewSubjectPage from '@/features/interview/pages/InterviewSubjectPage';
-import MockInterviewPage from '@/features/interview/pages/MockInterviewPage';
-import MockCallPage from '@/features/interview/pages/MockCallPage';
-import MockResultPage from '@/features/interview/pages/MockResultPage';
-import AiInterviewPage from '@/features/interview/pages/AiInterviewPage';
-import ShopPage from '@/features/shop/pages/ShopPage';
-import ResumePage from '@/features/resume/pages/ResumePage';
-import GamesLandingPage from '@/features/games/pages/GamesLandingPage';
-import HeroSection from '@/shared/components/HeroSection';
-import FAQ from '@/shared/components/FAQ';
+import { Link } from 'react-router-dom';
+import { motion, useInView } from 'framer-motion';
+import { TOPICS } from '@/shared/utils/constants';
+import {
+  ArrowRight, Database, Braces, Hash, Link2, Layers, MoveVertical, Trello,
+  GitBranch, TreePine, Network, Target, Puzzle, RefreshCw, Maximize2, Search,
+  ZapIcon, Sparkles, Code2, Eye, TrendingUp, Lightbulb, BookOpen, BarChart3,
+  Play, CheckCircle, ChevronRight, ChevronLeft, FileText, Monitor, Shield, Gamepad2,
+  Trophy, Crown, Flame
+} from 'lucide-react';
+import SEO, {
+  buildOrganizationJsonLd,
+  buildSoftwareApplicationJsonLd,
+  buildFaqJsonLd,
+} from '@/shared/components/SEO';
+
+const TopicsPage = lazy(() => import('@/features/topics/pages/TopicsPage'));
+const QuestionsPage = lazy(() => import('@/features/questions/pages/QuestionsPage'));
+const PatternsPage = lazy(() => import('@/features/patterns/pages/PatternsPage'));
+const DifficultyPage = lazy(() => import('@/features/difficulty/pages/DifficultyPage'));
+const LoginPage = lazy(() => import('@/features/auth/pages/LoginPage'));
+const ForgotPasswordPage = lazy(() => import('@/features/auth/pages/ForgotPasswordPage'));
+const ResetPasswordPage = lazy(() => import('@/features/auth/pages/ResetPasswordPage'));
+const PricingPage = lazy(() => import('@/features/subscription/pages/PricingPage'));
+const PrivacyPolicyPage = lazy(() => import('@/features/legal/pages/PrivacyPolicyPage'));
+const TermsOfServicePage = lazy(() => import('@/features/legal/pages/TermsOfServicePage'));
+const LeaderboardPage = lazy(() => import('@/features/leaderboard/pages/LeaderboardPage'));
+const InterviewPrepPage = lazy(() => import('@/features/interview/pages/InterviewPrepPage'));
+const InterviewSetupPage = lazy(() => import('@/features/interview/pages/InterviewSetupPage'));
+const InterviewDashboardPage = lazy(() => import('@/features/interview/pages/InterviewDashboardPage'));
+const InterviewSubjectPage = lazy(() => import('@/features/interview/pages/InterviewSubjectPage'));
+const MockInterviewPage = lazy(() => import('@/features/interview/pages/MockInterviewPage'));
+const MockCallPage = lazy(() => import('@/features/interview/pages/MockCallPage'));
+const MockResultPage = lazy(() => import('@/features/interview/pages/MockResultPage'));
+const AiInterviewPage = lazy(() => import('@/features/interview/pages/AiInterviewPage'));
+const ShopPage = lazy(() => import('@/features/shop/pages/ShopPage'));
+const ResumePage = lazy(() => import('@/features/resume/pages/ResumePage'));
+const GamesLandingPage = lazy(() => import('@/features/games/pages/GamesLandingPage'));
+const HeroSection = lazy(() => import('@/shared/components/HeroSection'));
+const FAQ = lazy(() => import('@/shared/components/FAQ'));
 
 const TopicDetailPage = lazy(() => import('@/features/topics/pages/TopicDetailPage'));
 const QuestionDetailPage = lazy(() => import('@/features/questions/pages/QuestionDetailPage'));
@@ -44,22 +60,6 @@ const ManageUsers = lazy(() => import('@/features/admin/pages/ManageUsers'));
 const ManageShopPayments = lazy(() => import('@/features/admin/pages/ManageShopPayments'));
 const ManageTemplates = lazy(() => import('@/features/admin/pages/ManageTemplates'));
 const ProfilePage = lazy(() => import('@/features/auth/pages/ProfilePage'));
-import { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
-import { TOPICS } from '@/shared/utils/constants';
-import {
-  ArrowRight, Database, Braces, Hash, Link2, Layers, MoveVertical, Trello,
-  GitBranch, TreePine, Network, Target, Puzzle, RefreshCw, Maximize2, Search,
-  ZapIcon, Sparkles, Code2, Eye, TrendingUp, Lightbulb, BookOpen, BarChart3,
-  Play, CheckCircle, ChevronRight, ChevronLeft, FileText, Monitor, Shield, Gamepad2,
-  Trophy, Crown, Flame
-} from 'lucide-react';
-import SEO, {
-  buildOrganizationJsonLd,
-  buildSoftwareApplicationJsonLd,
-  buildFaqJsonLd,
-} from '@/shared/components/SEO';
 
 const topicIcons: Record<string, React.ReactNode> = {
   arrays: <Database className="w-5 h-5" />,
@@ -755,42 +755,42 @@ export const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
     children: [
-      { index: true, element: <HomePage /> },
-      { path: 'topics', element: <TopicsPage /> },
+      { index: true, element: lazyRoute(HomePage as any) },
+      { path: 'topics', element: lazyRoute(TopicsPage) },
       { path: 'topics/:slug', element: lazyRoute(TopicDetailPage) },
-      { path: 'questions', element: <QuestionsPage /> },
+      { path: 'questions', element: lazyRoute(QuestionsPage) },
       { path: 'questions/:slug', element: lazyRoute(QuestionDetailPage) },
-      { path: 'patterns', element: <PatternsPage /> },
+      { path: 'patterns', element: lazyRoute(PatternsPage) },
       { path: 'patterns/:name', element: lazyRoute(PatternDetailPage) },
-      { path: 'easy', element: <DifficultyPage /> },
-      { path: 'medium', element: <DifficultyPage /> },
-      { path: 'hard', element: <DifficultyPage /> },
-      { path: 'login', element: <LoginPage /> },
-      { path: 'forgot-password', element: <ForgotPasswordPage /> },
-      { path: 'reset-password', element: <ResetPasswordPage /> },
-      { path: 'shop', element: <ShopPage /> },
-      { path: 'resume', element: <ResumePage /> },
-      { path: 'pricing', element: <PricingPage /> },
-      { path: 'interview-prep', element: <InterviewPrepPage /> },
-      { path: 'interview-prep/setup', element: <ProtectedRoute><InterviewSetupPage /></ProtectedRoute> },
-      { path: 'interview-prep/dashboard', element: <ProtectedRoute><InterviewDashboardPage /></ProtectedRoute> },
-      { path: 'interview-prep/subject/:subject', element: <ProtectedRoute><InterviewSubjectPage /></ProtectedRoute> },
-      { path: 'interview-prep/mock', element: <ProtectedRoute><MockInterviewPage /></ProtectedRoute> },
-      { path: 'interview-prep/call', element: <ProtectedRoute><MockCallPage /></ProtectedRoute> },
-      { path: 'interview-prep/ai', element: <ProtectedRoute><AiInterviewPage /></ProtectedRoute> },
-      { path: 'interview-prep/mock-result/:id', element: <ProtectedRoute><MockResultPage /></ProtectedRoute> },
-      { path: 'leaderboard', element: <LeaderboardPage /> },
-      { path: 'communities', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><CommunitiesPage /></Suspense></ProtectedRoute> },
-      { path: 'communities/:id', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><CommunityDetailPage /></Suspense></ProtectedRoute> },
-      { path: 'payment', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><PaymentPage /></Suspense></ProtectedRoute> },
-      { path: 'dashboard', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><DashboardPage /></Suspense></ProtectedRoute> },
-      { path: 'profile', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><ProfilePage /></Suspense></ProtectedRoute> },
-      { path: 'bookmarks', element: <ProtectedRoute><Suspense fallback={<PageLoader />}><BookmarksPage /></Suspense></ProtectedRoute> },
-      { path: 'games', element: <GamesLandingPage /> },
+      { path: 'easy', element: lazyRoute(DifficultyPage) },
+      { path: 'medium', element: lazyRoute(DifficultyPage) },
+      { path: 'hard', element: lazyRoute(DifficultyPage) },
+      { path: 'login', element: lazyRoute(LoginPage) },
+      { path: 'forgot-password', element: lazyRoute(ForgotPasswordPage) },
+      { path: 'reset-password', element: lazyRoute(ResetPasswordPage) },
+      { path: 'shop', element: lazyRoute(ShopPage) },
+      { path: 'resume', element: lazyRoute(ResumePage) },
+      { path: 'pricing', element: lazyRoute(PricingPage) },
+      { path: 'interview-prep', element: lazyRoute(InterviewPrepPage) },
+      { path: 'interview-prep/setup', element: <ProtectedRoute>{lazyRoute(InterviewSetupPage)}</ProtectedRoute> },
+      { path: 'interview-prep/dashboard', element: <ProtectedRoute>{lazyRoute(InterviewDashboardPage)}</ProtectedRoute> },
+      { path: 'interview-prep/subject/:subject', element: <ProtectedRoute>{lazyRoute(InterviewSubjectPage)}</ProtectedRoute> },
+      { path: 'interview-prep/mock', element: <ProtectedRoute>{lazyRoute(MockInterviewPage)}</ProtectedRoute> },
+      { path: 'interview-prep/call', element: <ProtectedRoute>{lazyRoute(MockCallPage)}</ProtectedRoute> },
+      { path: 'interview-prep/ai', element: <ProtectedRoute>{lazyRoute(AiInterviewPage)}</ProtectedRoute> },
+      { path: 'interview-prep/mock-result/:id', element: <ProtectedRoute>{lazyRoute(MockResultPage)}</ProtectedRoute> },
+      { path: 'leaderboard', element: lazyRoute(LeaderboardPage) },
+      { path: 'communities', element: <ProtectedRoute>{lazyRoute(CommunitiesPage)}</ProtectedRoute> },
+      { path: 'communities/:id', element: <ProtectedRoute>{lazyRoute(CommunityDetailPage)}</ProtectedRoute> },
+      { path: 'payment', element: <ProtectedRoute>{lazyRoute(PaymentPage)}</ProtectedRoute> },
+      { path: 'dashboard', element: <ProtectedRoute>{lazyRoute(DashboardPage)}</ProtectedRoute> },
+      { path: 'profile', element: <ProtectedRoute>{lazyRoute(ProfilePage)}</ProtectedRoute> },
+      { path: 'bookmarks', element: <ProtectedRoute>{lazyRoute(BookmarksPage)}</ProtectedRoute> },
+      { path: 'games', element: lazyRoute(GamesLandingPage) },
       { path: 'games/:topic', element: lazyRoute(GameTopicPage) },
       { path: 'games/:topic/:level', element: lazyRoute(GamePlayPage) },
-      { path: 'privacy-policy', element: <PrivacyPolicyPage /> },
-      { path: 'terms-of-service', element: <TermsOfServicePage /> },
+      { path: 'privacy-policy', element: lazyRoute(PrivacyPolicyPage) },
+      { path: 'terms-of-service', element: lazyRoute(TermsOfServicePage) },
     ],
   },
   {

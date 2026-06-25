@@ -421,7 +421,7 @@ export default function ShopPage() {
               >
                 {processing
                   ? <><Loader2 className="w-4 h-4 animate-spin" /> Opening Payment...</>
-                  : <><img src="https://razorpay.com/favicon.png" className="w-5 h-5" /> Pay with Razorpay</>
+                  : <><img src="https://razorpay.com/favicon.png" alt="Razorpay" className="w-5 h-5" /> Pay with Razorpay</>
                 }
               </button>
 
