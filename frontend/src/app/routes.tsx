@@ -117,15 +117,18 @@ function FadeInSection({ children, className }: { children: React.ReactNode; cla
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
       className={className}
+      style={{
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? 'translateY(0)' : 'translateY(40px)',
+        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+        willChange: 'opacity, transform',
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -342,10 +345,10 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {statsDisplay.map((stat, i) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} className="text-center">
+              <div key={stat.label} className="text-center animate-fadeIn" style={{ animationDelay: `${i * 100}ms` }}>
                 <div className={`text-2xl sm:text-3xl md:text-4xl font-extrabold ${stat.color}`}>{stat.value}</div>
-                <div className="text-xs sm:text-sm text-white/50 mt-1">{stat.label}</div>
-              </motion.div>
+                <div className="text-xs sm:text-sm text-white/60 mt-1">{stat.label}</div>
+              </div>
             ))}
           </div>
         </div>

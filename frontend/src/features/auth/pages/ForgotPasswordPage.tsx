@@ -43,7 +43,7 @@ export default function ForgotPasswordPage() {
         >
           <div className="rounded-2xl border border-white/10 overflow-hidden shadow-2xl shadow-purple-900/40" style={{ backgroundColor: 'rgba(17, 24, 39, 0.9)', backdropFilter: 'blur(20px)' }}>
             <div className="h-1.5 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-amber-500" />
-            <Link to="/login" className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all z-20">
+            <Link to="/login" className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all z-20" aria-label="Close">
               <X className="w-4 h-4" />
             </Link>
             <div className="p-6 sm:p-8">

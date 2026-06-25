@@ -132,7 +132,7 @@ export default function HeroSection() {
   }, [isPlaying]);
 
   return (
-    <section className="relative pb-12 overflow-hidden">
+    <section className="relative pb-12 overflow-hidden" style={{ contentVisibility: 'auto' }}>
       {/* Fixed top background — covers navbar area + blends into hero, behind everything */}
       <div className="fixed top-0 left-0 right-0 h-[400px] -z-10 pointer-events-none bg-gradient-to-b from-[#0B1020] via-[#1a1140] to-transparent" />
 
@@ -164,8 +164,8 @@ export default function HeroSection() {
               Free Access for All Questions
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5 sm:mb-6 min-h-[3.5rem] sm:min-h-[4.5rem] md:min-h-[5.5rem]">
-              <span className="bg-gradient-to-r from-primary-400 to-indigo-400 bg-clip-text" style={{ WebkitTextFillColor: 'transparent' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5 sm:mb-6" style={{ minHeight: '3.5rem' }}>
+              <span className="bg-gradient-to-r from-primary-400 to-indigo-400 bg-clip-text block" style={{ WebkitTextFillColor: 'transparent', minHeight: 'inherit' }}>
                 {(() => {
                   const typed = fullText.substring(0, charIdx);
                   const words = ['Learn', 'Solve', 'Crack'];

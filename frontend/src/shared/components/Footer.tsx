@@ -70,14 +70,15 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-2 sm:gap-2.5">
                 {[
-                  { Icon: Github, href: '#' },
-                  { Icon: Twitter, href: '#' },
-                  { Icon: Linkedin, href: '#' },
-                  { Icon: Mail, href: '#' },
-                ].map(({ Icon, href }, i) => (
+                  { Icon: Github, href: '#', label: 'GitHub' },
+                  { Icon: Twitter, href: '#', label: 'Twitter' },
+                  { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+                  { Icon: Mail, href: '#', label: 'Email' },
+                ].map(({ Icon, href, label }, i) => (
                   <a
                     key={i}
                     href={href}
+                    aria-label={label}
                     className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 hover:border-white/10 transition-all"
                   >
                     <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
