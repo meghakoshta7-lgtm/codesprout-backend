@@ -1,6 +1,7 @@
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 import multer from 'multer';
 
@@ -14,9 +15,33 @@ const PORT = Number(process.env.PORT) || 3000;
 
 app.set('trust proxy', 1);
 
+// ====== Compression (gzip/deflate) — 60-80% size reduction ======
+app.use(compression({
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) return false;
+    return compression.filter(req, res);
+  },
+  threshold: 1024,
+}));
+
+// ====== Response time logging ======
+app.use((req: Request, _res: Response, next: NextFunction) => {
+  (req as any)._start = Date.now();
+  const originalEnd = _res.end;
+  _res.end = function (this: Response, ...args: any[]) {
+    const ms = Date.now() - ((req as any)._start || 0);
+    if (ms > 200) {
+      console.warn(`[gateway] SLOW ${req.method} ${req.path} ${ms}ms`);
+    }
+    return originalEnd.apply(this, args as any);
+  } as any;
+  next();
+});
+
 app.use(cors({
   origin: (_origin, callback) => callback(null, _origin || true),
   credentials: true,
+  maxAge: 86400,
 }));
 
 const SERVICES = {
@@ -36,9 +61,10 @@ const getProxy = (target: string) => {
     proxy = createProxyMiddleware({
       target,
       changeOrigin: true,
-      proxyTimeout: 60000,
-      timeout: 60000,
+      proxyTimeout: 30000,
+      timeout: 30000,
       pathRewrite: (_path: string, req: any) => req.originalUrl,
+      selfHandleResponse: false,
       on: {
         error: (err: any, req: any, res: any) => {
           console.error(`[gateway] proxy error to ${target}:`, err.message);
@@ -83,10 +109,10 @@ let RESUME_TEMPLATES: any[] = [
   { id: 'ai-ml', category: 'ai-ml', name: 'AI/ML Resume', description: 'Research & model-focused layout for data scientists', is_ats_friendly: false, columns: 2, colors: ['#581c87', '#fdf4ff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'fullstack', category: 'fullstack', name: 'Full Stack Resume', description: 'Versatile format balancing frontend & backend skills', is_ats_friendly: true, columns: 1, colors: ['#0d9488', '#f0fdfa', '#ffffff'], is_premium: false, price: 0 },
   { id: 'executive', category: 'executive', name: 'Executive Resume', description: 'Leadership-focused layout for senior management roles', is_ats_friendly: true, columns: 1, colors: ['#1e3a8a', '#f8fafc', '#ffffff'], is_premium: false, price: 0 },
-  { id: 'minimalist', category: 'minimalist', name: 'Minimalist Resume', description: 'Clean spacious design with elegant typography', is_ats_friendly: true, columns: 1, colors: ['#475569', '#ffffff', '#ffffff'], is_premium: false, price: 0 },
+  { id: 'minimalist', category: 'minimalist', name: 'Minimalist Resume', description: 'Clean, spacious design with elegant typography', is_ats_friendly: true, columns: 1, colors: ['#475569', '#ffffff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'creative', category: 'creative', name: 'Creative Resume', description: 'Bold gradient header with portfolio metrics section', is_ats_friendly: false, columns: 1, colors: ['#7c3aed', '#fdf4ff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'technical', category: 'technical', name: 'Technical Resume', description: 'Skills-first layout with visual proficiency bars', is_ats_friendly: true, columns: 1, colors: ['#0369a1', '#f0f9ff', '#ffffff'], is_premium: false, price: 0 },
-  { id: 'professional', category: 'professional', name: 'Professional Resume', description: 'Polished one-page layout with a strong header and balanced sections', is_ats_friendly: true, columns: 1, colors: ['#0f172a', '#e2e8f0', '#ffffff'], is_premium: false, price: 0 },
+  { id: 'professional', category: 'professional', name: 'Professional', description: 'Polished one-page layout with a strong header and balanced sections', is_ats_friendly: true, columns: 1, colors: ['#0f172a', '#e2e8f0', '#ffffff'], is_premium: false, price: 0 },
   { id: 'professional-blue', category: 'professional', name: 'Professional Blue', description: 'Clean single-column with blue section headers, ATS-friendly corporate layout', is_ats_friendly: true, columns: 1, colors: ['#1a3c6e', '#ffffff', '#ffffff'], is_premium: false, price: 0 },
   { id: 'academic', category: 'academic', name: 'Academic Resume', description: 'Research & publication focused for academia roles', is_ats_friendly: false, columns: 1, colors: ['#b91c1c', '#fef2f2', '#ffffff'], is_premium: false, price: 0 },
 ];
@@ -116,10 +142,11 @@ const extractText = async (buffer: Buffer, mime: string): Promise<string> => {
 // ====== Feedback storage ======
 const FEEDBACKS: any[] = [];
 
-// ====== In-memory cache ======
-const memoryCache = new Map<string, { data: any; expiry: number }>();
-const CACHEABLE_PATHS = ['/topics', '/patterns', '/stats', '/leaderboard', '/roadmaps', '/questions', '/resume/list', '/resume/templates'];
-const CACHE_TTL = {
+// ====== In-memory cache with LRU-like eviction ======
+const memoryCache = new Map<string, { data: any; expiry: number; hits: number }>();
+const MAX_CACHE_SIZE = 500;
+const CACHEABLE_PATHS = ['/topics', '/patterns', '/stats', '/leaderboard', '/roadmaps', '/questions', '/resume/list', '/resume/templates', '/shop'];
+const CACHE_TTL: Record<string, number> = {
   '/topics': 5 * 60 * 1000,
   '/patterns': 10 * 60 * 1000,
   '/stats': 3 * 60 * 1000,
@@ -128,11 +155,34 @@ const CACHE_TTL = {
   '/questions': 3 * 60 * 1000,
   '/resume/list': 2 * 60 * 1000,
   '/resume/templates': 30 * 60 * 1000,
+  '/shop': 10 * 60 * 1000,
 };
 
 function getCacheKey(path: string, req: Request): string {
   const auth = (req.headers['authorization'] || '') as string;
   return `${req.method}:${path}:${auth}`;
+}
+
+function cacheGet(key: string): any | null {
+  const entry = memoryCache.get(key);
+  if (!entry) return null;
+  if (Date.now() > entry.expiry) {
+    memoryCache.delete(key);
+    return null;
+  }
+  entry.hits++;
+  return entry.data;
+}
+
+function cacheSet(key: string, data: any, ttl: number): void {
+  if (memoryCache.size >= MAX_CACHE_SIZE) {
+    let minHits = Infinity, minKey = '';
+    for (const [k, v] of memoryCache) {
+      if (v.hits < minHits) { minHits = v.hits; minKey = k; }
+    }
+    if (minKey) memoryCache.delete(minKey);
+  }
+  memoryCache.set(key, { data, expiry: Date.now() + ttl, hits: 0 });
 }
 
 setInterval(() => {
@@ -216,9 +266,6 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
     return res.status(201).json({ template: dup });
   }
 
-  // Resume upload & parse — proxy to resume service
-  // (removed direct handler; resume service handles upload, parse, DB save, scoring)
-
   // ====== Feedback ======
   if (path === '/feedback' && req.method === 'POST') {
     FEEDBACKS.push({ ...req.body, timestamp: new Date().toISOString() });
@@ -228,12 +275,13 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
     return res.json({ feedbacks: FEEDBACKS });
   }
 
-  // ====== Cache ALL GET requests (short TTL to avoid stale data) ======
+  // ====== Cache GET requests ======
   if (req.method === 'GET') {
     const cacheKey = getCacheKey(path, req);
-    const cached = memoryCache.get(cacheKey);
-    if (cached && Date.now() < cached.expiry) {
-      return res.json(cached.data);
+    const cached = cacheGet(cacheKey);
+    if (cached) {
+      res.setHeader('X-Cache', 'HIT');
+      return res.json(cached);
     }
   }
 
@@ -255,21 +303,22 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
 
   if (!target) return res.status(404).json({ error: 'Route not found', path });
 
-  // For ALL GET requests, use fetch for caching
+  // ====== GET: fetch + cache ======
   if (req.method === 'GET') {
     const cacheKey = getCacheKey(path, req);
     const url = `${target}${req.originalUrl}`;
     try {
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      const headers: Record<string, string> = {};
       const auth = req.headers['authorization'];
       if (auth) headers['authorization'] = auth as string;
-      const proxyRes = await fetch(url, { headers, signal: AbortSignal.timeout(15000) });
+      const proxyRes = await fetch(url, { headers, signal: AbortSignal.timeout(10000) });
       if (!proxyRes.ok) {
         return res.status(proxyRes.status).json({ error: `Upstream error: ${proxyRes.status}` });
       }
       const data = await proxyRes.json();
-      const ttl = (CACHE_TTL as any)[CACHEABLE_PATHS.find(p => path.startsWith(p))!] || 30_000;
-      memoryCache.set(cacheKey, { data, expiry: Date.now() + ttl });
+      const ttl = CACHE_TTL[CACHEABLE_PATHS.find(p => path.startsWith(p))!] || 30_000;
+      cacheSet(cacheKey, data, ttl);
+      res.setHeader('X-Cache', 'MISS');
       return res.json(data);
     } catch (e: any) {
       console.error(`[gateway] fetch error to ${target}:`, e.message);
@@ -277,7 +326,7 @@ const handle = async (req: Request, res: Response, next: NextFunction) => {
     }
   }
 
-  console.log(`[gateway] ${req.method} ${req.originalUrl} -> ${target}`);
+  // ====== POST/PUT/DELETE: proxy ======
   return getProxy(target)(req, res, next);
 };
 

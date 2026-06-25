@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import resumeRouter from '../routes/resume';
 import { initDb } from '../data/db';
 import { questions, topics, cheatSheets, users, patternDetails } from '../data/seed';
@@ -13,6 +14,7 @@ const testCaseData = Object.entries(TEST_CASES).flatMap(([slug, cases]) =>
 const app = express();
 const PORT = Number(process.env.PORT) || 3006;
 
+app.use(compression({ threshold: 1024 }));
 app.use(cors({
   origin: (_origin: any, callback: any) => callback(null, _origin || true),
   credentials: true,

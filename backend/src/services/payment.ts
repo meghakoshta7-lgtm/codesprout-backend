@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import paymentsRouter from '../routes/payments';
 import subscriptionRouter from '../routes/subscription';
 import { initDb } from '../data/db';
@@ -21,6 +22,7 @@ const testCaseData = Object.entries(TEST_CASES).flatMap(([slug, cases]) =>
 const app = express();
 const PORT = Number(process.env.PORT) || 3005;
 
+app.use(compression({ threshold: 1024 }));
 app.use(cors({
   origin: true,
   credentials: true,

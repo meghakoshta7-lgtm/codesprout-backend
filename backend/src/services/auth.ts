@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import authRouter from '../routes/auth';
 import notificationsRouter from '../routes/notifications';
 import emailRouter from '../routes/email';
@@ -15,6 +16,7 @@ const testCaseData = Object.entries(TEST_CASES).flatMap(([slug, cases]) =>
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 
+app.use(compression({ threshold: 1024 }));
 app.use(cors({
   origin: (_origin, callback) => callback(null, _origin || true),
   credentials: true,

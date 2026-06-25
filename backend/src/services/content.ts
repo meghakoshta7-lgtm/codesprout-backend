@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import topicsRouter from '../routes/topics';
 import questionsRouter from '../routes/questions';
 import publicPatternsRouter from '../routes/publicPatterns';
@@ -20,6 +21,7 @@ const testCaseData = Object.entries(TEST_CASES).flatMap(([slug, cases]) =>
 const app = express();
 const PORT = Number(process.env.PORT) || 3002;
 
+app.use(compression({ threshold: 1024 }));
 app.use(cors({
   origin: (_origin, callback) => callback(null, _origin || true),
   credentials: true,
